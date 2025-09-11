@@ -1,18 +1,20 @@
 import React from 'react'
 import mapimg from '../assets/mapimg.jpg'
 import { IoPinSharp } from "react-icons/io5";
+import locPin from "../assets/pin.png"
 
 function Map() {
   return (
-    <div className=" relative">
+    <div className="relative h-screen w-screen">
       <img 
         src={mapimg} 
         alt="Map" 
-        className="h-screen w-screen "
+        className="w-full h-full object-contain"
       />
-      <div className='absolute top-[4.5rem] left-[7rem]'>
+        <img src={locPin} alt="Location Pin" className='absolute top-[9%] left-[18%] h-10 w-5 cursor-pointer animate-bounce' />
+      {/* <div className='absolute top-[4.5rem] left-[7rem]'>
          <IoPinSharp style={{ color: "red", fontSize: "40px" }} className='cursor-pointer animate-bounce'/>
-      </div>
+      </div> */}
        <div className='absolute top-[1.8rem] left-[58.6rem]'>
          <IoPinSharp style={{ color: "red", fontSize: "40px" }} className='cursor-pointer  animate-bounce'/>
       </div>

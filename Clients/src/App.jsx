@@ -10,6 +10,13 @@ function App() {
       <Route>
        <Route index element={<HomePage/>} />
        <Route path='/map' element={<Map/>} />
+
+
+
+
+
+       {/* creating and testing individual components down here */}
+       <Route path='/waveform' element={<Map/>} />
       </Route>
     )
   )
