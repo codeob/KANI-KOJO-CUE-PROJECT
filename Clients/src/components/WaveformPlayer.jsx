@@ -2,7 +2,10 @@ import React, { useState, useEffect, useRef } from 'react';
 import grainBG from "../assets/backgrounds/grainBG.png"
 import mapimg from '../assets/backgrounds/mapimg.jpg'
 import PauseIcon from "../components/PauseIcon"
-import PlayIcon from '../components/PlayIcon'; // ✅ Fix wrong import (you had PlayIcon pointing to PauseIcon)
+import PlayIcon from '../components/PlayIcon';
+import KExpWithCloseBtnHeadingBrown from './KExpWithCloseBtnHeadingBrown';
+import KExpWithCloseBtnHeadingCream from './KExpWithCloseBtnHeadingCream';
+import BTMapAndAudioLink from './BTMapAndAudioLink';
 
 
 const WaveformPlayer = ({ audioUrl }) => {
@@ -118,34 +121,42 @@ const WaveformPlayer = ({ audioUrl }) => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-6 relative overflow-hidden">
+    <div className="h-screen relative overflow-hidden">
       {/* background */}
       <img src={mapimg} alt="" className="absolute h-full w-full object-cover scale-150" />
       <div className="h-full w-full bg-[#988B6DD6] absolute">
         <img src={grainBG} alt="" className="absolute left-0 h-full w-full object-fill" />
       </div>
-
-      <div className="px-[42px] py-[52px] z-50">
-        {/* hidden audio element */}
-        <audio ref={audioRef} src={audioUrl} preload="metadata" />
-
-        {/* Waveform */}
-        <div
-          className="relative w-[1020px] h-60 cursor-pointer overflow-hidden z-50"
-          onClick={handleWaveformClick}
-        >
-          <canvas ref={canvasRef} className="w-full h-full" />
+      <div className="relative z-10 flex flex-col items-center justify-between h-full w-full p-10">
+        <div className="w-full">
+          <KExpWithCloseBtnHeadingBrown />
         </div>
+        <div className="px-[42px] py-[52px]  ">
+          {/* hidden audio element */}
+          <audio ref={audioRef} src={audioUrl} preload="metadata" />
 
-        {/* Play Button */}
-        <div className="flex justify-center mt-[8px]">
-          <button
-            onClick={togglePlayPause}
-            className="w-[87px] h-[87px] bg-[#B69F7C] rounded-full flex items-center justify-center hover:scale-110 active:scale-95 transition-transform duration-200"
+          {/* Waveform */}
+          <div
+            className="w-[1020px] h-60 cursor-pointer overflow-hidden "
+            onClick={handleWaveformClick}
           >
-            {isPlaying ? <PauseIcon /> : <PlayIcon />}
-          </button>
+            <canvas ref={canvasRef} className="w-full h-full" />
+          </div>
+
+          {/* Play Button */}
+          <div className="flex justify-center mt-[8px]">
+            <button
+              onClick={togglePlayPause}
+              className="w-[87px] h-[87px] bg-[#B69F7C] rounded-full flex items-center justify-center hover:scale-110 active:scale-95 transition-transform duration-200"
+            >
+              {isPlaying ? <PauseIcon /> : <PlayIcon />}
+            </button>
+          </div>
         </div>
+        <div className="w-full">
+          <BTMapAndAudioLink />
+        </div>
+
       </div>
     </div>
   );
