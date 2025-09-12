@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import grainBG from "../assets/backgrounds/grainBG.png"
-import mapimg from '../assets/backgrounds/mapimg.jpg'
+import mapBG from '../assets/backgrounds/Map_Bkg.png'
 import PauseIcon from "../components/PauseIcon"
 import PlayIcon from '../components/PlayIcon';
 import KExpWithCloseBtnHeadingBrown from './KExpWithCloseBtnHeadingBrown';
@@ -123,10 +123,7 @@ const WaveformPlayer = ({ audioUrl }) => {
   return (
     <div className="h-screen relative overflow-hidden">
       {/* background */}
-      <img src={mapimg} alt="" className="absolute h-full w-full object-cover scale-150" />
-      <div className="h-full w-full bg-[#988B6DD6] absolute">
-        <img src={grainBG} alt="" className="absolute left-0 h-full w-full object-fill" />
-      </div>
+      <img src={mapBG} alt="" className="absolute h-full w-full object-cover " />
       <div className="relative z-10 flex flex-col items-center justify-between h-full w-full p-10">
         <div className="w-full">
           <KExpWithCloseBtnHeadingBrown />
