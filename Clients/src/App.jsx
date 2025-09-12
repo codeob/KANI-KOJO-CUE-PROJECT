@@ -1,11 +1,16 @@
+import "./App.css"
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider, } from "react-router-dom"
 import HomePage from "./Pages/HomePage"
 import Map from "./Pages/Map"
 import WaveformPlayer from "./components/WaveformPlayer"
 import song1 from "./audio/song1.mp3"
-import "./App.css"
+import ImagePreviewComponent from "./components/ImagePreviewComponent"
+import locationPins from "../locations"
 
 function App() {
+
+  console.log(locationPins);
+  
   //Routing  for All pages
   const Router = createBrowserRouter(
     createRoutesFromElements(
@@ -18,7 +23,7 @@ function App() {
 
 
        {/* creating and testing individual components down here */}
-       <Route path='/waveform' element={<WaveformPlayer audioUrl={song1}/>}/>
+       <Route path='/waveform' element={<ImagePreviewComponent audioUrl={song1}/>}/>
         {/* <Route path='/waveform2' element={<AudioWaveformProgress audioUrl={song1} />}/>        */}
       </Route>
     )

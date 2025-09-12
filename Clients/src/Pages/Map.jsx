@@ -1,19 +1,37 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import useLocationStore from "../store/useLocationStore"
 import mapimg from "../assets/backgrounds/mapimg.jpg";
 import locPin from "../assets/pin.png";
 import Slide from "./Slide";
+import locationPins from "../../locations";
 
 function Map() {
-  const [show, setShow] = useState(false);
+  const { selectedLocation, setSelectedLocation, clearSelected} = useLocationStore()
+  const [isSlideVisible, setIsSlideVisible ] = useState(false)
+  const [ isAnimating, setIsAnimating ] = useState(false)
 
-  const handleOpen = () => {
-    setShow(!show);
-  };
+  // Handle opening slide animation
+  useEffect(() => {
+    if (selectedLocation) {
+      setIsSlideVisible(true)
+      setTimeout(() => setIsAnimating(true), 10)  // small delay b4 animation to ensure element is mounted
+    }
+  }, [selectedLocation] )
+
+  //handle closing animation
+  const handleClose = () =>{
+    setIsAnimating(false);
+    // wait for animation to complete before hiding
+    setTimeout(() => {
+      setIsSlideVisible(false)
+      clearSelected();
+    }, 300)
+  }
 
   return (
     <div className="flex justify-center items-center h-screen w-screen">
       {/* Container that keeps image responsive */}
-      <div className="relative w-full max-w-5xl aspect-[16/9]">
+      <div className="relative w-full max-w-[1366px] aspect-[16/9]">
         {/* Map image */}
         <img
           src={mapimg}
@@ -21,72 +39,24 @@ function Map() {
           className="w-full h-full object-contain"
         />
 
-        {/* Location pins (scale with map) */}
-        <img
-          src={locPin}
-          alt="Location Pin"
-          className="absolute top-[13%] left-[19.5%] h-8 w-5 cursor-pointer"
-          onClick={handleOpen}
-        />
-        <img
-          src={locPin}
-          alt="Location Pin"
-          className="absolute top-[5%] left-[68%] h-8 w-5 cursor-pointer"
-          onClick={handleOpen}
-        />
-        <img
-          src={locPin}
-          alt="Location Pin"
-          className="absolute top-[32%] left-[50%] h-8 w-5 cursor-pointer"
-          onClick={handleOpen}
-        />
-        <img
-          src={locPin}
-          alt="Location Pin"
-          className="absolute top-[23%] left-[77.8%] h-8 w-5 cursor-pointer"
-          onClick={handleOpen}
-        />
-        <img
-          src={locPin}
-          alt="Location Pin"
-          className="absolute top-[55%] left-[45.8%] h-8 w-5 cursor-pointer"
-          onClick={handleOpen}
-        />
-        <img
-          src={locPin}
-          alt="Location Pin"
-          className="absolute top-[57%] left-[42%] h-8 w-5 cursor-pointer"
-          onClick={handleOpen}
-        />
-        <img
-          src={locPin}
-          alt="Location Pin"
-          className="absolute top-[69.8%] left-[27.2%] h-8 w-5 cursor-pointer"
-          onClick={handleOpen}
-        />
-        <img
-          src={locPin}
-          alt="Location Pin"
-          className="absolute top-[81.7%] left-[47.8%] h-8 w-5 cursor-pointer"
-          onClick={handleOpen}
-        />
-        <img
-          src={locPin}
-          alt="Location Pin"
-          className="absolute top-[88%] left-[56%] h-8 w-5 cursor-pointer"
-          onClick={handleOpen}
-        />
-        <img
-          src={locPin}
-          alt="Location Pin"
-          className="absolute top-[87%] left-[79%] h-8 w-5 cursor-pointer"
-          onClick={handleOpen}
-        />
+        {/* Location pins (scale with map), render from location.js data, coords top and left can be edited in location.js file */}
+        {locationPins.map((loc) => (
+          <img 
+            key={loc.id}
+            src={locPin}
+            alt={loc.locationName}
+            className="absolute h-8 w-5 cursor-pointer"
+            style={{ top:loc.coords.top, left:loc.coords.left}}
+            onClick={()=> setSelectedLocation(loc.id)}
+          />
 
-        {/* Overlay / Slide Info */}
-        {show && (
-          <div className="fixed inset-0 bg-black/55 z-50">
-             <Slide close={handleOpen} />
+        ))}
+
+
+        {/* Overlay / Slide Info base on selected pin */}
+        {isSlideVisible && (
+          <div className="absolute inset-0 bg-black/55 z-50">
+             <Slide location={selectedLocation} close={handleClose} isAnimating={isAnimating} />
           </div>
         )}
       </div>
