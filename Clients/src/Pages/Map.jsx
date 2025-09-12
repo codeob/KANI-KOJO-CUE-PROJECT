@@ -31,7 +31,7 @@ function Map() {
   return (
     <div className="flex justify-center items-center h-screen w-screen">
       {/* Container that keeps image responsive */}
-      <div className="relative w-full max-w-[1300px] aspect-[16/9]">
+      <div className="relative w-full max-w-[1280px] aspect-[16/9]">
         {/* Map image */}
         <img
           src={mapimg}
