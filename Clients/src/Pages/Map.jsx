@@ -1,5 +1,5 @@
 import React from 'react'
-import mapimg from '../assets/mapimg.jpg'
+import mapimg from '../assets/backgrounds/mapimg.jpg'
 import { IoPinSharp } from "react-icons/io5";
 import locPin from "../assets/pin.png"
 
