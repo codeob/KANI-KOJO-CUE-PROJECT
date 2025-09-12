@@ -1,49 +1,97 @@
-import React from 'react'
-import mapimg from '../assets/backgrounds/mapimg.jpg'
-import { IoPinSharp } from "react-icons/io5";
-import locPin from "../assets/pin.png"
+import React, { useState } from "react";
+import mapimg from "../assets/backgrounds/mapimg.jpg";
+import locPin from "../assets/pin.png";
+import Slide from "./Slide";
 
 function Map() {
+  const [show, setShow] = useState(false);
+
+  const handleOpen = () => {
+    setShow(!show);
+  };
+
   return (
-    <div className="relative h-screen w-screen">
-      <img 
-        src={mapimg} 
-        alt="Map" 
-        className="w-full h-full object-contain"
-      />
-        <img src={locPin} alt="Location Pin" className='absolute top-[9%] left-[18%] h-10 w-5 cursor-pointer animate-bounce' />
-      {/* <div className='absolute top-[4.5rem] left-[7rem]'>
-         <IoPinSharp style={{ color: "red", fontSize: "40px" }} className='cursor-pointer animate-bounce'/>
-      </div> */}
-       <div className='absolute top-[1.8rem] left-[58.6rem]'>
-         <IoPinSharp style={{ color: "red", fontSize: "40px" }} className='cursor-pointer  animate-bounce'/>
-      </div>
-       <div className='absolute top-[12rem] left-[39.7rem]'>
-         <IoPinSharp style={{ color: "red", fontSize: "40px" }} className='cursor-pointer  animate-bounce'/>
-      </div>
-        <div className='absolute top-[8.1rem] left-[69.7rem]'>
-         <IoPinSharp style={{ color: "red", fontSize: "40px" }} className='cursor-pointer  animate-bounce'/>
-      </div>
-        <div className='absolute top-[20.5rem] left-[35rem]'>
-         <IoPinSharp style={{ color: "red", fontSize: "40px" }} className='cursor-pointer  animate-bounce'/>
-      </div>
-        <div className='absolute top-[21.2rem] left-[31rem]'>
-         <IoPinSharp style={{ color: "red", fontSize: "40px" }} className='cursor-pointer  animate-bounce'/>
-      </div>
-       <div className='absolute top-[26.0rem] left-[16.3rem]'>
-         <IoPinSharp style={{ color: "red", fontSize: "40px" }} className='cursor-pointer  animate-bounce'/>
-      </div>
-       <div className='absolute top-[31rem] left-[37rem]'>
-         <IoPinSharp style={{ color: "red", fontSize: "40px" }} className='cursor-pointer  animate-bounce'/>
-      </div>
-       <div className='absolute top-[33rem] left-[46rem]'>
-         <IoPinSharp style={{ color: "red", fontSize: "40px" }} className='cursor-pointer  animate-bounce'/>
-      </div>
-        <div className='absolute top-[33rem] left-[70rem]'>
-         <IoPinSharp style={{ color: "red", fontSize: "40px" }} className='cursor-pointer  animate-bounce'/>
+    <div className="flex justify-center items-center h-screen w-screen">
+      {/* Container that keeps image responsive */}
+      <div className="relative w-full max-w-5xl aspect-[16/9]">
+        {/* Map image */}
+        <img
+          src={mapimg}
+          alt="Map"
+          className="w-full h-full object-contain"
+        />
+
+        {/* Location pins (scale with map) */}
+        <img
+          src={locPin}
+          alt="Location Pin"
+          className="absolute top-[13%] left-[19.5%] h-8 w-5 cursor-pointer"
+          onClick={handleOpen}
+        />
+        <img
+          src={locPin}
+          alt="Location Pin"
+          className="absolute top-[5%] left-[68%] h-8 w-5 cursor-pointer"
+          onClick={handleOpen}
+        />
+        <img
+          src={locPin}
+          alt="Location Pin"
+          className="absolute top-[32%] left-[50%] h-8 w-5 cursor-pointer"
+          onClick={handleOpen}
+        />
+        <img
+          src={locPin}
+          alt="Location Pin"
+          className="absolute top-[23%] left-[77.8%] h-8 w-5 cursor-pointer"
+          onClick={handleOpen}
+        />
+        <img
+          src={locPin}
+          alt="Location Pin"
+          className="absolute top-[55%] left-[45.8%] h-8 w-5 cursor-pointer"
+          onClick={handleOpen}
+        />
+        <img
+          src={locPin}
+          alt="Location Pin"
+          className="absolute top-[57%] left-[42%] h-8 w-5 cursor-pointer"
+          onClick={handleOpen}
+        />
+        <img
+          src={locPin}
+          alt="Location Pin"
+          className="absolute top-[69.8%] left-[27.2%] h-8 w-5 cursor-pointer"
+          onClick={handleOpen}
+        />
+        <img
+          src={locPin}
+          alt="Location Pin"
+          className="absolute top-[81.7%] left-[47.8%] h-8 w-5 cursor-pointer"
+          onClick={handleOpen}
+        />
+        <img
+          src={locPin}
+          alt="Location Pin"
+          className="absolute top-[88%] left-[56%] h-8 w-5 cursor-pointer"
+          onClick={handleOpen}
+        />
+        <img
+          src={locPin}
+          alt="Location Pin"
+          className="absolute top-[87%] left-[79%] h-8 w-5 cursor-pointer"
+          onClick={handleOpen}
+        />
+
+        {/* Overlay / Slide Info */}
+        {show && (
+          <div className="fixed inset-0 bg-black/55 z-50">
+             <Slide close={handleOpen} />
+          </div>
+        )}
       </div>
     </div>
-  )
+  );
 }
 
-export default Map
+export default Map;
