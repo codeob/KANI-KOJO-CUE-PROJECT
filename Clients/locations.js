@@ -9,6 +9,7 @@ const locationPins=[
     songUrl: "",
     videoUrl: "",
     artistName: "Kojo Cue",
+    lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis",
 
   }, {
     id: 2,
@@ -20,6 +21,8 @@ const locationPins=[
     songUrl: "",
     videoUrl: "",
     artistName: "Kojo Cue",
+        lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis",
+
 
   }, {
     id: 3,
@@ -31,6 +34,8 @@ const locationPins=[
     songUrl: "",
     videoUrl: "",
     artistName: "Kojo Cue",
+        lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis",
+
 
   }, {
     id: 4,
@@ -42,6 +47,8 @@ const locationPins=[
     songUrl: "",
     videoUrl: "",
     artistName: "Kojo Cue",
+        lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis",
+
 
   }, {
     id: 5,

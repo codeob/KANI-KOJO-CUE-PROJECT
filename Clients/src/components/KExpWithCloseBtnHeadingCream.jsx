@@ -9,8 +9,8 @@ export default function KExpWithCloseBtnHeadingCream({open}) {
       </div>
       <div>
         <button className="cursor-pointer" onClick={open}>
-        <img src={closeBtnCream} alt="Close Button" />
-      </button>
+          <img src={closeBtnCream} alt="Close Button" />
+        </button>
       </div>
     </div>
   )

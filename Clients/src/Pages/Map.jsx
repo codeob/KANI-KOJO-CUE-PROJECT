@@ -29,9 +29,9 @@ function Map() {
   }
 
   return (
-    <div className="flex justify-center items-center h-screen w-screen">
+    <div className="flex justify-center items-center h-screen w-screen p-10">
       {/* Container that keeps image responsive */}
-      <div className="relative w-full min-w-2xl aspect-[16/9]">
+      <div className="relative min-w-7xl aspect-[16/9] ">
         {/* Map image */}
         <img
           src={mapimg}
@@ -49,7 +49,6 @@ function Map() {
             style={{ top:loc.coords.top, left:loc.coords.left}}
             onClick={()=> setSelectedLocation(loc.id)}
           />
-
         ))}
 
 

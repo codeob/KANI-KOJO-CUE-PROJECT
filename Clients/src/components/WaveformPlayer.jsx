@@ -1,10 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
-import grainBG from "../assets/backgrounds/grainBG.png"
 import mapBG from '../assets/backgrounds/Map_Bkg.png'
 import PauseIcon from "../components/PauseIcon"
 import PlayIcon from '../components/PlayIcon';
 import KExpWithCloseBtnHeadingBrown from './KExpWithCloseBtnHeadingBrown';
-import KExpWithCloseBtnHeadingCream from './KExpWithCloseBtnHeadingCream';
 import BTMapAndAudioLink from './BTMapAndAudioLink';
 
 
@@ -15,6 +13,7 @@ const WaveformPlayer = ({ audioUrl }) => {
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const [waveformData, setWaveformData] = useState([]);
+
 
   // ✅ Generate waveform data (placeholder, not from actual file yet)
   useEffect(() => {

@@ -6,6 +6,7 @@ import WaveformPlayer from "./components/WaveformPlayer"
 import song1 from "./audio/song1.mp3"
 import ImagePreviewComponent from "./components/ImagePreviewComponent"
 import locationPins from "../locations"
+import LyricsContainer from "./components/LyricsContainer"
 
 function App() {
 
@@ -23,8 +24,8 @@ function App() {
 
 
        {/* creating and testing individual components down here */}
-       <Route path='/waveform' element={<ImagePreviewComponent audioUrl={song1}/>}/>
-        {/* <Route path='/waveform2' element={<AudioWaveformProgress audioUrl={song1} />}/>        */}
+       <Route path='/lyrics/:id' element={<LyricsContainer />}/>
+        {/* <Route path='/waveform2' element={<WaveformPlayer audioUrl={song1} />}/>        */}
       </Route>
     )
   )
