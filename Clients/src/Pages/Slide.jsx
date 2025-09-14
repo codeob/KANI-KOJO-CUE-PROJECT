@@ -8,15 +8,15 @@ function Slide({ location, close, isAnimating }) {
   if (!location) return null;
 
   return (
-    <div className={`bg-grainbkg-100 h-screen w-full md:w-4/5 lg:w-3/5 xl:w-1/2 2xl:w-2/5  transition-transform duration-300 ease-in-out ${isAnimating ? 'translate-x-0' : '-translate-x-full'
+    <div className={`bg-grainbkg-100 h-screen w-3/5 transition-transform duration-300 ease-in-out ${isAnimating ? 'translate-x-0' : '-translate-x-full'
       }`}
       style={{ position: 'absolute', left: 0, top: 0, transform: isAnimating ? 'translateX(0)' : 'translateX(-100%)' }}
     >
-      <img src={grainBG} alt="" className='absolute  ' />
-      <div className='p-4 md:p-5 lg:p-6 xl:p-8'>
+      <img src={grainBG} alt="" className='absolute left-0' />
+      <div className='p-4 md:p-5 lg:p-6 xl:p-8 relative z-50'>
         {/* close  button and the experience  */}
         <div className="">
-          <KExpWithCloseBtnHeadingCream open={close} />
+          <KExpWithCloseBtnHeadingCream close={close} />
         </div>
         <div className="">
           {/*location name with the subwayloc icons   */}
