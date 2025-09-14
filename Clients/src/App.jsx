@@ -7,6 +7,9 @@ import song1 from "./audio/song1.mp3"
 import ImagePreviewComponent from "./components/ImagePreviewComponent"
 import locationPins from "../locations"
 import LyricsContainer from "./components/LyricsContainer"
+import FIlmReel from "./components/FIlmReel"
+import BTSPhotos from "./components/BTSPhotos"
+import WrittenReflection from "./components/WrittenReflection"
 
 function App() {
 
@@ -24,8 +27,14 @@ function App() {
 
 
        {/* creating and testing individual components down here */}
-       <Route path='/lyrics/:id' element={<LyricsContainer />}/>
-        {/* <Route path='/waveform2' element={<WaveformPlayer audioUrl={song1} />}/>        */}
+        <Route path='/lyrics/:id' element={<LyricsContainer />}/>
+        <Route path='/waveform2' element={<WaveformPlayer audioUrl={song1} />}/>       
+        <Route path='/filmreel' element={<FIlmReel />}/>       
+        <Route path='/bts_photos' element={<BTSPhotos />}/>       
+        <Route path='/reflection' element={<WrittenReflection />}/>       
+
+
+
       </Route>
     )
   )
