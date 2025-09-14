@@ -34,3 +34,22 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+
+.oswald{
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+/*customized colors for the project */
+@theme {
+  --color-primary-100:#522a00;
+  --color-secondy-100:#7b3f00;
+  --color-tertiary-100:##B17010;
+  --color-textLight-100:#e1ddd4;
+  --color-surface-100:#b69f7c;
+  --color-watermark-100:#afa692;
+  --color-grainbkg-100:#E1DDD4
+}
