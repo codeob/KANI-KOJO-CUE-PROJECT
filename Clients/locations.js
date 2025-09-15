@@ -1,200 +1,315 @@
-const locationPins=[
+import leaf from './src/assets/leaf.png';
+import movieic from './src/assets/moviesic.png';
+import musicclef from './src/assets/musicclef.png';
+import picture from './src/assets/picture.png';
+import playlist from './src/assets/playlist.png';
+import rightarrow from './src/assets/Rarrow.png';
+import videofile from './src/assets/videofile.png';
+import voiceid from './src/assets/voiceid.png';
+import videoplay from './src/assets/videoplay.png';
+import camerastudio from './src/assets/camerastudio.png';
+import microphone from './src/assets/microphone.png';
+import videoslider from './src/assets/videoslider.png';
+
+const locationPins = [
   {
     id: 1,
     locationName: "Ota 42 - Adum",
     importance: "KO-JO'S BIRTHPLACE AND MOTHER'S FAMILY HOME",
-    coords: {top: "13%", left: "19.5%"},
+    coords: { top: "13%", left: "19.5%" },
     image: "",
     songTitle: "Fruit of the Womb",
     songUrl: "",
     videoUrl: "",
     artistName: "Kojo Cue",
     lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis",
-
-  }, {
+    buttons: [
+      { text: "FILM REEL", style: "border-2 border-[#a8743b] text-[#7B3F00] bg-transparent rock", textSize: "text-sm md:text-base", iconSize: "w-5 h-5", position: "mt-2", icon: movieic, iconColor: "#7B3F00", arrow: rightarrow, arrowColor: "#7B3F00", link: "/film-reel/ota-42-adum" },
+      { text: "REFLECTIONS", style: "bg-[#B69F7C] text-white border-2 border-[#a8743b] rock", textSize: "text-sm md:text-base", iconSize: "w-6 h-6", position: "mt-2", icon: leaf, iconColor: "#E1DDD4", arrow: rightarrow, arrowColor: "#E1DDD4", link: "/reflections/ota-42-adum" },
+      { text: "LYRICS", style: "border-2 border-[#B69F7C] text-[#7B3F00] bg-transparent rock", textSize: "text-sm md:text-base", iconSize: "w-5 h-5", position: "mt-2", icon: musicclef, iconColor: "#7B3F00", arrow: rightarrow, arrowColor: "#7B3F00", link: "/lyrics/fruit-of-the-womb" },
+    ],
+    prevButton: { text: "PREVIOUS", style: "border-2 border-[#522A00] text-[#522A00] bg-transparent rock", textSize: "text-sm md:text-base", position: "", link: "/previous" },
+    nextButton: { text: "NEXT LOCATION", style: "bg-[#522A00] text-[#E1DDD4] rock flex items-center gap-3", textSize: "text-sm md:text-base", iconSize: "w-5 h-5", position: "", icon: rightarrow, iconColor: "#E1DDD4", link: "/next" },
+  },
+  {
     id: 2,
     locationName: "Ota 42 - Adum",
     importance: "KO-JO'S BIRTHPLACE AND MOTHER'S FAMILY HOME",
     image: "",
-    coords: {top: "5%", left: "68%"},
+    coords: { top: "5%", left: "68%" },
     songTitle: "Big Boy",
     songUrl: "",
     videoUrl: "",
     artistName: "Kojo Cue",
-        lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis",
-
-
-  }, {
+    lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis",
+    buttons: [
+      { text: "FILM REEL", style: "text-[#7B3F00] border-2 border-[#B69F7C] rock", textSize: "text-sm md:text-base", iconSize: "w-5 h-5", position: "mt-2 pt-3", icon: movieic, iconColor: "#7B3F00", arrow: rightarrow, arrowColor: "#7B3F00", link: "/film-reel/big-boy" },
+      { text: "REFLECTIONS", style: "rock border-2 border-[#B69F7C] text-[#E1DDD4] bg-[#B69F7C]", textSize: "text-sm md:text-base", iconSize: "w-6 h-6", position: "mt-2", icon: leaf, iconColor: "#E1DDD4", arrow: rightarrow, arrowColor: "#E1DDD4", link: "/reflections/big-boy" },
+    ],
+    prevButton: { text: "PREVIOUS", style: "border-2 border-[#522A00] text-[#522A00] bg-transparent rock", textSize: "text-sm md:text-base", position: "", link: "/previous" },
+    nextButton: { text: "NEXT LOCATION", style: "bg-[#522A00] text-[#E1DDD4] rock flex items-center gap-3", textSize: "text-sm md:text-base", iconSize: "w-5 h-5", position: "", icon: rightarrow, iconColor: "#E1DDD4", link: "/next" },
+  },
+  {
     id: 3,
     locationName: "Kotoko - Oduom",
     importance: "First friendship, first injury, love for football",
     image: "",
-    coords: {top: "32%", left: "50%"},
+    coords: { top: "32%", left: "50%" },
     songTitle: "Next term",
     songUrl: "",
     videoUrl: "",
     artistName: "Kojo Cue",
-        lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis",
-
-
-  }, {
+    lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis",
+    buttons: [
+      { text: "MIXING NOTES", style: "border-2 border-[#B69F7C] text-[#7B3F00] bg-transparent rock", textSize: "text-sm md:text-base", iconSize: "w-5 h-5", position: "mt-2", icon: videofile, iconColor: "#7B3F00", arrow: rightarrow, arrowColor: "#7B3F00", link: "/mixing-notes/next-term" },
+      { text: "VOICE NOTE", style: "bg-[#B69F7C] text-[#E1DDD4] border-2 border-[#B69F7C] rock", textSize: "text-sm md:text-base", iconSize: "w-6 h-6", position: "mt-2", icon: voiceid, iconColor: "#E1DDD4", arrow: rightarrow, arrowColor: "#E1DDD4", link: "/voice-note/next-term" },
+      { text: "LYRICS BREAKDOWN", style: "border-2 border-[#B69F7C] text-[#7B3F00] bg-transparent rock", textSize: "text-sm md:text-base", iconSize: "w-5 h-5", position: "mt-2", icon: playlist, iconColor: "#7B3F00", arrow: rightarrow, arrowColor: "#7B3F00", link: "/lyrics-breakdown/next-term" },
+    ],
+    prevButton: { text: "PREVIOUS", style: "border-2 border-[#522A00] text-[#522A00] bg-transparent rock", textSize: "text-sm md:text-base", position: "", link: "/previous" },
+    nextButton: { text: "NEXT LOCATION", style: "bg-[#522A00] text-[#E1DDD4] rock flex items-center gap-3", textSize: "text-sm md:text-base", iconSize: "w-5 h-5", position: "", icon: rightarrow, iconColor: "#E1DDD4", link: "/next" },
+  },
+  {
     id: 4,
     locationName: "Jamaica House - Bantama",
     importance: "Core childhood home. Father’s side of the family",
     image: "",
-    coords: {top: "23%", left: "77.8%"},
+    coords: { top: "23%", left: "77.8%" },
     songTitle: "Bantama Blues 3",
     songUrl: "",
     videoUrl: "",
     artistName: "Kojo Cue",
-        lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis",
-
-
-  }, {
+    lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis",
+    buttons: [
+      { text: "BTS PHOTOS", style: "border-2 border-[#B69F7C] text-[#B69F7C] rock", textSize: "text-sm md:text-base", iconSize: "w-5 h-5", position: "mt-2", icon: picture, iconColor: "#7B3F00", arrow: rightarrow, arrowColor: "#7B3F00", link: "/bts-photos/bantama-blues-3" },
+      { text: "LYRICS BREAKDOWN", style: "text-[#7B3F00] border-2 border-[#B69F7C] rock", textSize: "text-sm md:text-base", iconSize: "w-5 h-5", position: "mt-2", icon: playlist, iconColor: "#7B3F00", arrow: rightarrow, arrowColor: "#7B3F00", link: "/lyrics-breakdown/bantama-blues-3" },
+      { text: "WATCH MUSIC VIDEO", style: "text-[#E1DDD4] bg-[#B69F7C] rock", textSize: "text-sm md:text-base", iconSize: "w-6 h-6", position: "mt-2", icon: videoslider, iconColor: "#E1DDD4", arrow: rightarrow, arrowColor: "#E1DDD4", link: "/music-video/bantama-blues-3" },
+    ],
+    prevButton: { text: "PREVIOUS", style: "border-2 border-[#522A00] text-[#522A00] bg-transparent rock", textSize: "text-sm md:text-base", position: "", link: "/previous" },
+    nextButton: { text: "NEXT LOCATION", style: "bg-[#522A00] text-[#E1DDD4] rock flex items-center gap-3", textSize: "text-sm md:text-base", iconSize: "w-5 h-5", position: "", icon: rightarrow, iconColor: "#E1DDD4", link: "/next" },
+  },
+  {
     id: 5,
     locationName: "Jamaica House - Bantama",
     importance: "Core childhood home. Father’s side of the family",
     image: "",
-    coords: {top: "55%", left: "45.8%"},
+    coords: { top: "55%", left: "45.8%" },
     songTitle: "Abrantie",
     songUrl: "",
     videoUrl: "",
     artistName: "Kojo Cue",
-
-  }, {
+    buttons: [
+      { text: "FILM REEL", style: "border-2 border-[#B69F7C] text-[#7B3F00] rock", textSize: "text-sm md:text-base", iconSize: "w-5 h-5", position: "mt-2", icon: movieic, iconColor: "#7B3F00", arrow: rightarrow, arrowColor: "#7B3F00", link: "/film-reel/abrantie" },
+      { text: "Lyrics Breakdown", style: "border-2 border-[#B69F7C] text-[#7B3F00] rock", textSize: "text-sm md:text-base", iconSize: "w-5 h-5", position: "mt-2", icon: playlist, iconColor: "#7B3F00", arrow: rightarrow, arrowColor: "#7B3F00", link: "/lyrics-breakdown/abrantie" },
+    ],
+    prevButton: { text: "PREVIOUS", style: "border-2 border-[#522A00] text-[#522A00] bg-transparent rock", textSize: "text-sm md:text-base", position: "", link: "/previous" },
+    nextButton: { text: "NEXT LOCATION", style: "bg-[#522A00] text-[#E1DDD4] rock flex items-center gap-3", textSize: "text-sm md:text-base", iconSize: "w-5 h-5", position: "", icon: rightarrow, iconColor: "#E1DDD4", link: "/next" },
+  },
+  {
     id: 6,
     locationName: "OWASS BASIC - Santasi",
     importance: "Junior and senior school years; early rap influences.",
     image: "",
-    coords: {top: "57%", left: "42%"},
+    coords: { top: "57%", left: "42%" },
     songTitle: "Squad",
     songUrl: "",
     videoUrl: "",
     artistName: "Kojo Cue",
-
-  }, {
+    buttons: [
+      { text: "VISUALIZER", style: "border-2 border-[#B69F7C] text-[#7B3F00] rock", textSize: "text-sm md:text-base", iconSize: "w-5 h-5", position: "mt-2", icon: videoplay, iconColor: "#7B3F00", arrow: rightarrow, arrowColor: "#7B3F00", link: "/visualizer/squad" },
+      { text: "LYRICS BREAKDOWN", style: "border-2 border-[#B69F7C] text-[#a8743b] rock", textSize: "text-sm md:text-base", iconSize: "w-5 h-5", position: "mt-2", icon: playlist, iconColor: "#7B3F00", arrow: rightarrow, arrowColor: "#7B3F00", link: "/lyrics-breakdown/squad" },
+    ],
+    prevButton: { text: "PREVIOUS", style: "border-2 border-[#522A00] text-[#522A00] bg-transparent rock", textSize: "text-sm md:text-base", position: "", link: "/previous" },
+    nextButton: { text: "NEXT LOCATION", style: "bg-[#522A00] text-[#E1DDD4] rock flex items-center gap-3", textSize: "text-sm md:text-base", iconSize: "w-5 h-5", position: "", icon: rightarrow, iconColor: "#E1DDD4", link: "/next" },
+  },
+  {
     id: 7,
     locationName: "OWASS BASIC - Santasi",
     importance: "Junior and senior school years; early rap influences.",
     image: "",
-    coords: {top: "69.8%", left: "27.2%"},
+    coords: { top: "69.8%", left: "27.2%" },
     songTitle: "Mr. Eben Interlude",
     songUrl: "",
     videoUrl: "",
     artistName: "Kojo Cue",
-
-  },   {
+    buttons: [
+      { text: "LYRICS BREAKDOWN", style: "border-2 border-[#B69F7C] text-[#7B3F00] rock", textSize: "text-sm md:text-base", iconSize: "w-5 h-5", position: "mt-2", icon: playlist, iconColor: "#7B3F00", arrow: rightarrow, arrowColor: "#7B3F00", link: "/lyrics-breakdown/mr-eben-interlude" },
+      { text: "INTERVIEW", style: "text-[#7B3F00] border-2 border-[#B69F7C] rock", textSize: "text-sm md:text-base", iconSize: "w-5 h-5", position: "mt-2", icon: microphone, iconColor: "#7B3F00", arrow: rightarrow, arrowColor: "#7B3F00", link: "/interview/mr-eben-interlude" },
+      { text: "MIXING NOTES", style: "border-2 border-[#B69F7C] text-[#7B3F00] rock", textSize: "text-sm md:text-base", iconSize: "w-5 h-5", position: "mt-2", icon: videofile, iconColor: "#7B3F00", arrow: rightarrow, arrowColor: "#7B3F00", link: "/mixing-notes/mr-eben-interlude" },
+    ],
+    prevButton: { text: "PREVIOUS", style: "border-2 border-[#522A00] text-[#522A00] bg-transparent rock", textSize: "text-sm md:text-base", position: "", link: "/previous" },
+    nextButton: { text: "NEXT LOCATION", style: "bg-[#522A00] text-[#E1DDD4] rock flex items-center gap-3", textSize: "text-sm md:text-base", iconSize: "w-5 h-5", position: "", icon: rightarrow, iconColor: "#E1DDD4", link: "/next" },
+  },
+  {
     id: 8,
     locationName: "SMALL LONDON - Breman",
     importance: "Grandmother's death and family changes.",
     image: "",
-    coords: {top: "81.7%", left: "47.8%"},
+    coords: { top: "81.7%", left: "47.8%" },
     songTitle: "Mysterious Ways",
     songUrl: "",
     videoUrl: "",
     artistName: "Kojo Cue",
-
-  }, {
+    buttons: [
+      { text: "FULL LYRICS", style: "border-2 border-[#B69F7C] text-[#7B3F00] rock", textSize: "text-sm md:text-base", iconSize: "w-5 h-5", position: "mt-2", icon: musicclef, iconColor: "#7B3F00", arrow: rightarrow, arrowColor: "#7B3F00", link: "/full-lyrics/mysterious-ways" },
+      { text: "REFLECTION", style: "border-2 border-[#B69F7C] text-[#7B3F00] rock", textSize: "text-sm md:text-base", iconSize: "w-5 h-5", position: "mt-2", icon: leaf, iconColor: "#7B3F00", arrow: rightarrow, arrowColor: "#7B3F00", link: "/reflection/mysterious-ways" },
+    ],
+    prevButton: { text: "PREVIOUS", style: "border-2 border-[#522A00] text-[#522A00] bg-transparent rock", textSize: "text-sm md:text-base", position: "", link: "/previous" },
+    nextButton: { text: "NEXT LOCATION", style: "bg-[#522A00] text-[#E1DDD4] rock flex items-center gap-3", textSize: "text-sm md:text-base", iconSize: "w-5 h-5", position: "", icon: rightarrow, iconColor: "#E1DDD4", link: "/next" },
+  },
+  {
     id: 9,
     locationName: "SMALL LONDON - Breman",
     importance: "Grandmother's death and family changes.",
     image: "",
-    coords: {top: "88%", left: "56%"},
+    coords: { top: "88%", left: "56%" },
     songTitle: "Angel",
     songUrl: "",
     videoUrl: "",
     artistName: "Kojo Cue",
-
-  },  {
+    buttons: [
+      { text: "FILM REEL", style: "border-2 border-[#B69F7C] text-[#7B3F00] rock", textSize: "text-sm md:text-base", iconSize: "w-5 h-5", position: "mt-2", icon: movieic, iconColor: "#7B3F00", arrow: rightarrow, arrowColor: "#7B3F00", link: "/film-reel/angel" },
+      { text: "MIXING NOTES", style: "text-[#7B3F00] border-2 border-[#B69F7C] rock", textSize: "text-sm md:text-base", iconSize: "w-5 h-5", position: "mt-2", icon: videofile, iconColor: "#7B3F00", arrow: rightarrow, arrowColor: "#7B3F00", link: "/mixing-notes/angel" },
+      { text: "VOICE NOTES", style: "border-2 border-[#B69F7C] text-[#7B3F00] bg-transparent rock", textSize: "text-sm md:text-base", iconSize: "w-5 h-5", position: "mt-2", icon: voiceid, iconColor: "#7B3F00", arrow: rightarrow, arrowColor: "#7B3F00", link: "/voice-notes/angel" },
+    ],
+    prevButton: { text: "PREVIOUS", style: "border-2 border-[#522A00] text-[#522A00] bg-transparent rock", textSize: "text-sm md:text-base", position: "", link: "/previous" },
+    nextButton: { text: "NEXT LOCATION", style: "bg-[#522A00] text-[#E1DDD4] rock flex items-center gap-3", textSize: "text-sm md:text-base", iconSize: "w-5 h-5", position: "", icon: rightarrow, iconColor: "#E1DDD4", link: "/next" },
+  },
+  {
     id: 10,
     locationName: "F176 - Buokrom Estate",
     importance: "Adolescence, the first meeting with father.",
     image: "",
-    coords: {top: "87%", left: "79%"},
+    coords: { top: "87%", left: "79%" },
     songTitle: "F176",
     songUrl: "",
     videoUrl: "",
     artistName: "Kojo Cue",
-
-  },{
+    buttons: [
+      { text: "VOICE NOTE", style: "border-2 border-[#B69F7C] text-[#7B3F00] rock", textSize: "text-sm md:text-base", iconSize: "w-5 h-5", position: "mt-2", icon: voiceid, iconColor: "#7B3F00", arrow: rightarrow, arrowColor: "#7B3F00", link: "/voice-note/f176" },
+    ],
+    prevButton: { text: "PREVIOUS", style: "border-2 border-[#522A00] text-[#522A00] bg-transparent rock", textSize: "text-sm md:text-base", position: "", link: "/previous" },
+    nextButton: { text: "NEXT LOCATION", style: "bg-[#522A00] text-[#E1DDD4] rock flex items-center gap-3", textSize: "text-sm md:text-base", iconSize: "w-5 h-5", position: "", icon: rightarrow, iconColor: "#E1DDD4", link: "/next" },
+  },
+  {
     id: 11,
     locationName: "F176 - Buokrom Estate",
     importance: "Adolescence, the first meeting with father.",
     image: "",
-    coords: {top: "23%", left: "16%"},
+    coords: { top: "23%", left: "16%" },
     songTitle: "Grew Up Fast",
     songUrl: "",
     videoUrl: "",
     artistName: "Kojo Cue",
-
-  }, {
+    buttons: [
+      { text: "FULL LYRICS", style: "border-2 border-[#B69F7C] text-[#7B3F00] rock", textSize: "text-sm md:text-base", iconSize: "w-5 h-5", position: "mt-2", icon: musicclef, iconColor: "#7B3F00", arrow: rightarrow, arrowColor: "#7B3F00", link: "/full-lyrics/grew-up-fast" },
+    ],
+    prevButton: { text: "PREVIOUS", style: "border-2 border-[#522A00] text-[#522A00] bg-transparent rock", textSize: "text-sm md:text-base", position: "", link: "/previous" },
+    nextButton: { text: "NEXT LOCATION", style: "bg-[#522A00] text-[#E1DDD4] rock flex items-center gap-3", textSize: "text-sm md:text-base", iconSize: "w-5 h-5", position: "", icon: rightarrow, iconColor: "#E1DDD4", link: "/next" },
+  },
+  {
     id: 12,
     locationName: "F176 - Buokrom Estate",
     importance: "Adolescence, the first meeting with father.",
     image: "",
-    coords: {top: "42%", left: "19.5%"},
+    coords: { top: "42%", left: "19.5%" },
     songTitle: "Tontonte",
     songUrl: "",
     videoUrl: "",
     artistName: "Kojo Cue",
-
-  },  {
+    buttons: [
+      { text: "BTS PHOTOS", style: "border-2 border-[#B69F7C] text-[#7B3F00] rock", textSize: "text-sm md:text-base", iconSize: "w-5 h-5", position: "mt-2", icon: picture, iconColor: "#7B3F00", arrow: rightarrow, arrowColor: "#7B3F00", link: "/bts-photos/tontonte" },
+      { text: "VISUALIZER", style: "text-[#7B3F00] border-2 border-[#B69F7C] rock", textSize: "text-sm md:text-base", iconSize: "w-5 h-5", position: "mt-2", icon: videoplay, iconColor: "#7B3F00", arrow: rightarrow, arrowColor: "#7B3F00", link: "/visualizer/tontonte" },
+      { text: "FULL LYRICS", style: "border-2 border-[#B69F7C] text-[#7B3F00] rock", textSize: "text-sm md:text-base", iconSize: "w-5 h-5", position: "mt-2", icon: musicclef, iconColor: "#7B3F00", arrow: rightarrow, arrowColor: "#7B3F00", link: "/full-lyrics/tontonte" },
+    ],
+    prevButton: { text: "PREVIOUS", style: "border-2 border-[#522A00] text-[#522A00] bg-transparent rock", textSize: "text-sm md:text-base", position: "", link: "/previous" },
+    nextButton: { text: "NEXT LOCATION", style: "bg-[#522A00] text-[#E1DDD4] rock flex items-center gap-3", textSize: "text-sm md:text-base", iconSize: "w-5 h-5", position: "", icon: rightarrow, iconColor: "#E1DDD4", link: "/next" },
+  },
+  {
     id: 13,
     locationName: "CLAMP STREET - Lake",
-    importance: "Current family home; recent life changes .",
+    importance: "Current family home; recent life changes.",
     image: "",
-    coords: {top: "13%", left: "43%"},
+    coords: { top: "13%", left: "43%" },
     songTitle: "Dreams",
     songUrl: "",
     videoUrl: "",
     artistName: "Kojo Cue",
-
-  },{
+    buttons: [
+      { text: "FULL LYRICS", style: "border-2 border-[#B69F7C] text-[#7B3F00] rock", textSize: "text-sm md:text-base", iconSize: "w-5 h-5", position: "mt-2", icon: musicclef, iconColor: "#7B3F00", arrow: rightarrow, arrowColor: "#7B3F00", link: "/full-lyrics/dreams" },
+      { text: "VOICE NOTE", style: "border-2 border-[#B69F7C] text-[#7B3F00] rock", textSize: "text-sm md:text-base", iconSize: "w-5 h-5", position: "mt-2", icon: voiceid, iconColor: "#7B3F00", arrow: rightarrow, arrowColor: "#7B3F00", link: "/voice-note/dreams" },
+    ],
+    prevButton: { text: "PREVIOUS", style: "border-2 border-[#522A00] text-[#522A00] bg-transparent rock", textSize: "text-sm md:text-base", position: "", link: "/previous" },
+    nextButton: { text: "NEXT LOCATION", style: "bg-[#522A00] text-[#E1DDD4] rock flex items-center gap-3", textSize: "text-sm md:text-base", iconSize: "w-5 h-5", position: "", icon: rightarrow, iconColor: "#E1DDD4", link: "/next" },
+  },
+  {
     id: 14,
     locationName: "CLAMP STREET - Lake",
-    importance: "Current family home; recent life changes .",
+    importance: "Current family home; recent life changes.",
     image: "",
-    coords: {top: "60%", left: "19.5%"},
+    coords: { top: "60%", left: "19.5%" },
     songTitle: "You Are",
     songUrl: "",
     videoUrl: "",
     artistName: "Kojo Cue",
-
-  }, {
+    buttons: [
+      { text: "FILM REEL", style: "border-2 border-[#B69F7C] text-[#7B3F00] rock", textSize: "text-sm md:text-base", iconSize: "w-5 h-5", position: "mt-2", icon: movieic, iconColor: "#7B3F00", arrow: rightarrow, arrowColor: "#7B3F00", link: "/film-reel/you-are" },
+      { text: "FULL LYRICS", style: "rock text-[#7B3F00] border-2 border-[#B69F7C]", textSize: "text-sm md:text-base", iconSize: "w-5 h-5", position: "mt-2", icon: musicclef, iconColor: "#7B3F00", arrow: rightarrow, arrowColor: "#7B3F00", link: "/full-lyrics/you-are" },
+      { text: "BTS VIDEO", style: "border-2 border-[#B69F7C] text-[#7B3F00] rock", textSize: "text-sm md:text-base", iconSize: "w-5 h-5", position: "mt-2", icon: camerastudio, iconColor: "#7B3F00", arrow: rightarrow, arrowColor: "#7B3F00", link: "/bts-video/you-are" },
+    ],
+    prevButton: { text: "PREVIOUS", style: "border-2 border-[#522A00] text-[#522A00] bg-transparent rock", textSize: "text-sm md:text-base", position: "", link: "/previous" },
+    nextButton: { text: "NEXT LOCATION", style: "bg-[#522A00] text-[#E1DDD4] rock flex items-center gap-3", textSize: "text-sm md:text-base", iconSize: "w-5 h-5", position: "", icon: rightarrow, iconColor: "#E1DDD4", link: "/next" },
+  },
+  {
     id: 15,
     locationName: "CLAMP STREET - Lake",
-    importance: "Current family home; recent life changes .",
+    importance: "Current family home; recent life changes.",
     image: "",
-    coords: {top: "13%", left: "60%"},
+    coords: { top: "13%", left: "60%" },
     songTitle: "The Fall",
     songUrl: "",
     videoUrl: "",
     artistName: "Kojo Cue",
-
-  }, {
+    buttons: [
+      { text: "FILM REEL", style: "border-2 border-[#B69F7C] text-[#7B3F00] rock", textSize: "text-sm md:text-base", iconSize: "w-5 h-5", position: "mt-2", icon: movieic, iconColor: "#7B3F00", arrow: rightarrow, arrowColor: "#7B3F00", link: "/film-reel/the-fall" },
+      { text: "MIXING NOTES", style: "border-2 border-[#B69F7C] text-[#7B3F00] rock", textSize: "text-sm md:text-base", iconSize: "w-5 h-5", position: "mt-2", icon: videofile, iconColor: "#7B3F00", arrow: rightarrow, arrowColor: "#7B3F00", link: "/mixing-notes/the-fall" },
+    ],
+    prevButton: { text: "PREVIOUS", style: "border-2 border-[#522A00] text-[#522A00] bg-transparent rock", textSize: "text-sm md:text-base", position: "", link: "/previous" },
+    nextButton: { text: "NEXT LOCATION", style: "bg-[#522A00] text-[#E1DDD4] rock flex items-center gap-3", textSize: "text-sm md:text-base", iconSize: "w-5 h-5", position: "", icon: rightarrow, iconColor: "#E1DDD4", link: "/next" },
+  },
+  {
     id: 16,
     locationName: "CLAMP STREET - Lake",
-    importance: "Current family home; recent life changes .",
+    importance: "Current family home; recent life changes.",
     image: "",
-    coords: {top: "13%", left: "74%"},
+    coords: { top: "13%", left: "74%" },
     songTitle: "Onipa Hia Mmoa",
     songUrl: "",
     videoUrl: "",
     artistName: "Kojo Cue",
-
-  }, {
+    buttons: [
+      { text: "FULL LYRICS", style: "border-2 border-[#a8743b] text-[#a8743b] bg-transparent", textSize: "text-sm md:text-base", iconSize: "w-5 h-5", position: "mt-2", icon: musicclef, iconColor: "#2196F3", arrow: rightarrow, arrowColor: "#2196F3", link: "/full-lyrics/onipa-hia-mmoa" },
+      { text: "CUE LIVE SESSION", style: "border-2 border-[#a8743b] text-[#a8743b] bg-transparent", textSize: "text-sm md:text-base", iconSize: "w-5 h-5", position: "mt-2", icon: videoplay, iconColor: "#4CAF50", arrow: rightarrow, arrowColor: "#4CAF50", link: "/cue-live-session/onipa-hia-mmoa" },
+    ],
+    prevButton: { text: "PREVIOUS", style: "border-2 border-[#522A00] text-[#522A00] bg-transparent rock", textSize: "text-sm md:text-base", position: "", link: "/previous" },
+    nextButton: { text: "NEXT LOCATION", style: "bg-[#522A00] text-[#E1DDD4] rock flex items-center gap-3", textSize: "text-sm md:text-base", iconSize: "w-5 h-5", position: "", icon: rightarrow, iconColor: "#E1DDD4", link: "/next" },
+  },
+  {
     id: 17,
     locationName: "CLAMP STREET - Lake",
-    importance: "Current family home; recent life changes .",
+    importance: "Current family home; recent life changes.",
     image: "",
-    coords: {top: "74%", left: "19.5%"},
+    coords: { top: "74%", left: "19.5%" },
     songTitle: "Onipa Hia Mmoa",
     songUrl: "",
     videoUrl: "",
-    artistName: "Gold Dust",    
+    artistName: "Gold Dust",
+    buttons: [
+      { text: "WRITTEN STORY", style: "border-2 border-[#B69F7C] text-[#7B3F00] rock", textSize: "text-sm md:text-base", iconSize: "w-5 h-5", position: "mt-2", icon: leaf, iconColor: "#7B3F00", arrow: rightarrow, arrowColor: "#7B3F00", link: "/written-story/onipa-hia-mmoa" },
+      { text: "FULL LYRICS", style: "border-2 border-[#B69F7C] text-[#7B3F00] rock", textSize: "text-sm md:text-base", iconSize: "w-5 h-5", position: "mt-2", icon: musicclef, iconColor: "#7B3F00", arrow: rightarrow, arrowColor: "#7B3F00", link: "/full-lyrics/onipa-hia-mmoa" },
+    ],
+    prevButton: { text: "PREVIOUS", style: "border-2 border-[#522A00] text-[#522A00] bg-transparent rock", textSize: "text-sm md:text-base", position: "", link: "/previous" },
+    nextButton: { text: "NEXT LOCATION", style: "bg-[#522A00] text-[#E1DDD4] rock flex items-center gap-3", textSize: "text-sm md:text-base", iconSize: "w-5 h-5", position: "", icon: rightarrow, iconColor: "#E1DDD4", link: "/next" },
   },
-]
+];
 
-
-
-export default locationPins
+export default locationPins;
