@@ -3,15 +3,15 @@ import KExpWithCloseBtnHeadingCream from '../components/KExpWithCloseBtnHeadingC
 import subwayloc from '../assets/subwayloc.png';
 import grainBG from '../assets/backgrounds/grainBG.png';
 import Aluming from '../assets/Group19.png';
+import { Link } from 'react-router-dom';
 
 function Slide({ location, close, isAnimating }) {
   if (!location) return null;
 
   return (
     <div
-      className={`bg-grainbkg-100 h-screen w-full sm:w-3/4 md:w-3/5 lg:w-1/2 transition-transform duration-300 ease-in-out ${
-        isAnimating ? 'translate-x-0' : '-translate-x-full'
-      }`}
+      className={`bg-grainbkg-100 h-screen w-full sm:w-3/4 md:w-3/5 lg:w-1/2 transition-transform duration-300 ease-in-out ${isAnimating ? 'translate-x-0' : '-translate-x-full'
+        }`}
       style={{
         position: 'absolute',
         left: 0,
@@ -69,7 +69,7 @@ function Slide({ location, close, isAnimating }) {
                         src={btn.icon}
                         alt={`${btn.text} icon`}
                         className={`object-contain ${btn.iconSize}`}
-                        style={{ filter: `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="colorFilter"><feColorMatrix type="matrix" values="0 0 0 0 ${parseInt(btn.iconColor.slice(1,3),16)/255} 0 0 0 0 ${parseInt(btn.iconColor.slice(3,5),16)/255} 0 0 0 0 ${parseInt(btn.iconColor.slice(5,7),16)/255} 0 0 0 1 0"/></filter></svg>#colorFilter')` }}
+                        style={{ filter: `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="colorFilter"><feColorMatrix type="matrix" values="0 0 0 0 ${parseInt(btn.iconColor.slice(1, 3), 16) / 255} 0 0 0 0 ${parseInt(btn.iconColor.slice(3, 5), 16) / 255} 0 0 0 0 ${parseInt(btn.iconColor.slice(5, 7), 16) / 255} 0 0 0 1 0"/></filter></svg>#colorFilter')` }}
                       />
                       <span className={`font-semibold tracking-wider ${btn.textSize}`}>
                         {btn.text}
@@ -80,43 +80,35 @@ function Slide({ location, close, isAnimating }) {
                       src={btn.arrow}
                       alt="arrow icon"
                       className={`object-contain ${btn.iconSize}`}
-                      style={{ filter: `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="colorFilter"><feColorMatrix type="matrix" values="0 0 0 0 ${parseInt(btn.arrowColor.slice(1,3),16)/255} 0 0 0 0 ${parseInt(btn.arrowColor.slice(3,5),16)/255} 0 0 0 0 ${parseInt(btn.arrowColor.slice(5,7),16)/255} 0 0 0 1 0"/></filter></svg>#colorFilter')` }}
+                      style={{ filter: `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="colorFilter"><feColorMatrix type="matrix" values="0 0 0 0 ${parseInt(btn.arrowColor.slice(1, 3), 16) / 255} 0 0 0 0 ${parseInt(btn.arrowColor.slice(3, 5), 16) / 255} 0 0 0 0 ${parseInt(btn.arrowColor.slice(5, 7), 16) / 255} 0 0 0 1 0"/></filter></svg>#colorFilter')` }}
                     />
                   </a>
                 ))}
               </div>
-              {/* Previous and Next Buttons */}
-              <div className="mt-4 flex flex-row justify-center gap-4">
-                {location.prevButton && (
-                  <a
-                    href={location.prevButton.link}
-                    className={`flex justify-center px-3 py-2 sm:px-4 sm:py-3 rounded-md font-handwriting transition-all duration-300 hover:scale-105 hover:shadow-lg w-32 ${location.prevButton.style} ${location.prevButton.position}`}
-                  >
-                    <span className={`font-semibold tracking-wider ${location.prevButton.textSize}`}>
-                      {location.prevButton.text}
-                    </span>
-                  </a>
-                )}
-                {location.nextButton && (
-                  <a
-                    href={location.nextButton.link}
-                    className={`flex items-center justify-center px-3 py-2 sm:px-4 sm:py-3 rounded-md font-handwriting transition-all duration-300 hover:scale-105 hover:shadow-lg w-44 whitespace-nowrap ${location.nextButton.style} ${location.nextButton.position}`}
-                  >
-                    <span className="flex items-center justify-center gap-2 sm:gap-3">
-                      <span className={`font-semibold tracking-wider ${location.nextButton.textSize}`}>
-                        {location.nextButton.text}
-                      </span>
-                      <img
-                        src={location.nextButton.icon}
-                        alt="next icon"
-                        className={`object-contain ${location.nextButton.iconSize}`}
-                        style={{ filter: `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="colorFilter"><feColorMatrix type="matrix" values="0 0 0 0 ${parseInt(location.nextButton.iconColor.slice(1,3),16)/255} 0 0 0 0 ${parseInt(location.nextButton.iconColor.slice(3,5),16)/255} 0 0 0 0 ${parseInt(location.nextButton.iconColor.slice(5,7),16)/255} 0 0 0 1 0"/></filter></svg>#colorFilter')` }}
-                      />
-                    </span>
-                  </a>
-                )}
-              </div>
+
+
+              {/* Previous button and Next Buttons */}
+             
             </div>
+             <div className="mt-4 flex flex-row  gap-4">
+               {location.prevButton && (
+                <Link>
+                  <button type="button" className='border-2 border-[#955f26] p-3 rounded-lg rock transition-all duration-300 hover:scale-105 hover:shadow-lg'>
+                 <h1 className='text-3xl'>{location.prevButton.text}</h1>
+                </button>
+                </Link>
+               )}
+               {location.nextButton && (
+              <Link to=''>
+                   <button type="button" className='bg- p-3 rounded-lg rock bg-[#522A00] text-[#E1DDD4] transition-all duration-300 hover:scale-105 hover:shadow-lg'>
+                  <div className='flex  items-center gap-2'>
+                    <h1 className='text-3xl'>{location.nextButton.text}</h1>
+                    <img src={location.nextButton.arrow} className='' alt="" />
+                  </div>
+                </button>
+              </Link>
+               )}
+              </div>
           </div>
         </div>
       </div>
