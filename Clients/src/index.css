@@ -43,6 +43,19 @@
   font-style: normal;
 }
 
+.jim-nightshade {
+  font-family: "Jim Nightshade", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.island-moments {
+  font-family: "Island Moments", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 /*customized colors for the project */
 @theme {
   --color-primary-100:#522a00;
