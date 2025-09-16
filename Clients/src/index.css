@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+
 .rock {
   font-family: "Rock Salt", cursive;
   font-weight: 400;
@@ -36,7 +37,8 @@
 }
 
 
-.oswald{
+
+.oswald {
   font-family: "Oswald", sans-serif;
   font-optical-sizing: auto;
   font-weight: weight;
