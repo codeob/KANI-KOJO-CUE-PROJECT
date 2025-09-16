@@ -10,7 +10,7 @@ function Slide({ location, close, isAnimating }) {
 
   return (
     <div
-      className={`bg-grainbkg-100 h-screen w-full sm:w-3/4 md:w-3/5 lg:w-1/2 transition-transform duration-300 ease-in-out ${isAnimating ? 'translate-x-0' : '-translate-x-full'
+      className={`bg-grainbkg-100  w-[872px] h-[900px] transition-transform duration-300 ease-in-out ${isAnimating ? 'translate-x-0' : '-translate-x-full'
         }`}
       style={{
         position: 'absolute',
@@ -28,13 +28,13 @@ function Slide({ location, close, isAnimating }) {
         <div>
           {/* Location name with subwayloc icon */}
           <div className="flex flex-row items-center gap-2">
-            <img src={subwayloc} alt="location icon" className="h-6 w-6 sm:h-8 sm:w-8" />
-            <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold special-elite text-primary-100">
+            <img src={subwayloc} alt="location icon" className="h-[32px] w-[32px]" />
+            <h2 className="text-[48px] font-bold special-elite text-primary-100">
               {location.locationName}
             </h2>
           </div>
           <div className="pt-6 sm:pt-9 flex flex-col gap-4">
-            <h1 className="oswald font-black text-lg sm:text-xl md:text-2xl text-secondy-100 tracking-wide">
+            <h1 className="oswald text-[12px] text-secondy-100 tracking-wide">
               The HEART OF THE STORY
             </h1>
             <p className="text-xs sm:text-sm md:text-base lg:text-lg rock text-primary-100">
