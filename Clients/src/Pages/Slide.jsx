@@ -14,7 +14,7 @@ function Slide({ location, close, isAnimating, onNext, onPrevious }) {
 
   return (
     <div
-      className={` h-screen bg-grainbkg-100  w-3/5 transition-transform duration-300 ease-in-out ${isAnimating ? 'translate-x-0' : '-translate-x-full'
+      className={` h-screen bg-grainbkg-100 w-full md:w-4/5 lg:w-3/5 transition-transform duration-300 ease-in-out ${isAnimating ? 'translate-x-0' : '-translate-x-full'
         }`}
       style={{
         position: 'absolute',
@@ -75,7 +75,7 @@ function Slide({ location, close, isAnimating, onNext, onPrevious }) {
                             <img
                               src={btn.icon}
                               alt={`${btn.text} icon`}
-                              className="w-8 h-8 transition-colors duration-10 group-hover:brightness-0 group-hover:invert group-focus:invert "
+                              className="w-8 h-8 transition-colors duration-10 group-hover:brightness-0 group-hover:invert group-focus:invert group-focus:brightness-0 "
                             />
                             <span className="rock text-sm tracking-wider text-secondy-100 transition-colors duration-100 group-hover:text-white group-focus:text-white">
                               {btn.text}
@@ -86,7 +86,7 @@ function Slide({ location, close, isAnimating, onNext, onPrevious }) {
                           <img
                             src={rightarrow}
                             alt="arrow icon"
-                            className="w-8 h-8 transition-colors duration-100 group-hover:brightness-0  group-hover:invert group-focus:invert"
+                            className="w-8 h-8 transition-colors duration-100 group-hover:brightness-0 group-hover:invert group-focus:invert group-focus:brightness-0"
                           />
                         </button>
                         {/* Left side: icon + text */}
