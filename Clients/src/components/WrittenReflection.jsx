@@ -7,7 +7,7 @@ import zigzagFrame from "../assets/backgrounds/zigzag_reflection_frame.png"
 
 export default function WrittenReflection() {
   return (
-    <div className="h-screen w-full relative overflow-hidden">
+    <div className="h-screen w-full relative overflow-hidden ">
       {/* background */}
       <img src={mapBG} alt="" className="absolute inset-0 h-full w-full object-cover z-0 " />
       <div className="relative z-10 flex flex-col items-center justify-between h-full w-full p-10 -space-y-20 ">

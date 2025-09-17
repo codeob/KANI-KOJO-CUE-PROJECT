@@ -1,15 +1,16 @@
-import leaf from './src/assets/leaf.png';
-import movieic from './src/assets/moviesic.png';
-import musicclef from './src/assets/musicclef.png';
-import picture from './src/assets/picture.png';
-import playlist from './src/assets/playlist.png';
-import rightarrow from './src/assets/Rarrow.png';
-import videofile from './src/assets/videofile.png';
-import voiceid from './src/assets/voiceid.png';
-import videoplay from './src/assets/videoplay.png';
-import camerastudio from './src/assets/camerastudio.png';
-import microphone from './src/assets/microphone.png';
-import videoslider from './src/assets/videoslider.png';
+import lyricsBDIcon from './src/assets/icons/lyricsBDIcon.svg';
+import rightarrow from './src/assets/icons/rArrow.svg';
+import mixingNoteIcon from './src/assets/icons/mixingNoteIcon.svg';
+import voiceNoteIcon from './src/assets/icons/voiceNoteIcon.svg';
+import quillPenIcon from './src/assets/icons/quillPenIcon.svg';
+import filmReelIcon from './src/assets/icons/filmReelIcon.svg';
+import fullLyricsIcon from './src/assets/icons/fullLyricsIcon.svg';
+import BTSPhotoIcon from './src/assets/icons/BTSPhotoIcon.svg';
+      // need to change the scource "watchMusicVideo.svg" below since its currently white and not visible on the slide, withing on Georgina
+import watchMusicVideo from './src/assets/icons/watchMusicVideo.svg';
+import visualizerIcon from './src/assets/icons/visualizerIcon.svg';
+import BTSVideoIcon from './src/assets/icons/BTSVideoIcon.svg';
+import interviewIcon from './src/assets/icons/interviewIcon.svg';
 
 const locationPins = [
   {
@@ -24,12 +25,10 @@ const locationPins = [
     artistName: "Kojo Cue",
     lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis",
     buttons: [
-      { text: "FILM REEL", style: "border-2 border-[#a8743b] text-[#7B3F00]  rock w-full h-[49px] mt-2 tracking-wide",  iconSize: "w-[32px] h-[32px]", icon: movieic, iconColor: "#7B3F00", arrow: rightarrow, arrowColor: "#7B3F00", link: "" },
-      { text: "REFLECTIONS", style: "bg-[#B69F7C]  border-2 border-[#a8743b] rock  w-full h-[49px] mt-2 text-[#E1DDD4]",  iconSize: "w-[32] h-[32px]",  icon:leaf, arrow:rightarrow,  link: "" },
-      { text: "LYRICS", style: "border-2 border-[#B69F7C] text-[#7B3F00] bg-transparent rock  w-full h-[49px] mt-2 text-[#7B3F00]",iconSize: "w-[32px] h-[32px]", icon: musicclef,  arrow: rightarrow,link: "" },
+      { text: "FILM REEL", icon: filmReelIcon,   link: "" },
+      { text: "REFLECTIONS",  icon:quillPenIcon, link: "" },
+      { text: "LYRICS", icon: fullLyricsIcon,   link: "" },
     ],
-    prevButton: { text: 'Previous', link: '' },
-    nextButton: { text: 'Next Location', arrow: rightarrow, link: '' },
   },
   {
     id: 2,
@@ -43,12 +42,9 @@ const locationPins = [
     artistName: "Kojo Cue",
     lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis",
     buttons: [
-      { text: "FILM REEL", style: "text-[#7B3F00] border-2  border-[#B69F7C] rock text-[#7B3F00] w-full h-[49px] mt-[6rem]", iconSize: "w-[32px] h-[32px]", icon: movieic, arrow: rightarrow, link: "" },
-      { text: "REFLECTIONS", style: "rock border-2 border-[#B69F7C] text-[#E1DDD4] bg-[#B69F7C] w-full h-[49px]",  iconSize: "w-[32px] h-[32px]", icon: leaf, arrow: rightarrow, arrowColor: "#E1DDD4", link: "" },
+      { text: "FILM REEL", icon: filmReelIcon,  link: "" },
+      { text: "REFLECTIONS", icon: quillPenIcon, link: "" },
     ],
-    prevButton: { text: 'Previous', link: '' },
-    nextButton: { text: 'Next Location', arrow: rightarrow, link: '' },
-
   },
   {
     id: 3,
@@ -62,12 +58,11 @@ const locationPins = [
     artistName: "Kojo Cue",
     lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis",
     buttons: [
-      { text: "MIXING NOTES", style: "border-2 border-[#B69F7C] text-[#7B3F00]  mt-[rem] bg-transparent rock w-full h-[49px] mt-[1.5rem]",  iconSize:"w-[32px] h-[32px]", icon: videofile,  arrow: rightarrow, arrowColor: "#7B3F00", link: "" },
-      { text: "VOICE NOTE", style: "bg-[#B69F7C] text-[#E1DDD4] border-2 border-[#B69F7C] rock w-full h-[49px]", iconSize: "w-[32px] h-[32px]",  icon: voiceid,arrow: rightarrow, link: "" },
-      { text: "LYRICS BREAKDOWN", style: "border-2 border-[#B69F7C] text-[#7B3F00] bg-transparent rock w-full   h-[49px]", iconSize: "w-[32px] h-[32px]", icon: playlist, arrow: rightarrow, link: "" },
+      { text: "MIXING NOTES",   icon: mixingNoteIcon,  link: "" },
+      { text: "VOICE NOTE",   icon: voiceNoteIcon,  link: "" },
+      { text: "LYRICS BREAKDOWN",  icon: lyricsBDIcon,  link: "" },
     ],
-    prevButton: { text: 'Previous', link: '' },
-    nextButton: { text: 'Next Location', arrow: rightarrow, link: '' },
+
   },
   {
     id: 4,
@@ -81,12 +76,10 @@ const locationPins = [
     artistName: "Kojo Cue",
     lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis",
     buttons: [
-      { text: "BTS PHOTOS", style: "border-2 border-[#B69F7C] text-[#B69F7C] rock w-full h-[49px] mt-[1.2rem] ", iconSize: "w-[32px] h-[32px]", icon: picture,  arrow: rightarrow, link: "" },
-      { text: "LYRICS BREAKDOWN", style: "text-[#7B3F00] border-2 border-[#B69F7C] rock w-full h-[49px]", iconSize:"w-[32px] h-[32]", icon: playlist,  arrow: rightarrow,  link: "" },
-      { text: "WATCH MUSIC VIDEO", style: "text-[#E1DDD4] bg-[#B69F7C] rock", iconSize: "w-[32px] h-[32px]",  icon: videoslider,arrow: rightarrow,  link: "" },
+      { text: "BTS PHOTOS",  icon: BTSPhotoIcon,   link: "" },
+      { text: "LYRICS BREAKDOWN",  icon: lyricsBDIcon,    link: "" },
+      { text: "WATCH MUSIC VIDEO", icon: watchMusicVideo,   link: "" },  
     ],
-    prevButton: { text: 'Previous', link: '' },
-    nextButton: { text: 'Next Location', arrow: rightarrow, link: '' },
   },
   {
     id: 5,
@@ -99,11 +92,10 @@ const locationPins = [
     videoUrl: "",
     artistName: "Kojo Cue",
     buttons: [
-      { text: "FILM REEL", style: "border-2 border-[#B69F7C] text-[#7B3F00] rock w-full h-[49px] mt-[6.4rem]", iconSize: "w-[32px] h-[32px]", icon: movieic,  arrow: rightarrow,  link: "" },
-      { text: "Lyrics Breakdown", style: "border-2 border-[#B69F7C] text-[#7B3F00] rock w-full h-[49px]",  iconSize: "w-[32px] h-[32px]", icon: playlist,  arrow: rightarrow, link: "" },
+      { text: "FILM REEL", icon: filmReelIcon,    link: "" },
+      { text: "Lyrics Breakdown", icon: lyricsBDIcon,   link: "" },
     ],
-    prevButton: { text: 'Previous', link: '' },
-    nextButton: { text: 'Next Location', arrow: rightarrow, link: '' },
+
   },
   {
     id: 6,
@@ -116,11 +108,10 @@ const locationPins = [
     videoUrl: "",
     artistName: "Kojo Cue",
     buttons: [
-      { text: "VISUALIZER", style: "border-2 border-[#B69F7C] text-[#7B3F00] rock w-full h-[49px mt-[5.7rem]",iconSize: "w-[32px] h-[32px]",  icon: videoplay, iconColor: "#7B3F00", arrow: rightarrow, arrowColor: "#7B3F00", link: "" },
-      { text: "LYRICS BREAKDOWN", style: "border-2 border-[#B69F7C] text-[#a8743b] rock w-full h-[49px]", iconSize: "w-[32px] h-[32px]", icon: playlist,  arrow: rightarrow, link: "" },
+      { text: "VISUALIZER",  icon: visualizerIcon, iconColor: "#7B3F00",  link: "" },
+      { text: "LYRICS BREAKDOWN", icon: lyricsBDIcon,   link: "" },
     ],
-    prevButton: { text: 'Previous', link: '' },
-    nextButton: { text: 'Next Location', arrow: rightarrow, link: '' },
+
   },
   {
     id: 7,
@@ -133,12 +124,11 @@ const locationPins = [
     videoUrl: "",
     artistName: "Kojo Cue",
     buttons: [
-      { text: "LYRICS BREAKDOWN", style: "border-2 border-[#B69F7C] text-[#7B3F00] rock w-full h-[49px] mt-[1.6rem]", iconSize: "w-5 h-5",  icon: playlist,  arrow: rightarrow, iconSize: "w-[32px] h-[32px]", link: "" },
-      { text: "INTERVIEW", style: "text-[#7B3F00] border-2 border-[#B69F7C] rock w-full h-[49px]",  iconSize: "w-[32px] h-[32px]", icon: microphone,  arrow: rightarrow,  link: "" },
-      { text: "MIXING NOTES", style: "border-2 border-[#B69F7C] text-[#7B3F00] rock w-full h-[49px]", iconSize: "w-[32px] h-[32px]", icon: videofile,  arrow: rightarrow,  link: "" },
+      { text: "LYRICS BREAKDOWN", icon: lyricsBDIcon,    link: "" },
+      { text: "INTERVIEW",  icon: interviewIcon,    link: "" },
+      { text: "MIXING NOTES",   icon: mixingNoteIcon,    link: "" },
     ],
-    prevButton: { text: 'Previous', link: '' },
-    nextButton: { text: 'Next Location', arrow: rightarrow, link: '' },
+
   },
   {
     id: 8,
@@ -151,11 +141,9 @@ const locationPins = [
     videoUrl: "",
     artistName: "Kojo Cue",
     buttons: [
-      { text: "FULL LYRICS", style: "border-2 border-[#B69F7C] text-[#7B3F00] rock w-full h-[49px] mt-[6.2rem]", iconSize: "w-[32px] h-[32px]", icon: musicclef, iconColor: "#7B3F00", arrow: rightarrow, arrowColor: "#7B3F00", link: "" },
-      { text: "REFLECTION", style: "border-2 border-[#B69F7C] text-[#7B3F00] rock w-full h-[49px]",  iconSize: "w-[32px] h-[32px]",  icon: leaf, arrow: rightarrow, link: "" },
+      { text: "FULL LYRICS",  icon: fullLyricsIcon, link: "" },
+      { text: "REFLECTION", icon: quillPenIcon,  link: "" },
     ],
-    prevButton: { text: 'Previous', link: '' },
-    nextButton: { text: 'Next Location', arrow: rightarrow, link: '' }
   },
   {
     id: 9,
@@ -168,12 +156,11 @@ const locationPins = [
     videoUrl: "",
     artistName: "Kojo Cue",
     buttons: [
-      { text: "FILM REEL", style: "border-2 border-[#B69F7C] text-[#7B3F00] rock w-full h-[49px] mt-[1.5rem]",  iconSize: "w-[32px] h-[32px]",  icon: movieic,  arrow: rightarrow,  link: "" },
-      { text: "MIXING NOTES", style: "text-[#7B3F00] border-2 border-[#B69F7C] rock w-full h-[49px]", iconSize: "w-[32px] h-[32px]", icon: videofile, arrow: rightarrow,  link: "" },
-      { text: "VOICE NOTES", style: "border-2 border-[#B69F7C] text-[#7B3F00] bg-transparent rock w-full h-[49px]",  iconSize: "w-[32px] h-[32px]", icon: voiceid,  arrow: rightarrow,  link: "" },
+      { text: "FILM REEL", icon: filmReelIcon,    link: "" },
+      { text: "MIXING NOTES", icon: mixingNoteIcon,   link: "" },
+      { text: "VOICE NOTES",  icon: voiceNoteIcon,    link: "" },
     ],
-    prevButton: { text: 'Previous', link: '' },
-    nextButton: { text: 'Next Location', arrow: rightarrow, link: '' },
+
   },
   {
     id: 10,
@@ -186,10 +173,9 @@ const locationPins = [
     videoUrl: "",
     artistName: "Kojo Cue",
     buttons: [
-      { text: "VOICE NOTE", style: "border-2 border-[#B69F7C] text-[#7B3F00] rock w-full h-[49px] mt-[10.8rem]",  iconSize: "w-[32px] h-[32px]",  icon: voiceid, arrow: rightarrow, link: "" },
+      { text: "VOICE NOTE", icon: voiceNoteIcon,  link: "" },
     ],
-    prevButton: { text: 'Previous', link: '' },
-    nextButton: { text: 'Next Location', arrow: rightarrow, link: '' },
+
   },
   {
     id: 11,
@@ -202,10 +188,8 @@ const locationPins = [
     videoUrl: "",
     artistName: "Kojo Cue",
     buttons: [
-      { text: "FULL LYRICS", style: "border-2 border-[#B69F7C] text-[#7B3F00] rock w-full h-[49px] mt-[10.8rem]",  iconSize: "w-[32px] h-[32px]",  icon: musicclef, arrow: rightarrow, link: "" },
+      { text: "FULL LYRICS", icon: fullLyricsIcon,  link: "" },
     ],
-    prevButton: { text: 'Previous', link: '' },
-    nextButton: { text: 'Next Location', arrow: rightarrow, link: '' }
   },
   {
     id: 12,
@@ -218,12 +202,11 @@ const locationPins = [
     videoUrl: "",
     artistName: "Kojo Cue",
     buttons: [
-      { text: "BTS PHOTOS", style: "border-2 border-[#B69F7C] text-[#7B3F00] rock w-full h-[49px]  mt-[1.7rem]",  iconSize: "w-[32px] h-[32px]",  icon: picture,  arrow: rightarrow,  link: "/bts-photos/tontonte" },
-      { text: "VISUALIZER", style: "text-[#7B3F00] border-2 border-[#B69F7C] rock w-full h-[49px]",  iconSize: "w-[32px] h-[32px]", icon: videoplay,arrow: rightarrow,  link: "" },
-      { text: "FULL LYRICS", style: "border-2 border-[#B69F7C] text-[#7B3F00] rock w-full h-[49px]",  iconSize: "w-[32px] h-[32px]",  icon: musicclef, arrow: rightarrow,  link: "" },
+      { text: "BTS PHOTOS",  icon: BTSPhotoIcon,    link: "/bts-photos/tontonte" },
+      { text: "VISUALIZER",  icon: visualizerIcon,  link: "" },
+      { text: "FULL LYRICS", icon: fullLyricsIcon,   link: "" },
     ],
-    prevButton: { text: 'Previous', link: '' },
-    nextButton: { text: 'Next Location', arrow: rightarrow, link: '' },
+
   },
   {
     id: 13,
@@ -236,11 +219,10 @@ const locationPins = [
     videoUrl: "",
     artistName: "Kojo Cue",
     buttons: [
-      { text: "FULL LYRICS", style: "border-2 border-[#B69F7C] text-[#7B3F00] rock w-full h-[49px] mt-[6.2rem]",  iconSize: "w-[32px] h-[32px]",  icon: musicclef,  arrow: rightarrow, link: "" },
-      { text: "VOICE NOTE", style: "border-2 border-[#B69F7C] text-[#7B3F00] rock w-full h-[49px]",  iconSize: "w-[32px] h-[32px]",  icon: voiceid, arrow: rightarrow,  link: "" },
+      { text: "FULL LYRICS", icon: fullLyricsIcon,   link: "" },
+      { text: "VOICE NOTE", icon: voiceNoteIcon,   link: "" },
     ],
-    prevButton: { text: 'Previous', link: '' },
-    nextButton: { text: 'Next Location', arrow: rightarrow, link: '' },
+
   },
   {
     id: 14,
@@ -253,12 +235,11 @@ const locationPins = [
     videoUrl: "",
     artistName: "Kojo Cue",
     buttons: [
-      { text: "FILM REEL", style: "border-2 border-[#B69F7C] text-[#7B3F00] rock mt-[0.4rem]", iconSize: "w-[32px] h-[32px]", icon: movieic,  arrow: rightarrow,  link: "/film-reel/you-are" },
-      { text: "FULL LYRICS", style: "rock text-[#7B3F00] border-2 border-[#B69F7C]",  iconSize: "w-[32px] h-[32px]",  icon: musicclef, arrow: rightarrow, link: "" },
-      { text: "BTS VIDEO", style: "border-2 border-[#B69F7C] text-[#7B3F00] rock w-full h-[49px]",  iconSize: "w-[32px] h-[32px]",  icon: camerastudio,  arrow: rightarrow, link: "" },
+      { text: "FILM REEL", icon: filmReelIcon,    link: "/film-reel/you-are" },
+      { text: "FULL LYRICS",  icon: fullLyricsIcon,  link: "" },
+      { text: "BTS VIDEO",  icon: BTSVideoIcon,   link: "" },
     ],
-    prevButton: { text: 'Previous', link: '' },
-    nextButton: { text: 'Next Location', arrow: rightarrow, link: '' },
+
   },
   {
     id: 15,
@@ -271,11 +252,10 @@ const locationPins = [
     videoUrl: "",
     artistName: "Kojo Cue",
     buttons: [
-      { text: "FILM REEL", style: "border-2 border-[#B69F7C] text-[#7B3F00] rock w-full h-[49px]  mt-[6.2rem]",  iconSize: "w-[32px] h-[32px]", icon: movieic, arrow: rightarrow,  link: "" },
-      { text: "MIXING NOTES", style: "border-2 border-[#B69F7C] text-[#7B3F00] rock w-full h-[49px]",  iconSize: "w-[32px] h-[32px]",  icon: videofile,  arrow: rightarrow,  link: "" },
+      { text: "FILM REEL", icon: filmReelIcon,   link: "" },
+      { text: "MIXING NOTES", icon: mixingNoteIcon,    link: "" },
     ],
-    prevButton: { text: 'Previous', link: '' },
-    nextButton: { text: 'Next Location', arrow: rightarrow, link: '' },
+
   },
   {
     id: 16,
@@ -288,11 +268,10 @@ const locationPins = [
     videoUrl: "",
     artistName: "Kojo Cue",
     buttons: [
-      { text: "FULL LYRICS", style: "border-2 border-[#a8743b] text-[#a8743b] bg-transparent w-full h-[49px]  mt-[6.2rem]",  iconSize: "w-[32px] h-[32px]",  icon: musicclef, arrow: rightarrow,  link: "" },
-      { text: "CUE LIVE SESSION", style: "border-2 border-[#a8743b] text-[#a8743b] bg-transparen w-full h-[49px]t",  iconSize: "w-[32px] h-[32px]",  icon: videoplay,  arrow: rightarrow, link: "" },
+      { text: "FULL LYRICS", icon: fullLyricsIcon,   link: "" },
+      { text: "CUE LIVE SESSION", icon: visualizerIcon,   link: "" },
     ],
-    prevButton: { text: 'Previous', link: '' },
-    nextButton: { text: 'Next Location', arrow: rightarrow, link: '' },
+
   },
   {
     id: 17,
@@ -305,11 +284,9 @@ const locationPins = [
     videoUrl: "",
     artistName: "Gold Dust",
     buttons: [
-      { text: "WRITTEN STORY", style: "border-2 border-[#B69F7C] text-[#7B3F00] rock w-full h-[49px]  ", textSize: "text-sm md:text-base", iconSize: "w-[32px] h-[32px]",  icon: leaf,arrow: rightarrow,  link: "" },
-      { text: "FULL LYRICS", style: "border-2 border-[#B69F7C] text-[#7B3F00] rock w-full h-[49px]",  iconSize: "w-[32px] h-[32px]", icon: musicclef,  arrow: rightarrow,  link: "" },
+      { text: "WRITTEN STORY", icon: quillPenIcon,  link: "" },
+      { text: "FULL LYRICS", icon: fullLyricsIcon,    link: "" },
     ],
-    prevButton: { text: 'Previous', link: '' },
-    nextButton: { text: 'Next Location', arrow: rightarrow, link: '' },
   },
 ];
 

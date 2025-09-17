@@ -13,9 +13,13 @@ function HomePage() {
                 Step into the journey behind the music
             </p>
             <div className='pt-[3rem]'>
-                <button className=' special-elite p-4 rounded-2xl bg-[#522A00] text-[32px] text-[#ffff] cursor-pointer'>
-               <Link to='/map'>Enter the experience</Link>
-                </button>
+               <Link to='/map'>
+                    <button className=' p-4 rounded-2xl bg-[#522A00]  cursor-pointer'>
+                        <p className='special-elite text-[32px] text-[#ffff]'>
+                            Enter the experience
+                        </p>
+                    </button>
+                </Link>
             </div>
         </div>
     )

@@ -35,6 +35,26 @@ function Map() {
     }
   }, [selectedLocation] )
 
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if(!selectedLocation) return; // this activates this function only if the slide is open
+
+      if(e.key === "ArrowRight") {
+        handleNext(selectedLocation.id)
+      } else if (e.key === "ArrowLeft") {
+        handlePrevious(selectedLocation.id)
+      } else if (e.key === "Escape") {
+        handleClose()
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown)
+    return () => window.removeEventListener("keydown", handleKeyDown)
+  }, [selectedLocation])
+
+
+
   //handle closing animation
   const handleClose = () =>{
     setIsAnimating(false);
@@ -43,6 +63,24 @@ function Map() {
       setIsSlideVisible(false)
       clearSelected();
     }, 300)
+  }
+
+    // handle next button
+  const handleNext = (currentId) => {
+    const currentIndex = locationPins.findIndex((loc) => loc.id === currentId);
+    if (currentIndex !== -1) {
+      const nextIndex = (currentIndex + 1) % locationPins.length; // loops back to 1st location
+      setSelectedLocation(locationPins[nextIndex].id);
+    }
+  }
+
+  // handle previous button
+  const handlePrevious = (currentId) => {
+    const currentIndex = locationPins.findIndex((loc) => loc.id === currentId);
+    if (currentIndex !== -1) {
+      const prevIndex = (currentIndex - 1 + locationPins.length) % locationPins.length; // loops back to last location
+      setSelectedLocation(locationPins[prevIndex].id);
+    }
   }
 
   const pinBaseWidth = 20; // px, equivalent to Tailwind w-5 (1.25rem ≈ 20px)
@@ -60,6 +98,7 @@ function Map() {
   const pinDimensions = getPinDimensions();
   const pinWidth = `${pinDimensions.width * scale}px`;
   const pinHeight = `${pinDimensions.height * scale}px`;
+
 
   return (
     <div className="h-screen flex justify-center items-center overflow-hidden relative">
@@ -97,7 +136,13 @@ function Map() {
       {/* Overlay / Slide Info base on selected pin - now fixed for full viewport coverage with responsive padding */}
       {isSlideVisible && (
         <div className="fixed inset-0 bg-black/55 z-50 flex items-center justify-center p-2 md:p-4 lg:p-6 xl:p-8 2xl:p-10">
-          <Slide location={selectedLocation} close={handleClose} isAnimating={isAnimating} />
+          <Slide 
+            location={selectedLocation} 
+            close={handleClose} 
+            isAnimating={isAnimating} 
+            onNext={() => handleNext(selectedLocation?.id)} 
+            onPrevious={() => handlePrevious(selectedLocation?.id)} 
+          />
         </div>
       )}
     </div>
