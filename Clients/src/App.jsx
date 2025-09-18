@@ -10,6 +10,7 @@ import LyricsContainer from "./components/LyricsContainer"
 import FIlmReel from "./components/FIlmReel"
 import BTSPhotos from "./components/BTSPhotos"
 import WrittenReflection from "./components/WrittenReflection"
+import VideoPlayer from "./components/VideoPlayer"
 
 function App() {
 
@@ -31,7 +32,10 @@ function App() {
         <Route path='/waveform2' element={<WaveformPlayer audioUrl={song1} />}/>       
         <Route path='/filmreel' element={<FIlmReel />}/>       
         <Route path='/bts_photos' element={<BTSPhotos />}/>       
-        <Route path='/reflection' element={<WrittenReflection />}/>       
+        <Route path='/reflection' element={<WrittenReflection />}/>
+        <Route path='/watch' element={<VideoPlayer />}/>
+
+
 
 
 

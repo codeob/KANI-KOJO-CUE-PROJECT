@@ -103,7 +103,7 @@ function Slide({ location, close, isAnimating, onNext, onPrevious }) {
           <button onClick={onPrevious} type="button" className='group relative transition-all w-[100px] h-[50px] p-0.5 px-1 pt-[3px] duration-300  '>
               <img src={previousBtn} alt=" Button Border Frame" className='absolute left-0 top-0 w-full h-full   ' />
               <div className=" relative cursor-pointer rounded-sm group-hover:bg-secondy-100 flex items-center justify-center  w-full h-full">
-              <h4 className='rock text-xs group-hover:text-white '>Previous</h4>
+              <h4 className='rock text-xs group-hover:text-white text-secondy-100'>Previous</h4>
 
             </div>
           </button>
