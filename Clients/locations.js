@@ -29,8 +29,8 @@ const locationPins = [
       { text: "REFLECTIONS",  icon:quillPenIcon, link: "" },
       { text: "LYRICS", icon: fullLyricsIcon,   link: "" },
     ],
-        lyrics:[
-      {song1:`Mummy Dey Grow
+        song:[
+      {lyrics1:`Mummy Dey Grow
 My mummy dey grow
 But I still no blow enough to put her in her home I still no fit change the car she get from years ago
 I still no fit take over all of her rent mpo
@@ -67,7 +67,7 @@ M'antumi anma no bed sheet mpo
 Anma no fridge mpo
 She used to cry when she threw food away
 And say, "I wish your grandmother was still here today"`},
-       {song2:`My mummy dey grow,
+       {lyrics2:`My mummy dey grow,
 Enso still a, me nyɛɛ hwee nmɑa no killa, I mean by now Ɛwɔ sɛ nka m'ɑma no villa And like a 100 visa
 Maids ne gardeners, paying for her drivers Last time I passed by the house where
 I said
@@ -125,9 +125,9 @@ have to tell y'all the story of my life.`}
       { text: "FILM REEL", icon: filmReelIcon,  link: "" },
       { text: "REFLECTIONS", icon: quillPenIcon, link: "" },
     ],
-        lyrics:[
-      {song1:``},
-       {song1:``}
+        song:[
+      {lyrics1:``},
+       {lyrics1:``}
     ]
   },
   {
@@ -146,9 +146,9 @@ have to tell y'all the story of my life.`}
       { text: "VOICE NOTE",   icon: voiceNoteIcon,  link: "" },
       { text: "LYRICS BREAKDOWN",  icon: lyricsBDIcon,  link: "" },
     ],
-    lyrics:[
-      {song1:``},
-       {song1:``}
+    song:[
+      {lyrics1:``},
+       {lyrics2:``}
     ]
   },
   {
@@ -167,9 +167,9 @@ have to tell y'all the story of my life.`}
       { text: "LYRICS BREAKDOWN",  icon: lyricsBDIcon,    link: "" },
       { text: "WATCH MUSIC VIDEO", icon: watchMusicVideo,   link: "" },  
     ],
-        lyrics:[
-      {song1:``},
-       {song1:``}
+        song:[
+      {lyrics1:``},
+       {lyrics2:``}
     ]
   },
   {
@@ -186,9 +186,9 @@ have to tell y'all the story of my life.`}
       { text: "FILM REEL", icon: filmReelIcon,    link: "" },
       { text: "Lyrics Breakdown", icon: lyricsBDIcon,   link: "" },
     ],
-         lyrics:[
-      {song1:``},
-       {song1:``}
+         song:[
+      {lyrics1:``},
+       {lyrics2:``}
     ]
   },
   {
@@ -205,9 +205,9 @@ have to tell y'all the story of my life.`}
       { text: "VISUALIZER",  icon: visualizerIcon, iconColor: "#7B3F00",  link: "" },
       { text: "LYRICS BREAKDOWN", icon: lyricsBDIcon,   link: "" },
     ],
-       lyrics:[
-      {song1:``},
-       {song1:``}
+       song:[
+      {lyrics1:``},
+       {lyrics2:``}
     ]
   },
   {
@@ -225,9 +225,9 @@ have to tell y'all the story of my life.`}
       { text: "INTERVIEW",  icon: interviewIcon,    link: "" },
       { text: "MIXING NOTES",   icon: mixingNoteIcon,    link: "" },
     ],
-        lyrics:[
-      {song1:``},
-       {song1:``}
+        song:[
+      {lyrics1:``},
+       {lyrics2:``}
     ]
   },
   {
@@ -244,9 +244,9 @@ have to tell y'all the story of my life.`}
       { text: "FULL LYRICS",  icon: fullLyricsIcon, link: "" },
       { text: "REFLECTION", icon: quillPenIcon,  link: "" },
     ],
-        lyrics:[
-      {song1:`Mysterious Ways Kwaku ahya ne white shirt Lilian gaye ne white dress Me dec Rose nti na me baa yε nso I no see am yet Madam grace se objarg ntena ase yɛ ntie nyame asem But e be she norr dey read some book To the mandem Things she dey say beats my logic can't understand them couldn't wait I was the first to put up my hands when They said (obi wo question angg?) Me bisa ya with a serious face frowned and she answered (God works in mysterious ways) Read your Bible Pray everyday Pray everyday Pray everyday Read your Bible Pray everyday If you want to grow Ante never let us skip Hymn nkoara she let us sing Maa Abena caught the Holy Ghost Next week then e enter Vic All my friends dey feel the spirit Me nkogra e never touch me No matter how hard I beg Jesus to forgive and forget my sins Madam grace se me ha adwene Nickname thomas I be doubting Ɔma yen kenkan Job and same Questions filled my soul again I raise my hand ǝse Junior no no What do you want to know again? (nti God killed the children too? But what did the children do?) Ɔse bonsam hyε wo mu a pie There norr wey she raise her cane as it came down all I heard say God works in mysterious ways Read your Bible Pray everyday Pray everyday`},
-       {song2:`
+        song:[
+      {lyrics1:`Mysterious Ways Kwaku ahya ne white shirt Lilian gaye ne white dress Me dec Rose nti na me baa yε nso I no see am yet Madam grace se objarg ntena ase yɛ ntie nyame asem But e be she norr dey read some book To the mandem Things she dey say beats my logic can't understand them couldn't wait I was the first to put up my hands when They said (obi wo question angg?) Me bisa ya with a serious face frowned and she answered (God works in mysterious ways) Read your Bible Pray everyday Pray everyday Pray everyday Read your Bible Pray everyday If you want to grow Ante never let us skip Hymn nkoara she let us sing Maa Abena caught the Holy Ghost Next week then e enter Vic All my friends dey feel the spirit Me nkogra e never touch me No matter how hard I beg Jesus to forgive and forget my sins Madam grace se me ha adwene Nickname thomas I be doubting Ɔma yen kenkan Job and same Questions filled my soul again I raise my hand ǝse Junior no no What do you want to know again? (nti God killed the children too? But what did the children do?) Ɔse bonsam hyε wo mu a pie There norr wey she raise her cane as it came down all I heard say God works in mysterious ways Read your Bible Pray everyday Pray everyday`},
+       {lyrics2:`
 Pray everyday Read your Bible Pray everyday If you want to
 grow
 Ante yare, ǝrefon
@@ -297,9 +297,9 @@ again`}
       { text: "MIXING NOTES", icon: mixingNoteIcon,   link: "" },
       { text: "VOICE NOTES",  icon: voiceNoteIcon,    link: "" },
     ],
-    lyrics:[
-      {song1:``},
-       {song1:``}
+    song:[
+      {lyrics1:``},
+       {lyrics2:``}
     ]
   },
   {
@@ -315,9 +315,9 @@ again`}
     buttons: [
       { text: "VOICE NOTE", icon: voiceNoteIcon,  link: "" },
     ],
-    lyrics:[
-      {song1:``},
-       {song1:``}
+    song:[
+      {lyrics1:``},
+       {lyrics2:``}
     ]
   },
   {
@@ -333,9 +333,9 @@ again`}
     buttons: [
       { text: "FULL LYRICS", icon: fullLyricsIcon,  link: "" },
     ],
-        lyrics:[
-      {song1:`Never had a chance to choose red or blue pill How adey SS2 dey think about the two bills? Making a mess at school because two grown people dey fight pushing me to pick a side Onfg hoo how I feel My peers dey think of school, adidas and then Nike Or which girl dem dey like The letters sef me adey write But I'm forced to think about how to provide For mummy and kiddie bro nti me nyinį oh, e b so Life of a first born son as ein poppy run World on my shoulders, I no grow yet but afor be man Without a blueprint No one in my corner In the ring without my shoe strings Still I for win, don't have the luxury of losing, Even if gfor sin Take my family out the hood king Have to keep it pushing Helping my mother sell angwamoo on the school pitch All I ever felt was envy staring at the cool kids Nsa tigg nyingg ny på now I know now Don't try to put the world up on your shoulders Weytin be mine no be your own Research and find yourself and you will know that Don't take too much time before its over So man define your own persona The clock dey tick while you dey slow down Research and find yourself and you will know that I mean it hurts that your daddy had to die so but How Abi 22 dey provide for your household What? your mummy, elder bro and uncles no dey do Wo regye from Ju, and if I talk abi asshole huh? How about we just vibe and I do what no go wound me Instead of you acting like all your bills be my duty Comparing me to your ex, that man is 32 still he no fit see top If anything I'm better boo But you know what to do to make it still about me How's your poverty fucking up how I feel about me Manipulate kakra`},
-       {song2:`Instead of you acting like all your bills be my duty Comparing me to your ex, that man is 32 still he no fit see top If anything I'm better boo But you know what to do to make it still about me How's your poverty fucking up how I feel about me Manipulate kakra gaslight kakra Ama small boy afei me da dwene mpo kyen wo papa Losing my youth though I'm still in this school cos I'm thinking it's cool to be a responsible dude Enso me bo so nkuro nwii afei na me nyini I had to learn to say no, I'm not a genie Nsg tiga nyingg nye pɛ now I know now Don't try to put the world up on your shoulders Weytin be mine no be your own Research and find yourself and you will know that Don't take too much time before its over So man define your own persona The clock dey tick while you dey slow down Research and find yourself and you will know that Drive slow don't rush to get grown, my man Dem try tell me on the low but the damage was done Growing up quick no be fun Children for fit to make mistakes Play with fire, burn, learn, how to make it shape Rough metals into swords as you hone am All the mistakes wonng parents never go own up Barely 6 being treated like a grown up W'af3four redi agoro no na wo nkoara wo so nṣuo nam I swear e no be my fault premature adult I skipped some steps in the process so now a part of Me dey Look in the mirror and see a kid I swear I still look in the mirror and see a kid But I no fit lose it Have to keep it pushing So my kiddie bro go dey grow, up cruising Helping my mother sell angwamoo on the school pitch All I ever felt was envy staring at the cool kids Grew up too quick Grew up quick. `}
+        song:[
+      {lyrics1:`Never had a chance to choose red or blue pill How adey SS2 dey think about the two bills? Making a mess at school because two grown people dey fight pushing me to pick a side Onfg hoo how I feel My peers dey think of school, adidas and then Nike Or which girl dem dey like The letters sef me adey write But I'm forced to think about how to provide For mummy and kiddie bro nti me nyinį oh, e b so Life of a first born son as ein poppy run World on my shoulders, I no grow yet but afor be man Without a blueprint No one in my corner In the ring without my shoe strings Still I for win, don't have the luxury of losing, Even if gfor sin Take my family out the hood king Have to keep it pushing Helping my mother sell angwamoo on the school pitch All I ever felt was envy staring at the cool kids Nsa tigg nyingg ny på now I know now Don't try to put the world up on your shoulders Weytin be mine no be your own Research and find yourself and you will know that Don't take too much time before its over So man define your own persona The clock dey tick while you dey slow down Research and find yourself and you will know that I mean it hurts that your daddy had to die so but How Abi 22 dey provide for your household What? your mummy, elder bro and uncles no dey do Wo regye from Ju, and if I talk abi asshole huh? How about we just vibe and I do what no go wound me Instead of you acting like all your bills be my duty Comparing me to your ex, that man is 32 still he no fit see top If anything I'm better boo But you know what to do to make it still about me How's your poverty fucking up how I feel about me Manipulate kakra`},
+       {lyrics2:`Instead of you acting like all your bills be my duty Comparing me to your ex, that man is 32 still he no fit see top If anything I'm better boo But you know what to do to make it still about me How's your poverty fucking up how I feel about me Manipulate kakra gaslight kakra Ama small boy afei me da dwene mpo kyen wo papa Losing my youth though I'm still in this school cos I'm thinking it's cool to be a responsible dude Enso me bo so nkuro nwii afei na me nyini I had to learn to say no, I'm not a genie Nsg tiga nyingg nye pɛ now I know now Don't try to put the world up on your shoulders Weytin be mine no be your own Research and find yourself and you will know that Don't take too much time before its over So man define your own persona The clock dey tick while you dey slow down Research and find yourself and you will know that Drive slow don't rush to get grown, my man Dem try tell me on the low but the damage was done Growing up quick no be fun Children for fit to make mistakes Play with fire, burn, learn, how to make it shape Rough metals into swords as you hone am All the mistakes wonng parents never go own up Barely 6 being treated like a grown up W'af3four redi agoro no na wo nkoara wo so nṣuo nam I swear e no be my fault premature adult I skipped some steps in the process so now a part of Me dey Look in the mirror and see a kid I swear I still look in the mirror and see a kid But I no fit lose it Have to keep it pushing So my kiddie bro go dey grow, up cruising Helping my mother sell angwamoo on the school pitch All I ever felt was envy staring at the cool kids Grew up too quick Grew up quick. `}
     ]
   },
   {
@@ -353,8 +353,8 @@ again`}
       { text: "VISUALIZER",  icon: visualizerIcon,  link: "" },
       { text: "FULL LYRICS", icon: fullLyricsIcon,   link: "" },
     ],
-        lyrics:[
-      {song1:`Tontonte
+        song:[
+      {lyrics1:`Tontonte
 
 Ba ba back in the days me hy me
 OG biara na w'abo
@@ -429,7 +429,7 @@ Nsem a esij ye a na nka me pfg hoo
 
 Afei na mahu ani, anoo ne ne nkyeregses
 `},
-       {song2:`Asem a preko ka kyere ne ba no
+       {lyrics2:`Asem a preko ka kyere ne ba no
 
 Afej na ato aso mu, afei na mate asee
 Nsem a esij ye a na nka me pfg hoo
@@ -498,8 +498,8 @@ Production Style
       { text: "FULL LYRICS", icon: fullLyricsIcon,   link: "" },
       { text: "VOICE NOTE", icon: voiceNoteIcon,   link: "" },
     ],
-    lyrics:[
-      {song1:`巳
+    song:[
+      {lyrics1:`
 Dreams Pt.2
 Abi small boy den gget dreams
 Say when I grow
@@ -528,7 +528,7 @@ then bills chop up all my earnings hw
 all my headache yε
 how fit make more
 Boss my dreams dey floor`},
-       {song2:`Abi grown man fuck dreams chale
+       {lyrics2:`Abi grown man fuck dreams chale
 Shine your eye
 Ain't nobody got time for that
 Reality be say
@@ -570,8 +570,8 @@ Wonna dreams all dey die`}
       { text: "FULL LYRICS",  icon: fullLyricsIcon,  link: "" },
       { text: "BTS VIDEO",  icon: BTSVideoIcon,   link: "" },
     ],
-         lyrics:[
-      {song1:`Marriage Song
+         song:[
+      {lyrics1:`Marriage Song
 
  lost my sight
 
@@ -665,7 +665,7 @@ Anything you want I'll do
 tryna love you like a gangsta yeah
 Sprav vou monev like a banker veah eh
 `},
-       {song2:`tryna love you like a gangsta yeah
+       {lyrics2:`tryna love you like a gangsta yeah
 Spray you money like a banker yeah eh
 Anything you want
 
@@ -756,7 +756,7 @@ With you
 With you, with you
 
 Fell and hit my head in love`},
-       {song3:`Without your love yeah
+       {lyrics3:`Without your love yeah
 
 Hold me down, you dey hold me close
 
@@ -813,14 +813,14 @@ Fell and hit my head in love`}
       { text: "FILM REEL", icon: filmReelIcon,   link: "" },
       { text: "MIXING NOTES", icon: mixingNoteIcon,    link: "" },
     ],
-       lyrics:[
-      {song1:`The Fall
+       song:[
+      {lyrics1:`The Fall
 No slippers chale we dey kyee And hopefully God go make us predators Cos you for bake before you go eat cake yeah Will I be successful? If only Drake stares Massa this ain't fair
 You no go barb until you end up in the studio with your idol On a label that you always told your friends that you'll sign to Feeling like you made it to the finals Small time the blow up go dey find you The whole city behind you Remember winning, it's time to Spin em true tales to a classic mixtape Figure the label go have your back but then throw you to the sharks You be smart so you play the optics But the fact, is the cards, on the ground no be great for options Producers se nana ylsigne wo dee a tua yen beat ka| Efiefoo ate, omo refre for sika wo nnipa joe se he dey from day 1 No be this thing we pray for?
 So how e set e no dey get the cake some? Make man, depressed he just, dey crib, dey stress 3 singles, no hit, radio no dey pick sef You turn entourage for EL I mean you're happy to be there Opening act on every stage But Nobody sef dey care Fans dey talk, say you flop and you're losing your groove Pappy drop, he on top for you nothing dey move You abusing the booze taking it out on your boo Mummy still dey call dey biz what you dey do
 Cos I've been waiting long ain't getting this call And I be staying strong watching fellas dey ball But Baby Tm falling Baby Tm falling Falling
 You no go barb until you link up with this label mate you know And finally crack the code Pen & Paper start the blow calls dey come for the shows`},
-       {song2:`But the shows no dey match the kwacha
+       {lyrics2:`But the shows no dey match the kwacha
 The big shows all you dey play for barter
 transpo sef matter
 They tell you that bi how e dey
@@ -852,7 +852,7 @@ Falling
 You no go barb until you get the vim to bet on your self Making your people mad cos you dey mess up what dey sell winning formula, cos of you PnP 2 is shelved
 Secof you feel you get something wey you for tell the world You make an album for your brothers they are hoping it fails So you jump back in the group and you, humble yourself But my pride is all I have and ril tell you what else ril tighten my belt before I ever beg for help
 Cos I've been doing me`},
-       {song3:`someway, but you balance am
+       {lyrics3:`someway, but you balance am
 Cos plenty small shows dey come
 Winneba strip club koraa mo gyee bam
 And Lauryn Hill put you on her tour
@@ -886,7 +886,7 @@ Something dey zook me
 They judge me guilty
 Biz the jury
 So why them no won make I shine like the jewelery`},
-       {song4:`The Fall Switch
+       {lyrics4:`The Fall Switch
 Hard headed, Always been set in my ways
 Time - the only real currency, lrve been betting my days And though, it may be hard for you to get me I pray You see, the height, of my respect in my face Shaker you're a legend to me though you never complain I know I let you down as I was jetting away But 111 always follow my heart, it never led me astray Confidence in my pace until they take me away Sometimes I wonder all the advice, what if I listened?
 Dropped I no dey instead of Corolla and it was crickets And UftWj doesn't want me on that song for me to kill it BBnZ never calls, and the school I finish NSS at NMC my rap career withers Words end up on the page-s Of newspapers Or I end up on TV because of my face Ori research and I chase A Phd in English so I can end my days Somewhere in America as Dr. LK Associate professor and the world never Gets, The Shining, P&P, Up & Awake For My Brothers doesn't drop on that November day And the boy who dm'd me saying that I saved Him is consumed by his grief, and he makes His way up to a peak, jumps and falls to his grave What else in the world would've changed?`}
@@ -906,8 +906,8 @@ Dropped I no dey instead of Corolla and it was crickets And UftWj doesn't want m
       { text: "FULL LYRICS", icon: fullLyricsIcon,   link: "" },
       { text: "CUE LIVE SESSION", icon: visualizerIcon,   link: "" },
     ],
-      lyrics:[
-      {song1:`
+      song:[
+      {lyrics1:`
 Onipa
 
 Bra Ayisi, Ko-Jo Cue Ko-Jo Cue, Bra Ayisi
@@ -950,7 +950,7 @@ Maame se boa no wo kura bi a
 Panyin ben na nkɑ ɔbɛ srɛ ɑkwɑdaa sika?
 Ɔhia ntira
 dane `},
-       {song2:`
+       {lyrics2:`
 Enyɛ sɛ me tirimu na ɛyɛ dene oh Eno Afia
 But I'm just one man,
 yeah, I'm just one man,
@@ -985,7 +985,7 @@ Opooman bus na de wo kɔ school na ede wo asan aba
 So when they call, how you no go answer?
 See at the bottom, we share the pain and share the stress Bɑɑko kɔ fa ba a, we all dey split and share the mess
 So when one makes it out we feel like e for pull we some How ago dawg my nieces when my uncle put me on? But I'm just one man.`},
-       {song3:`See at the bottom, we share the pain and share the stress) ko fa Rq a, we all dey split and share the mess
+       {lyrics3:`See at the bottom, we share the pain and share the stress) ko fa Rq a, we all dey split and share the mess
 So when one makes it out we feel like e for pull we some How ago dawg my nieces when my uncle put me on? But Km just one man.
 Part 2
 Mqq akuQ dware me, maa flo kyer3 me ludo
@@ -1021,8 +1021,8 @@ Some people no want you money just a call will do, so say they go fit brag they 
       { text: "WRITTEN STORY", icon: quillPenIcon,  link: "" },
       { text: "FULL LYRICS", icon: fullLyricsIcon,    link: "" },
     ],
-        lyrics:[
-      {song1:`Gold Dust
+        song:[
+      {lyrics1:`Gold Dust
 I swear this girl she's got a diamond for a heart
 Cos with a little bit of light
 She's the prettiest sight
@@ -1062,7 +1062,7 @@ Can fall in love with me
 Te hor din but the nerves plenty
 Your granny pacing up and down, odidi nursefoc akyi
 Are they okay? Akorsi sen? W'abisa b3v3 twenty`},
-       {song2:`Your granny pacing up and down, odidi nursefoc akyi Are they okay? Akorsi sen? W'abisa b3y3 twenty Dr. KGee sor me nsa na y3 kor t33 baabi
+       {lyrics2:`Your granny pacing up and down, odidi nursefoc akyi Are they okay? Akorsi sen? W'abisa b3y3 twenty Dr. KGee sor me nsa na y3 kor t33 baabi
 Ose oprepare me
 for how it could be
 I say whatever you do abeg bring my wife to me I'll be lost without her that was before you landed In the ward, And I saw
@@ -1104,7 +1104,7 @@ Heaven
 Tell me that you are from heaven
 From heaven
 Sent down to rescue me`},
-       {song3:`Sent down to rescue me
+       {lyrics3:`Sent down to rescue me
 Tell me someone from heaven From heaven
 Can fall in love with me
 Somehow
@@ -1133,7 +1133,7 @@ special Angels
 Verse 2
 But when I saw you, every cell in my body loved you, Arteries and veins all knew,
 I'll live days for you`},
-       {song4:`Your mummy but every 2 minutes he Dey check toe Venue, KATH labor ward
+       {lyrics4:`Your mummy but every 2 minutes he Dey check toe Venue, KATH labor ward
 Cue retwen two
 special Angels
 Verse 2
