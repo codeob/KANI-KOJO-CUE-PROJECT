@@ -2,6 +2,7 @@ import "./App.css"
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider, useParams, } from "react-router-dom"
 import locationPins from "../locations"
 import HomePage from "./Pages/HomePage"
+import WelcomePage from "./Pages/WelcomePage"
 import Map from "./Pages/Map"
 import WaveformPlayer from "./Components/WaveformPlayer"
 import ImagePreviewComponent from "./Components/ImagePreviewComponent"
@@ -52,6 +53,7 @@ function App() {
     createRoutesFromElements(
       <Route>
         <Route index element={<HomePage />} />
+        <Route path='/welcome' element={<WelcomePage />} />
         <Route path='/map' element={<Map />} />
         <Route path="/location/:id/:contentType" element={<ContentRouter />} />
         <Route path='*' element={<ErrorPage/>} />
