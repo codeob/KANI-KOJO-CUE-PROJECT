@@ -1,5 +1,11 @@
 import "./App.css"
-import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider, useParams, } from "react-router-dom"
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+  useParams,
+} from "react-router-dom"
 import locationPins from "../locations"
 import HomePage from "./Pages/HomePage"
 import Map from "./Pages/Map"
@@ -13,18 +19,20 @@ import ErrorPage from "./Pages/ErrorPage"
 import VideoPlayer from "./components/VideoPlayer"
 import Lyricsbreakedown from "./Components/lyricsbreakedown"
 
-function ContentRouter () {
-  const { id, contentType } = useParams();
-  const location = locationPins.find((loc) => loc.id === Number(id));
-  
+function ContentRouter() {
+  const { id, contentType } = useParams()
+  const location = locationPins.find((loc) => loc.id === Number(id))
+
   if (!location) {
     return <ErrorPage />
   }
-  
+
   switch (contentType) {
     case "lyrics":
       return <LyricsContainer />
-    case "audio": 
+    case "lyrics-breakdown":   // ✅ added for breakdown
+      return <Lyricsbreakedown />
+    case "audio":
       return <WaveformPlayer audioUrl={location.songUrl} />
     case "film-reel":
       return <FilmReel videoUrl={location.videoUrl} />
@@ -35,27 +43,24 @@ function ContentRouter () {
     case "video":
       return <VideoPlayer src={location.videoUrl} />
     case "voice-note":
-      return <WaveformPlayer audioUrl={location.songUrl} /> 
+      return <WaveformPlayer audioUrl={location.songUrl} />
     case "mixing-notes":
-      return <ImagePreviewComponent /> 
+      return <ImagePreviewComponent />
     case "interview":
-      return <VideoPlayer src={location.videoUrl} />   
+      return <VideoPlayer src={location.videoUrl} />
     default:
-      return <ErrorPage />;
+      return <ErrorPage />
   }
-
 }
 
 function App() {
-  //Routing  for All pages
   const Router = createBrowserRouter(
     createRoutesFromElements(
       <Route>
         <Route index element={<HomePage />} />
-        <Route path='/map' element={<Map />} />
+        <Route path="/map" element={<Map />} />
         <Route path="/location/:id/:contentType" element={<ContentRouter />} />
-        <Route path='*' element={<ErrorPage/>} />
-        <Route path='/lyrics' element={<Lyricsbreakedown/>} />
+        <Route path="*" element={<ErrorPage />} />
       </Route>
     )
   )

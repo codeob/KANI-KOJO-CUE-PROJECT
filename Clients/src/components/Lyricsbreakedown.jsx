@@ -1,10 +1,21 @@
-import React from 'react'
-import mapBG from '../assets/backgrounds/Map_BKg.png'
-import KExpWithCloseBtnHeadingBrown from './KExpWithCloseBtnHeadingBrown'
-import BTMapAndAudioLink from './BTMapAndAudioLink'
-import Scrollbar_Lyrics from './Scrollbar_Lyrics'
+import React from "react"
+import { useParams } from "react-router-dom"
+import mapBG from "../assets/backgrounds/Map_BKg.png"
+import KExpWithCloseBtnHeadingBrown from "./KExpWithCloseBtnHeadingBrown"
+import BTMapAndAudioLink from "./BTMapAndAudioLink"
+import Scrollbar_Lyrics from "./Scrollbar_Lyrics"
+import locationPins from "../../locations"
 
 function Lyricsbreakedown() {
+  const { id } = useParams()
+  const location = locationPins.find((loc) => loc.id === Number(id))
+
+  if (!location) {
+    return <p className="text-center text-red-500">Lyrics not found</p>
+  }
+
+  const lines = location.lyrics.split(". ")
+
   return (
     <div
       className="relative min-h-screen w-full bg-cover bg-center p-4 sm:p-6 lg:p-10"
@@ -20,9 +31,9 @@ function Lyricsbreakedown() {
         <div className="flex-1 flex justify-center items-center mr-14">
           <Scrollbar_Lyrics>
             <p className="text-base md:text-lg leading-relaxed text-center">
-              {[...Array(50)].map((_, i) => (
+              {lines.map((line, i) => (
                 <span key={i} className="block mb-2">
-                  Line {i + 1}: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  {line}
                 </span>
               ))}
             </p>
