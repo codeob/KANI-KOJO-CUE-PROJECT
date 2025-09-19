@@ -53,11 +53,11 @@ function App() {
     createRoutesFromElements(
       <Route>
         <Route index element={<HomePage />} />
-        <Route path='/welcome' element={<WelcomePage />} />
-        <Route path='/map' element={<Map />} />
+        <Route path="/welcome" element={<WelcomePage />} />
+        <Route path="/map" element={<Map />} />
         <Route path="/location/:id/:contentType" element={<ContentRouter />} />
-        <Route path='*' element={<ErrorPage/>} />
-        <Route path='/lyrics' element={<Lyricsbreakedown/>} />
+        <Route path="*" element={<ErrorPage/>} />
+        <Route path="/lyrics" element={<Lyricsbreakedown/>} />
       </Route>
     )
   )
