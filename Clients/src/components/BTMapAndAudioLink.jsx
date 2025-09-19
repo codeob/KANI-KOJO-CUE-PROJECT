@@ -2,22 +2,28 @@ import mapIcon from "../assets/icons/mapIcon.svg"
 import audioLinkBG from "../assets/backgrounds/audioLinkBG.png"
 import voiceIDIcon from "../assets/icons/voiceIDIcon.svg"
 import arrowNEIcon from "../assets/icons/arrow_ne.svg"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import useLocationStore from "../store/useLocationStore"
 
 
-export default function BTMapAndAudioLink() {
-  const { selectedLocation } = useLocationStore()
+
+export default function BTMapAndAudioLink({onBack}) {
+  const { selectedLocation, clearSelected } = useLocationStore()
+  const navigate = useNavigate()
+
+  const handleBack2Map = (e) => {
+    navigate('/map');
+    clearSelected();
+  }
 
   return (
     // note: to use this componenent, create a div where even you call it and add w-full to get it to flex
     <div className='flex justify-between w-full'>
-      <Link to="/map">
-        <button className='flex justify-between items-center cursor-pointer'>
-          <img src={mapIcon} alt="Return to map" className=""  />
-          <p className="rock text-primary-100 ">Back to map</p>
-        </button>
-      </Link>
+      
+      <button onClick={handleBack2Map} className='flex justify-between items-center cursor-pointer'>
+        <img src={mapIcon} alt="Return to map" className=""  />
+        <p className="rock text-primary-100 ">Back to map</p>
+      </button>
       
       <div className="relative h-fit max-w-fit flex items-center px-5 py-3 gap-2 ">
         <img src={audioLinkBG} alt="Audio link background" className="absolute left-0 right-0 h-full w-full " />

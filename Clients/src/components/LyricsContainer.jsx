@@ -1,52 +1,3 @@
-// import React from 'react'
-// import KExpWithCloseBtnHeadingBrown from './KExpWithCloseBtnHeadingBrown'
-// import mapBG from '../assets/backgrounds/Map_Bkg.png'
-// import lyricsBG from '../assets/backgrounds/lyricsFrameBackground.png'
-// import BTMapAndAudioLink from './BTMapAndAudioLink'
-// import Scrollbar_Lyrics from './Scrollbar_Lyrics'
-
-// export default function LyricsContainer() {
-//   const pattern = [1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1,0,0,1,1]
-
-//   return (
-//     <div className="h-screen relative overflow-hidden" >
-//       <img src={mapBG} alt="" className="absolute h-full w-full object-cover " />
-//       <div className="relative z-10 flex flex-col items-center justify-between h-full w-full p-10">
-//         <div className="w-full">
-//           <KExpWithCloseBtnHeadingBrown />
-//         </div>
-
-//         <div className="">
-//           <Scrollbar_Lyrics>
-//             <div className="  grid grid-cols-2 gap-x-40  ">
-//               {Array.from({ length: 30 }).map((_, i) => {
-//                 const show =pattern[i% pattern.length] ===1
-//                 return(
-//                   <div key={i} className="mb-2">
-//                     {show && <img src={lyricsBG} alt="" className='' /> }
-//                   </div>
-//                 )
-//               })}
-//             </div>
-
-//             <div className="">
-//        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis?
-//             </div>
-
-//           </Scrollbar_Lyrics>
-//         </div>
-
-//         <div className="w-full">
-//           <BTMapAndAudioLink />
-//         </div>
-//       </div>
-//     </div>
-//   )
-// }
-
-
-
-
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom"
 import KExpWithCloseBtnHeadingBrown from "./KExpWithCloseBtnHeadingBrown";
@@ -138,16 +89,6 @@ export default function LyricsContainer() {
             
           </Scrollbar_Lyrics>
         </div>
-        {/* //          <div className="  grid grid-cols-2 gap-x-40  "> */}
-             {/* {Array.from({ length: 30 }).map((_, i) => { */}
-                {/* const show =pattern[i% pattern.length] ===1
-                return( */}
-                  {/* <div key={i} className="mb-2"> */}
-                    {/* {show && <img src={lyricsBG} alt="" className='' /> } */}
-                  {/* </div>
-                ) */}
-              {/* })} */}
-            {/* </div> */}
 
         {/* Bottom button */}
         <div className="w-full">

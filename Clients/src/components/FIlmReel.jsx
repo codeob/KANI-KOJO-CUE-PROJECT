@@ -9,7 +9,7 @@ export default function FIlmReel({ videoUrl }) {
   return (
     <div className="h-screen w-full relative overflow-hidden">
       {/* background */}
-      <img src={mapBG} alt="" className="absolute h-full w-full object-cover " />
+      <img src={mapBG} alt="Map background image" className="absolute h-full w-full object-cover " />
       <div className="relative z-10 flex flex-col items-center justify-between h-full w-full p-10 -space-y-20 ">
         <div className="w-full">
           <KExpWithCloseBtnHeadingBrown />
@@ -22,7 +22,6 @@ export default function FIlmReel({ videoUrl }) {
               className='absolute top-0 left-0 w-full h-full p-1 ' 
             >
             </video>
-
           </div>
 
         </div>
