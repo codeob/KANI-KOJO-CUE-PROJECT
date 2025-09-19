@@ -3,10 +3,9 @@ import mapBG from '../assets/backgrounds/Map_Bkg.png'
 import KExpWithCloseBtnHeadingBrown from './KExpWithCloseBtnHeadingBrown'
 import BTMapAndAudioLink from './BTMapAndAudioLink'
 import filmFrame from "../assets/backgrounds/FilmReel_Frame.svg"
-import youAre from "../video/You_Are_Film_Reel.mp4"
 
 
-export default function FIlmReel() {
+export default function FIlmReel({ videoUrl }) {
   return (
     <div className="h-screen w-full relative overflow-hidden">
       {/* background */}
@@ -19,7 +18,7 @@ export default function FIlmReel() {
           <div className="relative h-full max-w-[430px]">
             <img src={filmFrame} alt="Film frame" className='h-full w-full object-contain' />
             <video 
-              src={youAre} autoPlay loop muted
+              src={videoUrl} autoPlay loop muted
               className='absolute top-0 left-0 w-full h-full p-1 ' 
             >
             </video>

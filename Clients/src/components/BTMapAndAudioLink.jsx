@@ -15,7 +15,7 @@ export default function BTMapAndAudioLink() {
       <Link to="/map">
         <button className='flex justify-between items-center cursor-pointer'>
           <img src={mapIcon} alt="Return to map" className=""  />
-          <p className="rock ">Back to map</p>
+          <p className="rock text-primary-100 ">Back to map</p>
         </button>
       </Link>
       

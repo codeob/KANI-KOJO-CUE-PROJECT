@@ -32,7 +32,7 @@ export default function WrittenReflection() {
         <div className=" h-full flex justify-center p-10  ">
           <div className="relative left-0 h-full w-full ">
             <img src={zigzagFrame1} alt="Film frame" className='h-full w-full  ' />
-            <div className="absolute inset-0 z-10 p-20 ">
+            <div className="absolute inset-0 z-10 p-20 text-primary-100 ">
               <h3 className='jim-nightshade text-[32px] ' >{animatedHeading}</h3>
               <p className='island-moments text-[28px] whitespace-pre-wrap'  >{animatedParagraph}</p>
             </div>

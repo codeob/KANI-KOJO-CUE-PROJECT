@@ -6,7 +6,6 @@ import quillPenIcon from './src/assets/icons/quillPenIcon.svg';
 import filmReelIcon from './src/assets/icons/filmReelIcon.svg';
 import fullLyricsIcon from './src/assets/icons/fullLyricsIcon.svg';
 import BTSPhotoIcon from './src/assets/icons/BTSPhotoIcon.svg';
-      // need to change the scource "watchMusicVideo.svg" below since its currently white and not visible on the slide, withing on Georgina
 import watchMusicVideo from './src/assets/icons/watchMusicVideo.svg';
 import visualizerIcon from './src/assets/icons/visualizerIcon.svg';
 import BTSVideoIcon from './src/assets/icons/BTSVideoIcon.svg';
@@ -25,9 +24,9 @@ const locationPins = [
     artistName: "Kojo Cue",
     lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis",
     buttons: [
-      { text: "FILM REEL", icon: filmReelIcon,   link: "" },
-      { text: "REFLECTIONS",  icon:quillPenIcon, link: "" },
-      { text: "LYRICS", icon: fullLyricsIcon,   link: "" },
+      { text: "FILM REEL", icon: filmReelIcon,   link: "location/1/film-reel" },
+      { text: "REFLECTIONS",  icon:quillPenIcon, link: "location/1/reflection" },
+      { text: "LYRICS", icon: fullLyricsIcon,   link: "location/1/lyrics" },
     ],
         song:[
       {lyrics1:`Mummy Dey Grow

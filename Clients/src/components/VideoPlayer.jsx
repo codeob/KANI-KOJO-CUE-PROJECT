@@ -45,6 +45,31 @@ export default function VideoPlayer({ src }) {
     };
   }, []);
 
+  // Controls visibility toggle in fullscreen
+  useEffect(() => {
+    let timeout;
+    const controls = playerRef.current?.querySelector('.custom-controls');
+    if (!controls) return;
+
+    const showControls = () => {
+      controls.style.opacity = '1';
+      clearTimeout(timeout);
+      timeout = setTimeout(() => {
+        if (isFullscreen) controls.style.opacity = '0.3';
+      }, 3000);
+    };
+
+    const handleMouseMove = () => {
+      if (isFullscreen) showControls();
+    };
+
+    playerRef.current.addEventListener('mousemove', handleMouseMove);
+    return () => {
+      playerRef.current?.removeEventListener('mousemove', handleMouseMove);
+      clearTimeout(timeout);
+    };
+  }, [isFullscreen]);
+
   const togglePlay = () => {
     const video = videoRef.current;
     if (playing) {
@@ -70,12 +95,19 @@ export default function VideoPlayer({ src }) {
   const goFullscreen = () => {
     if (!document.fullscreenElement && !document.webkitFullscreenElement && !document.mozFullScreenElement) {
       const elem = playerRef.current;
+      const video = videoRef.current;
       if (elem.requestFullscreen) {
-        elem.requestFullscreen();
+        elem.requestFullscreen().catch(() => {
+          if (video.requestFullscreen) video.requestFullscreen();
+        });
       } else if (elem.webkitRequestFullscreen) {
-        elem.webkitRequestFullscreen();
+        elem.webkitRequestFullscreen().catch(() => {
+          if (video.webkitRequestFullscreen) video.webkitRequestFullscreen();
+        });
       } else if (elem.mozRequestFullScreen) {
-        elem.mozRequestFullScreen();
+        elem.mozRequestFullScreen().catch(() => {
+          if (video.mozRequestFullScreen) video.mozRequestFullScreen();
+        });
       }
     } else {
       if (document.exitFullscreen) {
@@ -93,7 +125,7 @@ export default function VideoPlayer({ src }) {
       {/* background */}
       <img
         src={mapBG}
-        alt=""
+        alt="Background Image"
         className="absolute inset-0 h-full w-full object-cover z-0"
       />
 
@@ -105,15 +137,15 @@ export default function VideoPlayer({ src }) {
         {/* player container */}
         <div
           ref={playerRef}
-          className="relative w-[1049px] h-[550px] -mt-[5%] flex flex-col items-center"
+          className=" relative w-[1049px] h-[598px] -mt-[5%] flex flex-col items-center"
         >
           {/* video */}
-          <div className="relative h-full w-full flex justify-center">
+          <div className="relative w-full flex justify-center" style={{ height: 'calc(100% - 60px)' }}>
             <video
               src={src || testVideo}
               ref={videoRef}
               controls={false}
-              className="w-full rounded-lg"
+              className="w-full h-full object-contain rounded-lg"
               onLoadedMetadata={(e) => setDuration(e.target.duration)}
               onClick={togglePlay}
             />
@@ -121,7 +153,7 @@ export default function VideoPlayer({ src }) {
             {!playing && (
               <button
                 onClick={togglePlay}
-                className="absolute inset-0 flex items-center justify-center bg-black/90 rounded-3xl"
+                className="absolute inset-0 flex items-center justify-center bg-black/95 rounded-3xl"
               >
                 <img
                   src={playBtnOverlay}
@@ -133,7 +165,7 @@ export default function VideoPlayer({ src }) {
           </div>
 
           {/* custom controls */}
-          <div className="custom-controls flex items-center justify-between gap-6 bg-brown-300 rounded-lg py-2 w-full">
+          <div className="custom-controls flex items-center justify-between gap-6 rounded-lg py-2 w-full mt-2" >
             {/* play/volume */}
             <div className="bg-surface-100 rounded-2xl py-2 px-5 h-[50px] w-[141px] flex items-center justify-between">
               <button onClick={togglePlay} className="cursor-pointer">
