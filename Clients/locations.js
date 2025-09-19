@@ -1,5 +1,4 @@
 import lyricsBDIcon from './src/assets/icons/lyricsBDIcon.svg';
-import rightarrow from './src/assets/icons/rArrow.svg';
 import mixingNoteIcon from './src/assets/icons/mixingNoteIcon.svg';
 import voiceNoteIcon from './src/assets/icons/voiceNoteIcon.svg';
 import quillPenIcon from './src/assets/icons/quillPenIcon.svg';
@@ -145,7 +144,7 @@ const locationPins = [
     songUrl: "",
     videoUrl: "",
     artistName: "Kojo Cue",
-    lyrics: "",
+    lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis",
     buttons: [
       { text: "FULL LYRICS",  icon: fullLyricsIcon, link: "/location/8/lyrics" },
       { text: "REFLECTION", icon: quillPenIcon,  link: "/location/8/reflection" },
