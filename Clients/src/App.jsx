@@ -4,10 +4,9 @@ import locationPins from "../locations"
 import HomePage from "./Pages/HomePage"
 import Map from "./Pages/Map"
 import WaveformPlayer from "./Components/WaveformPlayer"
-import song1 from "./audio/song1.mp3"
 import ImagePreviewComponent from "./Components/ImagePreviewComponent"
 import LyricsContainer from "./Components/LyricsContainer"
-import FIlmReel from "./Components/FIlmReel"
+import FilmReel from "./Components/FilmReel"
 import BTSPhotos from "./Components/BTSPhotos"
 import WrittenReflection from "./Components/WrittenReflection"
 import ErrorPage from "./Pages/ErrorPage"
@@ -27,7 +26,7 @@ function ContentRouter () {
     case "audio": 
       return <WaveformPlayer audioUrl={location.songUrl} />
     case "film-reel":
-      return <FIlmReel videoUrl={location.videoUrl} />
+      return <FilmReel videoUrl={location.videoUrl} />
     case "bts-photos":
       return <BTSPhotos />
     case "reflection":
@@ -54,22 +53,6 @@ function App() {
         <Route index element={<HomePage />} />
         <Route path='/map' element={<Map />} />
         <Route path="/location/:id/:contentType" element={<ContentRouter />} />
-
-
-                
- 
-
-
-        {/* creating and testing individual components down here */}
-        {/* <Route path='/lyrics/:id' element={<LyricsContainer />} />
-        <Route path='/waveform2' element={<WaveformPlayer audioUrl={song1} />} />
-        <Route path='/filmreel' element={<FIlmReel />} />
-        <Route path='/bts_photos' element={<BTSPhotos />} />
-        <Route path='/reflection' element={<WrittenReflection />} />
-        <Route path='/watch' element={<VideoPlayer />} /> */}
-       {/* Error Page */}
-       {/* <Route path='*' element={<ErrorPage/>} /> */}
-
       </Route>
     )
   )

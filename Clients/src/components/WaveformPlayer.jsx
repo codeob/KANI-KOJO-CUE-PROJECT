@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import mapBG from '../assets/backgrounds/Map_Bkg.png'
-import PauseIcon from "./PauseIcon"
-import PlayIcon from './PlayIcon';
+import PauseIcon from "../Components/PauseIcon"
+import PlayIcon from '../Components/PlayIcon';
 import KExpWithCloseBtnHeadingBrown from './KExpWithCloseBtnHeadingBrown';
 import BTMapAndAudioLink from './BTMapAndAudioLink';
 
