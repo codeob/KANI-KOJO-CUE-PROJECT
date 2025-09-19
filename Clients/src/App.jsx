@@ -11,6 +11,7 @@ import BTSPhotos from "./Components/BTSPhotos"
 import WrittenReflection from "./Components/WrittenReflection"
 import ErrorPage from "./Pages/ErrorPage"
 import VideoPlayer from "./components/VideoPlayer"
+import Lyricsbreakedown from "./Components/lyricsbreakedown"
 
 function ContentRouter () {
   const { id, contentType } = useParams();
@@ -53,6 +54,8 @@ function App() {
         <Route index element={<HomePage />} />
         <Route path='/map' element={<Map />} />
         <Route path="/location/:id/:contentType" element={<ContentRouter />} />
+        <Route path='*' element={<ErrorPage/>} />
+        <Route path='/lyrics' element={<Lyricsbreakedown/>} />
       </Route>
     )
   )
