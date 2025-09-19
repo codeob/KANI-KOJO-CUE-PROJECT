@@ -34,9 +34,9 @@ function ContentRouter () {
     case "video":
       return <VideoPlayer src={location.videoUrl} />
     case "voice-note":
-      return <WaveformPlayer audioUrl={location.songUrl} />   // this is assuming voice notes are using waveformPlayer
+      return <WaveformPlayer audioUrl={location.songUrl} /> 
     case "mixing-notes":
-      return <ImagePreviewComponent />  // this is also assumed
+      return <ImagePreviewComponent /> 
     case "interview":
       return <VideoPlayer src={location.videoUrl} />   
     default:
