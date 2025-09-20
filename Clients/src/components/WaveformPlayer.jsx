@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import mapBG from '../assets/backgrounds/Map_Bkg.png'
+import bgimage from '../assets/backgrounds/bgimage.png'
 import PauseIcon from "../Components/PauseIcon"
 import PlayIcon from '../Components/PlayIcon';
 import KExpWithCloseBtnHeadingBrown from './KExpWithCloseBtnHeadingBrown';
@@ -122,7 +122,7 @@ const WaveformPlayer = ({ audioUrl }) => {
   return (
     <div className="h-screen relative overflow-hidden">
       {/* background */}
-      <img src={mapBG} alt="" className="absolute h-full w-full object-cover " />
+      <img src={bgimage} alt="" className="absolute bg-secondy-100/75 h-full w-full object-cover " />
       <div className="relative z-10 flex flex-col items-center justify-between h-full w-full p-10">
         <div className="w-full">
           <KExpWithCloseBtnHeadingBrown />
