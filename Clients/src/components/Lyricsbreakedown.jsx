@@ -30,7 +30,7 @@ function Lyricsbreakedown() {
       <div className="flex bg-secondy-100 rounded-2xl h-[70vh] max-h-[580px]  w-full max-w-7xl mx-auto shadow-lg overflow-hidden p-7">
         <div className="flex-1 flex justify-center items-center mr-14">
           <Scrollbar_Lyrics>
-            <p className="text-base md:text-lg leading-relaxed text-center">
+            <p className="text-base md:text-lg special-elite text-white leading-relaxed text-center">
               {lines.map((line, i) => (
                 <span key={i} className="block mb-2">
                   {line}
