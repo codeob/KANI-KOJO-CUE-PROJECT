@@ -80,7 +80,7 @@ export default function Scrollbar_Lyrics({ children }) {
   }, []);
 
   return (
-    <div className='relative flex h-[66vh] w-full px-3'>
+    <div className='relative flex h-full w-full px-3'>
       {/* Scrollable Content */}
       <div ref={contentRef} onScroll={handleScroll} className="flex-1 overflow-y-scroll pr-6 no-scrollbar">
         {children}

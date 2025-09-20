@@ -64,31 +64,35 @@ export default function LyricsContainer() {
         </div>
 
         {/* Lyrics grid inside scrollbar */}
-        <div>
-          <Scrollbar_Lyrics>
-            <div className="grid grid-cols-2 gap-x-50 -space-y-10 pl-10 pr-30">
-              {chunks.map((chunk, i) => {
-                const show = pattern[i % pattern.length] === 1;
-                if (!show) return <div key={i} />;
+        <div className="flex rounded-2xl h-[580px]  min-w-7xl -mt-[5%] overflow-hidden ">
 
-                return (
-                  <div key={i} className="relative py-6">
-                    {/* Frame as background */}
-                    <img src={lyricsBG} alt="" className="w-full h-auto" />
+          <div className="flex-1 flex  items-center ">
+            <Scrollbar_Lyrics>
+              <div className="grid grid-cols-2 gap-x-50  pl-10 pr-30">
+                {chunks.map((chunk, i) => {
+                  const show = pattern[i % pattern.length] === 1;
+                  if (!show) return <div key={i} />;
 
-                    {/* Text overlay */}
-                    <div className="absolute inset-0 flex flex-col justify-center items-center px-6 py-4 text-center text-[#522a00] ">
-                      {chunk.map((line, j) => (
-                        <p key={j} className="rock  " >{line}</p>
-                      ))}
+                  return (
+                    <div key={i} className="relative py-6">
+                      {/* Frame as background */}
+                      <img src={lyricsBG} alt="" className="w-full h-auto" />
+
+                      {/* Text overlay */}
+                      <div className="absolute inset-0 flex flex-col justify-center items-center px-6 py-4 text-center text-[#522a00] ">
+                        {chunk.map((line, j) => (
+                          <p key={j} className="rock  " >{line}</p>
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                );
-              })}
-            </div>
-            
-          </Scrollbar_Lyrics>
+                  );
+                })}
+              </div>
+              
+            </Scrollbar_Lyrics>
+          </div>
         </div>
+
 
         {/* Bottom button */}
         <div className="w-full">

@@ -25,6 +25,8 @@ function ContentRouter () {
   switch (contentType) {
     case "lyrics":
       return <LyricsContainer />
+    case "lyrics-breakdown":
+      return <Lyricsbreakedown />
     case "audio": 
       return <WaveformPlayer audioUrl={location.songUrl} />
     case "film-reel":
