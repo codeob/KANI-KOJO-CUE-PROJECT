@@ -23,7 +23,7 @@ function HomePage() {
 
             {/* Button */}
             <div className="pt-12 w-full flex justify-center">
-                <Link to="/map" className="block w-full max-w-xs sm:max-w-md">
+                <Link to="/welcome" className="block w-full max-w-xs sm:max-w-md">
                     <button
                         className="relative w-full flex justify-center items-center hover:cursor-pointer"
                         aria-label="Enter the experience"
