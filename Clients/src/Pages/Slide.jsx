@@ -1,4 +1,4 @@
-import KExpWithCloseBtnHeadingCream from '../Components/KExpWithCloseBtnHeadingCream';
+import KExpWithCloseBtnHeadingCream from '../components/KExpWithCloseBtnHeadingCream';
 import subwayloc from '../assets/icons/subway_location_Icon.svg';
 import grainBG from '../assets/backgrounds/grainBG.png';
 import AlbumImg from '../assets/Group19.png';
