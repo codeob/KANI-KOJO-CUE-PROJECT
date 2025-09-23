@@ -1,4 +1,0 @@
-[build]
-  base = "Clients"        # adjust if your React app is in Clients/
-  command = "yarn build"  # or "npm run build"
-  publish = "Clients/dist" # Vite default (use "Clients/build" if CRA)
