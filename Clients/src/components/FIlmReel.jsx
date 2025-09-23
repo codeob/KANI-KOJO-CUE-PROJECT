@@ -5,7 +5,7 @@ import BTMapAndAudioLink from './BTMapAndAudioLink'
 import filmFrame from "../assets/backgrounds/FilmReel_Frame.svg"
 
 
-export default function FIlmReel({ videoUrl }) {
+export default function FilmReel({ videoUrl }) {
   return (
     <div className="h-screen w-full relative overflow-hidden">
       {/* background */}

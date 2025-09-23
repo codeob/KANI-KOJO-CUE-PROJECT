@@ -6,13 +6,13 @@ import WelcomePage from "./Pages/WelcomePage"
 import Map from "./Pages/Map"
 import WaveformPlayer from "./components/WaveformPlayer"
 import LyricsContainer from "./components/LyricsContainer"
-import FilmReel from "./components/FilmReel"
 import BTSPhotos from "./components/BTSPhotos"
 import WrittenReflection from "./components/WrittenReflection"
 import ErrorPage from "./Pages/ErrorPage"
 import VideoPlayer from "./components/VideoPlayer"
 import ImagePreviewComponent from "./components/ImagePreviewComponent"
 import Lyricsbreakedown from "./components/Lyricsbreakedown"
+import FilmReel from "./components/FilmReel"
 
 function ContentRouter () {
   const { id, contentType } = useParams();
