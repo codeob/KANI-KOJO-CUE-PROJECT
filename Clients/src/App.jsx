@@ -57,7 +57,6 @@ function App() {
         <Route path="/map" element={<Map />} />
         <Route path="/location/:id/:contentType" element={<ContentRouter />} />
         <Route path="*" element={<ErrorPage/>} />
-        <Route path="/lyrics" element={<Lyricsbreakedown/>} />
       </Route>
     )
   );
