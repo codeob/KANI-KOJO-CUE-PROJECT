@@ -12,7 +12,7 @@ import ErrorPage from "./Pages/ErrorPage"
 import VideoPlayer from "./components/VideoPlayer"
 import ImagePreviewComponent from "./components/ImagePreviewComponent"
 import Lyricsbreakedown from "./components/Lyricsbreakedown"
-import FilmReel from "./Components/FilmReel"
+import FilmReel from "./components/FilmReel"
 
 function ContentRouter () {
   const { id, contentType } = useParams();
