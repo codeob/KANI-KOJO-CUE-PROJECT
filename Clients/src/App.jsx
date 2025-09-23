@@ -30,7 +30,7 @@ function ContentRouter () {
     case "audio": 
       return <WaveformPlayer audioUrl={location.songUrl} />
     case "film-reel":
-      return <FilmReel videoUrl={location.videoUrl} />;
+      return <FilmReel videoUrl={location.videoUrl} />
     case "bts-photos":
       return <BTSPhotos />;
     case "reflection":

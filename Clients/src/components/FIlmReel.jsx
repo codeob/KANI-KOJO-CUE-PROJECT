@@ -4,7 +4,6 @@ import KExpWithCloseBtnHeadingBrown from './KExpWithCloseBtnHeadingBrown'
 import BTMapAndAudioLink from './BTMapAndAudioLink'
 import filmFrame from "../assets/backgrounds/FilmReel_Frame.svg"
 
-
 export default function FilmReel({ videoUrl }) {
   return (
     <div className="h-screen w-full relative overflow-hidden">
