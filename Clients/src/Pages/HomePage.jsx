@@ -1,5 +1,5 @@
 import React from 'react'
-import Homepage from "../assets/HomePage.jpg"
+import Homepage from "../assets/homePage.jpg"
 import { Link } from 'react-router-dom'
 import btn from '../assets/icons/button.svg'
 
