@@ -1,0 +1,310 @@
+import lyricsBDIcon from './src/assets/icons/lyricsBDIcon.svg';
+import mixingNoteIcon from './src/assets/icons/mixingNoteIcon.svg';
+import voiceNoteIcon from './src/assets/icons/voiceNoteIcon.svg';
+import quillPenIcon from './src/assets/icons/quillPenIcon.svg';
+import filmReelIcon from './src/assets/icons/filmReelIcon.svg';
+import fullLyricsIcon from './src/assets/icons/fullLyricsIcon.svg';
+import BTSPhotoIcon from './src/assets/icons/BTSPhotoIcon.svg';
+import watchMusicVideo from './src/assets/icons/watchMusicVideo.svg';
+import visualizerIcon from './src/assets/icons/visualizerIcon.svg';
+import BTSVideoIcon from './src/assets/icons/BTSVideoIcon.svg';
+import interviewIcon from './src/assets/icons/interviewIcon.svg';
+
+const locationPins = [
+  {
+    id: 1,
+    locationName: "Ota 42 - Adum",
+    importance: "KO-JO'S BIRTHPLACE AND MOTHER'S FAMILY HOME",
+    coords: { top: "56%", left: "37%" },
+    image: "",
+    songTitle: "Fruit of the Womb",
+    songUrl: "",
+    videoUrl: "",
+    artistName: "Kojo Cue",
+    lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis",
+    buttons: [
+      { text: "FILM REEL", icon: filmReelIcon,   link: "/location/1/film-reel" },
+      { text: "REFLECTIONS",  icon:quillPenIcon, link: "/location/1/reflection" },
+      { text: "LYRICS", icon: fullLyricsIcon,   link: "/location/1/lyrics" },
+    ],
+  
+  },
+  {
+    id: 2,
+    locationName: "Ota 42 - Adum",
+    importance: "KO-JO'S BIRTHPLACE AND MOTHER'S FAMILY HOME",
+    image: "",
+    coords: { top: "56%", left: "45%" },
+    songTitle: "Big Boy",
+    songUrl: "",
+    videoUrl: "",
+    artistName: "Kojo Cue",
+    lyrics: "",
+    buttons: [
+      { text: "FILM REEL", icon: filmReelIcon,  link: "/location/2/film-reel" },
+      { text: "REFLECTIONS", icon: quillPenIcon, link: "/location/2/reflection" },
+    ],
+
+  },
+  {
+    id: 3,
+    locationName: "Kotoko - Oduom",
+    importance: "First friendship, first injury, love for football",
+    image: "",
+    coords: { top: "84%", left: "80%" },
+    songTitle: "Next term",
+    songUrl: "",
+    videoUrl: "",
+    artistName: "Kojo Cue",
+    lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis Next term",
+    buttons: [
+      { text: "MIXING NOTES",   icon: mixingNoteIcon,  link: "/location/3/mixing-notes" },
+      { text: "VOICE NOTE",   icon: voiceNoteIcon,  link: "/location/3/voice-note" },
+      { text: "LYRICS BREAKDOWN",  icon: lyricsBDIcon,  link: "/location/3/lyrics-breakdown" },  // ask where this link routes to?
+    ],
+
+  },
+  {
+    id: 4,
+    locationName: "Jamaica House - Bantama",
+    importance: "Core childhood home. Father’s side of the family",
+    image: "",
+    coords: { top: "10%", left: "9%" },
+    songTitle: "Bantama Blues 3",
+    songUrl: "",
+    videoUrl: "",
+    artistName: "Kojo Cue",
+    lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis Bantama Blues 3",
+    buttons: [
+      { text: "BTS PHOTOS",  icon: BTSPhotoIcon,   link: "/location/4/bts-photos" },
+      { text: "LYRICS BREAKDOWN",  icon: lyricsBDIcon,    link: "/location/4/lyrics-breakdown" },   // ask where this link routes to?
+      { text: "WATCH MUSIC VIDEO", icon: watchMusicVideo,   link: "" },   // use external link Kani website must still remain open
+    ],
+ 
+  },
+  {
+    id: 5,
+    locationName: "Jamaica House - Bantama",
+    importance: "Core childhood home. Father’s side of the family",
+    image: "",
+    coords: { top: "55%", left: "45.8%" },
+    songTitle: "Abrantie",
+    songUrl: "",
+    videoUrl: "",
+    artistName: "Kojo Cue",
+    lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis Jamaica House - Bantama Abrantie",
+    buttons: [
+      { text: "FILM REEL", icon: filmReelIcon,    link: "/location/5/film-reel" },
+      { text: "Lyrics Breakdown", icon: lyricsBDIcon,   link: "/location/5/lyrics-breakdown" },   // ask where this link routes to?
+    ],
+
+  },
+  {
+    id: 6,
+    locationName: "OWASS BASIC - Santasi",
+    importance: "Junior and senior school years; early rap influences.",
+    image: "",
+    coords: { top: "57%", left: "42%" },
+    songTitle: "Squad",
+    songUrl: "",
+    videoUrl: "",
+    artistName: "Kojo Cue",
+    lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis OWASS BASIC - Santasi",
+    buttons: [
+      { text: "VISUALIZER",  icon: visualizerIcon, iconColor: "#7B3F00",  link: "/location/6/video" },     // ask where this link routes to?
+      { text: "LYRICS BREAKDOWN", icon: lyricsBDIcon,   link: "/location/6/lyrics-breakdown" },    // ask where this link routes to?
+    ],
+
+  },
+  {
+    id: 7,
+    locationName: "OWASS BASIC - Santasi",
+    importance: "Junior and senior school years; early rap influences.",
+    image: "",
+    coords: { top: "69.8%", left: "27.2%" },
+    songTitle: "Mr. Eben Interlude",
+    songUrl: "",
+    videoUrl: "",
+    artistName: "Kojo Cue",
+    lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis Mr. Eben Interlude",
+    buttons: [
+      { text: "LYRICS BREAKDOWN", icon: lyricsBDIcon,    link: "/location/7/lyrics-breakdown" },
+      { text: "INTERVIEW",  icon: interviewIcon,    link: "/location/7/interview" },
+      { text: "MIXING NOTES",   icon: mixingNoteIcon,    link: "/location/7/mixing-notes" },
+    ],
+
+  },
+  {
+    id: 8,
+    locationName: "SMALL LONDON - Breman",
+    importance: "Grandmother's death and family changes.",
+    image: "",
+    coords: { top: "81.7%", left: "47.8%" },
+    songTitle: "Mysterious Ways",
+    songUrl: "",
+    videoUrl: "",
+    artistName: "Kojo Cue",
+    lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis",
+    buttons: [
+      { text: "FULL LYRICS",  icon: fullLyricsIcon, link: "/location/8/lyrics" },
+      { text: "REFLECTION", icon: quillPenIcon,  link: "/location/8/reflection" },
+    ],
+  
+  },
+  {
+    id: 9,
+    locationName: "SMALL LONDON - Breman",
+    importance: "Grandmother's death and family changes.",
+    image: "",
+    coords: { top: "88%", left: "56%" },
+    songTitle: "Angel",
+    songUrl: "",
+    videoUrl: "",
+    artistName: "Kojo Cue",
+    lyrics: "",
+    buttons: [
+      { text: "FILM REEL", icon: filmReelIcon,    link: "/location/9/film-reel" },
+      { text: "MIXING NOTES", icon: mixingNoteIcon,   link: "/location/9/mixing-notes" },
+      { text: "VOICE NOTES",  icon: voiceNoteIcon,    link: "/location/9/voice-note" },  // check this again
+    ],
+
+  },
+  {
+    id: 10,
+    locationName: "F176 - Buokrom Estate",
+    importance: "Adolescence, the first meeting with father.",
+    image: "",
+    coords: { top: "87%", left: "79%" },
+    songTitle: "F176",
+    songUrl: "",
+    videoUrl: "",
+    artistName: "Kojo Cue",
+    lyrics: "",
+    buttons: [
+      { text: "VOICE NOTE", icon: voiceNoteIcon,  link: "/location/10/audio" },
+    ],
+   
+  },
+  {
+    id: 11,
+    locationName: "F176 - Buokrom Estate",
+    importance: "Adolescence, the first meeting with father.",
+    image: "",
+    coords: { top: "23%", left: "16%" },
+    songTitle: "Grew Up Fast",
+    songUrl: "",
+    videoUrl: "",
+    artistName: "Kojo Cue",
+    lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis",
+    buttons: [
+      { text: "FULL LYRICS", icon: fullLyricsIcon,  link: "/location/11/lyrics" },
+    ],
+ 
+  },
+  {
+    id: 12,
+    locationName: "F176 - Buokrom Estate",
+    importance: "Adolescence, the first meeting with father.",
+    image: "",
+    coords: { top: "42%", left: "19.5%" },
+    songTitle: "Tontonte",
+    songUrl: "",
+    videoUrl: "",
+    artistName: "Kojo Cue",
+    lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis",
+    buttons: [
+      { text: "BTS PHOTOS",  icon: BTSPhotoIcon,    link: "/location/12/bts-photos" },
+      { text: "VISUALIZER",  icon: visualizerIcon,  link: "/location/12/video" },
+      { text: "FULL LYRICS", icon: fullLyricsIcon,   link: "/location/12/lyrics" },
+    ],
+  
+  },
+  {
+    id: 13,
+    locationName: "CLAMP STREET - Lake",
+    importance: "Current family home; recent life changes.",
+    image: "",
+    coords: { top: "13%", left: "43%" },
+    songTitle: "Dreams",
+    songUrl: "",
+    videoUrl: "",
+    artistName: "Kojo Cue",
+    lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis",
+    buttons: [
+      { text: "FULL LYRICS", icon: fullLyricsIcon,   link: "/location/13/lyrics" },
+      { text: "VOICE NOTE", icon: voiceNoteIcon,   link: "/location/13/voice-note" },
+    ],
+   
+  },
+  {
+    id: 14,
+    locationName: "CLAMP STREET - Lake",
+    importance: "Current family home; recent life changes.",
+    image: "",
+    coords: { top: "60%", left: "19.5%" },
+    songTitle: "You Are",
+    songUrl: "",
+    videoUrl: "",
+    artistName: "Kojo Cue",
+    lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis",
+    buttons: [
+      { text: "FILM REEL", icon: filmReelIcon,    link: "/location/14/film-reel" },
+      { text: "FULL LYRICS",  icon: fullLyricsIcon,  link: "/location/14/lyrics" },
+      { text: "BTS VIDEO",  icon: BTSVideoIcon,   link: "/location/14/video" },
+    ],
+  
+  },
+  {
+    id: 15,
+    locationName: "CLAMP STREET - Lake",
+    importance: "Current family home; recent life changes.",
+    image: "",
+    coords: { top: "13%", left: "60%" },
+    songTitle: "The Fall",
+    songUrl: "",
+    videoUrl: "",
+    artistName: "Kojo Cue",
+    lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis",
+    buttons: [
+      { text: "FILM REEL", icon: filmReelIcon,   link: "/location/15/film-reel" },
+      { text: "MIXING NOTES", icon: mixingNoteIcon,    link: "/location/15/mixing-notes" },
+    ],
+  
+  },
+  {
+    id: 16,
+    locationName: "CLAMP STREET - Lake",
+    importance: "Current family home; recent life changes.",
+    image: "",
+    coords: { top: "13%", left: "74%" },
+    songTitle: "Onipa Hia Mmoa",
+    songUrl: "",
+    videoUrl: "",
+    artistName: "Kojo Cue",
+    lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis",
+    buttons: [
+      { text: "FULL LYRICS", icon: fullLyricsIcon,   link: "/location/16/lyrics" },
+      { text: "CUE LIVE SESSION", icon: visualizerIcon,   link: "/location/16/video" },
+    ],
+   
+  },
+  {
+    id: 17,
+    locationName: "CLAMP STREET - Lake",
+    importance: "Current family home; recent life changes.",
+    image: "",
+    coords: { top: "74%", left: "19.5%" },
+    songTitle: "Onipa Hia Mmoa",
+    songUrl: "",
+    videoUrl: "",
+    artistName: "Gold Dust",
+    lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis",
+    buttons: [
+      { text: "WRITTEN STORY", icon: quillPenIcon,  link: "/location/17/reflection" },
+      { text: "FULL LYRICS", icon: fullLyricsIcon,    link: "/location/17/lyrics" },
+    ],
+   
+  },
+];
+
+export default locationPins;
