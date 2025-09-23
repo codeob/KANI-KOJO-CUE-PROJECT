@@ -5,14 +5,14 @@ import HomePage from "./Pages/HomePage"
 import WelcomePage from "./Pages/WelcomePage"
 import Map from "./Pages/Map"
 import WaveformPlayer from "./Components/WaveformPlayer"
-import ImagePreviewComponent from "./components/ImagePreviewComponent"
 import LyricsContainer from "./Components/LyricsContainer"
 import FilmReel from "./Components/FilmReel"
 import BTSPhotos from "./Components/BTSPhotos"
 import WrittenReflection from "./Components/WrittenReflection"
 import ErrorPage from "./Pages/ErrorPage"
 import VideoPlayer from "./components/VideoPlayer"
-import Lyricsbreakedown from "./Components/lyricsbreakedown"
+import ImagePreviewComponent from "./Components/ImagePreviewComponent"
+import Lyricsbreakedown from "./Components/Lyricsbreakedown"
 
 function ContentRouter () {
   const { id, contentType } = useParams();
