@@ -10,7 +10,7 @@ import FilmReel from "./Components/FilmReel"
 import BTSPhotos from "./Components/BTSPhotos"
 import WrittenReflection from "./Components/WrittenReflection"
 import ErrorPage from "./Pages/ErrorPage"
-import VideoPlayer from "./components/VideoPlayer"
+import VideoPlayer from "./Components/VideoPlayer"
 import ImagePreviewComponent from "./Components/ImagePreviewComponent"
 import Lyricsbreakedown from "./Components/Lyricsbreakedown"
 
