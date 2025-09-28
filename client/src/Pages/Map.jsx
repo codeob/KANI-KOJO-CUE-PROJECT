@@ -1,92 +1,97 @@
 import React, { useEffect, useState, useRef } from "react";
-import useLocationStore from "../store/useLocationStore"
+import useLocationStore from "../store/useLocationStore";
 import mapimg from "../assets/backgrounds/mapimg.jpg";
 import locPin from "../assets/pin.png";
 import Slide from "./Slide";
 import locationPins from "../../locations";
 
 function Map() {
-  const { selectedLocation, setSelectedLocation, clearSelected} = useLocationStore()
-  const [isSlideVisible, setIsSlideVisible ] = useState(false)
-  const [ isAnimating, setIsAnimating ] = useState(false)
-  const [scale, setScale] = useState(1)
-  const mapRef = useRef(null)
+  const { selectedLocation, setSelectedLocation, clearSelected } = useLocationStore();
+  const [isSlideVisible, setIsSlideVisible] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(false);
+  const [scale, setScale] = useState(1);
+  const [showLandscapePrompt, setShowLandscapePrompt] = useState(false);
+  const mapRef = useRef(null);
 
   const calculateScale = () => {
     if (mapRef.current && mapRef.current.complete) {
       const img = mapRef.current;
       const scaleX = window.innerWidth / img.naturalWidth;
       const scaleY = window.innerHeight / img.naturalHeight;
-      setScale(Math.min(scaleX, scaleY, 1)); // Cap at 1 to avoid upscaling
+      setScale(Math.min(scaleX, scaleY, 1));
     }
+  };
+
+  // changed: Check for small screens and portrait orientation
+  const checkOrientation = () => {
+    const isSmallScreen = window.innerWidth < 640; // 640px threshold for "too small"
+    const isPortrait = window.innerWidth < window.innerHeight;
+    setShowLandscapePrompt(isSmallScreen && isPortrait);
   };
 
   useEffect(() => {
     calculateScale();
+    checkOrientation(); // changed: initial orientation check
     window.addEventListener('resize', calculateScale);
-    return () => window.removeEventListener('resize', calculateScale);
+    window.addEventListener('resize', checkOrientation); // changed: listen for orientation changes
+    window.addEventListener('orientationchange', checkOrientation); // changed: handle device rotation
+    return () => {
+      window.removeEventListener('resize', calculateScale);
+      window.removeEventListener('resize', checkOrientation);
+      window.removeEventListener('orientationchange', checkOrientation);
+    };
   }, []);
 
   // Handle opening slide animation
   useEffect(() => {
     if (selectedLocation) {
-      setIsSlideVisible(true)
-      setTimeout(() => setIsAnimating(true), 10)  // small delay b4 animation to ensure element is mounted
+      setIsSlideVisible(true);
+      setTimeout(() => setIsAnimating(true), 10);
     }
-  }, [selectedLocation] )
-
+  }, [selectedLocation]);
 
   useEffect(() => {
     const handleKeyDown = (e) => {
-      if(!selectedLocation) return; // this activates this function only if the slide is open
-
-      if(e.key === "ArrowRight") {
-        handleNext(selectedLocation.id)
+      if (!selectedLocation) return;
+      if (e.key === "ArrowRight") {
+        handleNext(selectedLocation.id);
       } else if (e.key === "ArrowLeft") {
-        handlePrevious(selectedLocation.id)
+        handlePrevious(selectedLocation.id);
       } else if (e.key === "Escape") {
-        handleClose()
+        handleClose();
       }
     };
 
-    window.addEventListener("keydown", handleKeyDown)
-    return () => window.removeEventListener("keydown", handleKeyDown)
-  }, [selectedLocation])
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [selectedLocation]);
 
-
-
-  //handle closing animation
-  const handleClose = () =>{
+  const handleClose = () => {
     setIsAnimating(false);
-    // wait for animation to complete before hiding
     setTimeout(() => {
-      setIsSlideVisible(false)
+      setIsSlideVisible(false);
       clearSelected();
-    }, 300)
-  }
+    }, 300);
+  };
 
-    // handle next button
   const handleNext = (currentId) => {
     const currentIndex = locationPins.findIndex((loc) => loc.id === currentId);
     if (currentIndex !== -1) {
-      const nextIndex = (currentIndex + 1) % locationPins.length; // loops back to 1st location
+      const nextIndex = (currentIndex + 1) % locationPins.length;
       setSelectedLocation(locationPins[nextIndex].id);
     }
-  }
+  };
 
-  // handle previous button
   const handlePrevious = (currentId) => {
     const currentIndex = locationPins.findIndex((loc) => loc.id === currentId);
     if (currentIndex !== -1) {
-      const prevIndex = (currentIndex - 1 + locationPins.length) % locationPins.length; // loops back to last location
+      const prevIndex = (currentIndex - 1 + locationPins.length) % locationPins.length;
       setSelectedLocation(locationPins[prevIndex].id);
     }
-  }
+  };
 
-  const pinBaseWidth = 20; // px, equivalent to Tailwind w-5 (1.25rem ≈ 20px)
-  const pinBaseHeight = 32; // px, equivalent to Tailwind h-8 (2rem ≈ 32px)
-  // Apply responsive scaling adjustments based on breakpoints (approximate)
-  // On larger screens, slightly increase base for better visibility/touch targets
+  const pinBaseWidth = 20; // px, equivalent to Tailwind w-5
+  const pinBaseHeight = 32; // px, equivalent to Tailwind h-8
   const getPinDimensions = () => {
     if (window.innerWidth >= 1536) return { width: pinBaseWidth * 1.6, height: pinBaseHeight * 1.6 }; // 2xl
     if (window.innerWidth >= 1280) return { width: pinBaseWidth * 1.4, height: pinBaseHeight * 1.4 }; // xl
@@ -99,21 +104,29 @@ function Map() {
   const pinWidth = `${pinDimensions.width * scale}px`;
   const pinHeight = `${pinDimensions.height * scale}px`;
 
-
   return (
-    <div className="h-screen flex justify-center items-center overflow-hidden relative">
+    <div className="h-screen w-full flex justify-center items-center overflow-hidden relative">
+      {/* changed: Landscape prompt for small screens */}
+      {showLandscapePrompt && (
+        <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4">
+          <div className="bg-white/90 rounded-lg p-6 max-w-sm w-full text-center">
+            <h2 className="text-lg sm:text-xl font-bold text-primary-100 mb-4">Please Rotate Your Device</h2>
+            <p className="text-sm sm:text-base text-primary-100">For the best experience with the interactive map, please use landscape mode on your mobile device.</p>
+          </div>
+        </div>
+      )}
       {/* Container that keeps image responsive */}
-      <div className="relative flex-shrink-0 max-w-full max-h-screen">
+      <div className="relative flex-shrink-0 max-w-full max-h-screen w-full h-full"> 
         {/* Map image */}
         <img
           ref={mapRef}
           src={mapimg}
           alt="Map"
-          className="max-w-full max-h-screen object-contain w-auto h-auto"
+          className="max-w-full max-h-screen object-contain w-full h-full" 
           onLoad={calculateScale}
         />
 
-        {/* Location pins (scale with map), render from location.js data, coords top and left can be edited in location.js file */}
+        {/* Location pins */}
         {locationPins.map((loc) => (
           <img 
             key={loc.id}
@@ -125,17 +138,17 @@ function Map() {
               left: loc.coords.left,
               width: pinWidth,
               height: pinHeight,
-              minWidth: `${pinDimensions.width * 0.5 * scale}px`, // Minimum size for very small screens
+              minWidth: `${pinDimensions.width * 0.5 * scale}px`,
               minHeight: `${pinDimensions.height * 0.5 * scale}px`
             }}
-            onClick={()=> setSelectedLocation(loc.id)}
+            onClick={() => setSelectedLocation(loc.id)}
           />
         ))}
       </div>
 
-      {/* Overlay / Slide Info base on selected pin - now fixed for full viewport coverage with responsive padding */}
+      {/* Overlay / Slide Info */}
       {isSlideVisible && (
-        <div className="fixed inset-0 bg-black/55 z-50 flex items-center justify-center p-2 md:p-4 lg:p-6 xl:p-8 2xl:p-10">
+        <div className="fixed inset-0 bg-black/55 z-50 flex items-center justify-center p-2 sm:p-4 md:p-6 lg:p-8 xl:p-10">
           <Slide 
             location={selectedLocation} 
             close={handleClose} 

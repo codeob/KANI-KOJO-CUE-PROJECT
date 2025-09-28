@@ -1,21 +1,18 @@
 import React, { useState, useEffect, useRef } from 'react';
-import bgimage from '../assets/backgrounds/bgimage.png'
-import PauseIcon from "./PauseIcon"
+import bgimage from '../assets/backgrounds/bgimage.png';
+import PauseIcon from "./PauseIcon";
 import PlayIcon from './PlayIcon';
 import KExpWithCloseBtnHeadingBrown from './KExpWithCloseBtnHeadingBrown';
 import BTMapAndAudioLink from './BTMapAndAudioLink';
 
-
 const WaveformPlayer = ({ audioUrl }) => {
-  const audioRef = useRef(null)
+  const audioRef = useRef(null);
   const canvasRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const [waveformData, setWaveformData] = useState([]);
 
-
-  // ✅ Generate waveform data (placeholder, not from actual file yet)
   useEffect(() => {
     const samples = 60;
     const data = [];
@@ -30,7 +27,6 @@ const WaveformPlayer = ({ audioUrl }) => {
     setWaveformData(data);
   }, []);
 
-  // ✅ Update duration when audio loads
   useEffect(() => {
     if (audioRef.current) {
       const handleLoaded = () => setDuration(audioRef.current.duration);
@@ -39,16 +35,12 @@ const WaveformPlayer = ({ audioUrl }) => {
     }
   }, []);
 
-  // ✅ Update current time during playback
   useEffect(() => {
     if (audioRef.current) {
       const handleTimeUpdate = () => setCurrentTime(audioRef.current.currentTime);
       audioRef.current.addEventListener("timeupdate", handleTimeUpdate);
-
-      // ✅ FIX: Detect when audio ends and reset play button
       const handleEnded = () => setIsPlaying(false);
       audioRef.current.addEventListener("ended", handleEnded);
-
       return () => {
         audioRef.current?.removeEventListener("timeupdate", handleTimeUpdate);
         audioRef.current?.removeEventListener("ended", handleEnded);
@@ -56,7 +48,6 @@ const WaveformPlayer = ({ audioUrl }) => {
     }
   }, []);
 
-  // ✅ Draw waveform
   useEffect(() => {
     if (!canvasRef.current || waveformData.length === 0) return;
 
@@ -81,7 +72,6 @@ const WaveformPlayer = ({ audioUrl }) => {
 
       const isInProgress = x + barWidth <= (currentTime / duration) * width;
 
-      // Add spacing between bars
       const spacing = 12;
       const effectiveWidth = barWidth - spacing;
 
@@ -98,19 +88,17 @@ const WaveformPlayer = ({ audioUrl }) => {
     });
   }, [waveformData, currentTime, duration]);
 
-  // ✅ Play / Pause logic
   const togglePlayPause = () => {
     if (!audioRef.current) return;
     if (isPlaying) {
       audioRef.current.pause();
-      setIsPlaying(false); // ✅ Ensure button updates immediately when paused
+      setIsPlaying(false);
     } else {
       audioRef.current.play();
-      setIsPlaying(true); // ✅ Ensure button updates immediately when playing
+      setIsPlaying(true);
     }
   };
 
-  // ✅ Seek when clicking waveform
   const handleWaveformClick = (e) => {
     if (!audioRef.current || !duration) return;
     const rect = e.currentTarget.getBoundingClientRect();
@@ -121,29 +109,23 @@ const WaveformPlayer = ({ audioUrl }) => {
 
   return (
     <div className="h-screen relative overflow-hidden">
-      {/* background */}
-      <img src={bgimage} alt="" className="absolute bg-secondy-100/75 h-full w-full object-cover " />
-      <div className="relative z-10 flex flex-col items-center justify-between h-full w-full p-10">
+      <img src={bgimage} alt="" className="absolute bg-secondy-100/75 h-full w-full object-cover" />
+      <div className="relative z-10 flex flex-col items-center justify-between h-full w-full p-4 sm:p-6 md:p-8 lg:p-10">
         <div className="w-full">
           <KExpWithCloseBtnHeadingBrown />
         </div>
-        <div className="px-[42px] py-[52px]  ">
-          {/* hidden audio element */}
+        <div className="px-4 sm:px-6 md:px-8 lg:px-[42px] py-6 sm:py-8 md:py-10 lg:py-[52px] max-w-[1020px] w-full"> 
           <audio ref={audioRef} src={audioUrl} preload="metadata" />
-
-          {/* Waveform */}
           <div
-            className="w-[1020px] h-60 cursor-pointer overflow-hidden "
+            className="w-full h-40 sm:h-48 md:h-56 lg:h-60 cursor-pointer overflow-hidden"
             onClick={handleWaveformClick}
           >
             <canvas ref={canvasRef} className="w-full h-full" />
           </div>
-
-          {/* Play Button */}
-          <div className="flex justify-center mt-[8px]">
+          <div className="flex justify-center mt-2 sm:mt-4 md:mt-6 lg:mt-[8px]">
             <button
               onClick={togglePlayPause}
-              className="w-[87px] h-[87px] bg-[#B69F7C] rounded-full flex items-center justify-center hover:scale-110 active:scale-95 transition-transform duration-200"
+              className="w-[60px] sm:w-[70px] md:w-[80px] lg:w-[87px] h-[60px] sm:h-[70px] md:h-[80px] lg:h-[87px] bg-[#B69F7C] rounded-full flex items-center justify-center hover:scale-110 active:scale-95 transition-transform duration-200" // changed: responsive button size
             >
               {isPlaying ? <PauseIcon /> : <PlayIcon />}
             </button>
@@ -152,7 +134,6 @@ const WaveformPlayer = ({ audioUrl }) => {
         <div className="w-full">
           <BTMapAndAudioLink />
         </div>
-
       </div>
     </div>
   );

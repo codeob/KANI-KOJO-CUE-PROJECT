@@ -20,7 +20,6 @@ export default function VideoPlayer({ src }) {
   const [duration, setDuration] = useState(0);
   const [volume, setVolume] = useState(1);
 
-  // Update time
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
@@ -29,7 +28,6 @@ export default function VideoPlayer({ src }) {
     return () => video.removeEventListener("timeupdate", updateTime);
   }, []);
 
-  // Handle fullscreen toggle
   useEffect(() => {
     const handleFullscreenChange = () => {
       setIsFullscreen(!!document.fullscreenElement || !!document.webkitFullscreenElement || !!document.mozFullScreenElement);
@@ -45,7 +43,6 @@ export default function VideoPlayer({ src }) {
     };
   }, []);
 
-  // Controls visibility toggle in fullscreen
   useEffect(() => {
     let timeout;
     const controls = playerRef.current?.querySelector('.custom-controls');
@@ -122,24 +119,19 @@ export default function VideoPlayer({ src }) {
 
   return (
     <div className="h-screen w-full relative">
-      {/* background */}
       <img
         src={mapBG}
         alt="Background Image"
         className="absolute inset-0 h-full w-full object-cover z-0"
       />
-
-      <div className="relative z-10 flex flex-col items-center justify-between h-full w-full p-10">
+      <div className="relative z-10 flex flex-col items-center justify-between h-full w-full p-4 sm:p-6 md:p-8 lg:p-10">
         <div className="w-full">
           <KExpWithCloseBtnHeadingBrown />
         </div>
-
-        {/* player container */}
         <div
           ref={playerRef}
-          className=" relative w-[1049px] h-[598px] -mt-[5%] flex flex-col items-center"
+          className="relative w-full max-w-[800px] sm:max-w-[900px] md:max-w-[1000px] lg:max-w-[1049px] h-[400px] sm:h-[500px] md:h-[520px] xl:h-[598px] flex flex-col items-center"
         >
-          {/* video */}
           <div className="relative w-full flex justify-center" style={{ height: 'calc(100% - 60px)' }}>
             <video
               src={src || testVideo}
@@ -149,7 +141,6 @@ export default function VideoPlayer({ src }) {
               onLoadedMetadata={(e) => setDuration(e.target.duration)}
               onClick={togglePlay}
             />
-            {/* overlay play button */}
             {!playing && (
               <button
                 onClick={togglePlay}
@@ -158,21 +149,18 @@ export default function VideoPlayer({ src }) {
                 <img
                   src={playBtnOverlay}
                   alt="Play overlay"
-                  className="h-25 w-25 cursor-pointer"
+                  className="h-20 w-20 sm:h-25 sm:w-25 cursor-pointer"
                 />
               </button>
             )}
           </div>
-
-          {/* custom controls */}
-          <div className="custom-controls flex items-center justify-between gap-6 rounded-lg py-2 w-full mt-2" >
-            {/* play/volume */}
-            <div className="bg-surface-100 rounded-2xl py-2 px-5 h-[50px] w-[141px] flex items-center justify-between">
+          <div className="custom-controls flex items-center justify-between gap-4 sm:gap-6 rounded-lg py-2 w-full mt-2">
+            <div className="bg-surface-100 rounded-2xl py-2 px-4 sm:px-5 h-[40px] sm:h-[50px] w-[120px] sm:w-[141px] flex items-center justify-between"> 
               <button onClick={togglePlay} className="cursor-pointer">
                 <img
                   src={playing ? pauseIcon : playIcon}
                   alt={playing ? "Pause" : "Play"}
-                  className="h-6 w-6"
+                  className="h-5 w-5 sm:h-6 sm:w-6" 
                 />
               </button>
               <button
@@ -182,18 +170,16 @@ export default function VideoPlayer({ src }) {
                 <img
                   src={volumeDown}
                   alt="Volume Down"
-                  className="h-6 w-6"
+                  className="h-5 w-5 sm:h-6 sm:w-6" 
                 />
               </button>
               <button
                 onClick={() => changeVolume(0.1)}
                 className="cursor-pointer"
               >
-                <img src={volumeUp} alt="Volume Up" className="h-6 w-6" />
+                <img src={volumeUp} alt="Volume Up" className="h-5 w-5 sm:h-6 sm:w-6" /> 
               </button>
             </div>
-
-            {/* seek bar */}
             <input
               type="range"
               min="0"
@@ -202,15 +188,11 @@ export default function VideoPlayer({ src }) {
               onChange={handleSeek}
               className="flex-1 appearance-none h-2 rounded-lg cursor-pointer"
               style={{
-                background: `linear-gradient(to right, #522a00 ${
-                  (currentTime / duration) * 100
-                }%, #B69F7C ${(currentTime / duration) * 100}%)`,
+                background: `linear-gradient(to right, #522a00 ${(currentTime / duration) * 100}%, #B69F7C ${(currentTime / duration) * 100}%)`,
               }}
             />
-
-            {/* time + fullscreen */}
-            <div className="bg-surface-100 rounded-2xl py-2 px-5 flex items-center justify-between gap-8">
-              <span className="special-elite text-sm text-primary-100">
+            <div className="bg-surface-100 rounded-2xl py-2 px-4 sm:px-5 flex items-center justify-between gap-6 sm:gap-8">
+              <span className="special-elite text-xs sm:text-sm md:text-base text-primary-100">
                 {Math.floor(currentTime / 60)}:
                 {("0" + Math.floor(currentTime % 60)).slice(-2)} /{" "}
                 {Math.floor(duration / 60)}:
@@ -220,13 +202,12 @@ export default function VideoPlayer({ src }) {
                 <img
                   src={isFullscreen ? exitFullscreen : fullscreen}
                   alt="Fullscreen toggle"
-                  className="h-8 w-8"
+                  className="h-6 w-6 sm:h-8 sm:w-8" // changed: responsive icon size
                 />
               </button>
             </div>
           </div>
         </div>
-
         <div className="w-full">
           <BTMapAndAudioLink />
         </div>

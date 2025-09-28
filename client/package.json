@@ -13,6 +13,7 @@
     "node": "22.x"
   },
   "dependencies": {
+    "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.1.13",
     "@wavesurfer/react": "^1.0.11",
     "framer-motion": "^12.23.18",
@@ -23,6 +24,7 @@
     "react-dom": "^19.1.1",
     "react-icons": "^5.5.0",
     "react-router-dom": "^7.8.2",
+    "react-textfit": "^1.1.1",
     "tailwindcss": "^4.1.13",
     "wavesurfer.js": "^7.10.1",
     "zustand": "^5.0.8"
@@ -32,6 +34,7 @@
     "@types/react": "^19.1.10",
     "@types/react-dom": "^19.1.7",
     "@vitejs/plugin-react": "^5.0.0",
+    "autoprefixer": "^10.4.21",
     "eslint": "^9.33.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",

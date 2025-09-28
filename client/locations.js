@@ -69,7 +69,7 @@ const locationPins = [
     locationName: "Jamaica House - Bantama",
     importance: "Core childhood home. Father’s side of the family",
     image: "",
-    coords: { top: "10%", left: "9%" },
+    coords: { top: "10%", left: "20%" },
     songTitle: "Bantama Blues 3",
     songUrl: "",
     videoUrl: "",
