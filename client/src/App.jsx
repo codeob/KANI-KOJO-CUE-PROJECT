@@ -17,6 +17,9 @@ import FilmReel from "./components/FilmReel.jsx"
 function ContentRouter () {
   const { id, contentType } = useParams();
   const location = locationPins.find((loc) => loc.id === Number(id));
+
+  console.log(location.videoUrl);
+  
   
   if (!location) {
     return <ErrorPage />;

@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import useLocationStore from "../store/useLocationStore";
-import mapimg from "../assets/backgrounds/mapimg.jpg";
+import mapDay from "../assets/mapDay.png"
+import mapNight from "../assets/mapNight.png";
 import locPin from "../assets/pin.png";
 import Slide from "./Slide";
 import locationPins from "../../locations";
@@ -12,6 +13,10 @@ function Map() {
   const [scale, setScale] = useState(1);
   const [showLandscapePrompt, setShowLandscapePrompt] = useState(false);
   const mapRef = useRef(null);
+
+  const now = new Date();
+  const hours = now.getHours();
+
 
   const calculateScale = () => {
     if (mapRef.current && mapRef.current.complete) {
@@ -90,8 +95,8 @@ function Map() {
     }
   };
 
-  const pinBaseWidth = 20; // px, equivalent to Tailwind w-5
-  const pinBaseHeight = 32; // px, equivalent to Tailwind h-8
+  const pinBaseWidth = 170; // px, equivalent to Tailwind w-5
+  const pinBaseHeight = 200; // px, equivalent to Tailwind h-8
   const getPinDimensions = () => {
     if (window.innerWidth >= 1536) return { width: pinBaseWidth * 1.6, height: pinBaseHeight * 1.6 }; // 2xl
     if (window.innerWidth >= 1280) return { width: pinBaseWidth * 1.4, height: pinBaseHeight * 1.4 }; // xl
@@ -118,13 +123,23 @@ function Map() {
       {/* Container that keeps image responsive */}
       <div className="relative flex-shrink-0 max-w-full max-h-screen w-full h-full"> 
         {/* Map image */}
-        <img
-          ref={mapRef}
-          src={mapimg}
-          alt="Map"
-          className="max-w-full max-h-screen object-contain w-full h-full" 
-          onLoad={calculateScale}
-        />
+        { hours > 5 && hours < 18 ?
+          <img
+            ref={mapRef}
+            src={mapDay}
+            alt="Map"
+            className="max-w-full max-h-screen object-contain w-full h-full" 
+            onLoad={calculateScale}
+          />
+          :
+          <img
+            ref={mapRef}
+            src={mapNight}
+            alt="Map"
+            className="max-w-full max-h-screen object-contain w-full h-full" 
+            onLoad={calculateScale}
+          />
+        }
 
         {/* Location pins */}
         {locationPins.map((loc) => (
