@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import useLocationStore from "../store/useLocationStore"
-import mapimg from "../assets/backgrounds/mapimg.jpg";
+import mapimg from "../assets/KANI_CITY_0CT_20_DAY_2.png";
 import locPin from "../assets/pin.png";
 import Slide from "./Slide";
 import locationPins from "../../locations";
