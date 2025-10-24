@@ -92,7 +92,7 @@ export default function Lyricsbreakedown() {
             <Scrollbar_Lyrics>
               <p className="text-[38px] px-30 special-elite text-white leading-relaxed">
                 {lines.map((line, i) => (
-                  <span key={i} className="block mb-2">
+                  <span key={i} className="block mb-2 .font-biro">
                     {line}
                   </span>
                 ))}
