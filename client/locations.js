@@ -21,13 +21,88 @@ const locationPins = [
     songUrl: "",
     videoUrl: "",
     artistName: "Kojo Cue",
-    lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis",
+    lyrics: `I made a little mistake
+Have I taken on more than I weigh?
+But you gave and you gave and you gave me the world
+So I’ll keep on, on my way
+And I’ll try, I’ll try, I’ll try
+
+My mummy dey grow 
+But I still no blow enough to put her in her home
+I still no fit change the car she get from years ago
+I still no fit take over all of her rent mpo
+She still the work and oh
+Naturally
+She still be proud of me
+She asks for money sometimes but
+Her number one request still be grand kiddies
+Meanwhile I dey grind in these 
+streets
+Struggling to pay my masters fees
+
+My mummy dey grow
+Ɔyi ne duku pɛ plenty grey dey show
+She dey stress climb stairs cos her knees dey go
+BP dey rise and I have a need to show
+fruits of the seeds she sow
+Na ne plan ne sɛ ɔrehwɛ ne ba sukuu
+Na daakye bi ne ba nso abɛ hwɛ no bi
+Ɛnso Cue no fit find his feet
+brother and a wife to feed, wondering if this rich dad thing sef man fit be
+
+My mummy dey grow, 
+Ɛnso still a, me nyɛɛ hwee nmaa no killa, 
+I mean by now ɛwɔ sɛ nka m’ama no villa
+And like a 100 visa
+Maids ne gardeners, paying for her drivers
+
+Last time I passed by the house where
+I said 
+I was gonna buy her, when I grow up
+Yeah I think the owner 
+Turned it into some apartments
+And I still cant afford mummy a flat there
+Funny I was on my way to carry mattress from mummy ein house when 
+I by chance met 
+my homie from back then
+
+Ɔse Cue my mummy she go
+Maame yi brɛ a w’abrɛ me ho yi
+M’antumi anma no bed sheet mpo
+Anma no fridge mpo 
+She used to cry when she threw food away
+And say, “I wish your grandmother was still here today”
+And here I dey eating through my tears
+Nka Leti ntwɛn ma kofi nhitte ansa eh
+Nyame nnim me plans, nka ɔnma no npicke ansa eh
+Nnipa na me frɛ no da biara
+Now she no fit answer and
+I feel so lonely out here
+Hold yours cos you’re lucky to have her
+Made me feel terrible as a son, 
+I no dey call enough, 
+Blame it on these schemes adey run
+These streets, no be fun
+These gees, no fit come
+
+My mummy dey grow
+Nansa yi weekend biara maninii dey go
+Wonder how she feels to know
+That I still no be close 
+To paying her back and giving her what she want or
+Four more
+When you’ve taken plenty shots and still put nothing on the scoreboard
+I Wonder who you disappoint more?
+Your mummy or your wife?
+Shit I might
+have to tell y’all the story of my life. 
+`,
     buttons: [
-      { text: "FILM REEL", icon: filmReelIcon,   link: "/location/1/film-reel" },
-      { text: "REFLECTIONS",  icon:quillPenIcon, link: "/location/1/reflection" },
-      { text: "LYRICS", icon: fullLyricsIcon,   link: "/location/1/lyrics" },
+      { text: "FILM REEL", icon: filmReelIcon, link: "/location/1/film-reel" },
+      { text: "REFLECTIONS", icon: quillPenIcon, link: "/location/1/reflection" },
+      { text: "LYRICS", icon: fullLyricsIcon, link: "/location/1/lyrics" },
     ],
-  
+
   },
   {
     id: 2,
@@ -39,9 +114,85 @@ const locationPins = [
     songUrl: "",
     videoUrl: "",
     artistName: "Kojo Cue",
-    lyrics: "",
+    lyrics: `I made a little mistake
+Have I taken on more than I weigh?
+But you gave and you gave and you gave me the world
+So I’ll keep on, on my way
+And I’ll try, I’ll try, I’ll try
+
+My mummy dey grow 
+But I still no blow enough to put her in her home
+I still no fit change the car she get from years ago
+I still no fit take over all of her rent mpo
+She still the work and oh
+Naturally
+She still be proud of me
+She asks for money sometimes but
+Her number one request still be grand kiddies
+Meanwhile I dey grind in these 
+streets
+Struggling to pay my masters fees
+
+My mummy dey grow
+Ɔyi ne duku pɛ plenty grey dey show
+She dey stress climb stairs cos her knees dey go
+BP dey rise and I have a need to show
+fruits of the seeds she sow
+Na ne plan ne sɛ ɔrehwɛ ne ba sukuu
+Na daakye bi ne ba nso abɛ hwɛ no bi
+Ɛnso Cue no fit find his feet
+brother and a wife to feed, wondering if this rich dad thing sef man fit be
+
+My mummy dey grow, 
+Ɛnso still a, me nyɛɛ hwee nmaa no killa, 
+I mean by now ɛwɔ sɛ nka m’ama no villa
+And like a 100 visa
+Maids ne gardeners, paying for her drivers
+
+Last time I passed by the house where
+I said 
+I was gonna buy her, when I grow up
+Yeah I think the owner 
+Turned it into some apartments
+And I still cant afford mummy a flat there
+Funny I was on my way to carry mattress from mummy ein house when 
+I by chance met 
+my homie from back then
+
+Ɔse Cue my mummy she go
+Maame yi brɛ a w’abrɛ me ho yi
+M’antumi anma no bed sheet mpo
+Anma no fridge mpo 
+She used to cry when she threw food away
+And say, “I wish your grandmother was still here today”
+And here I dey eating through my tears
+Nka Leti ntwɛn ma kofi nhitte ansa eh
+Nyame nnim me plans, nka ɔnma no npicke ansa eh
+Nnipa na me frɛ no da biara
+Now she no fit answer and
+I feel so lonely out here
+Hold yours cos you’re lucky to have her
+Made me feel terrible as a son, 
+I no dey call enough, 
+Blame it on these schemes adey run
+These streets, no be fun
+These gees, no fit come
+
+My mummy dey grow
+Nansa yi weekend biara maninii dey go
+Wonder how she feels to know
+That I still no be close 
+To paying her back and giving her what she want or
+Four more
+When you’ve taken plenty shots and still put nothing on the scoreboard
+I Wonder who you disappoint more?
+Your mummy or your wife?
+Shit I might
+have to tell y’all the story of my life. 
+
+`,
     buttons: [
-      { text: "FILM REEL", icon: filmReelIcon,  link: "/location/2/film-reel" },
+      { text: "FILM REEL", icon: filmReelIcon, link: "/location/2/film-reel" },
       { text: "REFLECTIONS", icon: quillPenIcon, link: "/location/2/reflection" },
     ],
 
@@ -58,9 +209,9 @@ const locationPins = [
     artistName: "Kojo Cue",
     lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis Next term",
     buttons: [
-      { text: "MIXING NOTES",   icon: mixingNoteIcon,  link: "/location/3/mixing-notes" },
-      { text: "VOICE NOTE",   icon: voiceNoteIcon,  link: "/location/3/voice-note" },
-      { text: "LYRICS BREAKDOWN",  icon: lyricsBDIcon,  link: "/location/3/lyrics-breakdown" },  // ask where this link routes to?
+      { text: "MIXING NOTES", icon: mixingNoteIcon, link: "/location/3/mixing-notes" },
+      { text: "VOICE NOTE", icon: voiceNoteIcon, link: "/location/3/voice-note" },
+      { text: "LYRICS BREAKDOWN", icon: lyricsBDIcon, link: "/location/3/lyrics-breakdown" },  // ask where this link routes to?
     ],
 
   },
@@ -76,11 +227,11 @@ const locationPins = [
     artistName: "Kojo Cue",
     lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis Bantama Blues 3",
     buttons: [
-      { text: "BTS PHOTOS",  icon: BTSPhotoIcon,   link: "/location/4/bts-photos" },
-      { text: "LYRICS BREAKDOWN",  icon: lyricsBDIcon,    link: "/location/4/lyrics-breakdown" },   // ask where this link routes to?
-      { text: "WATCH MUSIC VIDEO", icon: watchMusicVideo,   link: "" },   // use external link Kani website must still remain open
+      { text: "BTS PHOTOS", icon: BTSPhotoIcon, link: "/location/4/bts-photos" },
+      { text: "LYRICS BREAKDOWN", icon: lyricsBDIcon, link: "/location/4/lyrics-breakdown" },   // ask where this link routes to?
+      { text: "WATCH MUSIC VIDEO", icon: watchMusicVideo, link: "" },   // use external link Kani website must still remain open
     ],
- 
+
   },
   {
     id: 5,
@@ -94,8 +245,8 @@ const locationPins = [
     artistName: "Kojo Cue",
     lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis Jamaica House - Bantama Abrantie",
     buttons: [
-      { text: "FILM REEL", icon: filmReelIcon,    link: "/location/5/film-reel" },
-      { text: "Lyrics Breakdown", icon: lyricsBDIcon,   link: "/location/5/lyrics-breakdown" },   // ask where this link routes to?
+      { text: "FILM REEL", icon: filmReelIcon, link: "/location/5/film-reel" },
+      { text: "Lyrics Breakdown", icon: lyricsBDIcon, link: "/location/5/lyrics-breakdown" },   // ask where this link routes to?
     ],
 
   },
@@ -111,8 +262,8 @@ const locationPins = [
     artistName: "Kojo Cue",
     lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis OWASS BASIC - Santasi",
     buttons: [
-      { text: "VISUALIZER",  icon: visualizerIcon, iconColor: "#7B3F00",  link: "/location/6/video" },     // ask where this link routes to?
-      { text: "LYRICS BREAKDOWN", icon: lyricsBDIcon,   link: "/location/6/lyrics-breakdown" },    // ask where this link routes to?
+      { text: "VISUALIZER", icon: visualizerIcon, iconColor: "#7B3F00", link: "/location/6/video" },     // ask where this link routes to?
+      { text: "LYRICS BREAKDOWN", icon: lyricsBDIcon, link: "/location/6/lyrics-breakdown" },    // ask where this link routes to?
     ],
 
   },
@@ -128,9 +279,9 @@ const locationPins = [
     artistName: "Kojo Cue",
     lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis Mr. Eben Interlude",
     buttons: [
-      { text: "LYRICS BREAKDOWN", icon: lyricsBDIcon,    link: "/location/7/lyrics-breakdown" },
-      { text: "INTERVIEW",  icon: interviewIcon,    link: "/location/7/interview" },
-      { text: "MIXING NOTES",   icon: mixingNoteIcon,    link: "/location/7/mixing-notes" },
+      { text: "LYRICS BREAKDOWN", icon: lyricsBDIcon, link: "/location/7/lyrics-breakdown" },
+      { text: "INTERVIEW", icon: interviewIcon, link: "/location/7/interview" },
+      { text: "MIXING NOTES", icon: mixingNoteIcon, link: "/location/7/mixing-notes" },
     ],
 
   },
@@ -144,12 +295,130 @@ const locationPins = [
     songUrl: "",
     videoUrl: "",
     artistName: "Kojo Cue",
-    lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis",
+    lyrics: `Kwaku ahyɛ ne white shirt 
+Lilian agye ne white dress 
+Me deɛ Rose nti na me baa yɛ 
+nso I no see am yet
+Madam grace 
+se obiara ntena ase yɛ ntie nyame asem
+But e be she norr dey read some book
+To the mandem
+Things she dey say beats my logic 
+can’t understand them
+couldn’t wait I was the first to put up my hands when
+They said (obi wo question anaa?)
+Me bisa yɛ with a serious face
+frowned and she answered
+(God works in mysterious ways)
+
+Read your Bible
+Pray everyday
+Pray everyday
+Pray everyday
+Read your Bible 
+Pray everyday 
+If you want to 
+grow
+
+Ante never let us skip
+Hymn nkoara she let us sing
+Maa Abena caught the Holy Ghost
+Next week then e enter Vic
+All my friends dey feel the spirit
+Me nkoara e never touch me
+No matter how hard I beg Jesus to forgive and forget my sins
+Madam grace se me ha adwene
+Nickname thomas I be doubting
+Ɔma yɛn kenkan Job and same
+Questions filled my soul again
+I raise my hand ɔse Junior no no
+What do you want to know again?
+(nti God killed the children too?
+But what did the children do?)
+Ɔse bonsam hyɛ wo mu a pie 
+There norr wey she raise her cane
+as it came down all I heard say
+God works in mysterious ways
+
+Read your Bible
+Pray everyday
+Pray everyday
+Pray everyday
+Read your Bible 
+Pray everyday 
+If you want to 
+grow
+
+Ante yare, ɔrefon 
+In so much pain for long
+All the Doctors no fit solve 
+All the plenry nnuro we bought
+Everyday I called on God
+Every night she called on God
+Dunno if he heard or not
+Be like say ein ear comot
+Nti wani nhuu yɛ koraa?
+Ana maame yi rebrɛ saa?
+Way she dey love you paa
+Can’t you come through once?
+Miracle you can’t do one?
+Even if you pass through man?
+See as her tears dey flow 
+See as her eyes dey close 
+
+Read her Bible
+Prayed everyday
+Prayed everyday
+Prayed everyday
+Read her Bible 
+Prayed everyday
+Saw her faith dey shake
+As she face pain
+So I read my Bible
+Prayed everyday
+Prayed everyday
+Prayed everyday
+Read my Bible 
+Prayed everyday
+Prayed everyday
+Prayed everyday
+
+Skit
+
+Pastor said Ante’s gone 
+She’s never coming back again
+But one day if we hear horn 
+We go be in her arms again
+For now we for look to God
+And make Jesus our friend
+And come find him in the church
+Like they confined him in church
+Well I couldn’t find him in church
+only found hymns church
+So on the day my Angel go
+I knew 
+I was never ever 
+coming back here
+again
+`,
+    WrittenReflection: `When I was nine, I began looking for God. Not out of holiness or fear of hell. I just wanted the power. The magic trick. The thing that could split oceans or make people stare. I thought maybe if I prayed hard enough, I could bend the world to my will.
+But what began as a hunt for magic turned into something else. A question that kept widening until it swallowed me whole. God became less a person and more a question that kept changing shape every time I thought I had an answer.
+I grew up Presbyterian. Clean shirts, quiet hymns, and people pretending they were okay. I inherited it from my parents like they inherited it from their parents. Then I fell in love,  first love, Leticia, and she dragged me to the Church of Pentecost. That was louder. People spoke in tongues, danced like they were on fire, cried like they’d seen death and were bargaining with it. I thought maybe that’s where God hid - in the noise.
+After that, I couldn’t stop chasing him. SDA, Sunsum sore, Assemblies of God, Deeper Life, Latter-day Saints; I tried them all. My mom stopped me before I got baptized by the Mormons. Said they were strange. I wanted to tell her that everyone searching for God was strange.
+When Christianity stopped making sense, I started peeking into other rooms. Krishna, Buddha, the eastern calm. At Sat Sang, they said God was beyond religion. I believed them until I didn’t.
+Then I walked with an African priest - a man who seemed to breathe secrets. He taught me about spirits, rituals, Crowley, the 6th & 7th Books of Moses. Things hidden behind curtains most people are too scared to touch, the names that could open invisible doors. I kept thinking that if I could just say the right name, God would finally turn around. He never did. Occult, they call it. I just wanted answers. I didn’t find any. Just more doors.
+By the time I was 19, I’d read the Bible from cover to cover. It said everything and nothing at the same time. Once, when I was six, my uncle - a Muslim convert - made me pray Salat beside him. He gave me a Muslim name. I don’t remember it now, but sometimes when I see the way one well placed Alhamdulillah can calm me, I think God does.
+After all that searching, I found that God doesn’t live in temples or chants. He isn’t in the noise, or the smoke, or the holy books. He lives in the quiet machinery of everything. He’s in the quiet pulse inside everything that breathes. The way a leaf trembles, the way pain insists on staying, the way time refuses to stop. In you, in me, in the man you hate, in the woman you miss, in the insect you crush. He’s not watching - He is the watching.
+To know Him, you have to love Him. But to love Him, you have to love everything that’s falling apart including yourself. Not the Sunday-school kind of love but the kind that starts with looking in the mirror and not hating what you see. Then extend it, to the people who piss you off, to the ones who left, to the ones who stayed.
+
+Jesus said, “Love your neighbor as yourself.” Maybe he knew that would be the hardest command of all - to look at the face of another and see your own reflection, flickering and temporary, carrying the same desperate hope. Jesus said it first, but the truth is older than he is. God is everywhere, but if you want to hear him, you have to shut up long enough to listen inside your own chest.
+
+`,
     buttons: [
-      { text: "FULL LYRICS",  icon: fullLyricsIcon, link: "/location/8/lyrics" },
-      { text: "REFLECTION", icon: quillPenIcon,  link: "/location/8/reflection" },
+      { text: "FULL LYRICS", icon: fullLyricsIcon, link: "/location/8/lyrics" },
+      { text: "REFLECTION", icon: quillPenIcon, link: "/location/8/reflection" },
     ],
-  
+
   },
   {
     id: 9,
@@ -163,9 +432,9 @@ const locationPins = [
     artistName: "Kojo Cue",
     lyrics: "",
     buttons: [
-      { text: "FILM REEL", icon: filmReelIcon,    link: "/location/9/film-reel" },
-      { text: "MIXING NOTES", icon: mixingNoteIcon,   link: "/location/9/mixing-notes" },
-      { text: "VOICE NOTES",  icon: voiceNoteIcon,    link: "/location/9/voice-note" },  // check this again
+      { text: "FILM REEL", icon: filmReelIcon, link: "/location/9/film-reel" },
+      { text: "MIXING NOTES", icon: mixingNoteIcon, link: "/location/9/mixing-notes" },
+      { text: "VOICE NOTES", icon: voiceNoteIcon, link: "/location/9/voice-note" },  // check this again
     ],
 
   },
@@ -181,9 +450,9 @@ const locationPins = [
     artistName: "Kojo Cue",
     lyrics: "",
     buttons: [
-      { text: "VOICE NOTE", icon: voiceNoteIcon,  link: "/location/10/audio" },
+      { text: "VOICE NOTE", icon: voiceNoteIcon, link: "/location/10/audio" },
     ],
-   
+
   },
   {
     id: 11,
@@ -195,11 +464,110 @@ const locationPins = [
     songUrl: "",
     videoUrl: "",
     artistName: "Kojo Cue",
-    lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis",
+    lyrics: `Never had a chance to choose red or blue pill
+How adey SS2 dey think about the two bills?
+Making a mess at school because two
+grown people dey fight
+pushing me to pick a side
+Ɔnfa hoo how I feel
+My peers dey think of school, adidas and then Nike
+Or which girl dem dey like
+The letters sef me adey write
+But I’m forced to think about how to provide
+For mummy and kiddie bro
+nti me nyini oh, e b so
+Life of a first born son
+as ein poppy run
+World on my shoulders, I no grow yet 
+but afor be man
+Without a blueprint
+No one in my corner
+In the ring without my shoe strings
+Still I for win, don’t have the luxury of losing,
+Even if afor sin
+Take my family out the hood king
+Have to keep it pushing
+Helping my mother sell angwamoo on the school pitch
+All I ever felt was envy staring at the cool kids
+
+Nsa tiaa nyinaa nyɛ pɛ now I know now
+Don’t try to put the world up on your shoulders
+Weytin be mine no be your own
+Research and find yourself and you will know that
+Don’t take too much time before its over
+So man define your own persona
+The clock dey tick while you dey slow down
+Research and find yourself and you will know that
+
+
+I mean it hurts that your daddy had to die so but
+How Abi 22 dey provide for your household
+What?
+your mummy, elder bro and uncles no dey do
+Wo regye from Ju, and if I talk abi asshole huh?
+How about
+we just vibe
+and I do what no go wound me
+Instead of you acting like
+all your bills be my duty
+Comparing me to your ex, that man is 32
+still he no fit see top
+If anything I’m better boo
+But you know 
+what to do 
+to make it still about me
+How’s your poverty fucking up how I feel about me
+Manipulate kakra
+gaslight kakra
+Ama small boy afei me da dwene mpo kyen wo papa
+Losing my youth though I’m still in this school
+cos I’m thinking it’s cool z
+to be a responsible dude 
+Enso me bo so nkuro nwii afei na me nyini
+I had to learn to say no, I’m not a genie
+
+Nsa tiaa nyinaa nyɛ pɛ now I know now
+Don’t try to put the world up on your shoulders
+Weytin be mine no be your own
+Research and find yourself and you will know that
+Don’t take too much time before its over
+So man define your own persona
+The clock dey tick while you dey slow down
+Research and find yourself and you will know that
+
+Drive slow
+don’t rush to get grown, my man
+Dem try tell me on the low 
+but the damage was done
+Growing up quick no be fun
+Children for fit to make mistakes
+Play with fire, 
+burn, learn, 
+how to make it shape
+Rough metals into swords as you hone am
+All the mistakes wonna parents never go own up
+Barely 6 being treated like a grown up
+W’af3four redi agoro no 
+na wo nkoara wo so nsuo nam
+I swear e no be my fault
+premature adult
+I skipped some steps 
+in the process so now a part of
+Me dey
+Look in the mirror and see a kid
+I swear I still look in the mirror and see a kid
+But I no fit lose it
+Have to keep it pushing
+So my kiddie bro
+go dey grow, up cruising
+Helping my mother sell angwamoo on the school pitch
+All I ever felt was envy staring at the cool kids
+Grew up too quick
+`,
     buttons: [
-      { text: "FULL LYRICS", icon: fullLyricsIcon,  link: "/location/11/lyrics" },
+      { text: "FULL LYRICS", icon: fullLyricsIcon, link: "/location/11/lyrics" },
     ],
- 
+
   },
   {
     id: 12,
@@ -211,13 +579,136 @@ const locationPins = [
     songUrl: "",
     videoUrl: "",
     artistName: "Kojo Cue",
-    lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis",
+    lyrics:`Ehhhhh ahhhhh (Ginseng asɛ nsuo grawa)
+Mmm ahhh mmmm (Me redwene, got me thinking louder)
+Wiase nsɛmsɛm na adane me adwenedwene ahhh (ɔkɔ baabi a)
+Me twa bi a wo se me yɛ asommorodwe ei (ɔkɔ baabi aye)
+Kwame ei 
+
+Back in the days me hu me 
+OG biara na w’abo 
+Nti me bisa no, Bra Dan
+aden na daa na w’ayɛ sram
+Ɔse wo bɛ nyini abɛ to
+he went to Lagos to get rich
+hustle hard make e pick
+Dem deport am 83
+W’anfa hwee 
+agye ne Ghana must go
+But man be who dey do 
+No be who do some
+Ɔbra nso kakra ni wo ho a it’s too gruesome
+To make a move, you for move on
+Nti ne nsem hyɛ tirimu
+Hwɛ, ɔgye ne quarter on credit
+Na ɔne brothers asette 
+Gulder nam mu, ɛsweate
+Talking pain and lessons
+Gain and blessings
+The women, the children
+And now I get it 
+
+Ma yɛ barima nti 
+Ɔbra no rekɔ m’ani 
+I’m at that age, I dey craze
+But the Hennessy’s
+Cheaper than therapy
+Nti Friday then I link boys
+Kokroko na ɛɛma me joy
+Ɛnmaa m’ani so a me nkɔɔ yɛ
+Me wia a m’atippo rejoice
+Finding myself in the stories shared
+Everybody needs somebody who’s always there
+Eka ba a yɛ bɛ sorte chef 
+
+Afei deɛ asante akae nakyi wakae nakyi oh ei (kae nakyi oh ei)
+Ɛnso ɛnkaa akyi, Konkontibaa dane aponkyereni 
+na wakɔ baabi a, akɔ baabi oh ei (kɔ baabi oh ei)
+If he come back ɛnsuo no mu nso a ɛnyɛ me nwanwa
+
+Wiase abrabɔ yi ɛnyɛ mmirika oh (ohhhh)
+Ɛnyɛ mmirika oh (ɛnyɛ mmirika oh)
+Me nim sɛ dabi ɛbɛ se sa (ɛbɛ se sa ahh)
+Wiase abrabɔ yi ɛnyɛ mmirika oh (ohhhh)
+Ɛnyɛ mmirika oh (ɛye ahhh ahhh ahhh)
+Me nim sɛ dabi ɛbɛ se sa (ɛbɛ se sa ahh)
+
+Asem a preko ka kyerɛ ne ba no
+Afei na ato aso mu, afei na mate aseɛ
+Nsɛm a ɛsii yɛ a na nka me nfa hoo
+Afei na mahu ani, anoo ne ne nkyereaseɛ
+Youthful exuberance, tintiriti 
+Ɔbra go calm you down, ma biribi nsi
+I’m sorry mama, na me nnim nti
+Alcohol no be food oh, adwendwen nti
+2 whiskey, coke koraa nfra
+The weight I place on my shoulders, Job koraa nsoa
+Nyame hyira Nnipa kakra bi a 
+na ɔrebɛ twa wo mpoa 
+Ohu wo te sɛ akoa
+Ɛnso ɛhia ɛnyi mu
+
+Ɛhia se, na ɛhia ni, 
+Ɛhia nnim, neɛ ɔhia bi
+Ɔhia di, deɛ nua ni mu
+Yɛ mia ani, de hua bi
+nnua nim, Nyame anim
+Neɛ enti a na Three hyɛ bitters wo mpa ase
+Salary nto nsaase, yɛ de te nsa ase
+
+Paapa baa yɛ na wa vex I couldn’t believe
+Sɛ ɛnti a ɔbaa ɛyɛ a ɔnnidi
+This life as a test no ankɔ me tiri mu
+Plans no ma forme nso ne koraa koraa committee
+Na me dwene sɛ mɛ yɛ fast na makɔ m’anim
+Crash makoma for the side nti matɔ mani
+Magye lime ne Ginseng 
+Magye ice se makae makyi
+Ɔsoma me a asɔ mani 
+
+Afei deɛ asante akae nakyi 
+wakae nakyi oh ei 
+(kae nakyi oh ei)
+Ɛnso ɛnkaa akyi, Konkontibaa dane aponkyereni 
+na wakɔ baabi a, akɔ baabi oh ei 
+(kɔ baabi oh ei)
+If he come back ɛnsuo no mu nso a ɛnyɛ me nwanwa
+
+Me se afei deɛ me nom Ginseng asɛ nsuo grawa
+Me redwene, got me thinking louder 
+Konkontibaa dane aponkyerenii no ɔkɔ baabi a
+Hmmm ɔkɔ baabi aye
+Ɔhu sɛ wooo 
+yike eiii, ahhhh
+
+Wiase nsɛmsɛm, wiase nsɛm ntira
+Ɛyɛ a na ɛbi se me pɛ nsa ahh
+Bosome aso, ɛfie wura ɛregye ohhhh boooo
+Nkoraa school fees yi ayɛ dendenden (Wiase abrabɔ yi ɛnyɛ mmirika oh)
+Aso oh me yere yi nso a (Ɛnyɛ mmirika oh)
+ɔno na ɔbɛ yɛ mawerɛkyekyerɛ (Me nim sɛ dabi ɛbɛ se sa)
+Nanso aboa ɔhia ama odo yi ayɛ nwononwononwono (Wiase abrabɔ yi ɛnyɛ mmirika oh)
+Yɛ kɔ da ɔde n’ani akyerɛ dan odo eiiii (Ɛnyɛ mmirika oh)
+Me nom nsa mo se asommorodwe eiii (Me nim sɛ dabi ɛbɛ se sa)
+Wiase nsemsem na ama no aba saa (Wiase abrabɔ yi ɛnyɛ mmirika oh)
+(Ɛnyɛ mmirika oh)
+(Me nim sɛ dabi ɛbɛ se sa)
+
+
+(ɛnyɛ mmirika oh)
+ (ɛbɛ se sa ahh)
+(ohhhh)
+ (ɛye ahhh ahhh ahhh)
+ (ɛbɛ se sa ahh)
+
+
+`,
     buttons: [
-      { text: "BTS PHOTOS",  icon: BTSPhotoIcon,    link: "/location/12/bts-photos" },
-      { text: "VISUALIZER",  icon: visualizerIcon,  link: "/location/12/video" },
-      { text: "FULL LYRICS", icon: fullLyricsIcon,   link: "/location/12/lyrics" },
+      { text: "BTS PHOTOS", icon: BTSPhotoIcon, link: "/location/12/bts-photos" },
+      { text: "VISUALIZER", icon: visualizerIcon, link: "/location/12/video" },
+      { text: "FULL LYRICS", icon: fullLyricsIcon, link: "/location/12/lyrics" },
     ],
-  
+
   },
   {
     id: 13,
@@ -231,10 +722,10 @@ const locationPins = [
     artistName: "Kojo Cue",
     lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis",
     buttons: [
-      { text: "FULL LYRICS", icon: fullLyricsIcon,   link: "/location/13/lyrics" },
-      { text: "VOICE NOTE", icon: voiceNoteIcon,   link: "/location/13/voice-note" },
+      { text: "FULL LYRICS", icon: fullLyricsIcon, link: "/location/13/lyrics" },
+      { text: "VOICE NOTE", icon: voiceNoteIcon, link: "/location/13/voice-note" },
     ],
-   
+
   },
   {
     id: 14,
@@ -246,13 +737,122 @@ const locationPins = [
     songUrl: "",
     videoUrl: "",
     artistName: "Kojo Cue",
-    lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis",
+    lyrics: `I lost my sight 
+I’m driving blind when I’m with you
+I think I’m fell and hit my head in love
+With you
+With you, with you
+Midoh!
+
+Last one did me dirty
+Na wo yɛ certi 
+From the day you text me
+Had nothing to hide
+Before na me lie
+Ɛyɛ shape ene size
+Tapped into your mind
+Saw all the divine designs 
+kae when you met me?
+Wo se “I thought you were taller”
+And then you led me 
+to your room for the vibes
+Na Connection no yɛ high wae
+Touched all your hotspots
+by week two Cue knew this was the wife I
+Was made for
+kept me really close
+Real like IG videos
+pity those who
+Let you slip into my safe hands in pretty clothes boo
+Now where should we go to?
+Hwim
+Next to the Eiffel Tower we made love 
+Swear a lot of my firsts you dey mong 
+Drove that white Corolla like a grey porsche
+It’s like time stopped when our song came on
+ 
+Rising sun in the morning you light my world
+Girl with you there’s no dull
+And I no fit make it a day 
+Without your love yeah
+Hold me down, you dey hold me close
+If e no be you my song no fit bounce
+With just your love I’ll shut the whole world down ou ouhhh
+
+You are, are
+You are my true love yeah
+My true love yeah
+You are, are
+You are my true love 
+Yeah, eh, 
+
+I’m tryna love you like a gangsta
+Spray you money like a banker
+Anything you want I’ll do
+Anything you want I’ll do
+tryna love you like a gangsta yeah
+Spray you money like a banker yeah eh
+Anything you want
+Anything you want I’ll do
+
+You know the road to the holes where the bones dey 
+But your oath to Kojo’s that you won’t say 
+For my growth, aint a role that you won’t play
+For your own, ain’t a toll that I won’t pay
+And she won’t play about me
+she go jump you
+Wo te yɛn dede a pass and go like 1,2
+Ka yɛn asɛm a we go haunt you
+She be the one, true
+She come first then I come too
+Easiest words I ever said, I do
+Cos I did, and I’m doing 
+Only place I wanna be is a house you in
+We no be perfect, we fine tuning
+The rocks no fit scratch you, a boss!
+Talk dem dey talk, you know you’re loved only by Cue
+Opps no fit touch you
+my Ace in tennis
+You be my own
+Yeah you be my home 
+
+Rising sun in the morning you light my world
+Girl with you there’s no dull
+And I no fit make it a day 
+Without your love yeah
+Hold me down, you dey hold me close
+If e no be you my song no fit bounce
+With just your love I’ll shut the whole world down ou ouhhh
+
+You are, are
+You are my true love yeah
+My true love yeah
+You are, are
+You are my true love 
+Yeah, eh, 
+
+I’m tryna love you like a gangsta
+Spray you money like a banker
+Anything you want I’ll do
+Anything you want I’ll do
+tryna love you like a gangsta yeah
+Spray you money like a banker yeah eh
+Anything you want
+Anything you want I’ll do
+
+I lost my sight 
+I’m driving blind when I’m with you
+I think I’m fell and hit my head in love
+With you
+With you, with you
+Fell and hit my head in love
+`,
     buttons: [
-      { text: "FILM REEL", icon: filmReelIcon,    link: "/location/14/film-reel" },
-      { text: "FULL LYRICS",  icon: fullLyricsIcon,  link: "/location/14/lyrics" },
-      { text: "BTS VIDEO",  icon: BTSVideoIcon,   link: "/location/14/video" },
+      { text: "FILM REEL", icon: filmReelIcon, link: "/location/14/film-reel" },
+      { text: "FULL LYRICS", icon: fullLyricsIcon, link: "/location/14/lyrics" },
+      { text: "BTS VIDEO", icon: BTSVideoIcon, link: "/location/14/video" },
     ],
-  
+
   },
   {
     id: 15,
@@ -266,10 +866,10 @@ const locationPins = [
     artistName: "Kojo Cue",
     lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis",
     buttons: [
-      { text: "FILM REEL", icon: filmReelIcon,   link: "/location/15/film-reel" },
-      { text: "MIXING NOTES", icon: mixingNoteIcon,    link: "/location/15/mixing-notes" },
+      { text: "FILM REEL", icon: filmReelIcon, link: "/location/15/film-reel" },
+      { text: "MIXING NOTES", icon: mixingNoteIcon, link: "/location/15/mixing-notes" },
     ],
-  
+
   },
   {
     id: 16,
@@ -281,16 +881,112 @@ const locationPins = [
     songUrl: "",
     videoUrl: "",
     artistName: "Kojo Cue",
-    lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis",
+    lyrics:`Bere a yi si, kojo kill
+Kojo kill, bere a yi si, mmh
+Onipa yɛ nha mmoa wo, hmmm
+Adiɛn, yɛɛ wo
+
+Cousin Ann dey blow my phone up
+A ntena nso tɛma ho ma
+Dwuma abako a minyae nti
+Na sɛ minya ho na
+Wɛ si ne BPɛ dwo
+Wɛ nso sɛ nako ma
+Wɛ iba school fees
+Wɛ maame ayi ye ntoma
+Obiɛ bɛtwa ne die before the cake hit
+Wo nyɛ icing mpɔ, although you you bake it
+Community or tax, easy for you to hate it
+Sweat the street, you naked
+When you the first to make it
+
+Heavy is the head
+To muster courage I suppose
+From the cradle to the grave
+Oh, every man must stand alone
+And favours they are wearing out
+And walls are closing in
+Me say, asem na aba ama
+Sɛ obiɛ nyɛ bi ka
+Ɔdehye me poli gege, na to be continued
+
+Story story
+Onipa yɛ nmoa na sɛ ankaa yɛ nani red roti
+Adwuma tiɛfɛ nni ma tem
+Ɛbaasa ɛbaasa from morning to morning
+Onipa yɛ nmoa na sɛ ankaa yɛ nani red roti
+And that fam no be easy, how I go do
+
+All my well wishes hoping I′m the one who drops the coin
+200 Cedi mo mo nti, I almost lost a friend
+He say I dey do some wey when he text
+Plus he putting work so why he own no dey set?
+My progress dey make am salty, that's a lot to deal with
+Looking back at the city go fit crush your spirit
+Obiɛ ɛnyɛ mmoa ampa
+But to pay nɛyɛ sen
+Wode solve ɛbu sɛ mma wo future so bɛyɛ den
+I grow wey I see say
+My uncle no be wicked
+Ontumi ifa yɛn trickies
+Yɛnhyɛ me yɛnhyɛ ne tickets
+Me buawa ayɛ nyinaa yɛbɛ ka two
+But me dwiri me ho a
+There′s a chance that I make it to four
+And maybe make it to more
+Then I go fit help with more than I could take in before
+Maame si bua no wukro ɛbia
+Pɛne yi bɛn na kɛbɛsraa koda ɛska wo nyɛntra
+Ɛnyɛ sɛ me 3 mu adiɛn, eno ɛfia
+But I'm just one man
+Yeah I'm just one man
+Thousand things on my head
+Thousand people I for help
+Ma te saa abom nti obiɛ bɛgyene hyɛ
+But I′m just one man
+
+Story story
+Onipa yɛ nmoa na sɛ ankaa yɛ nani red roti
+Adwuma tiɛfɛ nni ma tem
+Ɛbaasa ɛbaasa from morning to morning
+Onipa yɛ nmoa na sɛ ankaa yɛ nani red roti
+And that fam no be easy, how I go do
+Story story
+Onipa yɛ nmoa na sɛ ankaa yɛ nani red roti
+Adwuma tiɛfɛ nni ma tem
+Ɛbaasa ɛbaasa from morning to morning
+Onipa yɛ nmoa na sɛ ankaa yɛ nani red roti
+And that fam no be easy, how I go do
+
+Sɛ yɛ titi wo fi kɛsie m na obia atia obia abaa
+Obia hwe obia awugyaa w′adia obia anfaa
+Kofi Nana yɛ dwia ne mmanitu niso obia sua
+It's hard for them not to keep their hands out
+Adiwo di homework bɛ fie, wo fa desk ne mma wo answer
+Police tokye wo, askɔ ne mma wo cover
+Wo poma ɛbaa sɛ wo kɔ school na ɛdɛwa saa mba
+So when they call, how you no go answer?
+See at the bottom, we share the pain and share the stress
+Baako kɔ fa bar, we all dey split and share the mess
+So when one makes it out, you feel like you for pull we some
+How I go dog my nieces when my uncle pull me on?
+But I′m just one man
+
+Onipa yɛ nmoa na sɛ ankaa yɛ nani red roti
+From morning to morning
+Onipa yɛ nmoa na sɛ ankaa yɛ nani red roti
+And that fam no be easy, how I go do
+Story
+`,
     buttons: [
-      { text: "FULL LYRICS", icon: fullLyricsIcon,   link: "/location/16/lyrics" },
-      { text: "CUE LIVE SESSION", icon: visualizerIcon,   link: "/location/16/video" },
+      { text: "FULL LYRICS", icon: fullLyricsIcon, link: "/location/16/lyrics" },
+      { text: "CUE LIVE SESSION", icon: visualizerIcon, link: "/location/16/video" },
     ],
-   
+
   },
   {
     id: 17,
-    locationName: "CLAMP STREET - Lake",
+    locationName: "CLAMP STREET - Lake1",
     importance: "Current family home; recent life changes.",
     image: "",
     coords: { top: "66%", left: "32%" },
@@ -298,12 +994,125 @@ const locationPins = [
     songUrl: "",
     videoUrl: "",
     artistName: "Kojo Cue",
-    lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis",
+    lyrics: `I swear this girl she’s got a diamond for a heart
+Cos with a little bit of light
+She’s the prettiest sight
+There’s not a thing in this world that could crack her soul
+You don’t need to be told
+Where she’s coming from
+
+Drifting back home, praying
+nobody go cross me
+Godspeed
+The phone rings I almost hit a troski
+Now I’m blaming the driver 
+mo deɛ baabiara mo bɛ parke
+As I pick and hear her say
+Kojo come back
+the babies dey come now
+Come where? Come how? 
+Na sɛ ɛnduruu 9 months,
+The U-Turn I hit 
+Kaa kitikiti I flip the sentra for top high 
+My hands dey shake on the steer
+I almost orphan you before you were here
+Called your grandma
+She was there, she came with a friend too
+Your other gran dey call dey check
+On her daugther and you 
+Doctor Baffour no dey town 
+but we’ve been referred to
+Tkay cos today 
+then no one dey expect you
+Te Komfo Anokye labour ward, I’m praying to God 
+Please will anybody 
+tell me something? It’s taking too long 
+You know how e Dey
+it’s like every doctor you’re facing be opp
+Every time they open the door
+I’m hoping they want to
+
+Tell me that you are from heaven
+Sent down to rescue me
+Tell me someone from heaven
+Can fall in love with me
+
+Te hor din but the nerves plenty 
+Your granny pacing up and down, odidi nursefoc akyi 
+Are they okay? Akorsi sen? W’abisa b3y3 twenty
+Dr. TKay sor me nsa na y3 kor t33 baabi 
+Ose oprepare me
+for how it could be
+I say whatever you do abeg bring my wife to me
+I’ll be lost without her that was before you landed
+In the ward, And I saw 
+all the love your eyes held
+Your mama is a warrior, she pushed you out safe
+preterm babies so they put you some place
+Called Nicu
+Covid Nti only I could come with you
+Your calm faces in an incubator made my eyes rain
+M3 ka nokore a me mma
+Always been afraid of raising kids
+What if I fuck them up
+Try making them great and they hate it
+Do my best and still fail 
+cos the world is ruin
+You kiss trauma, and I hug blame 
+for putting you in it
+But mo nsa tor me nsem
+Was like my grandmothers came back to me
+So naturally, 
+I’ll name you after them, 
+Pinamang ne kwaakyewaa
+Greatest blessings life gave me
+I know they sent you here to come save me
+My babies 
+
+Tell me that you are from heaven
+Sent down to rescue me
+Tell me someone from heaven
+Can fall in love with me
+Tell me that you are from heaven
+Sent down to rescue me
+Tell me someone from heaven
+Can fall in love with me
+
+Tell me that you are from
+Heaven
+Heaven
+Heaven
+Heaven
+Heaven
+Heaven
+Tell me that you are from heaven
+From heaven
+Sent down to rescue me
+Tell me someone from heaven
+From heaven
+Can fall in love with me
+Somehow
+Someway
+Some day
+
+I swear she’s breathing gold dust in her lungs
+Cos when she parts her lips to speak its like she got 
+Heaven deep down
+When she stops to catch her breath you’ll see her glow
+Nobody has to tell you
+Where she’s coming from
+`,
+WrittenRelection:`There’s always that one song that seems to summon itself—like it existed long before I ever reached for it. Every time I work on a project, one track insists on being born without my guidance. It starts as a fragment in my mind, an idea so certain in feeling yet shapeless in sound. Usually, I can already hear the production breathing beneath the words, but with these songs, I know nothing. I just wait—helpless, hopeful—for the moment when sound finds form.
+It’s strange how these songs, the ones that come uninvited, end up becoming the spine of everything. A Ghetto Story did that on The Shining. Rich Dad did the same on FMB. And now Gold Dust has followed that pattern—appearing first as an absence that wouldn’t leave me alone.
+I remember the night clearly. I was at Paapa Versa’s album listening. He’s someone I’ve long wanted to create with, though the timing never seemed to align. Before one of the opening acts, a singer named Tsiee, began his set, he mentioned he’d written a song for a friend who ended up rejecting it. Then he began to sing the hook—and in that instant, I recognized it. Not as something new, but as something I had been waiting to hear.
+I reached out to him, got the song, and brought it to Evans and Paapa. And like that—through the quiet machinery of coincidence—the universe handed me what I was missing. Gold Dust took its time, argued with us, resisted completion. But in the end, it allowed itself to be finished.
+Some songs you make. Others choose you. This one felt like it already existed somewhere, waiting for me to catch up.
+`,
     buttons: [
-      { text: "WRITTEN STORY", icon: quillPenIcon,  link: "/location/17/reflection" },
-      { text: "FULL LYRICS", icon: fullLyricsIcon,    link: "/location/17/lyrics" },
+      { text: "WRITTEN STORY", icon: quillPenIcon, link: "/location/17/reflection" },
+      { text: "FULL LYRICS", icon: fullLyricsIcon, link: "/location/17/lyrics" },
     ],
-   
+
   },
 ];
 

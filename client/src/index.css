@@ -202,6 +202,92 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 
+@font-face {
+  font-family: 'BiroScript';
+  src: url('../src/assets/font/Biro_Script_reduced.otf') format('opentype');
+   font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FuturaCyrillicDemi';
+  src: url('../src/assets/font/FuturaCyrillicDemi.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SansSerifBldFLF';
+  src: url('../src/assets/font/SansSerifBldFLF.otf') format('opentype');
+   font-weight: 550;
+  font-style: midium;
+  font-display: swap;
+}
+
+.font-biro {
+  font-family: 'BiroScript', cursive;
+}
+
+.font-futura {
+  font-family: 'FuturaCyrillicDemi', "Helvetica Neue", Arial, sans-serif;
+}
+
+.font-sansSerif {
+  font-family: 'SansSerifBldFLF', "Helvetica Neue", Arial, sans-serif;
+}
+
+@layer utilities {
+  .font-biro { font-family: 'BiroScript', cursive; }
+  .font-futura { font-family: 'FuturaCyrillicDemi', "Helvetica Neue", Arial, sans-serif; }
+  .font-sansSerif { font-family: 'SansSerifBldFLF', "Helvetica Neue", Arial, sans-serif; }
+}
+
+
+@font-face {
+  font-family: 'BiroScript';
+  src: url('../src/assets/font/Biro_Script_reduced.otf') format('opentype');
+   font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FuturaCyrillicDemi';
+  src: url('../src/assets/font/FuturaCyrillicDemi.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SansSerifBldFLF';
+  src: url('../src/assets/font/SansSerifBldFLF.otf') format('opentype');
+   font-weight: 550;
+  font-style: midium;
+  font-display: swap;
+}
+
+.font-biro {
+  font-family: 'BiroScript', cursive;
+}
+
+.font-futura {
+  font-family: 'FuturaCyrillicDemi', "Helvetica Neue", Arial, sans-serif;
+}
+
+.font-sansSerif {
+  font-family: 'SansSerifBldFLF', "Helvetica Neue", Arial, sans-serif;
+}
+
+@layer utilities {
+  .font-biro { font-family: 'BiroScript', cursive; }
+  .font-futura { font-family: 'FuturaCyrillicDemi', "Helvetica Neue", Arial, sans-serif; }
+  .font-sansSerif { font-family: 'SansSerifBldFLF', "Helvetica Neue", Arial, sans-serif; }
+}
+
+
 /* BTSPhotos Flip Animation Styles */
 .bts-photo-container {
   perspective: 1200px;

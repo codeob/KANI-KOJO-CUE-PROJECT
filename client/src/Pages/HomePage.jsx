@@ -1,6 +1,7 @@
-import Homepage from "../assets/homepage.jpg";
-import { Link } from 'react-router-dom';
-import btn from '../assets/icons/button.svg';
+import React from 'react'
+import Homepage from "../assets/HomepageBkg.png"
+import { Link } from 'react-router-dom'
+import Playbutton from '../assets/icons/playBtnWBg.svg'
 
 function HomePage() {
     return (
@@ -9,35 +10,22 @@ function HomePage() {
             style={{ backgroundImage: `url(${Homepage})` }}
         >
             {/* Title */}
-            <h1 className="rock font-bold text-transparent bg-gradient-to-r from-[#FF8600] to-[#995000] bg-clip-text text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl text-center">
+            <h1 className="  text-transparent bg-gradient-to-r from-[#FF8600] to-[#995000] bg-clip-text 
+                          text-5xl sm:text-7xl md:text-8xl lg:text-9xl text-center font-sansSerif font-bold tracking-wider">
                 KANI
             </h1>
-
+             {/* Title */}
             {/* Subtitle */}
             <p className="special-elite font-normal text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl leading-relaxed text-center text-[#B69F7C] mt-3 sm:mt-4 max-w-xl sm:max-w-2xl">
                 Step into the journey behind the music
             </p>
-
+            {/* Subtitle */}
             {/* Button */}
-            <div className="pt-8 sm:pt-10 md:pt-12 w-full flex justify-center"> 
-                <Link to="/welcome" className="block w-full max-w-[200px] sm:max-w-xs md:max-w-sm lg:max-w-md"> 
-                    <button
-                        className="relative w-full flex justify-center items-center hover:cursor-pointer"
-                        aria-label="Enter the experience"
-                    >
-                        {/* Button background */}
-                        <img
-                            src={btn}
-                            alt=""
-                            className="w-full h-auto object-contain"
-                        />
-                        {/* Button text */}
-                        <span className="special-elite absolute text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-white font-bold">
-                            Enter the experience
-                        </span>
-                    </button>
-                </Link>
-            </div>
+              <Link to="/welcome" className="mt-8">
+                  <img src={Playbutton} alt="" />
+              </Link>
+            {/* Button */}
+
         </div>
     );
 }

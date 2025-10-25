@@ -1,23 +1,24 @@
 import { Link } from 'react-router-dom';
-import mapBg from '../assets/backgrounds/mapimg.jpg';
+import mapimage from "../assets/backgrounds/mapimage.png";
 import grainBG from '../assets/backgrounds/grainBG.png';
 import btnBorder from "../assets/slideBtn_Frame.png";
 import rightarrow from '../assets/icons/rArrow.svg';
+import Frame from '../assets/Frame43773.png'
 
 function WelcomePage() {
   return (
     <div
-      className="h-screen w-full bg-cover bg-center flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 relative"
-      style={{ backgroundImage: `url(${mapBg})` }}
+      className="h-screen w-full bg-cover bg-center flex flex-col justify-center items-center px-4 relative"
+      style={{ backgroundImage: `url(${mapimage})` }}
     >
       <div className="absolute inset-0 bg-black/60 z-0"></div>
       
       {/* Main Card Container */}
       <div className="relative max-w-4xl w-full mx-auto z-10 sm:max-w-5xl lg:max-w-6xl">
         {/* Card with decorative border effect */}
-        <div className="relative bg-white/90 backdrop-blur-sm rounded-lg shadow-xl border-4 border-blue-400 overflow-hidden">
+        <div className="relative bg-[#E1DDD4] backdrop-blur-sm rounded-lg shadow-xl overflow-hidden">
           {/* Grain texture overlay */}
-          <img src={grainBG} alt="grain background" className="absolute inset-0 w-full h-full object-cover opacity-20 z-0" />
+          <img src={grainBG} alt="grain background" className="absolute  w-full h-full object-cover opacity-20 z-0" />
           
           {/* Content Container */}
           <div className="relative z-10 p-4 sm:p-8 md:p-10 lg:p-12">
@@ -29,15 +30,7 @@ function WelcomePage() {
             </div>
 
             {/* Map/Illustration Container */}
-            <div className="relative bg-gray-100 rounded-lg p-4 sm:p-6 mb-6 sm:mb-8 min-h-[200px] sm:min-h-[250px] md:min-h-[300px] flex items-center justify-center border-2 border-gray-200">
-              {/* This would be your actual map component/image */}
-              <div className="w-full h-full bg-gradient-to-br rounded flex items-center justify-center">
-                <div className="text-center text-gray-600">
-                  <div className="text-2xl sm:text-3xl md:text-4xl mb-2"></div> 
-                  <p className="text-xs sm:text-sm"></p> 
-                </div>
-              </div>
-            </div>
+            <img src={Frame} alt="" />
 
             {/* Description Text */}
             <div className="text-center mb-6 sm:mb-8"> 
