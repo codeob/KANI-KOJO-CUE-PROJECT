@@ -146,8 +146,8 @@ function Map() {
           <img 
             key={loc.id}
             src={locPin}
-            alt={loc.locationName}
-            className="absolute cursor-pointer transition-all duration-200 hover:scale-110"
+            alt={loc.locationName}  
+            className="absolute cursor-pointer transition-all duration-200 hover:scale-120"
             style={{ 
               top: loc.coords.top, 
               left: loc.coords.left,
