@@ -1,5 +1,5 @@
 import React from 'react'
-import Homepage from "../assets/HomepageBkg.png"
+import Homepage from "../assets/homePage_Bg.png"
 import { Link } from 'react-router-dom'
 import Playbutton from '../assets/icons/playBtnWBg.svg'
 
@@ -10,8 +10,7 @@ function HomePage() {
             style={{ backgroundImage: `url(${Homepage})` }}
         >
             {/* Title */}
-            <h1 className="  text-transparent bg-gradient-to-r from-[#FF8600] to-[#995000] bg-clip-text 
-                          text-5xl sm:text-7xl md:text-8xl lg:text-9xl text-center font-sansSerif font-bold tracking-wider">
+            <h1 className="  text-[#995000] bg-clip-text text-5xl sm:text-7xl md:text-8xl lg:text-9xl text-center font-sansSerif font-bold tracking-wider">
                 KANI
             </h1>
              {/* Title */}
