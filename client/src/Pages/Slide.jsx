@@ -17,8 +17,8 @@ function Slide({ location, close, isAnimating, onNext, onPrevious }) {
       className={`fixed inset-y-0 left-0 bg-grainbkg-100 w-full sm:w-11/12 md:w-4/5 lg:w-3/5 max-w-5xl transition-transform duration-300 ease-in-out ${
         isAnimating ? 'translate-x-0' : '-translate-x-full'
       } overflow-y-auto`}
+      style={{ backgroundImage: `url(${grainBG})` }}
     >
-      <img src={grainBG} alt="background" className="absolute inset-0 w-full h-full object-cover" />
       <div className="p-3 sm:p-4 md:p-6 lg:p-8 relative z-30 flex flex-col min-h-full justify-between "> 
         {/* Close button and the experience */}
         <div className='flex flex-col justify-between'>
