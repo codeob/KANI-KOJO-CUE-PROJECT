@@ -6,7 +6,6 @@ import mapNight from "../assets/mapNight.png";
 import locPin from "../assets/icons/locationPin.svg";
 import speaker from "../assets/icons/speaker.svg";
 import speakerMute from "../assets/icons/speakerMute.svg";
-import song1 from "../audio/song1.mp3"; // ✅ Import your audio
 import Slide from "./Slide";
 import locationPins from "../../locations";
 
@@ -24,28 +23,50 @@ function Map() {
   const now = new Date();
   const hours = now.getHours();
 
-  // ✅ Toggle audio playback
   const togglePlay = () => {
     const audio = audioRef.current;
     if (!audio) return;
 
     if (playing) {
       audio.pause();
+      setPlaying(false);
     } else {
       audio.play();
+      setPlaying(true);
     }
-    setPlaying(!playing);
   };
 
-  // ✅ Stop music when component unmounts
+
   useEffect(() => {
-    return () => {
-      if (audioRef.current) {
-        audioRef.current.pause();
-        audioRef.current.currentTime = 0;
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    const tryPlay = async () => {
+      try {
+        await audio.play();
+        setPlaying(true);
+      } catch (err) {
+        console.warn("Autoplay blocked — waiting for user interaction.");
       }
     };
+
+    tryPlay();
+
+    // Unmute when user clicks anywhere on the page
+    const handleUserInteraction = () => {
+      audio.muted = false;
+      document.removeEventListener("click", handleUserInteraction);
+    };
+
+    document.addEventListener("click", handleUserInteraction);
+
+    return () => {
+      audio.pause();
+      audio.currentTime = 0;
+      document.removeEventListener("click", handleUserInteraction);
+    };
   }, []);
+
 
   // ✅ Update scaling when screen resizes
   const updateImageInfo = () => {
@@ -145,6 +166,9 @@ function Map() {
   const pinDimensions = getPinDimensions();
   const pinWidth = `${pinDimensions.width * scale}px`;
   const pinHeight = `${pinDimensions.height * scale}px`;
+
+  const song1 = "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/Inst%20Clip%202.wav?alt=media&token=10316723-b997-4e1d-9a84-c90e8f077d72";
+
 
   return (
     <div className="h-screen w-full flex justify-center items-center overflow-hidden relative">

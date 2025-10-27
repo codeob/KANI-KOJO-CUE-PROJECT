@@ -6,8 +6,11 @@ import rightarrow from '../assets/icons/rArrow.svg';
 import Frame from '../assets/backgrounds/Map.png'
 import grayFrame from '../assets/backgrounds/frame_gray_grain.png'
 import contineFrame from '../assets/backgrounds/darkBrownFrame.svg';
+import { storage } from '../firebase/firebaseClient'
 
 function WelcomePage() {
+  console.log("firebase storage bucket:", storage.app.options.storageBucket)
+
   return (
     <div
       className="h-screen w-full bg-cover bg-center flex flex-col justify-center items-center px-4 relative"
