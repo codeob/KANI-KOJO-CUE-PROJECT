@@ -8,21 +8,18 @@ import rightarrow from '../assets/icons/rArrow.svg';
 import { Link } from 'react-router-dom';
 import previousBtn from '../assets/backgrounds/previousBtn_Frame.png';
 
+
 function Slide({ location, close, isAnimating, onNext, onPrevious }) { 
   if (!location) return null;  
 
   return (
     <div
-      className={`h-screen bg-grainbkg-100 w-full sm:w-11/12 md:w-4/5 lg:w-3/5 max-w-5xl transition-transform duration-300 ease-in-out ${isAnimating ? 'translate-x-0' : '-translate-x-full'}`}
-      style={{
-        position: 'absolute',
-        left: 0,
-        top: 0,
-        transform: isAnimating ? 'translateX(0)' : 'translateX(-100%)',
-      }}
+      className={`fixed inset-y-0 left-0 bg-grainbkg-100 w-full sm:w-11/12 md:w-4/5 lg:w-3/5 max-w-5xl transition-transform duration-300 ease-in-out ${
+        isAnimating ? 'translate-x-0' : '-translate-x-full'
+      } overflow-y-auto`}
     >
       <img src={grainBG} alt="background" className="absolute inset-0 w-full h-full object-cover" />
-      <div className="p-3 sm:p-4 md:p-6 lg:p-8 relative z-50 flex flex-col justify-between h-full"> 
+      <div className="p-3 sm:p-4 md:p-6 lg:p-8 relative z-30 flex flex-col min-h-full justify-between "> 
         {/* Close button and the experience */}
         <div className='flex flex-col justify-between'>
           <div>
@@ -95,7 +92,9 @@ function Slide({ location, close, isAnimating, onNext, onPrevious }) {
           </div>
         </div>
         {/* Previous button and Next Buttons */}
-        <div className="relative flex flex-row items-center gap-2 sm:gap-4">
+        <div className="sticky bottom-0 z-50 bg-grainbkg-100 py-4 flex flex-row items-center gap-2 sm:gap-4"
+          style={{ backgroundImage: `url(${grainBG})` }}
+        >
           <button onClick={onPrevious} type="button" className='group relative transition-all w-[80px] sm:w-[100px] h-[40px] sm:h-[50px] p-0.5 px-1 pt-[3px] duration-300'>
             <img src={previousBtn} alt="Button Border Frame" className='absolute left-0 top-0 w-full h-full' />
             <div className="relative cursor-pointer rounded-sm group-hover:bg-secondy-100 flex items-center justify-center w-full h-full">

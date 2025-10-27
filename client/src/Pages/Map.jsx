@@ -137,9 +137,9 @@ function Map() {
   const getPinDimensions = () => {
     if (window.innerWidth >= 1536) return { width: pinBaseWidth * 1.6, height: pinBaseHeight * 1.6 };
     if (window.innerWidth >= 1280) return { width: pinBaseWidth * 1.4, height: pinBaseHeight * 1.4 };
-    if (window.innerWidth >= 1024) return { width: pinBaseWidth * 1.2, height: pinBaseHeight * 1.2 };
-    if (window.innerWidth >= 768) return { width: pinBaseWidth * 1.0, height: pinBaseHeight * 1.0 };
-    return { width: pinBaseWidth * 0.8, height: pinBaseHeight * 0.8 };
+    if (window.innerWidth >= 1024) return { width: pinBaseWidth * 1.4, height: pinBaseHeight * 1.4 };
+    if (window.innerWidth >= 768) return { width: pinBaseWidth * 1.2, height: pinBaseHeight * 1.2 };
+    return { width: pinBaseWidth * 0.8, height: pinBaseHeight * 1.2 };
   };
 
   const pinDimensions = getPinDimensions();
