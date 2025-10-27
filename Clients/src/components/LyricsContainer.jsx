@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom"
 import KExpWithCloseBtnHeadingBrown from "./KExpWithCloseBtnHeadingBrown";
-import mapBG from "../assets/backgrounds/Map_Bkg.png";
+import mapBG from "../assets/backgrounds/Map1_Bkg.png";
 import lyricsBG from "../assets/backgrounds/lyricsFrameBackground.png";
 import BTMapAndAudioLink from "./BTMapAndAudioLink";
 import Scrollbar_Lyrics from "./Scrollbar_Lyrics";

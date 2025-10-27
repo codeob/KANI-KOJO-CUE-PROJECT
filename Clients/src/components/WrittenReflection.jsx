@@ -1,7 +1,7 @@
 import React from 'react'
 import KExpWithCloseBtnHeadingBrown from './KExpWithCloseBtnHeadingBrown'
 import BTMapAndAudioLink from './BTMapAndAudioLink'
-import mapBG from '../assets/backgrounds/Map_Bkg.png'
+import mapBG from '../assets/backgrounds/Map1_Bkg.png'
 // import zigzagFrame from "../assets/backgrounds/zigzag_reflection_frame.png"
 import zigzagFrame1 from "../assets/backgrounds/zigzagFrame1.png"
 import useTypingEffect from '../hooks/useTypingEffect'

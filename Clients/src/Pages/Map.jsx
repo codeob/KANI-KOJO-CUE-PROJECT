@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import useLocationStore from "../store/useLocationStore"
-import mapimage from "../assets/backgrounds/mapimage.png";
+// import mapimage from "../assets/backgrounds/mapbg.png";
 import locPin from "../assets/pin.png";
 import Slide from "./Slide";
 import locationPins from "../../locations";
@@ -108,13 +108,13 @@ function Map() {
       {/* Container that keeps image responsive */}
       <div className="relative flex-shrink-0 max-w-full max-h-screen">
         {/* Map image */}
-        <img
+        {/* <img
           ref={mapRef}
           src={mapimage}
           alt="Map"
           className="max-w-full max-h-screen  w-fit h-fit object-cover"
           onLoad={calculateScale}
-        />
+        /> */}
 
         {/* Location pins (scale with map), render from location.js data, coords top and left can be edited in location.js file */}
         {locationPins.map((loc) => (

@@ -1,7 +1,7 @@
 import React from 'react'
 import KExpWithCloseBtnHeadingBrown from './KExpWithCloseBtnHeadingBrown'
 import BTMapAndAudioLink from './BTMapAndAudioLink'
-import mapBG from '../assets/backgrounds/Map_Bkg.png'
+import mapBG from '../assets/backgrounds/Map1_Bkg.png'
 import backPhotoFrame from "../assets/backgrounds/BTS_FrameBack.svg"
 import frontPhotoFrame from "../assets/backgrounds/BTS_FrameFront.svg"
 

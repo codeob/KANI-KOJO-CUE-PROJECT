@@ -1,4 +1,4 @@
-import mapBG from '../assets/backgrounds/Map_Bkg.png'
+import mapBG from '../assets/backgrounds/Map1_Bkg.png'
 import BTMapAndAudioLink from './BTMapAndAudioLink'
 import KExpWithCloseBtnHeadingBrown from './KExpWithCloseBtnHeadingBrown'
 import leftFrame from "../assets/imageDisplayFrames/displayImage_Inactive_Left.png"

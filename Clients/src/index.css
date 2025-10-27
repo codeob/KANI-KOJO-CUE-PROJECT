@@ -158,7 +158,7 @@ input[type="range"]::-webkit-slider-thumb {
 
 
 /*customized colors for the project */
-@theme {
+:root {
   --color-primary-100:#522a00;
   --color-secondy-100:#7b3f00;
   --color-tertiary-100:#B17010;

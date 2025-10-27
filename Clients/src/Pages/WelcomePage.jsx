@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import mapimage from "../assets/backgrounds/mapimage.png";
+import mapimage from "../assets/backgrounds/Map1_Bkg.png";
 import grainBG from '../assets/backgrounds/grainBG.png';
 import btnBorder from "../assets/slideBtn_Frame.png";
 import rightarrow from '../assets/icons/rArrow.svg';
-import Frame from '../assets/Frame43773.png'
+import Frame from '../assets//backgrounds/Map.png'
 
 function WelcomePage() {
   return (

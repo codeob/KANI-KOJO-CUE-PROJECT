@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import BTMapAndAudioLink from "./BTMapAndAudioLink";
-import mapBG from "../assets/backgrounds/Map_Bkg.png";
+import mapBG from "../assets/backgrounds/Map1_Bkg.png";
 import KExpWithCloseBtnHeadingBrown from "./KExpWithCloseBtnHeadingBrown";
 import playIcon from "../assets/icons/play.svg";
 import pauseIcon from "../assets/icons/pause.svg";
@@ -9,7 +9,7 @@ import volumeUp from "../assets/icons/volumeUp.svg";
 import fullscreen from "../assets/icons/fullscreen.svg";
 import exitFullscreen from "../assets/icons/exitFullscreen.svg";
 import playBtnOverlay from "../assets/icons/playBtnWBg.svg";
-import testVideo from "../video/output_The_AI_Revolution_History's_Transformation_in_the_Digital_Age.mp4";
+// import testVideo from "../video/output_The_AI_Revolution_History's_Transformation_in_the_Digital_Age.mp4";
 
 export default function VideoPlayer({ src }) {
   const videoRef = useRef(null);
@@ -140,7 +140,7 @@ export default function VideoPlayer({ src }) {
           className=" relative w-[1049px] h-[598px] -mt-[5%] flex flex-col items-center"
         >
           {/* video */}
-          <div className="relative w-full flex justify-center" style={{ height: 'calc(100% - 60px)' }}>
+          {/* <div className="relative w-full flex justify-center" style={{ height: 'calc(100% - 60px)' }}>
             <video
               src={src || testVideo}
               ref={videoRef}
@@ -149,7 +149,6 @@ export default function VideoPlayer({ src }) {
               onLoadedMetadata={(e) => setDuration(e.target.duration)}
               onClick={togglePlay}
             />
-            {/* overlay play button */}
             {!playing && (
               <button
                 onClick={togglePlay}
@@ -162,7 +161,7 @@ export default function VideoPlayer({ src }) {
                 />
               </button>
             )}
-          </div>
+          </div> */}
 
           {/* custom controls */}
           <div className="custom-controls flex items-center justify-between gap-6 rounded-lg py-2 w-full mt-2" >
