@@ -13,6 +13,7 @@ import VideoPlayer from "./components/VideoPlayer"
 import ImagePreviewComponent from "./components/ImagePreviewComponent"
 import Lyricsbreakedown from "./components/Lyricsbreakedown"
 import FilmReel from "./components/FilmReel.jsx"
+import ComingSoon from "./Pages/ComingSoon.jsx"
 
 function ContentRouter () {
   const { id, contentType } = useParams();
@@ -60,6 +61,7 @@ function App() {
         <Route path="/map" element={<Map />} />
         <Route path="/location/:id/:contentType" element={<ContentRouter />} />
         <Route path="*" element={<ErrorPage/>} />
+        <Route path="/comingsoon" element={<ComingSoon/>} />
       </Route>
     )
   );

@@ -16,7 +16,7 @@ function WelcomePage() {
       <div className="absolute inset-0 bg-black/60 z-0"></div>
       
       {/* Main Card Container */}
-      <div className="relative max-w-4xl w-full mx-auto z-10 sm:max-w-5xl lg:max-w-6xl rounded-xl"
+      <div className="relative max-w-4xl w-full mx-auto z-10   rounded-xl"
         style={{ backgroundImage: `url(${grayFrame})` }}
       >
         {/* Card with decorative border effect */}
