@@ -1,7 +1,7 @@
 import KExpWithCloseBtnHeadingCream from '../components/KExpWithCloseBtnHeadingCream';
 import subwayloc from '../assets/icons/subway_location_Icon.svg';
 import grainBG from '../assets/backgrounds/grainBG.png';
-import AlbumImg from '../assets/group19.png';
+import AlbumImg from '../assets/favicon.jpg';
 import btnBorder from "../assets/slideBtn_Frame.png";
 import whiteRArrow from '../assets/icons/rArrow_WhiteColor.svg';
 import rightarrow from '../assets/icons/rArrow.svg';
@@ -30,17 +30,17 @@ function Slide({ location, close, isAnimating, onNext, onPrevious }) {
             {/* location name and icon container */}
             <div className="flex flex-row items-center gap-2">
               <img src={subwayloc} alt="location icon" className="h-6 w-6 sm:h-8 sm:w-8 mb-3 sm:mb-4" />
-              <h2 className="text-[1.5rem] sm:text-[2rem] md:text-[2.5rem] lg:text-[3rem] special-elite text-primary-100">
+              <h2 className="text-[1.5rem] sm:text-[2rem] md:text-[2.5rem] lg:text-[3rem] special-elite text-primary-100 ">
                 {location.locationName}
               </h2>
             </div>
             {/* song details container */}
             <div className="flex flex-col justify-between gap-6 sm:gap-8 md:gap-10"> 
               <div className="flex flex-col gap-3 sm:gap-4"> 
-                <h1 className="oswald text-[0.65rem] sm:text-[0.75rem] md:text-[0.875rem] text-secondy-100 tracking-wide font-bold"> 
+                <h1 className="oswald text-[0.65rem] sm:text-[0.75rem] md:text-[0.875rem] text-secondy-100 tracking-wide font-bold font-futura"> 
                   The HEART OF THE STORY
                 </h1>
-                <p className="text-[0.875rem] sm:text-[1rem] md:text-[1.125rem] rock text-primary-100"> 
+                <p className="text-[0.875rem] sm:text-[1rem] md:text-[1.125rem] rock text-primary-100 font-homemadeApple"> 
                   {location.importance}
                 </p>
               </div>
@@ -53,7 +53,7 @@ function Slide({ location, close, isAnimating, onNext, onPrevious }) {
                 />
                 <div className="flex flex-col gap-1 sm:gap-1.5 justify-between"> 
                   <div className="flex flex-col">
-                    <h2 className="text-[1.5rem] sm:text-[1.75rem] md:text-[2rem] lg:text-[2.25rem] freckle-face-regular font-normal text-primary-100"> 
+                    <h2 className="text-[1.5rem] sm:text-[1.75rem] md:text-[2rem] lg:text-[2.25rem] freckle-face-regular font-normal text-primary-100 "> 
                       {location.songTitle}
                     </h2>
                     <h3 className="text-[0.875rem] sm:text-[1rem] md:text-[1.125rem] lg:text-[1.25rem] special-elite text-primary-100 tracking-wide"> 
@@ -72,7 +72,7 @@ function Slide({ location, close, isAnimating, onNext, onPrevious }) {
                               alt={`${btn.text} icon`}
                               className="w-6 h-6 sm:w-8 sm:h-8 transition-colors duration-100 group-hover:brightness-0 group-hover:invert group-focus:invert group-focus:brightness-0" 
                             />
-                            <span className="rock text-[0.75rem] sm:text-[0.875rem] md:text-[1rem] tracking-wider text-secondy-100 transition-colors duration-100 group-hover:text-white group-focus:text-white"> 
+                            <span className="rock text-[0.75rem] sm:text-[0.875rem] md:text-[1rem] tracking-wider text-secondy-100 transition-colors duration-100 group-hover:text-white group-focus:text-white font-biro"> 
                               {btn.text}
                             </span>
                           </div>

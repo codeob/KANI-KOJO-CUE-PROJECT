@@ -19,7 +19,7 @@ export default function ComingSoon() {
                                 className="w-full h-auto object-contain"
                             />
                             {/* Overlay text */}
-                            <span className="absolute text-white font-bold text-sm sm:text-base md:text-lg lg:text-xl special-elite">
+                            <span className="absolute text-white font-bold text-sm sm:text-base md:text-lg lg:text-xl special-elit">
                                 Let’s go back
                             </span>
                         </button>
