@@ -236,6 +236,22 @@ input[type="range"]::-webkit-slider-thumb {
   font-display: swap;
 }
 
+@font-face {
+  font-family:'COCOGOOSELETTERPRESSTRIAL' ;
+  src: url('../src/assets/font/COCOGOOSELETTERPRESSTRIAL.ttf') format('truetype');
+   font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family:'RoughOTF';
+  src: url('../src/assets/font//RoughOTF.otf') format('opentype');
+   font-weight: 400 ;
+  font-style: normal;
+  font-display: swap;
+}
+
 .font-biro {
   font-family: 'BiroScript', cursive;
 }
@@ -252,12 +268,23 @@ input[type="range"]::-webkit-slider-thumb {
   font-family: 'HomemadeApple', cursive;
 }
 
+.font-cocogoose {
+  font-family: 'COCOGOOSELETTERPRESSTRIAL', "Helvetica Neue", Arial, sans-serif;
+}
+
+.font-rough {
+  font-family: 'RoughOTF', cursive;
+}
+
 @layer utilities {
   .font-biro { font-family: 'BiroScript', cursive; }
   .font-futura { font-family: 'FuturaCyrillicDemi', "Helvetica Neue", Arial, sans-serif; }
   .font-sansSerif { font-family: 'SansSerifBldFLF', "Helvetica Neue", Arial, sans-serif; }
   .font-homemadeApple { font-family: 'HomemadeApple', cursive; }
+  .font-cocogoose { font-family: 'COCOGOOSELETTERPRESSTRIAL', "Helvetica Neue", Arial, sans-serif; }
+  .font-rough { font-family: 'RoughOTF', cursive; }
 }
+
 
 
 /* BTSPhotos Flip Animation Styles */

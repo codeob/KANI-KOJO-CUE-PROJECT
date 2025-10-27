@@ -98,13 +98,13 @@ function Slide({ location, close, isAnimating, onNext, onPrevious }) {
           <button onClick={onPrevious} type="button" className='group relative transition-all w-[80px] sm:w-[100px] h-[40px] sm:h-[50px] p-0.5 px-1 pt-[3px] duration-300'>
             <img src={previousBtn} alt="Button Border Frame" className='absolute left-0 top-0 w-full h-full' />
             <div className="relative cursor-pointer rounded-sm group-hover:bg-secondy-100 flex items-center justify-center w-full h-full">
-              <h4 className='rock text-[0.625rem] sm:text-[0.75rem] group-hover:text-white text-secondy-100'>Previous</h4>
+              <h4 className='rock text-[0.625rem] sm:text-[0.75rem] group-hover:text-white text-secondy-100 font-rough '>Previous</h4>
             </div>
           </button>
           <button onClick={onNext} type="button" className='group relative transition-all h-[40px] sm:h-[50px] p-0.5 px-1 pt-[3px] duration-300'> 
             <img src={previousBtn} alt="Button Border Frame" className='absolute left-0 top-0 w-full h-full' />
             <div className="relative cursor-pointer py-2 px-4 rounded-sm group-hover:bg-secondy-100 bg-primary-100 flex items-center justify-center gap-2 sm:gap-3 w-full h-full"> 
-              <h4 className='rock text-[0.625rem] sm:text-[0.75rem] text-white'>Next Location</h4>
+              <h4 className='rock text-[0.625rem] sm:text-[0.75rem] text-white font-rough '>Next Location</h4>
               <img
                 src={whiteRArrow}
                 alt="arrow icon"

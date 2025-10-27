@@ -246,7 +246,7 @@ function Map() {
         {/* ✅ Speaker toggle button */}
         <button onClick={togglePlay} className="cursor-pointer fixed bottom-6 left-12 lg:bottom-10">
           <img
-            src={playing ? speakerMute : speaker}
+            src={playing ? speaker :  speakerMute}
             alt={playing ? "Mute" : "Play"}
             className="h-5 w-5 sm:h-6 sm:w-6 lg:h-12 lg:w-12"
           />

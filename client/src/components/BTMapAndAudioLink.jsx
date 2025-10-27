@@ -82,7 +82,7 @@ export default function BTMapAndAudioLink({ onBack }) {
           </p>
           <Link to="#" className="cursor-pointer">
             <div className="flex items-center gap-1 sm:gap-2"> 
-              <p className="text-[#b07010] font-semibold nunito-small text-xs sm:text-sm md:text-base"> 
+              <p className="text-[#b07010] font-semibold font-biro text-xs sm:text-sm md:text-base"> 
                 Listen to full song
               </p>
               <img src={arrowNEIcon} alt="arrow icon" className="w-4 h-4 sm:w-5 sm:h-5" />
