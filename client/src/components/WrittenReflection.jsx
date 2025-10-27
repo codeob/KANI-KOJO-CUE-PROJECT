@@ -1,9 +1,10 @@
-import KExpWithCloseBtnHeadingBrown from './KExpWithCloseBtnHeadingBrown';
-import BTMapAndAudioLink from './BTMapAndAudioLink';
-import mapBG from '../assets/backgrounds/Map_Bkg.png';
-import zigzagFrame1 from "../assets/backgrounds/zigzagFrame1.png";
-import useTypingEffect from '../hooks/useTypingEffect';
 import { Textfit } from "react-textfit";
+import KExpWithCloseBtnHeadingBrown from './KExpWithCloseBtnHeadingBrown'
+import BTMapAndAudioLink from './BTMapAndAudioLink'
+import mapBG from '../assets/backgrounds/Map1_Bkg.png'
+import zigzagFrame1 from "../assets/backgrounds/zigzagFrame1.png"
+import useTypingEffect from '../hooks/useTypingEffect'
+
 
 export default function WrittenReflection() {
   const headingText = "A Mother's Love";

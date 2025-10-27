@@ -1,8 +1,12 @@
 import React, { useEffect, useState, useRef } from "react";
 import useLocationStore from "../store/useLocationStore";
+import grainBG from "../assets/backgrounds/grainBG.png";
 import mapDay from "../assets/mapDay.png";
 import mapNight from "../assets/mapNight.png";
 import locPin from "../assets/icons/locationPin.svg";
+import speaker from "../assets/icons/speaker.svg";
+import speakerMute from "../assets/icons/speakerMute.svg";
+import song1 from "../audio/song1.mp3"; // ✅ Import your audio
 import Slide from "./Slide";
 import locationPins from "../../locations";
 
@@ -13,12 +17,37 @@ function Map() {
   const [scale, setScale] = useState(1);
   const [showLandscapePrompt, setShowLandscapePrompt] = useState(false);
   const [imageInfo, setImageInfo] = useState({ offsetX: 0, offsetY: 0, scale: 1 });
+  const [playing, setPlaying] = useState(false);
   const mapRef = useRef(null);
+  const audioRef = useRef(null); // ✅ Create a ref for audio
 
   const now = new Date();
   const hours = now.getHours();
 
-  // Calculate scaling ratio and offsets so pins align perfectly
+  // ✅ Toggle audio playback
+  const togglePlay = () => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    if (playing) {
+      audio.pause();
+    } else {
+      audio.play();
+    }
+    setPlaying(!playing);
+  };
+
+  // ✅ Stop music when component unmounts
+  useEffect(() => {
+    return () => {
+      if (audioRef.current) {
+        audioRef.current.pause();
+        audioRef.current.currentTime = 0;
+      }
+    };
+  }, []);
+
+  // ✅ Update scaling when screen resizes
   const updateImageInfo = () => {
     if (!mapRef.current || !mapRef.current.complete) return;
     const img = mapRef.current;
@@ -40,7 +69,6 @@ function Map() {
     setScale(ratio);
   };
 
-  // Check device orientation for prompt
   const checkOrientation = () => {
     const isSmallScreen = window.innerWidth < 640;
     const isPortrait = window.innerWidth < window.innerHeight;
@@ -60,7 +88,6 @@ function Map() {
     };
   }, []);
 
-  // Handle opening slide animation
   useEffect(() => {
     if (selectedLocation) {
       setIsSlideVisible(true);
@@ -71,13 +98,9 @@ function Map() {
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (!selectedLocation) return;
-      if (e.key === "ArrowRight") {
-        handleNext(selectedLocation.id);
-      } else if (e.key === "ArrowLeft") {
-        handlePrevious(selectedLocation.id);
-      } else if (e.key === "Escape") {
-        handleClose();
-      }
+      if (e.key === "ArrowRight") handleNext(selectedLocation.id);
+      else if (e.key === "ArrowLeft") handlePrevious(selectedLocation.id);
+      else if (e.key === "Escape") handleClose();
     };
 
     window.addEventListener("keydown", handleKeyDown);
@@ -125,10 +148,15 @@ function Map() {
 
   return (
     <div className="h-screen w-full flex justify-center items-center overflow-hidden relative">
+      {/* ✅ Hidden audio element */}
+      <audio ref={audioRef} src={song1} loop preload="auto" />
+
       {showLandscapePrompt && (
         <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4">
           <div className="bg-white/90 rounded-lg p-6 max-w-sm w-full text-center">
-            <h2 className="text-lg sm:text-xl font-bold text-primary-100 mb-4">Please Rotate Your Device</h2>
+            <h2 className="text-lg sm:text-xl font-bold text-primary-100 mb-4">
+              Please Rotate Your Device
+            </h2>
             <p className="text-sm sm:text-base text-primary-100">
               For the best experience with the interactive map, please use landscape mode on your mobile device.
             </p>
@@ -136,35 +164,40 @@ function Map() {
         </div>
       )}
 
-      {/* Map container */}
-      <div className="relative flex-shrink-0 max-w-full max-h-screen w-full h-full">
-        {hours > 5 && hours < 18 ? (
-          <img
-            ref={mapRef}
-            src={mapDay}
-            alt="Map"
-            className="max-w-full max-h-screen object-contain w-full h-full"
-            onLoad={updateImageInfo}
-          />
-        ) : (
-          <img
-            ref={mapRef}
-            src={mapNight}
-            alt="Map"
-            className="max-w-full max-h-screen object-contain w-full h-full bg-[#0f0f0f]"
-            onLoad={updateImageInfo}
-          />
-        )}
+      <div
+        className={`relative flex-shrink-0 max-w-full max-h-screen w-full h-full ${
+          hours > 5 && hours < 18
+            ? "bg-[rgba(196,170,141,0.9)]"
+            : "bg-[rgb(15,15,15)]"
+        }`}
+        style={{ backgroundImage: `url(${grainBG})` }}
+      >
+        <h2
+          className={`fixed left-5 top-5 lg:left-13 lg:top-13 text-center text-[1.2rem] sm:text-[1.5rem] md:text-[2rem] lg:text-[2.5rem] rock mb-2 leading-tight ${
+            hours > 5 && hours < 18 ? "text-primary-100" : "text-textLight-100"
+          }`}
+        >
+          Explore the Kani
+          <br />
+          <span className="lowercase">journey</span>
+        </h2>
 
-        {/* Location pins — now precisely aligned */}
+        {/* Map images */}
+        <img
+          ref={mapRef}
+          src={hours > 5 && hours < 18 ? mapDay : mapNight}
+          alt="Map"
+          className="max-w-full max-h-screen object-contain w-full h-full"
+          onLoad={updateImageInfo}
+        />
+
+        {/* Pins */}
         {locationPins.map((loc) => {
           const topPercent = parseFloat(loc.coords.top.replace("%", ""));
           const leftPercent = parseFloat(loc.coords.left.replace("%", ""));
-
           const img = mapRef.current;
           const naturalWidth = img?.naturalWidth || 0;
           const naturalHeight = img?.naturalHeight || 0;
-
           const topPx = imageInfo.offsetY + (topPercent / 100) * naturalHeight * imageInfo.scale;
           const leftPx = imageInfo.offsetX + (leftPercent / 100) * naturalWidth * imageInfo.scale;
 
@@ -179,17 +212,24 @@ function Map() {
                 left: `${leftPx}px`,
                 width: pinWidth,
                 height: pinHeight,
-                minWidth: `${pinDimensions.width * 0.5 * scale}px`,
-                minHeight: `${pinDimensions.height * 0.5 * scale}px`,
                 transform: "translate(-50%, -100%)",
               }}
               onClick={() => setSelectedLocation(loc.id)}
             />
           );
         })}
+
+        {/* ✅ Speaker toggle button */}
+        <button onClick={togglePlay} className="cursor-pointer fixed bottom-6 left-12 lg:bottom-10">
+          <img
+            src={playing ? speakerMute : speaker}
+            alt={playing ? "Mute" : "Play"}
+            className="h-5 w-5 sm:h-6 sm:w-6 lg:h-12 lg:w-12"
+          />
+        </button>
       </div>
 
-      {/* Overlay / Slide Info */}
+      {/* Slide overlay */}
       {isSlideVisible && (
         <div className="fixed inset-0 bg-black/55 z-50 flex items-center justify-center p-2 sm:p-4 md:p-6 lg:p-8 xl:p-10">
           <Slide

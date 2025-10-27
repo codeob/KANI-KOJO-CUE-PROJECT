@@ -10,16 +10,20 @@ import visualizerIcon from './src/assets/icons/visualizerIcon.svg';
 import BTSVideoIcon from './src/assets/icons/BTSVideoIcon.svg';
 import interviewIcon from './src/assets/icons/interviewIcon.svg';
 
+// Import video files for location-specific videos
+// These videos are used in VideoPlayer.jsx and FilmReel.jsx components
+// Video assignment: Locations with film-reel buttons get YouAreFilmReelVideo; locations with BTS VIDEO buttons get BTSYouAreVideo
+
 const locationPins = [
   {
     id: 1,
     locationName: "Ota 42 - Adum",
-    importance: "KO-JO'S BIRTHPLACE AND MOTHER'S FAMILY HOME",
+    importance: "Cue’s birthplace and his mother’s family home in Adum, Kumasi — where his story quietly began and, years later, came full circle as his mother returned to live there.",
     coords: { top: "40%", left: "50%" },
     image: "",
     songTitle: "Fruit of the Womb",
     songUrl: "",
-    videoUrl: "",
+    videoUrl: '',
     artistName: "Kojo Cue",
     lyrics: `I made a little mistake
 Have I taken on more than I weigh?
@@ -107,12 +111,12 @@ have to tell y’all the story of my life.
   {
     id: 2,
     locationName: "Ota 42 - Adum",
-    importance: "KO-JO'S BIRTHPLACE AND MOTHER'S FAMILY HOME",
+    importance: "Cue’s birthplace and his mother’s family home in Adum, Kumasi — where his story quietly began and, years later, came full circle as his mother returned to live there.",
     image: "",
     coords: { top: "46%", left: "47%" },
     songTitle: "Big Boy",
     songUrl: "",
-    videoUrl: "",
+    videoUrl: '',
     artistName: "Kojo Cue",
     lyrics: `I made a little mistake
 Have I taken on more than I weigh?
@@ -200,7 +204,7 @@ have to tell y’all the story of my life.
   {
     id: 3,
     locationName: "Kotoko - Oduom",
-    importance: "First friendship, first injury, love for football",
+    importance: "Oduom — the birthplace of his love for football, where scraped knees and street games near the Kotoko camp sparked dreams that never faded.",
     image: "",
     coords: { top: "80%", left: "58%" },
     songTitle: "Next term",
@@ -218,7 +222,7 @@ have to tell y’all the story of my life.
   {
     id: 4,
     locationName: "Jamaica House - Bantama",
-    importance: "Core childhood home. Father’s side of the family",
+    importance: "Cue’s father’s family home in Bantama — the unshakable center of his world, filled with childhood laughter, family lessons, and the comfort of belonging.",
     image: "",
     coords: { top: "13%", left: "52%" },
     songTitle: "Bantama Blues 3",
@@ -236,14 +240,14 @@ have to tell y’all the story of my life.
   {
     id: 5,
     locationName: "Jamaica House - Bantama",
-    importance: "Core childhood home. Father’s side of the family",
+    importance: "Cue’s father’s family home in Bantama — the unshakable center of his world, filled with childhood laughter, family lessons, and the comfort of belonging.",
     image: "",
     coords: { top: "19%", left: "47%" },
     songTitle: "Abrantie",
     songUrl: "",
     videoUrl: "https://youtube.com/shorts/3u9dKyR7iOM",
     artistName: "Kojo Cue",
-    lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis Jamaica House - Bantama Abrantie",
+    lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis Jamaica House - Bantama Abrantie",
     buttons: [
       { text: "FILM REEL", icon: filmReelIcon, link: "/location/5/film-reel" },
       { text: "Lyrics Breakdown", icon: lyricsBDIcon, link: "/location/5/lyrics-breakdown" },   // ask where this link routes to?
@@ -288,7 +292,7 @@ have to tell y’all the story of my life.
   {
     id: 8,
     locationName: "SMALL LONDON - Breman",
-    importance: "Grandmother's death and family changes.",
+    importance: "Home in Breman with his grandmother and auntie from 2000 to 2003 — the setting of his earliest independence, first love, and long walks to school..",
     image: "",
     coords: { top: "36%", left: "72%" },
     songTitle: "Mysterious Ways",
@@ -423,12 +427,12 @@ Jesus said, “Love your neighbor as yourself.” Maybe he knew that would be th
   {
     id: 9,
     locationName: "SMALL LONDON - Breman",
-    importance: "Grandmother's death and family changes.",
+    importance: "Home in Breman with his grandmother and auntie from 2000 to 2003 — the setting of his earliest independence, first love, and long walks to school.",
     image: "",
     coords: { top: "43%", left: "77%" },
     songTitle: "Angel",
     songUrl: "",
-    videoUrl: "",
+    videoUrl: '',
     artistName: "Kojo Cue",
     lyrics: "",
     buttons: [
@@ -441,7 +445,7 @@ Jesus said, “Love your neighbor as yourself.” Maybe he knew that would be th
   {
     id: 10,
     locationName: "F176 - Buokrom Estate",
-    importance: "Adolescence, the first meeting with father.",
+    importance: "Buokrom Estate, 2004–2007 — where Cue came of age, met his father for the first time, and found ambition shaping the boy into a young man.",
     image: "",
     coords: { top: "50%", left: "72%" },
     songTitle: "F176",
@@ -457,7 +461,7 @@ Jesus said, “Love your neighbor as yourself.” Maybe he knew that would be th
   {
     id: 11,
     locationName: "F176 - Buokrom Estate",
-    importance: "Adolescence, the first meeting with father.",
+    importance: "Buokrom Estate, 2004–2007 — where Cue came of age, met his father for the first time, and found ambition shaping the boy into a young man.",
     image: "",
     coords: { top: "58%", left: "68%" },
     songTitle: "Grew Up Fast",
@@ -572,14 +576,14 @@ Grew up too quick
   {
     id: 12,
     locationName: "F176 - Buokrom Estate",
-    importance: "Adolescence, the first meeting with father.",
+    importance: "Buokrom Estate, 2004–2007 — where Cue came of age, met his father for the first time, and found ambition shaping the boy into a young man.",
     image: "",
     coords: { top: "55%", left: "76%" },
     songTitle: "Tontonte",
     songUrl: "",
     videoUrl: "",
     artistName: "Kojo Cue",
-    lyrics:`Ehhhhh ahhhhh (Ginseng asɛ nsuo grawa)
+    lyrics: `Ehhhhh ahhhhh (Ginseng asɛ nsuo grawa)
 Mmm ahhh mmmm (Me redwene, got me thinking louder)
 Wiase nsɛmsɛm na adane me adwenedwene ahhh (ɔkɔ baabi a)
 Me twa bi a wo se me yɛ asommorodwe ei (ɔkɔ baabi aye)
@@ -713,7 +717,7 @@ Wiase nsemsem na ama no aba saa (Wiase abrabɔ yi ɛnyɛ mmirika oh)
   {
     id: 13,
     locationName: "CLAMP STREET - Lake",
-    importance: "Current family home; recent life changes.",
+    importance: "Cue’s present home — the calm after all the movement.",
     image: "",
     coords: { top: "66%", left: "27%" },
     songTitle: "Dreams",
@@ -730,14 +734,14 @@ Wiase nsemsem na ama no aba saa (Wiase abrabɔ yi ɛnyɛ mmirika oh)
   {
     id: 14,
     locationName: "CLAMP STREET - Lake",
-    importance: "Current family home; recent life changes.",
+    importance: "Cue’s present home — the calm after all the movement.",
     image: "",
     coords: { top: "62%", left: "34%" },
     songTitle: "You Are",
     songUrl: "",
-    videoUrl: "",
+    videoUrl: '',
     artistName: "Kojo Cue",
-    lyrics: `I lost my sight 
+    lyrics: `I lost my sight
 I’m driving blind when I’m with you
 I think I’m fell and hit my head in love
 With you
@@ -850,19 +854,19 @@ Fell and hit my head in love
     buttons: [
       { text: "FILM REEL", icon: filmReelIcon, link: "/location/14/film-reel" },
       { text: "FULL LYRICS", icon: fullLyricsIcon, link: "/location/14/lyrics" },
-      { text: "BTS VIDEO", icon: BTSVideoIcon, link: "/location/14/video" },
+      { text: "BTS VIDEO", icon: BTSVideoIcon, link: "/location/14/BTSYouAre.mp4" },
     ],
 
   },
   {
     id: 15,
     locationName: "CLAMP STREET - Lake",
-    importance: "Current family home; recent life changes.",
+    importance: "Cue’s present home — the calm after all the movement.",
     image: "",
     coords: { top: "59%", left: "31%" },
     songTitle: "The Fall",
     songUrl: "",
-    videoUrl: "",
+    videoUrl:'https://drive.google.com/file/d/1KxMu2Xe0iVU03w9opPDcRf-sY8HpogHb/view?usp=drive_link' ,
     artistName: "Kojo Cue",
     lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis",
     buttons: [
@@ -874,14 +878,14 @@ Fell and hit my head in love
   {
     id: 16,
     locationName: "CLAMP STREET - Lake",
-    importance: "Current family home; recent life changes.",
+    importance: "Cue’s present home — the calm after all the movement.",
     image: "",
     coords: { top: "60%", left: "27%" },
     songTitle: "Onipa Hia Mmoa",
     songUrl: "",
     videoUrl: "",
     artistName: "Kojo Cue",
-    lyrics:`Bere a yi si, kojo kill
+    lyrics: `Bere a yi si, kojo kill
 Kojo kill, bere a yi si, mmh
 Onipa yɛ nha mmoa wo, hmmm
 Adiɛn, yɛɛ wo
@@ -987,7 +991,7 @@ Story
   {
     id: 17,
     locationName: "CLAMP STREET - Lake",
-    importance: "Current family home; recent life changes.",
+    importance: "Cue’s present home — the calm after all the movement.",
     image: "",
     coords: { top: "69%", left: "31%" },
     songTitle: "Gold Dust",
@@ -1102,7 +1106,7 @@ When she stops to catch her breath you’ll see her glow
 Nobody has to tell you
 Where she’s coming from
 `,
-WrittenRelection:`There’s always that one song that seems to summon itself—like it existed long before I ever reached for it. Every time I work on a project, one track insists on being born without my guidance. It starts as a fragment in my mind, an idea so certain in feeling yet shapeless in sound. Usually, I can already hear the production breathing beneath the words, but with these songs, I know nothing. I just wait—helpless, hopeful—for the moment when sound finds form.
+    WrittenRelection: `There’s always that one song that seems to summon itself—like it existed long before I ever reached for it. Every time I work on a project, one track insists on being born without my guidance. It starts as a fragment in my mind, an idea so certain in feeling yet shapeless in sound. Usually, I can already hear the production breathing beneath the words, but with these songs, I know nothing. I just wait—helpless, hopeful—for the moment when sound finds form.
 It’s strange how these songs, the ones that come uninvited, end up becoming the spine of everything. A Ghetto Story did that on The Shining. Rich Dad did the same on FMB. And now Gold Dust has followed that pattern—appearing first as an absence that wouldn’t leave me alone.
 I remember the night clearly. I was at Paapa Versa’s album listening. He’s someone I’ve long wanted to create with, though the timing never seemed to align. Before one of the opening acts, a singer named Tsiee, began his set, he mentioned he’d written a song for a friend who ended up rejecting it. Then he began to sing the hook—and in that instant, I recognized it. Not as something new, but as something I had been waiting to hear.
 I reached out to him, got the song, and brought it to Evans and Paapa. And like that—through the quiet machinery of coincidence—the universe handed me what I was missing. Gold Dust took its time, argued with us, resisted completion. But in the end, it allowed itself to be finished.

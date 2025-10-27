@@ -1,6 +1,6 @@
-import mapBG from '../assets/backgrounds/Map_Bkg.png';
-import btn from '../assets/icons/button.svg';
-import { Link } from 'react-router-dom';
+import mapBG from '../assets/backgrounds/Map1_Bkg.png'
+import btn from '../assets/icons/button.svg'
+import { Link } from 'react-router-dom'
 
 export default function ErrorPage() {
     return (

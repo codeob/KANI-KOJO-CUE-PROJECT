@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom';
-import mapimage from "../assets/backgrounds/mapimage.png";
+import mapimage from "../assets/backgrounds/Map1_Bkg.png";
 import grainBG from '../assets/backgrounds/grainBG.png';
 import btnBorder from "../assets/slideBtn_Frame.png";
 import rightarrow from '../assets/icons/rArrow.svg';
-import Frame from '../assets/Frame43773.png'
+import Frame from '../assets/backgrounds/Map.png'
+import grayFrame from '../assets/backgrounds/frame_gray_grain.png'
+import contineFrame from '../assets/backgrounds/darkBrownFrame.svg';
 
 function WelcomePage() {
   return (
@@ -14,9 +16,11 @@ function WelcomePage() {
       <div className="absolute inset-0 bg-black/60 z-0"></div>
       
       {/* Main Card Container */}
-      <div className="relative max-w-4xl w-full mx-auto z-10 sm:max-w-5xl lg:max-w-6xl">
+      <div className="relative max-w-4xl w-full mx-auto z-10 sm:max-w-5xl lg:max-w-6xl rounded-xl"
+        style={{ backgroundImage: `url(${grayFrame})` }}
+      >
         {/* Card with decorative border effect */}
-        <div className="relative bg-[#E1DDD4] backdrop-blur-sm rounded-lg shadow-xl overflow-hidden">
+        <div className="relative rounded-lg overflow-hidden">
           {/* Grain texture overlay */}
           <img src={grainBG} alt="grain background" className="absolute  w-full h-full object-cover opacity-20 z-0" />
           
@@ -42,11 +46,12 @@ function WelcomePage() {
             {/* Continue Button with same style as Slide component */}
             <div className="flex justify-center">
               <Link to="/map" className="block">
-                <button className="group relative flex items-center gap-2 sm:gap-4 justify-between py-2 sm:py-3 px-6 sm:px-8 rounded-[10px] cursor-pointer transition-all duration-300 hover:bg-surface-100 focus:bg-secondy-100 outline-none min-w-[150px] sm:min-w-[200px]">
-                  <img src={btnBorder} alt="Button Border Frame" className='absolute left-0 w-full h-full' />
+                <button className="group relative flex items-center gap-2 sm:gap-4 justify-between py-2 sm:py-3 px-6 sm:px-8 rounded-[10px] cursor-pointer transition-all duration-300 outline-none min-w-[150px] sm:min-w-[200px]"
+                >
+                  <img src={contineFrame} alt="Button Border Frame" className='absolute left-0 w-full h-full' />
                   <div className="flex items-center gap-2 sm:gap-3 z-10">
-                    <span className="rock text-sm sm:text-base font-bold tracking-wider text-secondy-100 transition-colors duration-100 group-hover:text-white group-focus:text-white">
-                      CONTINUE
+                    <span className="font-biro text-sm sm:text-[24px] tracking-wider text-white transition-colors duration-100 group-hover:text-white group-focus:text-white">
+                      Continue
                     </span>
                   </div>
                   {/* Right arrow */}

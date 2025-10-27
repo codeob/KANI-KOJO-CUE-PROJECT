@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import BTMapAndAudioLink from "./BTMapAndAudioLink";
-import mapBG from "../assets/backgrounds/Map_Bkg.png";
+import mapBG from "../assets/backgrounds/Map1_Bkg.png";
 import KExpWithCloseBtnHeadingBrown from "./KExpWithCloseBtnHeadingBrown";
 import playIcon from "../assets/icons/play.svg";
 import pauseIcon from "../assets/icons/pause.svg";
@@ -9,7 +9,7 @@ import volumeUp from "../assets/icons/volumeUp.svg";
 import fullscreen from "../assets/icons/fullscreen.svg";
 import exitFullscreen from "../assets/icons/exitFullscreen.svg";
 import playBtnOverlay from "../assets/icons/playBtnWBg.svg";
-import testVideo from "../video/output_The_AI_Revolution_History's_Transformation_in_the_Digital_Age.mp4";
+// import testVideo from "../video/output_The_AI_Revolution_History's_Transformation_in_the_Digital_Age.mp4";
 
 export default function VideoPlayer({ src }) {
   const videoRef = useRef(null);
