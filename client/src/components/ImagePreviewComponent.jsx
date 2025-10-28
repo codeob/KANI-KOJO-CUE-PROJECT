@@ -7,6 +7,7 @@ import nextBTNIcon from "../assets/icons/arrow_next.svg";
 import picFrame from "../assets/backgrounds/carouselPhotoFrame.png";
 import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
+import BgAudio from './BgAudio';
 
 export default function ImagePreviewComponent() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -128,6 +129,7 @@ export default function ImagePreviewComponent() {
         <div className="w-full">
           <KExpWithCloseBtnHeadingBrown />
         </div>
+        <BgAudio />
         <div className="flex flex-col items-center justify-center w-full max-w-4xl sm:max-w-5xl md:max-w-6xl lg:max-w-7xl"> 
           <div className="relative w-full">
             <div 

@@ -4,6 +4,7 @@ import BTMapAndAudioLink from './BTMapAndAudioLink'
 import mapBG from '../assets/backgrounds/Map1_Bkg.png'
 import zigzagFrame1 from "../assets/backgrounds/zigzagFrame1.png"
 import useTypingEffect from '../hooks/useTypingEffect'
+import BgAudio from "./BgAudio";
 
 
 export default function WrittenReflection() {
@@ -19,11 +20,13 @@ export default function WrittenReflection() {
 
   return (
     <div className="h-screen w-full relative overflow-hidden">
+      {/* audio */}
       <img src={mapBG} alt="" className="absolute inset-0 h-full w-full object-cover z-0" />
       <div className="relative z-10 flex flex-col items-center justify-between h-full w-full p-4 sm:p-6 md:p-8 lg:p-10 -space-y-10 sm:-space-y-20">
         <div className="w-full">
           <KExpWithCloseBtnHeadingBrown />
         </div>
+         <BgAudio />
         <div className="h-full flex justify-center p-16 sm:p-16 md:p-16 lg:p-10"> 
           <div className="relative left-0 h-full w-full max-w-6xl sm:max-w-2xl lg:max-w-4xl  ">
             <img src={zigzagFrame1} alt="Film frame" className='h-full w-full ' />

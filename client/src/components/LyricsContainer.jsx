@@ -7,6 +7,7 @@ import BTMapAndAudioLink from "./BTMapAndAudioLink";
 import Scrollbar_Lyrics from "./Scrollbar_Lyrics";
 import useLocationStore from "../store/useLocationStore";
 import { Textfit } from "react-textfit";
+import BgAudio from "./BgAudio";
 
 export default function LyricsContainer() {
   const { id } = useParams();
@@ -62,6 +63,7 @@ export default function LyricsContainer() {
         <div className="w-full">
           <KExpWithCloseBtnHeadingBrown />
         </div>
+        <BgAudio />
         <div className="flex w-full py-6 sm:max-w-5xl md:max-w-6xl lg:max-w-7xl xl:max-w-full md:h-[70vh] overflow-hidden">
           <div className="flex-1 flex items-center">
             <Scrollbar_Lyrics>
