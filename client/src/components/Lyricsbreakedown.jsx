@@ -1,4 +1,4 @@
-import mapBG from '../assets/backgrounds/Map_Bkg.png';
+
 import mapimage from "../assets/backgrounds/Map1_Bkg.png";
 import KExpWithCloseBtnHeadingBrown from './KExpWithCloseBtnHeadingBrown';
 import BTMapAndAudioLink from './BTMapAndAudioLink';

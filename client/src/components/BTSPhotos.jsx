@@ -173,11 +173,12 @@ import React, { useState, useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import KExpWithCloseBtnHeadingBrown from "./KExpWithCloseBtnHeadingBrown";
 import BTMapAndAudioLink from "./BTMapAndAudioLink";
-import mapBG from "../assets/backgrounds/Map_Bkg.png";
+import mapBG from "../assets/backgrounds/Map1_Bkg.png";
 import frontPhotoFrame from "../assets/backgrounds/BTS_FrameFront.svg";
 import prevBTNIcon from "../assets/icons/arrow_previous.svg";
 import nextBTNIcon from "../assets/icons/arrow_next.svg";
 import "../../locations";
+import BgAudio from "./BgAudio";
 
 export default function BTSPhotos() {
   const images = location?.images || [
@@ -282,9 +283,9 @@ export default function BTSPhotos() {
   };
 
   return (
-    <div className="h-screen w-full relative overflow-hidden">
+    <div className="h-screen w-full bg-cover bg-center flex flex-col justify-center items-center px-4 relative"
+          style={{ backgroundImage: `url(${ mapBG})` }}>
       {/* background */}
-      <img src={mapBG} alt="" className="absolute h-full w-full object-cover z-0" />
       {/* changed: Landscape prompt for small screens */}
       {showLandscapePrompt && (
         <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4">
@@ -299,7 +300,7 @@ export default function BTSPhotos() {
         <div className="w-full">
           <KExpWithCloseBtnHeadingBrown />
         </div>
-
+         <BgAudio />
         {/* Frames + Photo */}
         <div className="relative h-[320px] sm:h-[400px] md:h-[450px] lg:h-[500px] xl:h-[590px] w-full max-w-[450px] sm:max-w-[560px] md:max-w-[640px] lg:max-w-[720px] xl:max-w-[1024px] flex justify-center items-center"> 
           <div className="relative h-full w-full bts-photo-container">
