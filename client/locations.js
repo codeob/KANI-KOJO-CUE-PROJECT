@@ -23,7 +23,7 @@ const locationPins = [
     image: "",
     songTitle: "Fruit of the Womb",
     songUrl: "",
-    videoUrl: '',
+    videoUrl: 'https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/Fruit%20of%20the%20Womb%20Film%20Reel.mp4?alt=media&token=8837820d-db42-4658-96e7-6bf8a395a132',
     artistName: "Kojo Cue",
     lyrics: `I made a little mistake
 Have I taken on more than I weigh?
@@ -116,7 +116,7 @@ have to tell y’all the story of my life.
     coords: { top: "46%", left: "47%" },
     songTitle: "Big Boy",
     songUrl: "",
-    videoUrl: '',
+    videoUrl: 'https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/Big%20Boy%20Film%20Reel.mp4?alt=media&token=05a852d0-178f-430d-a950-8e7cea372aba',
     artistName: "Kojo Cue",
     lyrics: `I made a little mistake
 Have I taken on more than I weigh?
@@ -245,19 +245,19 @@ have to tell y’all the story of my life.
     coords: { top: "19%", left: "47%" },
     songTitle: "Abrantie",
     songUrl: "",
-    videoUrl: "https://youtube.com/shorts/3u9dKyR7iOM",
+    videoUrl: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/Abrantie%20Film%20Reel.mp4?alt=media&token=fba62780-14e3-4146-bb22-dafb2edea49c",
     artistName: "Kojo Cue",
     lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis Jamaica House - Bantama Abrantie",
     buttons: [
       { text: "FILM REEL", icon: filmReelIcon, link: "/location/5/film-reel" },
-      { text: "Lyrics Breakdown", icon: lyricsBDIcon, link: "/location/5/lyrics-breakdown" },   // ask where this link routes to?
+      { text: "LYRICS BREAKDOWN", icon: lyricsBDIcon, link: "/location/5/lyrics-breakdown" },   // ask where this link routes to?
     ],
 
   },
   {
     id: 6,
     locationName: "OWASS BASIC - Santasi",
-    importance: "Junior and senior school years; early rap influences.",
+    importance: "Cue’ JSS. A place rich with memories and mischief where his love for literature first took root. And where his science teacher became the unlikely villain of his childhood story",
     image: "",
     coords: { top: "36%", left: "36%" },
     songTitle: "Squad",
@@ -274,7 +274,7 @@ have to tell y’all the story of my life.
   {
     id: 7,
     locationName: "OWASS BASIC - Santasi",
-    importance: "Junior and senior school years; early rap influences.",
+    importance: "Cue’ JSS. A place rich with memories and mischief where his love for literature first took root. And where his science teacher became the unlikely villain of his childhood story",
     image: "",
     coords: { top: "40.5%", left: "30.5%" },
     songTitle: "Mr. Eben Interlude",
@@ -432,7 +432,7 @@ Jesus said, “Love your neighbor as yourself.” Maybe he knew that would be th
     coords: { top: "43%", left: "77%" },
     songTitle: "Angel",
     songUrl: "",
-    videoUrl: '',
+    videoUrl: 'https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/Angel%20Film%20Reel.mp4?alt=media&token=4631e9d9-4cca-4d2f-b215-892441680782',
     artistName: "Kojo Cue",
     lyrics: "",
     buttons: [
@@ -739,7 +739,7 @@ Wiase nsemsem na ama no aba saa (Wiase abrabɔ yi ɛnyɛ mmirika oh)
     coords: { top: "62%", left: "34%" },
     songTitle: "You Are",
     songUrl: "",
-    videoUrl: '',
+    videoUrl: 'https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/You_Are_Film_Reel.mp4?alt=media&token=c6a37d45-d4b3-47c1-a5c5-cfe77105404d',
     artistName: "Kojo Cue",
     lyrics: `I lost my sight
 I’m driving blind when I’m with you
@@ -866,7 +866,7 @@ Fell and hit my head in love
     coords: { top: "59%", left: "31%" },
     songTitle: "The Fall",
     songUrl: "",
-    videoUrl:'https://drive.google.com/file/d/1KxMu2Xe0iVU03w9opPDcRf-sY8HpogHb/view?usp=drive_link' ,
+    videoUrl:'https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/The%20Fall%20Film%20Reel.mp4?alt=media&token=4aaf2a06-c8f2-4e1e-9cfb-93fcdc4a524d' ,
     artistName: "Kojo Cue",
     lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis",
     buttons: [

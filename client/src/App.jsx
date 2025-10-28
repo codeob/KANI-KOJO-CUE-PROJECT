@@ -17,10 +17,7 @@ import ComingSoon from "./Pages/ComingSoon.jsx"
 
 function ContentRouter () {
   const { id, contentType } = useParams();
-  const location = locationPins.find((loc) => loc.id === Number(id));
-
-  console.log(location.videoUrl);
-  
+  const location = locationPins.find((loc) => loc.id === Number(id));  
   
   if (!location) {
     return <ErrorPage />;

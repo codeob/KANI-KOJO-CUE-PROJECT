@@ -182,7 +182,7 @@ function Map() {
               Please Rotate Your Device
             </h2>
             <p className="text-sm sm:text-base text-primary-100">
-              For the best experience with the interactive map, please use landscape mode on your mobile device.
+              For the best experience with the interactive map, please use landscape mode on your mobile device or view on a larger screen.
             </p>
           </div>
         </div>
@@ -246,7 +246,7 @@ function Map() {
         {/* ✅ Speaker toggle button */}
         <button onClick={togglePlay} className="cursor-pointer fixed bottom-6 left-12 lg:bottom-10">
           <img
-            src={playing ? speaker :  speakerMute}
+            src={playing ? speakerMute :  speaker}
             alt={playing ? "Mute" : "Play"}
             className="h-5 w-5 sm:h-6 sm:w-6 lg:h-12 lg:w-12"
           />
