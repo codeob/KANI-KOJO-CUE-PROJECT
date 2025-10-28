@@ -4,6 +4,7 @@ import BTMapAndAudioLink from './BTMapAndAudioLink';
 import Scrollbar_Lyrics from './Scrollbar_Lyrics';
 import { useParams } from 'react-router-dom';
 import locationPins from "../../locations";
+import BgAudio from "./BgAudio";
 
 export default function Lyricsbreakedown() {
   const { id } = useParams();
@@ -22,10 +23,11 @@ export default function Lyricsbreakedown() {
         <div className="w-full">
           <KExpWithCloseBtnHeadingBrown />
         </div>
+        <BgAudio />
         <div className="flex bg-secondy-100 rounded-2xl max-h-[400px] sm:max-h-[450px] md:max-h-[500px] w-full max-w-4xl sm:max-w-5xl md:max-w-6xl lg:max-w-7xl -mt-[3%] mx-auto shadow-lg overflow-hidden"> 
           <div className="flex-1 flex items-center py-8 sm:py-10 md:py-12 lg:py-14 pr-8 sm:pr-10 md:pr-12 lg:pr-[40px]">
             <Scrollbar_Lyrics>
-              <p className="text-[1.5rem] sm:text-[1.75rem] md:text-[2rem] lg:text-[2.25rem] px-10 sm:px-20 md:px-25 lg:px-30 special-elite text-white leading-relaxed"> 
+              <p className="text-[1.5rem] sm:text-[1.75rem] md:text-[2rem] lg:text-[2.25rem] px-10 sm:px-20 md:px-25 lg:px-30 font-biro text-white leading-relaxed"> 
                 {lines.map((line, i) => (
                   <span key={i} className="block mb-1 sm:mb-2">
                     {line}
