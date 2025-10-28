@@ -7,7 +7,7 @@ export default function ComingSoon() {
          <h1 className="text-[128px] special-elite text-textLight-100">coming soon</h1>
          <div>
                            <div className="pt-8 sm:pt-10 md:pt-12 w-full flex justify-center"> 
-                    <Link to="/slide" className="block w-full max-w-[200px] sm:max-w-xs md:max-w-sm lg:max-w-md">
+                    <Link to="/map" className="block w-full max-w-[200px] sm:max-w-xs md:max-w-sm lg:max-w-md">
                         <button
                             className="relative w-full flex justify-center items-center hover:cursor-pointer"
                             aria-label="Go back home"
