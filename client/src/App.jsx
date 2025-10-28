@@ -45,7 +45,9 @@ function ContentRouter () {
     case "mixing-notes":
       return <ImagePreviewComponent /> 
     case "interview":
-      return <VideoPlayer src={location.videoUrl} />   
+      return <VideoPlayer src={location.videoUrl} />  
+    case "comingsoon":
+      return <ComingSoon /> 
     default:
       return <ErrorPage />
   }
@@ -60,8 +62,7 @@ function App() {
         <Route path="/map" element={<Map />} />
         <Route path="/location/:id/:contentType" element={<ContentRouter />} />
         <Route path="*" element={<ErrorPage/>} />
-        <Route path="/comingsoon" element={<ComingSoon/>} />
-        <Route path="/bgaudio" element={<BgAudio/>} />
+        {/* <Route path="/comingsoon" element={<ComingSoon/>} /> */}
       </Route>
     )
   );

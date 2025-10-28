@@ -51,7 +51,7 @@ export default function BgAudio() {
   }, []);
 
   // audio url
-const Audio = "";
+  const Audio = "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/Inst%20Clip%208.wav?alt=media&token=9c2cee40-c56e-4ada-91d8-8f63a297f9cf";
 
   return (
     <div className="absolute top-[73px] left-[4%] ">
@@ -59,8 +59,8 @@ const Audio = "";
         <audio ref={audioRef} src={Audio} loop preload="auto" />
         <button onClick={togglePlay} className="cursor-pointer fixed">
           <img
-            src={playing ? speaker : speakerMute}
-            alt={playing ? "Mute" : "Play"}
+            src={playing ? speakerMute : speaker}
+            alt={playing ? "Play" : "Mute"}
             className="h-5 w-5 sm:h-6 sm:w-6 lg:h-12 lg:w-12"
           />
         </button>

@@ -231,9 +231,9 @@ have to tell y’all the story of my life.
     artistName: "Kojo Cue",
     lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis Bantama Blues 3",
     buttons: [
-      { text: "BTS PHOTOS", icon: BTSPhotoIcon, link: "/location/4/bts-photos" },
-      { text: "LYRICS BREAKDOWN", icon: lyricsBDIcon, link: "/location/4/lyrics-breakdown" },   // ask where this link routes to?
-      { text: "WATCH MUSIC VIDEO", icon: watchMusicVideo, link: "" },   // use external link Kani website must still remain open
+      { text: "BTS VIDEO", icon: BTSVideoIcon, link: "/location/4/video" },
+      { text: "MIXING NOTES", icon: mixingNoteIcon, link: "/location/4/mixing-notes" },   // ask where this link routes to?
+      { text: "WATCH MUSIC VIDEO", icon: watchMusicVideo, link: "/location/4/comingsoon" }, 
     ],
 
   },
@@ -250,7 +250,24 @@ have to tell y’all the story of my life.
     lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis Jamaica House - Bantama Abrantie",
     buttons: [
       { text: "FILM REEL", icon: filmReelIcon, link: "/location/5/film-reel" },
-      { text: "LYRICS BREAKDOWN", icon: lyricsBDIcon, link: "/location/5/lyrics-breakdown" },   // ask where this link routes to?
+      { text: "MIXING NOTES", icon: mixingNoteIcon, link: "/location/5/mixing-notes" },
+    ],
+    mixingNoteImages: [
+      {
+        id: 1,
+        src: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/AB1_1.jpg?alt=media&token=ba4837dc-204e-4260-9fb3-f245201f7f52",
+        title: "Abrantie Mixing Note 1",
+      },
+      {
+        id: 2,
+        src: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/AB1_2.jpg?alt=media&token=fe6c80af-8cd6-4120-a48d-c324ff55db40",
+        title: "Abrantie Mixing Note 2",
+      },
+      {
+        id: 3,
+        src: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/AB2.jpg?alt=media&token=7e5da675-5a4c-4676-8e0f-91bcc46de613",
+        title: "Abrantie Mixing Note 3",
+      }
     ],
 
   },
@@ -439,6 +456,23 @@ Jesus said, “Love your neighbor as yourself.” Maybe he knew that would be th
       { text: "FILM REEL", icon: filmReelIcon, link: "/location/9/film-reel" },
       { text: "MIXING NOTES", icon: mixingNoteIcon, link: "/location/9/mixing-notes" },
       { text: "VOICE NOTES", icon: voiceNoteIcon, link: "/location/9/voice-note" },  // check this again
+    ],
+    mixingNoteImages: [
+      {
+        id: 1,
+        src: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/Ang1_1.jpg?alt=media&token=e0b24473-9886-41f9-b176-a59978e6b002",
+        title: "Angel Mixing Note 1",
+      },
+      {
+        id: 2,
+        src: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/Ang2_1.jpg?alt=media&token=9b91284f-75b2-49dd-ad6f-3a5f08c3adfa",
+        title: "Angel Mixing Note 2",
+      },
+      {
+        id: 3,
+        src: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/Ang2_2.jpg?alt=media&token=30c8d685-aa33-4f9d-a731-829523707d83",
+        title: "Angel Mixing Note 3",
+      }
     ],
 
   },
@@ -854,7 +888,7 @@ Fell and hit my head in love
     buttons: [
       { text: "FILM REEL", icon: filmReelIcon, link: "/location/14/film-reel" },
       { text: "FULL LYRICS", icon: fullLyricsIcon, link: "/location/14/lyrics" },
-      { text: "BTS VIDEO", icon: BTSVideoIcon, link: "/location/14/BTSYouAre.mp4" },
+      { text: "BTS VIDEO", icon: BTSVideoIcon, link: "/location/14/video" },
     ],
 
   },

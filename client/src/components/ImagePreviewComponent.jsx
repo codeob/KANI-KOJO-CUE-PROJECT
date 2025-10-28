@@ -8,50 +8,20 @@ import picFrame from "../assets/backgrounds/carouselPhotoFrame.png";
 import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import BgAudio from './BgAudio';
+import useLocationStore from "../store/useLocationStore";
+import locationPins from "../../locations";
+import image from "../assets/images/AB1_1.jpg"
 
-export default function ImagePreviewComponent() {
+
+
+export default function ImagePreviewComponent() {  
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const [direction, setDirection] = useState(0);
-
-  const images = [
-    {
-      id: 1,
-      src: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=600&fit=crop",
-      title: "Mountain Landscape",
-      description: "Beautiful mountain scenery"
-    },
-    {
-      id: 2,
-      src: "https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=500&h=600&fit=crop",
-      title: "Ocean View",
-      description: "Serene ocean waves"
-    },
-    {
-      id: 3,
-      src: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=500&h=600&fit=crop",
-      title: "Forest Path",
-      description: "Peaceful forest trail"
-    },
-    {
-      id: 4,
-      src: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=500&h=600&fit=crop",
-      title: "Lake Reflection",
-      description: "Mirror-like lake surface"
-    },
-    {
-      id: 5,
-      src: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=600&fit=crop",
-      title: "Desert Sunset",
-      description: "Golden desert landscape"
-    },
-    {
-      id: 6,
-      src: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=600&fit=crop",
-      title: "Desert Sunset",
-      description: "Golden desert landscape"
-    },
-  ];
+  
+  const { selectedLocation } = useLocationStore();
+  const currentLocation = selectedLocation;
+  const images = currentLocation?.mixingNoteImages || []
 
   const wrapIndex = (index, length) => (index % length + length) % length;
 
@@ -89,7 +59,7 @@ export default function ImagePreviewComponent() {
   useEffect(() => {
     const interval = setInterval(() => {
       nextImage();
-    }, 4000);
+    }, 10000);
     return () => clearInterval(interval);
   }, [isAnimating]);
 
@@ -172,20 +142,20 @@ export default function ImagePreviewComponent() {
                         }}
                       >
                         <img src={picFrame} alt="" className='absolute h-full z-20  ' />
-                        <div className="relative left-0 h-full overflow-hidden ">
+                        <div className="relative left-0 h-full overflow-hidden bg-black">
                           <img
                             src={image.src}
                             alt={image.title}
-                            className="w-full h-full object-cover rounded-2xl p-1"
+                            className="w-full h-full object-fit rounded-2xl p-1 pb-10 "
                           />
                         </div>
-                        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent">
+                        <div className="absolute inset-0">
                           <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4 text-white"> 
-                            <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold mb-1"> 
+                            {/* <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold mb-1"> 
                               {image.title}
-                            </h3>
+                            </h3> */}
                             <p className="text-xs sm:text-sm md:text-base lg:text-lg opacity-90"> 
-                              {image.description}
+                              {image.title}
                             </p>
                           </div>
                         </div>
@@ -209,25 +179,6 @@ export default function ImagePreviewComponent() {
                 <img src={nextBTNIcon} alt="Next Image Button" />
               </button>
             </div>
-            {/* <div className="flex justify-center space-x-1 sm:space-x-2 mb-4 sm:mb-6">
-              {images.map((image, index) => (
-                <button
-                  key={image.id}
-                  onClick={() => goToImage(index)}
-                  className={`relative overflow-hidden rounded-lg transition-all duration-300 ${
-                    index === currentIndex 
-                      ? 'ring-3 ring-secondy-100 scale-110' 
-                      : 'hover:scale-105 opacity-70 hover:opacity-100'
-                  } ${isAnimating ? 'pointer-events-none' : ''}`}
-                >
-                  <img
-                    src={image.src}
-                    alt={image.title}
-                    className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 object-cover"
-                  />
-                </button>
-              ))}
-            </div> */}
             <div className="mt-6 flex justify-center space-x-1 sm:space-x-2">
               {images.map((_, index) => (
                 <div
@@ -242,7 +193,7 @@ export default function ImagePreviewComponent() {
             </div>
             <div className="text-center mt-4 sm:mt-6 md:mt-8 text-primary-100 text-opacity-60">
               <p className="text-xs sm:text-sm md:text-base rock ">
-                Use arrow buttons to navigate • Auto-play every 4 seconds
+                Use arrow buttons to navigate • Auto-play every 10 seconds
               </p>
             </div>
           </div>

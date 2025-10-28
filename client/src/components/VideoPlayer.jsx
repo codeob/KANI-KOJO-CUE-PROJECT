@@ -9,7 +9,6 @@ import volumeUp from "../assets/icons/volumeUp.svg";
 import fullscreen from "../assets/icons/fullscreen.svg";
 import exitFullscreen from "../assets/icons/exitFullscreen.svg";
 import playBtnOverlay from "../assets/icons/playBtnWBg.svg";
-// import testVideo from "../video/output_The_AI_Revolution_History's_Transformation_in_the_Digital_Age.mp4";
 
 export default function VideoPlayer({ src }) {
   const videoRef = useRef(null);
@@ -134,7 +133,7 @@ export default function VideoPlayer({ src }) {
         >
           <div className="relative w-full flex justify-center" style={{ height: 'calc(100% - 60px)' }}>
             <video
-              src={src || testVideo}
+              src={src}
               ref={videoRef}
               controls={false}
               className="w-full h-full object-contain rounded-lg"
