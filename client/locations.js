@@ -217,6 +217,38 @@ have to tell y’all the story of my life.
       { text: "VOICE NOTE", icon: voiceNoteIcon, link: "/location/3/voice-note" },
       { text: "LYRICS BREAKDOWN", icon: lyricsBDIcon, link: "/location/3/lyrics-breakdown" },  // ask where this link routes to?
     ],
+    mixingNoteImages: [
+      {
+        id: 1,
+        src: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/NXT1_a.jpg?alt=media&token=6fb5c997-de0c-4e3d-84eb-a073c5138275",
+        title: "Next term Mixing Note 1",
+      },
+      {
+        id: 2,
+        src: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/NXT1_b.jpg?alt=media&token=2302d04b-4d47-409c-a3bf-18c55f26fc43",
+        title: "Next term Mixing Note 2",
+      },
+      {
+        id: 3,
+        src: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/NXT2_a.jpg?alt=media&token=5926103d-1e55-4f75-b628-68da00559da2",
+        title: "Next term Mixing Note 3",
+      },
+      {
+        id: 4,
+        src: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/NXT2_b.jpg?alt=media&token=5414ab02-dad2-44f2-a89a-a99d094c4b75",
+        title: "Next term Mixing Note 4",
+      },
+      {
+        id: 5,
+        src: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/NXT3_a.jpg?alt=media&token=85aafc68-1594-4691-9146-8ac46f49982c",
+        title: "Next term Mixing Note 5",
+      },
+      {
+        id: 6,
+        src: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/NXT3_b.jpg?alt=media&token=e6933f31-6ca1-4408-915e-069f9c305780",
+        title: "Next term Mixing Note 6",
+      }      
+    ],
 
   },
   {
@@ -234,6 +266,49 @@ have to tell y’all the story of my life.
       { text: "BTS VIDEO", icon: BTSVideoIcon, link: "/location/4/video" },
       { text: "MIXING NOTES", icon: mixingNoteIcon, link: "/location/4/mixing-notes" },   // ask where this link routes to?
       { text: "WATCH MUSIC VIDEO", icon: watchMusicVideo, link: "/location/4/comingsoon" }, 
+    ],
+    mixingNoteImages: [
+      {
+        id: 1,
+        src: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/BB%201_a.PNG?alt=media&token=6f4f9852-0025-4452-ac71-7803032435f5",
+        title: "Bantama Blues 3 Mixing Note 1",
+      },
+      {
+        id: 2,
+        src: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/BB%201_b.PNG?alt=media&token=35172f4c-eea2-4740-bb5c-98ebb8f3a6df",
+        title: "Bantama Blues 3 Mixing Note 2",
+      },
+      {
+        id: 3,
+        src: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/BB%202_a.PNG?alt=media&token=0e70a03f-e474-45f0-8502-706eb4729b3c",
+        title: "Bantama Blues 3 Mixing Note 3",
+      },
+      {
+        id: 4,
+        src: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/BB%202_b.PNG?alt=media&token=a1a2b8e4-f61c-4c26-beac-3871237e5efa",
+        title: "Bantama Blues 3 Mixing Note 4",
+      },
+      {
+        id: 5,
+        src: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/BB%203_a.PNG?alt=media&token=58f81e84-776d-4dae-95e0-d04ac2435f7d",
+        title: "Bantama Blues 3 Mixing Note 5",
+      },
+      {
+        id: 6,
+        src: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/BB%203_b.PNG?alt=media&token=38455506-09c5-4fba-a9d8-1eb950f0b770",
+        title: "Bantama Blues 3 Mixing Note 6",
+      },
+      {
+        id: 7,
+        src: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/BB%204_a.PNG?alt=media&token=c73bfe06-0067-4fdb-8132-5878d80aded1",
+        title: "Bantama Blues 3 Mixing Note 7",
+      },
+      {
+        id: 8,
+        src: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/BB%204_b.PNG?alt=media&token=d780738c-fd26-47b5-ab2f-40da5b8e4a63",
+        title: "Bantama Blues 3 Mixing Note 8",
+      },
+      
     ],
 
   },
@@ -294,15 +369,22 @@ have to tell y’all the story of my life.
     importance: "Cue’ JSS. A place rich with memories and mischief where his love for literature first took root. And where his science teacher became the unlikely villain of his childhood story",
     image: "",
     coords: { top: "40.5%", left: "30.5%" },
-    songTitle: "Mr. Eben Interlude",
+    songTitle: "Mr. Eben",
     songUrl: "",
     videoUrl: "",
     artistName: "Kojo Cue",
     lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis Mr. Eben Interlude",
     buttons: [
-      { text: "LYRICS BREAKDOWN", icon: lyricsBDIcon, link: "/location/7/lyrics-breakdown" },
+      { text: "LYRICS BREAKDOWN", icon: lyricsBDIcon, link: "/location/7/lyrics-breakdown" },  // Ask question on this
       { text: "INTERVIEW", icon: interviewIcon, link: "/location/7/interview" },
       { text: "MIXING NOTES", icon: mixingNoteIcon, link: "/location/7/mixing-notes" },
+    ],
+    mixingNoteImages: [
+      {
+        id: 1,
+        src: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/MrE.jpg?alt=media&token=6ccf0b50-bec5-4557-b560-71d7dfc1faa0",
+        title: "Mr. Eben Mixing Note 1",
+      }
     ],
 
   },
@@ -760,8 +842,30 @@ Wiase nsemsem na ama no aba saa (Wiase abrabɔ yi ɛnyɛ mmirika oh)
     artistName: "Kojo Cue",
     lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis",
     buttons: [
-      { text: "FULL LYRICS", icon: fullLyricsIcon, link: "/location/13/lyrics" },
+      { text: "MIXING NOTES", icon: mixingNoteIcon, link: "/location/13/mixing-notes" },
       { text: "VOICE NOTE", icon: voiceNoteIcon, link: "/location/13/voice-note" },
+    ],
+    mixingNoteImages: [
+      {
+        id: 1,
+        src: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/DR1_a.jpg?alt=media&token=a4b2cf38-0d9d-42e4-b165-f72da00885c0",
+        title: "Dreams Mixing Note 1",
+      },
+      {
+        id: 2,
+        src: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/DR1_b.jpg?alt=media&token=a925661d-8a2f-4435-be83-d255041dad26",
+        title: "Dreams Mixing Note 2",
+      },
+      {
+        id: 3,
+        src: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/DR2_a.jpg?alt=media&token=a6fc0c82-c739-4a60-92e1-706af529adb3",
+        title: "Dreams Mixing Note 3",
+      },
+      {
+        id: 4,
+        src: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/DR2_b.jpg?alt=media&token=2f615872-9ed4-4538-bc63-fc55cb88013d",
+        title: "Dreams Mixing Note 4",
+      },
     ],
 
   },
@@ -773,7 +877,7 @@ Wiase nsemsem na ama no aba saa (Wiase abrabɔ yi ɛnyɛ mmirika oh)
     coords: { top: "62%", left: "34%" },
     songTitle: "You Are",
     songUrl: "",
-    videoUrl: 'https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/You_Are_Film_Reel.mp4?alt=media&token=c6a37d45-d4b3-47c1-a5c5-cfe77105404d',
+    videoUrl: '',
     artistName: "Kojo Cue",
     lyrics: `I lost my sight
 I’m driving blind when I’m with you
@@ -886,9 +990,32 @@ With you, with you
 Fell and hit my head in love
 `,
     buttons: [
-      { text: "FILM REEL", icon: filmReelIcon, link: "/location/14/film-reel" },
+      { text: "MIXING NOTES", icon: mixingNoteIcon, link: "/location/14/mixing-notes" },
       { text: "FULL LYRICS", icon: fullLyricsIcon, link: "/location/14/lyrics" },
       { text: "BTS VIDEO", icon: BTSVideoIcon, link: "/location/14/video" },
+      { text: "WATCH MUSIC VIDEO", icon: watchMusicVideo, link: "/location/14/comingsoon" }, 
+    ],
+    mixingNoteImages: [
+      {
+        id: 1,
+        src: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/YA1_a.jpg?alt=media&token=fbcdd0a6-d636-43ab-9741-7d69d4ddac3a",
+        title: "You Are Mixing Note 1",
+      },
+      {
+        id: 2,
+        src: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/YA1_b.jpg?alt=media&token=394cf1c3-3276-4805-be0b-79642b58458a",
+        title: "You Are Mixing Note 2",
+      },
+      {
+        id: 3,
+        src: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/YA2_a.jpg?alt=media&token=17406b09-1d8c-4921-9c6b-2afdc780351b",
+        title: "You Are Mixing Note 3",
+      },
+      {
+        id: 4,
+        src: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/YA2_b.jpg?alt=media&token=64e11914-db00-403c-b9af-a5810f88a8c4",
+        title: "You Are Mixing Note 4",
+      },
     ],
 
   },
@@ -906,6 +1033,29 @@ Fell and hit my head in love
     buttons: [
       { text: "FILM REEL", icon: filmReelIcon, link: "/location/15/film-reel" },
       { text: "MIXING NOTES", icon: mixingNoteIcon, link: "/location/15/mixing-notes" },
+      { text: "INTERVIEW", icon: interviewIcon, link: "/location/15/interview" },
+    ],
+    mixingNoteImages: [
+      {
+        id: 1,
+        src: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/TF1_a.jpg?alt=media&token=991c7f71-6b15-4df2-88d6-ae8e9ef3d4f6",
+        title: "The Fall Mixing Note 1",
+      },
+      {
+        id: 2,
+        src: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/TF1_b.jpg?alt=media&token=ec4c8013-fc87-4479-a97c-63347cf56987",
+        title: "The Fall Mixing Note 2",
+      },
+      {
+        id: 3,
+        src: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/TF2_a.jpg?alt=media&token=6d68640b-d10c-4116-ac14-7407bad1b0a2",
+        title: "The Fall Mixing Note 3",
+      },
+      {
+        id: 4,
+        src: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/TF2_b.jpg?alt=media&token=b470aed5-6adc-4bcd-b6d2-dd6d3d82778f",
+        title: "The Fall Mixing Note 4",
+      },
     ],
 
   },

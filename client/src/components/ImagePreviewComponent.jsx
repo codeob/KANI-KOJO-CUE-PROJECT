@@ -1,4 +1,3 @@
-import mapBG from '../assets/backgrounds/Map_Bkg.png';
 import BTMapAndAudioLink from './BTMapAndAudioLink';
 import KExpWithCloseBtnHeadingBrown from './KExpWithCloseBtnHeadingBrown';
 import middleFrame from "../assets/imageDisplayFrames/displayImage_Active.png";
@@ -9,8 +8,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import BgAudio from './BgAudio';
 import useLocationStore from "../store/useLocationStore";
-import locationPins from "../../locations";
-import image from "../assets/images/AB1_1.jpg"
+import mapimage from "../assets/backgrounds/Map1_Bkg.png";
+
 
 
 
@@ -93,8 +92,9 @@ export default function ImagePreviewComponent() {
   };
 
   return (
-    <div className='h-screen relative overflow-hidden'>
-      <img src={mapBG} alt="" className="absolute h-full w-full object-cover" />
+    <div className='h-screen relative overflow-hidden bg-cover bg-center'
+      style={{ backgroundImage: `url(${mapimage})` }}
+    >
       <div className="relative z-10 flex flex-col items-center justify-between h-full w-full p-4 sm:p-6 md:p-8 lg:p-10"> 
         <div className="w-full">
           <KExpWithCloseBtnHeadingBrown />
