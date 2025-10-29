@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import KExpWithCloseBtnHeadingBrown from "./KExpWithCloseBtnHeadingBrown";
-import mapBG from "../assets/backgrounds/Map_Bkg.png";
+import mapBG from "../assets/backgrounds/Map1_Bkg.png";
 import lyricsBG from "../assets/backgrounds/lyricsFrameBackground.png";
 import BTMapAndAudioLink from "./BTMapAndAudioLink";
 import Scrollbar_Lyrics from "./Scrollbar_Lyrics";
@@ -57,8 +57,8 @@ export default function LyricsContainer() {
   const pattern = [1, 0, 0, 1, 1, 0, 0, 1, 1];
 
   return (
-    <div className="h-screen relative overflow-hidden">
-      <img src={mapBG} alt="" className="absolute h-full w-full object-cover" />
+    <div className="h-screen w-full bg-cover bg-center flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 relative"
+                style={{ backgroundImage: `url(${mapBG})` }}>
       <div className="relative z-10 flex flex-col items-center justify-between h-full w-full p-4 sm:p-6 md:p-8 lg:p-10">
         <div className="w-full">
           <KExpWithCloseBtnHeadingBrown />

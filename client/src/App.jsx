@@ -15,6 +15,7 @@ import Lyricsbreakedown from "./components/Lyricsbreakedown"
 import FilmReel from "./components/FilmReel.jsx"
 import ComingSoon from "./Pages/ComingSoon.jsx"
 import BgAudio from "./components/BgAudio.jsx"
+import Slide from "./Pages/Slide.jsx"
 
 
 function ContentRouter () {
@@ -62,7 +63,6 @@ function App() {
         <Route path="/map" element={<Map />} />
         <Route path="/location/:id/:contentType" element={<ContentRouter />} />
         <Route path="*" element={<ErrorPage/>} />
-        {/* <Route path="/comingsoon" element={<ComingSoon/>} /> */}
       </Route>
     )
   );
