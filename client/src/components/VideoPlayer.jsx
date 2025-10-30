@@ -128,7 +128,7 @@ export default function VideoPlayer({ src }) {
           ref={playerRef}
           className="relative w-full max-w-[800px] sm:max-w-[900px] md:max-w-[1000px] lg:max-w-[1049px] h-[400px] sm:h-[500px] md:h-[520px] xl:h-[598px] flex flex-col items-center"
         >
-          <div className="relative w-full flex justify-center" style={{ height: 'calc(100% - 60px)' }}>
+          <div className="relative w-full flex justify-center rounded-lg" style={{ height: 'calc(100% - 60px)' }}>
             <video
               src={src}
               ref={videoRef}
