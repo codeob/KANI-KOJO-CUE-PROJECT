@@ -123,7 +123,7 @@ export default function VideoPlayer({ src }) {
         alt="Background Image"
         className="absolute inset-0 h-full w-full object-cover z-0"
       />
-      <div className="relative z-10 flex flex-col items-center justify-between h-full w-full p-4 sm:p-6 md:p-8 lg:p-10">
+      <div className="relative z-10 flex flex-col items-center justify-between h-full w-full p-4 lg:p-10">
         <div className="w-full">
           <KExpWithCloseBtnHeadingBrown />
         </div>
