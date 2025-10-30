@@ -103,8 +103,8 @@ have to tell y’all the story of my life.
 `,
     buttons: [
       { text: "FILM REEL", icon: filmReelIcon, link: "/location/1/film-reel" },
-      { text: "INTERVIEW", icon: quillPenIcon, link: "/location/1/reflection" },
-      { text: "LYRICS", icon: fullLyricsIcon, link: "/location/1/lyrics" },
+      { text: "INTERVIEW", icon: interviewIcon, link: "/location/1/interview" },
+      { text: "LYRICS", icon: fullLyricsIcon, link: "/location/1/comingsoon" },
     ],
 
   },
@@ -197,7 +197,7 @@ have to tell y’all the story of my life.
 `,
     buttons: [
       { text: "FILM REEL", icon: filmReelIcon, link: "/location/2/film-reel" },
-      { text: "INTERVIW", icon: quillPenIcon, link: "/location/2/reflection" },
+      { text: "INTERVIEW", icon: interviewIcon, link: "/location/2/interview" },
     ],
 
   },
@@ -215,7 +215,7 @@ have to tell y’all the story of my life.
     buttons: [
       { text: "MIXING NOTES", icon: mixingNoteIcon, link: "/location/3/mixing-notes" },
       { text: "VOICE NOTE", icon: voiceNoteIcon, link: "/location/3/voice-note" },
-      { text: "LYRICS BREAKDOWN", icon: lyricsBDIcon, link: "/location/3/lyrics-breakdown" },  // ask where this link routes to?
+      { text: "LYRICS BREAKDOWN", icon: lyricsBDIcon, link: "/location/3/comingsoon" },  // ask where this link routes to?
     ],
     mixingNoteImages: [
       {
@@ -358,8 +358,9 @@ have to tell y’all the story of my life.
     artistName: "Kojo Cue",
     lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis OWASS BASIC - Santasi",
     buttons: [
-      { text: "VISUALIZER", icon: visualizerIcon, iconColor: "#7B3F00", link: "/location/6/video" },     // ask where this link routes to?
-      { text: "LYRICS BREAKDOWN", icon: lyricsBDIcon, link: "/location/6/lyrics-breakdown" },    // ask where this link routes to?
+      { text: "BTS PHOTOS", icon: BTSPhotoIcon, link: "/location/6/bts-photos" },
+      { text: "VOICE NOTES", icon: voiceNoteIcon, link: "/location/6/voice-note" },  // check this again
+      { text: "LYRICS BREAKDOWN", icon: lyricsBDIcon, link: "/location/6/comingsoon" },    // ask where this link routes to?
     ],
 
   },
@@ -375,7 +376,7 @@ have to tell y’all the story of my life.
     artistName: "Kojo Cue",
     lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis Mr. Eben Interlude",
     buttons: [
-      { text: "LYRICS BREAKDOWN", icon: lyricsBDIcon, link: "/location/7/lyrics-breakdown" },  // Ask question on this
+      { text: "LYRICS BREAKDOWN", icon: lyricsBDIcon, link: "/location/7/comingsoon" },
       { text: "INTERVIEW", icon: interviewIcon, link: "/location/7/interview" },
       { text: "MIXING NOTES", icon: mixingNoteIcon, link: "/location/7/mixing-notes" },
     ],
@@ -518,8 +519,9 @@ Jesus said, “Love your neighbor as yourself.” Maybe he knew that would be th
 
 `,
     buttons: [
-      { text: "FULL LYRICS", icon: fullLyricsIcon, link: "/location/8/lyrics" },
+      { text: "FULL LYRICS", icon: fullLyricsIcon, link: "/location/8/comingsoon" },
       { text: "REFLECTION", icon: quillPenIcon, link: "/location/8/reflection" },
+      { text: "BTS VIDEO", icon: BTSVideoIcon, link: "/location/8/video" },
     ],
 
   },
@@ -529,7 +531,7 @@ Jesus said, “Love your neighbor as yourself.” Maybe he knew that would be th
     importance: "Home in Breman with his grandmother and auntie from 2000 to 2003 — the setting of his earliest independence, first love, and long walks to school.",
     image: "",
     coords: { top: "43%", left: "77%" },
-    songTitle: "Angel",
+    songTitle: "Angel / Pente Interlude",
     songUrl: "",
     videoUrl: 'https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/Angel%20Film%20Reel.mp4?alt=media&token=4631e9d9-4cca-4d2f-b215-892441680782',
     artistName: "Kojo Cue",
@@ -571,6 +573,8 @@ Jesus said, “Love your neighbor as yourself.” Maybe he knew that would be th
     lyrics: "",
     buttons: [
       { text: "VOICE NOTE", icon: voiceNoteIcon, link: "/location/10/audio" },
+      { text: "INTERVIEW", icon: interviewIcon, link: "/location/10/interview" },
+      { text: "BTS VIDEO", icon: BTSVideoIcon, link: "/location/10/video" },
     ],
 
   },
@@ -685,7 +689,7 @@ All I ever felt was envy staring at the cool kids
 Grew up too quick
 `,
     buttons: [
-      { text: "FULL LYRICS", icon: fullLyricsIcon, link: "/location/11/lyrics" },
+      { text: "FULL LYRICS", icon: fullLyricsIcon, link: "/location/11/comingsoon" },
     ],
 
   },
@@ -825,8 +829,8 @@ Wiase nsemsem na ama no aba saa (Wiase abrabɔ yi ɛnyɛ mmirika oh)
 `,
     buttons: [
       { text: "BTS PHOTOS", icon: BTSPhotoIcon, link: "/location/12/bts-photos" },
-      { text: "VISUALIZER", icon: visualizerIcon, link: "/location/12/video" },
-      { text: "FULL LYRICS", icon: fullLyricsIcon, link: "/location/12/lyrics" },
+      { text: "WATCH MUSIC VIDEO", icon: watchMusicVideo, link: "/location/12/comingsoon" }, 
+      { text: "FULL LYRICS", icon: fullLyricsIcon, link: "/location/12/comingsoon" },
     ],
 
   },
@@ -837,7 +841,7 @@ Wiase nsemsem na ama no aba saa (Wiase abrabɔ yi ɛnyɛ mmirika oh)
     image: "",
     coords: { top: "66%", left: "27%" },
     songTitle: "Dreams",
-    songUrl: "https://drive.google.com/uc?export=download&id=10MdmU5D7AXKnoLj1DHg8yW6WVE2JxG0W",
+    songUrl: "",
     videoUrl: "",
     artistName: "Kojo Cue",
     lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis",
@@ -991,7 +995,7 @@ Fell and hit my head in love
 `,
     buttons: [
       { text: "MIXING NOTES", icon: mixingNoteIcon, link: "/location/14/mixing-notes" },
-      { text: "FULL LYRICS", icon: fullLyricsIcon, link: "/location/14/lyrics" },
+      { text: "FULL LYRICS", icon: fullLyricsIcon, link: "/location/14/comingsoon" },
       { text: "BTS VIDEO", icon: BTSVideoIcon, link: "/location/14/video" },
       { text: "WATCH MUSIC VIDEO", icon: watchMusicVideo, link: "/location/14/comingsoon" }, 
     ],
@@ -1167,8 +1171,8 @@ And that fam no be easy, how I go do
 Story
 `,
     buttons: [
-      { text: "FULL LYRICS", icon: fullLyricsIcon, link: "/location/16/lyrics" },
-      { text: "CUE LIVE SESSION", icon: visualizerIcon, link: "/location/16/video" },
+      { text: "FULL LYRICS", icon: fullLyricsIcon, link: "/location/16/comingsoon" },
+      { text: "CUE LIVE SESSION", icon: visualizerIcon, link: "/location/16/comingsoon" },
     ],
 
   },
@@ -1298,7 +1302,7 @@ Some songs you make. Others choose you. This one felt like it already existed so
 `,
     buttons: [
       { text: "WRITTEN STORY", icon: quillPenIcon, link: "/location/17/reflection" },
-      { text: "FULL LYRICS", icon: fullLyricsIcon, link: "/location/17/lyrics" },
+      { text: "FULL LYRICS", icon: fullLyricsIcon, link: "/location/17/comingsoon" },
     ],
 
   },
