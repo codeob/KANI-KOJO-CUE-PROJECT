@@ -117,12 +117,9 @@ export default function VideoPlayer({ src }) {
   };
 
   return (
-    <div className="h-screen w-full relative">
-      <img
-        src={mapBG}
-        alt="Background Image"
-        className="absolute inset-0 h-full w-full object-cover z-0"
-      />
+    <div       className="h-screen w-full bg-cover bg-center flex flex-col justify-center items-center px-4 relative"
+          style={{ backgroundImage: `url(${mapBG})` }}>
+    
       <div className="relative z-10 flex flex-col items-center justify-between h-full w-full p-4 lg:p-10">
         <div className="w-full">
           <KExpWithCloseBtnHeadingBrown />

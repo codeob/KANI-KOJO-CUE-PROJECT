@@ -208,7 +208,7 @@ have to tell y’all the story of my life.
     image: "",
     coords: { top: "80%", left: "58%" },
     songTitle: "Next term",
-    songUrl: "",
+    songUrl: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/VN%20Genosi.mp3?alt=media&token=af80807d-15a5-43c2-a005-8a5f7a2e1d4f",
     videoUrl: "",
     artistName: "Kojo Cue",
     lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis Next term",
@@ -353,12 +353,12 @@ have to tell y’all the story of my life.
     image: "",
     coords: { top: "36%", left: "36%" },
     songTitle: "Squad",
-    songUrl: "",
+    songUrl: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/Cobby%20Voice%20Note.m4a?alt=media&token=bcd329bf-5bab-4070-a1c6-56db82933e78",
     videoUrl: "",
     artistName: "Kojo Cue",
     lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis OWASS BASIC - Santasi",
     buttons: [
-      { text: "VISUALIZER", icon: visualizerIcon, iconColor: "#7B3F00", link: "/location/6/video" },     // ask where this link routes to?
+      { text: "Voice Note", icon: visualizerIcon, iconColor: "#7B3F00", link: "/location/6/voice-note" },     // ask where this link routes to?
       { text: "LYRICS BREAKDOWN", icon: lyricsBDIcon, link: "/location/6/lyrics-breakdown" },    // ask where this link routes to?
     ],
 
@@ -396,7 +396,7 @@ have to tell y’all the story of my life.
     coords: { top: "36%", left: "72%" },
     songTitle: "Mysterious Ways",
     songUrl: "",
-    videoUrl: "",
+    videoUrl: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/BTS%20MW.mp4?alt=media&token=6cbb2511-4980-4e34-9c7d-010cc2da6b67",
     artistName: "Kojo Cue",
     lyrics: `Kwaku ahyɛ ne white shirt 
 Lilian agye ne white dress 
@@ -566,7 +566,7 @@ Jesus said, “Love your neighbor as yourself.” Maybe he knew that would be th
     coords: { top: "50%", left: "72%" },
     songTitle: "F176",
     songUrl: "",
-    videoUrl: "",
+    videoUrl: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/BTS%20Mixing.mp4?alt=media&token=c7e10a59-5db2-49fe-a7db-7b248e6fc03c",
     artistName: "Kojo Cue",
     lyrics: "",
     buttons: [
@@ -837,7 +837,7 @@ Wiase nsemsem na ama no aba saa (Wiase abrabɔ yi ɛnyɛ mmirika oh)
     image: "",
     coords: { top: "66%", left: "27%" },
     songTitle: "Dreams",
-    songUrl: "https://drive.google.com/uc?export=download&id=10MdmU5D7AXKnoLj1DHg8yW6WVE2JxG0W",
+    songUrl: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/Askor%20Voice%20Note.m4a?alt=media&token=981b2622-c5e4-4b93-993f-b206b30b69ac",
     videoUrl: "",
     artistName: "Kojo Cue",
     lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis",
@@ -877,7 +877,7 @@ Wiase nsemsem na ama no aba saa (Wiase abrabɔ yi ɛnyɛ mmirika oh)
     coords: { top: "62%", left: "34%" },
     songTitle: "You Are",
     songUrl: "",
-    videoUrl: '',
+    videoUrl: 'https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/BTS%20You%20Are.mp4?alt=media&token=1fc4015b-6d88-4755-8bc7-3fba1ef64a5e',
     artistName: "Kojo Cue",
     lyrics: `I lost my sight
 I’m driving blind when I’m with you
