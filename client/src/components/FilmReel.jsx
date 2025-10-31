@@ -3,8 +3,12 @@ import KExpWithCloseBtnHeadingBrown from './KExpWithCloseBtnHeadingBrown';
 import BTMapAndAudioLink from './BTMapAndAudioLink';
 import filmFrame from "../assets/backgrounds/FilmReel_Frame.svg";
 import mapimage from "../assets/backgrounds/Map1_Bkg.png";
+import { useState } from 'react';
 
 export default function FilmReel({ videoUrl }) {
+  const [isLoading, setIsLoading] = useState(false)
+  
+
   return (
     <div className="h-screen w-full relative overflow-hidden bg-cover bg-center"
       style={{ backgroundImage: `url(${mapimage})` }}
@@ -17,13 +21,24 @@ export default function FilmReel({ videoUrl }) {
           <div className="relative h-full max-w-[350px] sm:max-w-[400px] md:max-w-[430px] w-full">
             <img src={filmFrame} alt="Film frame" className='h-full w-full object-contain' />
             <video 
-              src={videoUrl} 
+              src={videoUrl}
               autoPlay 
               loop 
               playsInline
               preload='auto'
               className='absolute top-0 left-0 w-full h-full p-0.5' 
+              onLoadedMetadata={(e)=> {
+                setIsLoading(false)
+              }}
+              onLoadStart={()=> setIsLoading(true)} // removes spinner on video play
+              onWaiting={()=> setIsLoading(true)} // shows spinner if buffering
+              onCanPlay={()=> setIsLoading(false)}
             />
+            {isLoading && (
+              <div className="absolute p-2 inset-0 flex items-center justify-center bg-black/90 z-20">
+                <div className="w-12 h-12 border-4 border-t-transparent border-watermark-100 rounded-full animate-spin"></div>
+              </div>
+            )}
           </div>
 
         </div>
