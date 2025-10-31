@@ -80,14 +80,14 @@ export default function BTMapAndAudioLink({ onBack }) {
           <p className="rock text-watermark-100 text-xs sm:text-sm md:text-base"> 
             {selectedLocation ? selectedLocation.songTitle : ""}
           </p>
-          <Link to="#" className="cursor-pointer">
+          {/* <Link to="#" className="cursor-pointer">
             <div className="flex items-center gap-1 sm:gap-2"> 
               <p className="text-tertiary-100 font-semibold font-biro text-xs sm:text-sm md:text-base"> 
                 Listen to full song
               </p>
               <img src={arrowNEIcon} alt="arrow icon" className="w-4 h-4 sm:w-5 sm:h-5" />
             </div>
-          </Link>
+          </Link> */}
         </div>
       </div>
     </div>

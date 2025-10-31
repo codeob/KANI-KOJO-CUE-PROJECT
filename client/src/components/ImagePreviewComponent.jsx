@@ -1,6 +1,6 @@
 import BTMapAndAudioLink from './BTMapAndAudioLink';
 import KExpWithCloseBtnHeadingBrown from './KExpWithCloseBtnHeadingBrown';
-import middleFrame from "../assets/imageDisplayFrames/displayImage_Active.png";
+import middleFrame from "../assets/backgrounds/ImgPreviewDefaultBG.svg";
 import prevBTNIcon from "../assets/icons/arrow_previous.svg";
 import nextBTNIcon from "../assets/icons/arrow_next.svg";
 import picFrame from "../assets/backgrounds/carouselPhotoFrame.png";
