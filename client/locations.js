@@ -208,7 +208,7 @@ have to tell y’all the story of my life.
     image: "",
     coords: { top: "80%", left: "58%" },
     songTitle: "Next term",
-    songUrl: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/VN%20Genosi.mp3?alt=media&token=af80807d-15a5-43c2-a005-8a5f7a2e1d4f",
+    songUrl: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/nextterm.mp3?alt=media&token=72df2a02-c29b-4b92-8b9e-5c24f1bf5e2c",
     videoUrl: "",
     artistName: "Kojo Cue",
     lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis Next term",
@@ -358,15 +358,10 @@ have to tell y’all the story of my life.
     artistName: "Kojo Cue",
     lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis OWASS BASIC - Santasi",
     buttons: [
-<<<<<<< HEAD
-      { text: "Voice Note", icon: visualizerIcon, iconColor: "#7B3F00", link: "/location/6/voice-note" },     // ask where this link routes to?
-      { text: "LYRICS BREAKDOWN", icon: lyricsBDIcon, link: "/location/6/lyrics-breakdown" },    // ask where this link routes to?
-=======
-      { text: "BTS PHOTOS", icon: BTSPhotoIcon, link: "/location/6/bts-photos" },
-      { text: "VOICE NOTES", icon: voiceNoteIcon, link: "/location/6/voice-note" },  // check this again
-      { text: "LYRICS BREAKDOWN", icon: lyricsBDIcon, link: "/location/6/comingsoon" },    // ask where this link routes to?
->>>>>>> 62e3c299c130d020bbf0aba9995774d5223556b1
-    ],
+     { text: "BTS PHOTOS", icon: BTSPhotoIcon, link: "/location/6/bts-photos" },
+     { text: "VOICE NOTES", icon: voiceNoteIcon, link: "/location/6/voice-note" },  // check this again
+     { text: "LYRICS BREAKDOWN", icon: lyricsBDIcon, link: "/location/6/comingsoon" },    // ask where this link routes to?
+   ],
 
   },
   {
@@ -537,7 +532,7 @@ Jesus said, “Love your neighbor as yourself.” Maybe he knew that would be th
     image: "",
     coords: { top: "43%", left: "77%" },
     songTitle: "Angel / Pente Interlude",
-    songUrl: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/Cobby%20Voice%20Note.m4a?alt=media&token=bcd329bf-5bab-4070-a1c6-56db82933e78",
+    songUrl: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/Kiki_Angel%20(Voice%20Note).m4a?alt=media&token=86b6fdff-fcf3-4230-b34c-87560e554c99",
     videoUrl: 'https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/Angel%20Film%20Reel.mp4?alt=media&token=4631e9d9-4cca-4d2f-b215-892441680782',
     artistName: "Kojo Cue",
     lyrics: "",
@@ -846,12 +841,8 @@ Wiase nsemsem na ama no aba saa (Wiase abrabɔ yi ɛnyɛ mmirika oh)
     image: "",
     coords: { top: "66%", left: "27%" },
     songTitle: "Dreams",
-<<<<<<< HEAD
-    songUrl: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/Askor%20Voice%20Note.m4a?alt=media&token=981b2622-c5e4-4b93-993f-b206b30b69ac",
-=======
-    songUrl: "",
->>>>>>> 62e3c299c130d020bbf0aba9995774d5223556b1
-    videoUrl: "",
+   songUrl: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/Askor%20Voice%20Note.m4a?alt=media&token=981b2622-c5e4-4b93-993f-b206b30b69ac",
+   videoUrl: "",
     artistName: "Kojo Cue",
     lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis",
     buttons: [
@@ -1303,7 +1294,7 @@ When she stops to catch her breath you’ll see her glow
 Nobody has to tell you
 Where she’s coming from
 `,
-    WrittenRelection: `There’s always that one song that seems to summon itself—like it existed long before I ever reached for it. Every time I work on a project, one track insists on being born without my guidance. It starts as a fragment in my mind, an idea so certain in feeling yet shapeless in sound. Usually, I can already hear the production breathing beneath the words, but with these songs, I know nothing. I just wait—helpless, hopeful—for the moment when sound finds form.
+    WrittenReflection: `There’s always that one song that seems to summon itself—like it existed long before I ever reached for it. Every time I work on a project, one track insists on being born without my guidance. It starts as a fragment in my mind, an idea so certain in feeling yet shapeless in sound. Usually, I can already hear the production breathing beneath the words, but with these songs, I know nothing. I just wait—helpless, hopeful—for the moment when sound finds form.
 It’s strange how these songs, the ones that come uninvited, end up becoming the spine of everything. A Ghetto Story did that on The Shining. Rich Dad did the same on FMB. And now Gold Dust has followed that pattern—appearing first as an absence that wouldn’t leave me alone.
 I remember the night clearly. I was at Paapa Versa’s album listening. He’s someone I’ve long wanted to create with, though the timing never seemed to align. Before one of the opening acts, a singer named Tsiee, began his set, he mentioned he’d written a song for a friend who ended up rejecting it. Then he began to sing the hook—and in that instant, I recognized it. Not as something new, but as something I had been waiting to hear.
 I reached out to him, got the song, and brought it to Evans and Paapa. And like that—through the quiet machinery of coincidence—the universe handed me what I was missing. Gold Dust took its time, argued with us, resisted completion. But in the end, it allowed itself to be finished.

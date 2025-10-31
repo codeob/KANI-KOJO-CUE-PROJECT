@@ -117,10 +117,10 @@ export default function VideoPlayer({ src }) {
   };
 
   return (
-    <div       className="h-screen w-full bg-cover bg-center flex flex-col justify-center items-center px-4 relative"
+    <div      className="h-screen w-full bg-cover bg-center flex flex-col justify-center items-center px-4 relative"
           style={{ backgroundImage: `url(${mapBG})` }}>
     
-      <div className="relative z-10 flex flex-col items-center justify-between h-full w-full p-4 lg:p-10">
+      <div className="relative z-10 flex flex-col items-center justify-between h-full w-full  lg:p-10">
         <div className="w-full">
           <KExpWithCloseBtnHeadingBrown />
         </div>
@@ -128,7 +128,7 @@ export default function VideoPlayer({ src }) {
           ref={playerRef}
           className="relative w-full max-w-[800px] sm:max-w-[900px] md:max-w-[1000px] lg:max-w-[1049px] h-[400px] sm:h-[500px] md:h-[520px] xl:h-[598px] flex flex-col items-center"
         >
-          <div className="relative w-full flex justify-center rounded-lg" style={{ height: 'calc(100% - 60px)' }}>
+          <div className="relative w-full flex justify-center" style={{ height: 'calc(100% - 60px)' }}>
             <video
               src={src}
               ref={videoRef}
