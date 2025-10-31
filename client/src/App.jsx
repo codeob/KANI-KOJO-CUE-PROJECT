@@ -61,6 +61,7 @@ function App() {
         <Route path="/welcome" element={<WelcomePage />} />
         <Route path="/map" element={<Map />} />
         <Route path="/location/:id/:contentType" element={<ContentRouter />} />
+        <Route path="*" element={<ErrorPage />} />
       </Route>
     )
   );

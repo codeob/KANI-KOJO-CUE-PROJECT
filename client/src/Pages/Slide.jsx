@@ -32,7 +32,7 @@ function Slide({ location, close, isAnimating, onNext, onPrevious }) {
             {/* location name and icon container */}
             <div className="flex flex-row items-center gap-2">
               <img src={subwayloc} alt="location icon" className="h-6 w-6 sm:h-8 sm:w-8 mb-3 sm:mb-4" />
-              <h2 className="text-[1.5rem] sm:text-[2rem] md:text-[2.5rem] lg:text-[3rem] special-elite text-primary-100 ">
+              <h2 className="text-[0.8rem] sm:text-[2rem] md:text-[2.5rem] lg:text-[3rem] special-elite text-primary-100 ">
                 {location.locationName}
               </h2>
             </div>

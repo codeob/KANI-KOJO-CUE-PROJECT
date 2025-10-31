@@ -18,6 +18,7 @@ export default function VideoPlayer({ src }) {
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const [volume, setVolume] = useState(1);
+  const [isLoading, setIsLoading] = useState(false)
 
   useEffect(() => {
     const video = videoRef.current;
@@ -117,16 +118,17 @@ export default function VideoPlayer({ src }) {
   };
 
   return (
-    <div      className="h-screen w-full bg-cover bg-center flex flex-col justify-center items-center px-4 relative"
-          style={{ backgroundImage: `url(${mapBG})` }}>
+    <div style={{ backgroundImage: `url(${mapBG})` }}
+      className="min-h-screen w-full bg-cover bg-center flex flex-col justify-center items-center px-4 relative"
+    >
     
-      <div className="relative z-10 flex flex-col items-center justify-between h-full w-full  lg:p-10">
+      <div className="relative z-10 flex flex-col items-center justify-between flex-1 h-full w-full  lg:p-10">
         <div className="w-full">
           <KExpWithCloseBtnHeadingBrown />
         </div>
         <div
           ref={playerRef}
-          className="relative w-full max-w-[800px] sm:max-w-[900px] md:max-w-[1000px] lg:max-w-[1049px] h-[400px] sm:h-[500px] md:h-[520px] xl:h-[598px] flex flex-col items-center"
+          className="relative w-full max-w-[800px] sm:max-w-[900px] md:max-w-[1000px] lg:max-w-[1049px] h-[598px] flex flex-col items-center"
         >
           <div className="relative w-full flex justify-center" style={{ height: 'calc(100% - 60px)' }}>
             <video
@@ -134,9 +136,20 @@ export default function VideoPlayer({ src }) {
               ref={videoRef}
               controls={false}
               className="w-full h-full object-contain rounded-lg"
-              onLoadedMetadata={(e) => setDuration(e.target.duration)}
+              onLoadedMetadata={(e)=> {
+                setDuration(e.target.duration);
+                setIsLoading(false)
+              }}
+              onLoadStart={()=> setIsLoading(true)} // removes spinner on video play
+              onWaiting={()=> setIsLoading(true)} // shows spinner if buffering
+              onCanPlay={()=> setIsLoading(false)} // hides spinner when ready to play
               onClick={togglePlay}
             />
+            {isLoading && (
+              <div className="absolute inset-0 flex items-center justify-center bg-black/70 rounded-3xl z-20">
+                <div className="w-12 h-12 border-4 border-t-transparent border-watermark-100 rounded-full animate-spin"></div>
+              </div>
+            )}
             {!playing && (
               <button
                 onClick={togglePlay}

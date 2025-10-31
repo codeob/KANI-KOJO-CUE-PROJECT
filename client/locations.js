@@ -572,7 +572,7 @@ Jesus said, “Love your neighbor as yourself.” Maybe he knew that would be th
     artistName: "Kojo Cue",
     lyrics: "",
     buttons: [
-      { text: "VOICE NOTE", icon: voiceNoteIcon, link: "/location/10/audio" },
+      { text: "VOICE NOTE", icon: voiceNoteIcon, link: "/location/10/comingsoon" },
       { text: "INTERVIEW", icon: interviewIcon, link: "/location/10/interview" },
       { text: "BTS VIDEO", icon: BTSVideoIcon, link: "/location/10/video" },
     ],
