@@ -146,14 +146,14 @@ export default function VideoPlayer({ src }) {
               onClick={togglePlay}
             />
             {isLoading && (
-              <div className="absolute inset-0 flex items-center justify-center bg-black/70 rounded-3xl z-20">
+              <div className="absolute inset-0 flex items-center justify-center bg-black/90 rounded-3xl z-20">
                 <div className="w-12 h-12 border-4 border-t-transparent border-watermark-100 rounded-full animate-spin"></div>
               </div>
             )}
             {!playing && (
               <button
                 onClick={togglePlay}
-                className="absolute inset-0 flex items-center justify-center bg-black/95 rounded-3xl"
+                className="absolute inset-0 flex items-center justify-center bg-black/90 rounded-3xl"
               >
                 <img
                   src={playBtnOverlay}
