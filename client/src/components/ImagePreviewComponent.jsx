@@ -98,9 +98,9 @@ export default function ImagePreviewComponent() {
       <div className="relative z-10 flex flex-col items-center justify-between gap-2 h-full w-full p-4 sm:p-6 md:p-8 lg:p-10"> 
         <div className="w-full">
           <KExpWithCloseBtnHeadingBrown />
+          <BgAudio />
         </div>
-        <BgAudio />
-        <div className="flex flex-col items-center justify-center w-full max-w-4xl sm:max-w-5xl md:max-w-6xl lg:max-w-7xl"> 
+        <div className="flex flex-col items-center justify-between w-full max-w-4xl sm:max-w-5xl md:max-w-6xl lg:max-w-7xl"> 
           <div className="relative w-full">
             <div 
               className="relative h-64 sm:h-80 md:h-96 lg:h-[500px] mb-3" 
@@ -109,8 +109,9 @@ export default function ImagePreviewComponent() {
               <AnimatePresence initial={false}>
                 {images.map((image, i) => {
                   const offset = getMinOffset(currentIndex, i, images.length);
+                  // CHANGED: Reduced visible cards from up to 3 (|offset| <= 2) to exactly 2 (offset -1 left/previous and 0 center/current) for consistent left-right design with fewer images
+                  if (offset < -1 || offset > 1) return null;
                   const absOffset = Math.abs(offset);
-                  if (absOffset > 2) return null;
                   return (
                     <motion.div
                       key={image.id}
@@ -167,14 +168,14 @@ export default function ImagePreviewComponent() {
               <button
                 onClick={prevImage}
                 disabled={isAnimating}
-                className="absolute left-0 top-1/2 transform -translate-y-1/2 transition-all duration-200 cursor-pointer group z-30" 
+                className="absolute -left-3 sm:left-10 top-1/2 transform -translate-y-1/2 transition-all duration-200 cursor-pointer group z-30" 
               >
                 <img src={prevBTNIcon} alt="Previous Image Button" />
               </button>
               <button
                 onClick={nextImage}
                 disabled={isAnimating}
-                className="absolute right-0 top-1/2 transform -translate-y-1/2 transition-all duration-200 cursor-pointer group z-30"
+                className="absolute -right-3 sm:right-10 top-1/2 transform -translate-y-1/2 transition-all duration-200 cursor-pointer group z-30"
               >
                 <img src={nextBTNIcon} alt="Next Image Button" />
               </button>
