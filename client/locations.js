@@ -24,7 +24,7 @@ const locationPins = [
     songTitle: "Fruit of the Womb",
     songUrl: "",
     videoUrl: 'https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/Fruit%20of%20the%20Womb%20Film%20Reel.mp4?alt=media&token=8837820d-db42-4658-96e7-6bf8a395a132',
-    artistName: "Kojo Cue",
+    artistName: "Ko-Jo Cue",
     lyrics: `I made a little mistake
 Have I taken on more than I weigh?
 But you gave and you gave and you gave me the world
@@ -119,14 +119,14 @@ have to tell y’all the story of my life.
       { role: "cue", text: "For sure! Let’s get into it." },
       { role: "interviewer", text: "So you’re by the fans as Ko-Jo Cue. If I may ask, what’s your [government] name?" },
       { role: "cue", text: "I hate my government name, and it’s not even because I’m a rapper. It’s because of the English part of it. My name is Linford Kennedy Amankwaa." },
-      { role: "interviewer", text: "Oh wow! So there’s no Kojo in your name?" },
+      { role: "interviewer", text: "Oh wow! So there’s no Ko-Jo in your name?" },
       { role: "cue", text: "No, not as part of my legal name." },
       { role: "interviewer", text: "Ohok. So why the name Ko-Jo Cue?" },
-      { role: "cue", text: "Kojo [obviously] because I was born on a Monday. And the Cue I got from a collective I was a part of called The Cue. I came up with the social media strategy for everyone who was involved in the collective and asked that they add Cue to their handles, just to make people curious about what it was about. At that time, the name I was using for music was just Kojo, but Kojo was just so common. The people who saw my handle on social media started to call me Kojo Cue as a differentiator, and after it stuck, I was like Ok. Cool. For a long time, I struggled with coming up with an artist name, so once people started to call me by that name, it worked for me." },
+      { role: "cue", text: "Ko-Jo [obviously] because I was born on a Monday. And the Cue I got from a collective I was a part of called The Cue. I came up with the social media strategy for everyone who was involved in the collective and asked that they add Cue to their handles, just to make people curious about what it was about. At that time, the name I was using for music was just Ko-Jo, but Ko-Jo was just so common. The people who saw my handle on social media started to call me Ko-Jo Cue as a differentiator, and after it stuck, I was like Ok. Cool. For a long time, I struggled with coming up with an artist name, so once people started to call me by that name, it worked for me." },
       { role: "interviewer", text: "Wait, so you didn’t have any rap name prior to that?" },
-      { role: "cue", text: "Kojo." },
-      { role: "interviewer", text: "Just Kojo?" },
-      { role: "cue", text: "Yeah. Haha. But before I decided to go with Kojo, I called myself Jazziflo. But I don’t think I ever put out any work with that name. So I just went from Jazziflo to Kojo, and I added the hyphen later to make it stand out from the ordinary Ko-Jo. " },
+      { role: "cue", text: "Ko-Jo." },
+      { role: "interviewer", text: "Just Ko-Jo?" },
+      { role: "cue", text: "Yeah. Haha. But before I decided to go with Ko-Jo, I called myself Jazziflo. But I don’t think I ever put out any work with that name. So I just went from Jazziflo to Ko-Jo, and I added the hyphen later to make it stand out from the ordinary Ko-Jo. " },
       { role: "interviewer", text: "Ohok. Why Jazziflo tho? Are you into Jazz?" },
       { role: "cue", text: "No. No. Well, I like Jazz now, but that wasn’t the case during the period when I was known as Jazziflo. The Jazzi came because I’m a big fan of Jay-Z…" },
       { role: "interviewer", text: "Ohok. That makes two of us then" },
@@ -172,7 +172,7 @@ have to tell y’all the story of my life.
     songTitle: "Big Boy",
     songUrl: "",
     videoUrl: 'https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/Big%20Boy%20Film%20Reel.mp4?alt=media&token=05a852d0-178f-430d-a950-8e7cea372aba',
-    artistName: "Kojo Cue",
+    artistName: "Ko-Jo Cue",
     lyrics: `I made a little mistake
 Have I taken on more than I weigh?
 But you gave and you gave and you gave me the world
@@ -292,7 +292,7 @@ interview: [
     songTitle: "Next term",
     songUrl: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/nextterm.mp3?alt=media&token=72df2a02-c29b-4b92-8b9e-5c24f1bf5e2c",
     videoUrl: "",
-    artistName: "Kojo Cue",
+    artistName: "Ko-Jo Cue",
     lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis Next term",
     buttons: [
       { text: "MIXING NOTES", icon: mixingNoteIcon, link: "/location/3/mixing-notes" },
@@ -342,7 +342,7 @@ interview: [
     songTitle: "Bantama Blues 3",
     songUrl: "",
     videoUrl: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/BTS%20Recording%20Skits.mp4?alt=media&token=96de9fdb-afc8-4751-a676-60e253438e29",
-    artistName: "Kojo Cue",
+    artistName: "Ko-Jo Cue",
     lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis Bantama Blues 3",
     buttons: [
       { text: "BTS VIDEO", icon: BTSVideoIcon, link: "/location/4/video" },
@@ -403,7 +403,7 @@ interview: [
     songTitle: "Abrantie",
     songUrl: "",
     videoUrl: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/Abrantie%20Film%20Reel.mp4?alt=media&token=fba62780-14e3-4146-bb22-dafb2edea49c",
-    artistName: "Kojo Cue",
+    artistName: "Ko-Jo Cue",
     lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis Jamaica House - Bantama Abrantie",
     buttons: [
       { text: "FILM REEL", icon: filmReelIcon, link: "/location/5/film-reel" },
@@ -437,7 +437,7 @@ interview: [
     songTitle: "Squad",
     songUrl: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/Cobby%20Voice%20Note.m4a?alt=media&token=bcd329bf-5bab-4070-a1c6-56db82933e78",
     videoUrl: "",
-    artistName: "Kojo Cue",
+    artistName: "Ko-Jo Cue",
     lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis OWASS BASIC - Santasi",
     buttons: [
       { text: "BTS PHOTOS", icon: BTSPhotoIcon, link: "/location/6/bts-photos" },
@@ -455,7 +455,7 @@ interview: [
     songTitle: "Mr. Eben",
     songUrl: "",
     videoUrl: "",
-    artistName: "Kojo Cue",
+    artistName: "Ko-Jo Cue",
     lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis Mr. Eben Interlude",
     buttons: [
       { text: "LYRICS BREAKDOWN", icon: lyricsBDIcon, link: "/location/7/comingsoon" },
@@ -520,7 +520,7 @@ interview: [
     songTitle: "Mysterious Ways",
     songUrl: "",
     videoUrl: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/BTS%20MW.mp4?alt=media&token=6cbb2511-4980-4e34-9c7d-010cc2da6b67",
-    artistName: "Kojo Cue",
+    artistName: "Ko-Jo Cue",
     lyrics: `Kwaku ahyɛ ne white shirt 
 Lilian agye ne white dress 
 Me deɛ Rose nti na me baa yɛ 
@@ -656,7 +656,7 @@ Jesus said, “Love your neighbor as yourself.” Maybe he knew that would be th
     songTitle: "Angel / Pente Interlude",
     songUrl: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/Kiki_Angel%20(Voice%20Note).m4a?alt=media&token=86b6fdff-fcf3-4230-b34c-87560e554c99",
     videoUrl: 'https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/Angel%20Film%20Reel.mp4?alt=media&token=4631e9d9-4cca-4d2f-b215-892441680782',
-    artistName: "Kojo Cue",
+    artistName: "Ko-Jo Cue",
     lyrics: "",
     buttons: [
       { text: "FILM REEL", icon: filmReelIcon, link: "/location/9/film-reel" },
@@ -691,7 +691,7 @@ Jesus said, “Love your neighbor as yourself.” Maybe he knew that would be th
     songTitle: "F176",
     songUrl: "",
     videoUrl: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/BTS%20Mixing.mp4?alt=media&token=c7e10a59-5db2-49fe-a7db-7b248e6fc03c",
-    artistName: "Kojo Cue",
+    artistName: "Ko-Jo Cue",
     lyrics: "",
     buttons: [
       { text: "VOICE NOTE", icon: voiceNoteIcon, link: "/location/10/comingsoon" },
@@ -730,7 +730,7 @@ Jesus said, “Love your neighbor as yourself.” Maybe he knew that would be th
       { role: "interviewer", text: "So Benewaa is a part of it?" },
       { role: "cue", text: "Yeah, she is. So when we discussed it, Benewaa said she already had the idea and had a name for it. We liked the name she proposed so we decided to run with it. So it’s me, Benewaa, Trebla, and Mikey Ashkar. I brought Trebla onboard, because I knew Benewaa,… She wanted to do a performance series for Harmattan Rain, so she reached out to me and we did that. It never came out, but we formed a relationship out of that; we’d had conversations about the lack of knowledge in the industry. For Trebla, I knew him from way back because he also used to record at Peewee’s, and I’d had similar conversations about the industry with him. So I connected the three of us, then Benewaa was also like I also have someone I’d like to bring onboard; he’s into advertising. I knew Mikey, but I didn’t know he was the one Benewaa had been talking about, and I think Trebla also knew him already. So we got to work. The idea was, as proof of concept, we’d randomly pick three (3) or four (4) artists, and do pro bono work for them. That was a way to build our portfolio. So we picked Joey and KiDi…" },
       { role: "interviewer", text: "Joey B?" },
-      { role: "cue", text: "Yeah. Joey B. KiDi has a close relationship with Benewaa, but Joey had approached her for some help with some of his stuff. So she brought the two of them and we worked on KiDi’s Blue EP, the project which had ‘Say Cheese’; we did PR, strategy, and label pitching. We did the same thing for Joey’s ‘Lava Feels.’ Through those projects, and through word of mouth, Gyakie approached us to do some work for her. There was another person, whose name I can’t remember. But within that space, we four (4) pro bono jobs, and that got people coming to us. That was 2020. Then in 2021, we started charging for our services. We did Pappy Kojo, and a bunch of other stuff. And then, when people would come to us, they’d ask if we did distro. We kept hearing it so much that we decided to investigate, and it turned out we could. So added that to our services. I think the first person we did distro for was Fameye; we’d done PR for him and he loved it, so he asked us to handle the distro for one of his songs. Crazy enough, we probably do more distro now than music marketing. Even some of the music labels such as Sony Music and Empire come to us when they need people to help them handle stuff in Ghana. Somewhere along the line, Benewaa, who’d left Harmattan Rain for John Hill to run, introduced us to him. And I’ve got to say it; John is an amazing guy…" },
+      { role: "cue", text: "Yeah. Joey B. KiDi has a close relationship with Benewaa, but Joey had approached her for some help with some of his stuff. So she brought the two of them and we worked on KiDi’s Blue EP, the project which had ‘Say Cheese’; we did PR, strategy, and label pitching. We did the same thing for Joey’s ‘Lava Feels.’ Through those projects, and through word of mouth, Gyakie approached us to do some work for her. There was another person, whose name I can’t remember. But within that space, we four (4) pro bono jobs, and that got people coming to us. That was 2020. Then in 2021, we started charging for our services. We did Pappy Ko-Jo, and a bunch of other stuff. And then, when people would come to us, they’d ask if we did distro. We kept hearing it so much that we decided to investigate, and it turned out we could. So added that to our services. I think the first person we did distro for was Fameye; we’d done PR for him and he loved it, so he asked us to handle the distro for one of his songs. Crazy enough, we probably do more distro now than music marketing. Even some of the music labels such as Sony Music and Empire come to us when they need people to help them handle stuff in Ghana. Somewhere along the line, Benewaa, who’d left Harmattan Rain for John Hill to run, introduced us to him. And I’ve got to say it; John is an amazing guy…" },
       { role: "interviewer", text: "Is he Ghanaian?" },
       { role: "cue", text: "Yeah, John Hill is Ghanaian. But he currently lives in the UK. John is amazing. So we became the five (5) horsemen." },
       { role: "interviewer", text: "So, who are some of the people you work with? Your frequent collaborators?" },
@@ -784,15 +784,15 @@ Jesus said, “Love your neighbor as yourself.” Maybe he knew that would be th
       { role: "interviewer", text: "Ok. But are there are stand out ones? Like, interviews which you look back on and think that was a sick interview?" },
       { role: "cue", text: "I’ve had a bunch of them, but in recent times dieeer,… In recent times, I’d say the 3 Music one seems to resonate with a lot of people." },
       { role: "interviewer", text: "The one with C-Real?" },
-      { role: "cue", text: "Yeah. And I just did an interview with Kojo Manuel as well that’s not yet out; it was well-researched on his part and I liked that. Also, I did one with Gabriel Myers Hansen, from around the… Ermm… from around the…" },
+      { role: "cue", text: "Yeah. And I just did an interview with Ko-Jo Manuel as well that’s not yet out; it was well-researched on his part and I liked that. Also, I did one with Gabriel Myers Hansen, from around the… Ermm… from around the…" },
       { role: "interviewer", text: "Is it Pan African Music or something?" },
       { role: "cue", text: "Yep! Him too." },
       { role: "interviewer", text: "Ohok. I think I really enjoyed the… Eeermm…" },
       { role: "cue", text: "The 3 Music one?" },
-      { role: "interviewer", text: "Naah. The one with Kojo… Errmm… What’s his name? Pffft… Big head…" },
-      { role: "cue", text: "Oh! Kojo Sheldon." },
-      { role: "interviewer", text: "Yeah! Kojo Sheldon!" },
-      { role: "cue", text: "Yeah. The Kojo Sheldon interview was great too. Chale, as long as I get a person who… Oh! And I’ve had some of the best conversations with Mz Naa and Akosua Hanson as well." },
+      { role: "interviewer", text: "Naah. The one with Ko-Jo… Errmm… What’s his name? Pffft… Big head…" },
+      { role: "cue", text: "Oh! Ko-Jo Sheldon." },
+      { role: "interviewer", text: "Yeah! Ko-Jo Sheldon!" },
+      { role: "cue", text: "Yeah. The Ko-Jo Sheldon interview was great too. Chale, as long as I get a person who… Oh! And I’ve had some of the best conversations with Mz Naa and Akosua Hanson as well." },
       { role: "interviewer", text: "Nice. So a lot of times, you hear people say “The industry this, the industry that. Ghana music industry, the gatekeepers, blah, blah, blah…” It seems to be a recurring theme amongst our folk here. Within the time you’ve spent within the industry, is there anything you’ve experienced which you’d consider as industry drama?" },
       { role: "cue", text: "Truthfully, there may have been some things which were done to me. But the way I am, I don’t believe in other people blocking my shine. I don’t believe in people having that much power over my destiny, especially in this era. Because I come from the era where you definitely needed the radio guy…" },
       { role: "interviewer", text: "To shine!" },
@@ -813,7 +813,7 @@ Jesus said, “Love your neighbor as yourself.” Maybe he knew that would be th
     songTitle: "Grew Up Fast",
     songUrl: "",
     videoUrl: "",
-    artistName: "Kojo Cue",
+    artistName: "Ko-Jo Cue",
     lyrics: `Never had a chance to choose red or blue pill
 How adey SS2 dey think about the two bills?
 Making a mess at school because two
@@ -928,7 +928,7 @@ Grew up too quick
     songTitle: "Tontonte",
     songUrl: "",
     videoUrl: "",
-    artistName: "Kojo Cue",
+    artistName: "Ko-Jo Cue",
     lyrics: `Ehhhhh ahhhhh (Ginseng asɛ nsuo grawa)
 Mmm ahhh mmmm (Me redwene, got me thinking louder)
 Wiase nsɛmsɛm na adane me adwenedwene ahhh (ɔkɔ baabi a)
@@ -1069,7 +1069,7 @@ Wiase nsemsem na ama no aba saa (Wiase abrabɔ yi ɛnyɛ mmirika oh)
     songTitle: "Dreams",
     songUrl: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/Askor%20Voice%20Note.m4a?alt=media&token=981b2622-c5e4-4b93-993f-b206b30b69ac",
     videoUrl: "",
-    artistName: "Kojo Cue",
+    artistName: "Ko-Jo Cue",
     lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis",
     buttons: [
       { text: "MIXING NOTES", icon: mixingNoteIcon, link: "/location/13/mixing-notes" },
@@ -1108,7 +1108,7 @@ Wiase nsemsem na ama no aba saa (Wiase abrabɔ yi ɛnyɛ mmirika oh)
     songTitle: "You Are",
     songUrl: "",
     videoUrl: 'https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/BTS%20You%20Are.mp4?alt=media&token=1fc4015b-6d88-4755-8bc7-3fba1ef64a5e',
-    artistName: "Kojo Cue",
+    artistName: "Ko-Jo Cue",
     lyrics: `I lost my sight
 I’m driving blind when I’m with you
 I think I’m fell and hit my head in love
@@ -1168,7 +1168,7 @@ Anything you want
 Anything you want I’ll do
 
 You know the road to the holes where the bones dey 
-But your oath to Kojo’s that you won’t say 
+But your oath to Ko-Jo’s that you won’t say 
 For my growth, aint a role that you won’t play
 For your own, ain’t a toll that I won’t pay
 And she won’t play about me
@@ -1258,7 +1258,7 @@ Fell and hit my head in love
     songTitle: "The Fall",
     songUrl: "",
     videoUrl: 'https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/The%20Fall%20Film%20Reel.mp4?alt=media&token=4aaf2a06-c8f2-4e1e-9cfb-93fcdc4a524d',
-    artistName: "Kojo Cue",
+    artistName: "Ko-Jo Cue",
     lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis",
     buttons: [
       { text: "FILM REEL", icon: filmReelIcon, link: "/location/15/film-reel" },
@@ -1291,7 +1291,7 @@ Fell and hit my head in love
       { role: "interviewer", text: "Oh ok. Great. Errmmm… Can you break down your last album? That’s For My Brothers, right?" },
       { role: "cue", text: "Yeaaah! Errmm… Music for people like me. Yeah, music for people like me, to get them through the bad days and the good days, and to remind them that they’re not alone in whatever struggle they’re facing. And to let them know that they’ll get out of it. Yeah." },
       { role: "interviewer", text: "A song like ‘Dua’, is it based on a real experience?" },
-      { role: "cue", text: "It’s not based on a real experience line by line, but the idea of it came from errmm… Something my dad used to say to me, which is the phrase “Kojo wo bɛ brɛ.” So, it’s not like a line by line, that’s what he used to say; it’s just that phrase. But then I took the phrase and kind of built on it, using all the things we heard from… So everything I said is something I’ve heard before from one person or another, not just from my dad. All those things we heard, but separated them into good advice, but bad way of communicating, and good advice, good way of communicating." },
+      { role: "cue", text: "It’s not based on a real experience line by line, but the idea of it came from errmm… Something my dad used to say to me, which is the phrase “Ko-Jo wo bɛ brɛ.” So, it’s not like a line by line, that’s what he used to say; it’s just that phrase. But then I took the phrase and kind of built on it, using all the things we heard from… So everything I said is something I’ve heard before from one person or another, not just from my dad. All those things we heard, but separated them into good advice, but bad way of communicating, and good advice, good way of communicating." },
       { role: "interviewer", text: "Ohok. But I think it’s a really… Errmm… Poignant song, because I think with the older folk, most times, their way of advising you is that “If you’re going down this path, then you’re going to be a failure or a disgrace.” So hearing that song was kind of interesting." },
       { role: "cue", text: "Thank you." },
       { role: "interviewer", text: "I’ve also heard those words several times, because in the minds of the old folk, there’s only one way this thing you’re doing could end." },
@@ -1309,7 +1309,7 @@ Fell and hit my head in love
       { role: "interviewer", text: "A borga?" },
       { role: "cue", text: "Yes. So, I used to be very into… I mean, Hip-Hop culture, so I used to be heavily into Hip-Hop fashion. Then when my dad came into my life and he left, I started to feel like he cared more about fashion than he did about me. So I disconnected from fashion. For a long time, I was really adoncare; I really didn’t care how I looked. I’d just pull up in some random whatever I can find. But somewhere in 2016 or so, one of my best friends from GIJ, who’s kid brother was super into fashion, saw me at an event and he didn’t like the way I was looking. So, he reached out to his [older] brother and told him he wasn’t digging the way I was looking, and proposed that he’d love to style me. His brother told me and I was like Yeah, why not?! Let’s geddit! I told him to put a look book together, and he did that. We went through a bunch of stuff, and discussed what he thought I should look like. I tried some of them out and figured what I’m comfortable with. And from there, the fashion sort of started coming back. I started going out and picking stuff myself; I became actively conscious. But to the question itself, ermmm… I am super on… I am on the Adidas side in the Adidas/Nike war, because the very first pair of hip sneakers I owned was a pair of [Adidas] Superstar(s)." },
       { role: "interviewer", text: "Ohok." },
-      { role: "cue", text: "So I’m on the Adidas side on that one; I wear everything but I’m on the Adidas side when it comes to that one. Lately, I like Reebok and New Balance a lot. But Adidas bought Reebok, so it’s still on the same side. Converse Chuck Taylors as well; that’s because when The Game came out, I was a blood n*gga in Buokrom Estates, and we were always wearing Chuck Taylors. So yeah, Chuck Taylors. I also find canvas shoes very comfortable. In Ghana, I love what Studio Kojo Kusi is doing. Tribe of God as well; I love what they’re doing a lot. Also, Fear No Man; I feel like they’re [one of] the pioneers of modern streetwear scene in Ghana. Free the Youth looks great too. And this other brand called Rebl." },
+      { role: "cue", text: "So I’m on the Adidas side on that one; I wear everything but I’m on the Adidas side when it comes to that one. Lately, I like Reebok and New Balance a lot. But Adidas bought Reebok, so it’s still on the same side. Converse Chuck Taylors as well; that’s because when The Game came out, I was a blood n*gga in Buokrom Estates, and we were always wearing Chuck Taylors. So yeah, Chuck Taylors. I also find canvas shoes very comfortable. In Ghana, I love what Studio Ko-Jo Kusi is doing. Tribe of God as well; I love what they’re doing a lot. Also, Fear No Man; I feel like they’re [one of] the pioneers of modern streetwear scene in Ghana. Free the Youth looks great too. And this other brand called Rebl." },
       { role: "interviewer", text: "Yeah, Rebl!" },
       { role: "cue", text: "I used to wear their stuff a lot. And there’s this brand called Fumé, or something along those lines; I want to get some of their stuff." },
       { role: "interviewer", text: "Nice! So I’d want us to play a quick game. I give you two options, and you choose one. This or that kind of format. Cool?" },
@@ -1404,9 +1404,9 @@ Fell and hit my head in love
     songTitle: "Onipa Hia Mmoa",
     songUrl: "",
     videoUrl: "",
-    artistName: "Kojo Cue",
-    lyrics: `Bere a yi si, kojo kill
-Kojo kill, bere a yi si, mmh
+    artistName: "Ko-Jo Cue",
+    lyrics: `Bere a yi si, Ko-Jo kill
+Ko-Jo kill, bere a yi si, mmh
 Onipa yɛ nha mmoa wo, hmmm
 Adiɛn, yɛɛ wo
 
@@ -1517,7 +1517,7 @@ Story
     songTitle: "Gold Dust",
     songUrl: "",
     videoUrl: "",
-    artistName: "Kojo Cue",
+    artistName: "Ko-Jo Cue",
     lyrics: `I swear this girl she’s got a diamond for a heart
 Cos with a little bit of light
 She’s the prettiest sight
@@ -1532,7 +1532,7 @@ The phone rings I almost hit a troski
 Now I’m blaming the driver 
 mo deɛ baabiara mo bɛ parke
 As I pick and hear her say
-Kojo come back
+Ko-Jo come back
 the babies dey come now
 Come where? Come how? 
 Na sɛ ɛnduruu 9 months,

@@ -155,9 +155,9 @@ export default function ImagePreviewComponent() {
                             {/* <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold mb-1"> 
                               {image.title}
                             </h3> */}
-                            <p className="text-xs sm:text-sm md:text-base lg:text-lg opacity-90"> 
+                            {/* <p className="text-xs sm:text-sm md:text-base lg:text-lg opacity-90"> 
                               {image.title}
-                            </p>
+                            </p> */}
                           </div>
                         </div>
                       </div>
