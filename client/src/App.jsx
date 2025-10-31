@@ -5,7 +5,7 @@ import HomePage from "./Pages/HomePage"
 import WelcomePage from "./Pages/WelcomePage"
 import Map from "./Pages/Map"
 import WaveformPlayer from "./components/WaveformPlayer"
-import LyricsContainer from "./components/LyricsContainer"
+import LyricsContainer from "./components/Interview.jsx"
 import BTSPhotos from "./components/BTSPhotos"
 import WrittenReflection from "./components/WrittenReflection"
 import ErrorPage from "./Pages/ErrorPage"
@@ -14,6 +14,7 @@ import ImagePreviewComponent from "./components/ImagePreviewComponent"
 import Lyricsbreakedown from "./components/Lyricsbreakedown"
 import FilmReel from "./components/FilmReel.jsx"
 import ComingSoon from "./Pages/ComingSoon.jsx"
+import Interview from "./components/Interview.jsx"
 
 
 
@@ -26,8 +27,8 @@ function ContentRouter () {
   }
 
   switch (contentType) {
-    case "lyrics":
-      return <LyricsContainer />
+    case "interview":
+      return <Interview />
     case "lyrics-breakdown":
       return <Lyricsbreakedown />
     case "audio": 

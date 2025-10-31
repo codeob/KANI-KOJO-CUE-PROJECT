@@ -9,7 +9,7 @@ import contineFrame from '../assets/backgrounds/darkBrownFrame.svg';
 function WelcomePage() {
   return (
     <div
-      className="relative flex items-center justify-center min-h-screen w-full bg-cover bg-center overflow-hidden px-4"
+      className="relative flex items-center justify-center min-h-screen w-full bg-cover bg-center overflow-hidden p-4"
       style={{
         backgroundImage: `url(${mapimage})`,
       }}
@@ -19,7 +19,7 @@ function WelcomePage() {
 
       {/* Center Container */}
       <div
-        className="relative flex flex-col items-center justify-center w-full max-w-3xl sm:max-w-4xl rounded-2xl overflow-hidden p-4 sm:p-6 md:p-8 z-10 text-center transition-all duration-300 ease-in-out"
+        className="relative flex flex-col flex-1 items-center justify-center w-full max-w-3xl sm:max-w-4xl rounded-2xl overflow-hidden p-4 sm:p-6 md:p-8 z-10 text-center transition-all duration-300 ease-in-out"
         style={{
           backgroundImage: `url(${grayFrame})`,
           backgroundSize: 'cover',

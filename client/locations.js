@@ -106,6 +106,25 @@ have to tell y’all the story of my life.
       { text: "INTERVIEW", icon: interviewIcon, link: "/location/1/interview" },
       { text: "LYRICS", icon: fullLyricsIcon, link: "/location/1/comingsoon" },
     ],
+    interview: [
+      { role: "interviewer", text: `Ko-Jo Cue looks like the ideal poster boy for Ghanaian cool kids, and he’s actually a ‘cool kid’; from his appearance, to his cool demeanor and mannerisms. Somewhat reminiscent of a young Lupe [Fiasco]. However, beneath all that mint cool demeanor is a character I’d liken to a dragon; spitting fire is second nature to him, especially when his eardrums receive signals requesting that he steps up to a mic to speak his mind. He does it so effortlessly, and with a swagger which is unique to only him. Ko-Jo seems to face the struggles of the [everyday] Ghanaian youth, and for this reason, his words tend to resonate with many of them, who’ve chosen him as one of the voices they resort to when they’re in need of some advice from someone they know understands their pain. Heck! Some even consider him a shrink because the time they spend interacting with his music feels like therapy [sessions]. Jesus Muhammad met up with him at one of Accra’s newest spots, the Barndoor Beer Garden in the Nyaniba Estates for a conversation. 
+
+  Man like Ko-Jo. What’s good chale?` },
+      { role: "cue", text: "Yo, I’m good chale. I’m doing alright." },
+      { role: "interviewer", text: "Nice. That’s great to hear. So we’re here this evening to have a talk about you and your music. You’re one of the guys many people I’ve spoken to about rap in Ghana consider a solid guy…" },
+      { role: "cue", text: "Oh, you sure? Haha…" },
+      { role: "interviewer", text: "Oh yeah chale. Forreal!" },
+      { role: "cue", text: "That’s good to know. All my work hasn’t been in vain then. Haha.." },
+      { role: "interviewer", text: "So it’s only right that the fans get to know one of their favourite rappers better. Can we do that?" },
+      { role: "cue", text: "For sure! Let’s get into it." },
+      { role: "interviewer", text: "So you’re by the fans as Ko-Jo Cue. If I may ask, what’s your [government] name?" },
+      { role: "cue", text: "I hate my government name, and it’s not even because I’m a rapper. It’s because of the English part of it. My name is Linford Kennedy Amankwaa." },
+      { role: "interviewer", text: "Oh wow! So there’s no Kojo in your name?" },
+      { role: "cue", text: "No, not as part of my legal name." },
+      { role: "interviewer", text: "Ohok. So why the name Ko-Jo Cue?" },
+      { role: "cue", text: "Kojo [obviously] because I was born on a Monday. And the Cue I got from a collective I was a part of called The Cue. I came up with the social media strategy for everyone who was involved in the collective and asked that they add Cue to their handles, just to make people curious about what it was about. At that time, the name I was using for music was just Kojo, but Kojo was just so common. The people who saw my handle on social media started to call me Kojo Cue as a differentiator, and after it stuck, I was like Ok. Cool. For a long time, I struggled with coming up with an artist name, so once people started to call me by that name, it worked for me." },
+
+    ]
 
   },
   {
@@ -198,6 +217,20 @@ have to tell y’all the story of my life.
     buttons: [
       { text: "FILM REEL", icon: filmReelIcon, link: "/location/2/film-reel" },
       { text: "INTERVIEW", icon: interviewIcon, link: "/location/2/interview" },
+    ],
+    interview: [
+      { role: "interviewer", text: "Hahaha… Smart! So you mentioned that your older cousin whom you looked up to… What’s his name?" },
+      { role: "cue", text: "Rebel. Nana Kwame. But till date, everyone calls him T-Rebel." },
+      { role: "interviewer", text: "Ok. Is he one of the cousins you said are out of the country now?" },
+      { role: "cue", text: "He’s also out of the country, but not one of them. He was way older." },
+      { role: "interviewer", text: "Ohok. So, the question is, what got you into music? Was it T-Rebel? Or there was an incident which made you start?" },
+      { role: "cue", text: "I’d say the genesis is definitely Rebel. But, in SS3, my parents had just split and I was with my mum..." },
+      { role: "interviewer", text: "Yeaaah." },
+      { role: "cue", text: "So, I picked it up because at that point in my life, it appeared to be one of my best paths to becoming a provider..." },
+      { role: "interviewer", text: "Which studios were those?" },
+      { role: "cue", text: "Pokallos Studio in Kumasi..." },
+      { role: "interviewer", text: "Oh wow!" },
+      { role: "cue", text: "Yeah chale. I remember, we were living in Maakro at the time..." },
     ],
 
   },
