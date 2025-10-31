@@ -107,7 +107,8 @@ have to tell y’all the story of my life.
       { text: "LYRICS", icon: fullLyricsIcon, link: "/location/1/comingsoon" },
     ],
     interview: [
-      { role: "interviewer", text: `Ko-Jo Cue looks like the ideal poster boy for Ghanaian cool kids, and he’s actually a ‘cool kid’; from his appearance, to his cool demeanor and mannerisms. Somewhat reminiscent of a young Lupe [Fiasco]. However, beneath all that mint cool demeanor is a character I’d liken to a dragon; spitting fire is second nature to him, especially when his eardrums receive signals requesting that he steps up to a mic to speak his mind. He does it so effortlessly, and with a swagger which is unique to only him. Ko-Jo seems to face the struggles of the [everyday] Ghanaian youth, and for this reason, his words tend to resonate with many of them, who’ve chosen him as one of the voices they resort to when they’re in need of some advice from someone they know understands their pain. Heck! Some even consider him a shrink because the time they spend interacting with his music feels like therapy [sessions]. Jesus Muhammad met up with him at one of Accra’s newest spots, the Barndoor Beer Garden in the Nyaniba Estates for a conversation. 
+      {
+        role: "interviewer", text: `Ko-Jo Cue looks like the ideal poster boy for Ghanaian cool kids, and he’s actually a ‘cool kid’; from his appearance, to his cool demeanor and mannerisms. Somewhat reminiscent of a young Lupe [Fiasco]. However, beneath all that mint cool demeanor is a character I’d liken to a dragon; spitting fire is second nature to him, especially when his eardrums receive signals requesting that he steps up to a mic to speak his mind. He does it so effortlessly, and with a swagger which is unique to only him. Ko-Jo seems to face the struggles of the [everyday] Ghanaian youth, and for this reason, his words tend to resonate with many of them, who’ve chosen him as one of the voices they resort to when they’re in need of some advice from someone they know understands their pain. Heck! Some even consider him a shrink because the time they spend interacting with his music feels like therapy [sessions]. Jesus Muhammad met up with him at one of Accra’s newest spots, the Barndoor Beer Garden in the Nyaniba Estates for a conversation. 
 
   Man like Ko-Jo. What’s good chale?` },
       { role: "cue", text: "Yo, I’m good chale. I’m doing alright." },
@@ -329,7 +330,7 @@ interview: [
         id: 6,
         src: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/NXT3_b.jpg?alt=media&token=e6933f31-6ca1-4408-915e-069f9c305780",
         title: "Next term Mixing Note 6",
-      }      
+      }
     ],
 
   },
@@ -347,7 +348,7 @@ interview: [
     buttons: [
       { text: "BTS VIDEO", icon: BTSVideoIcon, link: "/location/4/video" },
       { text: "MIXING NOTES", icon: mixingNoteIcon, link: "/location/4/mixing-notes" },   // ask where this link routes to?
-      { text: "WATCH MUSIC VIDEO", icon: watchMusicVideo, link: "/location/4/comingsoon" }, 
+      { text: "WATCH MUSIC VIDEO", icon: watchMusicVideo, link: "/location/4/comingsoon" },
     ],
     mixingNoteImages: [
       {
@@ -390,7 +391,7 @@ interview: [
         src: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/BB%204_b.PNG?alt=media&token=d780738c-fd26-47b5-ab2f-40da5b8e4a63",
         title: "Bantama Blues 3 Mixing Note 8",
       },
-      
+
     ],
 
   },
@@ -440,10 +441,10 @@ interview: [
     artistName: "Kojo Cue",
     lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis OWASS BASIC - Santasi",
     buttons: [
-     { text: "BTS PHOTOS", icon: BTSPhotoIcon, link: "/location/6/bts-photos" },
-     { text: "VOICE NOTES", icon: voiceNoteIcon, link: "/location/6/voice-note" },  // check this again
-     { text: "LYRICS BREAKDOWN", icon: lyricsBDIcon, link: "/location/6/comingsoon" },    // ask where this link routes to?
-   ],
+      { text: "BTS PHOTOS", icon: BTSPhotoIcon, link: "/location/6/bts-photos" },
+      { text: "VOICE NOTES", icon: voiceNoteIcon, link: "/location/6/voice-note" },  // check this again
+      { text: "LYRICS BREAKDOWN", icon: lyricsBDIcon, link: "/location/6/comingsoon" },    // ask where this link routes to?
+    ],
 
   },
   {
@@ -461,6 +462,46 @@ interview: [
       { text: "LYRICS BREAKDOWN", icon: lyricsBDIcon, link: "/location/7/comingsoon" },
       { text: "INTERVIEW", icon: interviewIcon, link: "/location/7/interview" },
       { text: "MIXING NOTES", icon: mixingNoteIcon, link: "/location/7/mixing-notes" },
+    ],
+    interview: [
+      { role: "interviewer", text: "Was that your first time in Accra?" },
+      { role: "cue", text: "No, that was my second time. But that was the first time I came to Accra by myself. My uncle had brought me to Accra for the first time when I was a kid and he took me to the popular places and stuff. " },
+      { role: "interviewer", text: "Ohok." },
+      { role: "cue", text: "So yeah, I went to meet Ian Jazzi and his guy in Osu, around Koala, and I played a bunch of my songs for them. Back then, I rapped with this terrible LAFA. When I was done, Jazzi’s guy, whose name is Tallal Sangari, said “Chale, I can tell you’ve never been out of this country. Anyone who has [been out of the country] can tell you’re faking the accent. There’s no need to fake it, you can be yourself. Why don’t you rap in Twi, because this track that you did in Twi, I prefer that more?” So I was like Cool. No qualms at all. He said he needed me to return to Kumasi and get straight to work. Tallal was a huge fan of Lil Wayne’s, so he said he wanted me to follow the mixtape formula; he wanted me to drop a mixtape every month for a year. That he said, would serve as my practice hours. I agreed and decided that each mixtape would have twelve (12) songs, because I’m a fan of the number three (3) and its multiples. So I returned to Kumasi, to get to work. Unfortunately, by the time I returned, Okechukwu and Mac Fancy had graduated from school. Okechukwu had already returned to Nigeria. But I was able to talk to Mac Fancy to explain what was happening to him and the need for me to get to recording ASAP. That was when he told me of this guy called Cabum who was making some noise on the Kumasi scene…  " },
+      { role: "interviewer", text: "Oooh! So you didn’t even know of Cabum by then? I’d always thought you and Cabum were day ones." },
+      { role: "cue", text: "Naah. I didn’t know of him at the time." },
+      { role: "interviewer", text: "Wow!" },
+      { role: "cue", text: "Yeah chale. So Cabum’s music was making waves and the people loved him. Frank had connected with his producer, Peewezel, who also happened to be a student at KNUST. So he assured me he was going to take me to Peewezel. At the time, Peewezel’s room on campus was at Evandy, if my memory serves me right. So we went there, and he took us to his studio at Suame. Then he took us to another studio in Adoato. At the studio in Adoato, I met this other guy; he was a young guy like me, but he’d set up a studio in his house. And for some reason, he and I connected instantly. Honestly, I have no idea why we connected like that. His name was Big Jeff. I went to the studio because of Peewee, but I remained there even after he’d left. Later, Big Jeff and I ended up finding out that his mum had been my mum’s school mother in secondary school. So I spent a lot of time with Big Jeff in his studio, making records and trying to put the mixtape together. Then Big Jeff also had to move to Accra, so I was stranded once again." },
+      { role: "interviewer", text: "Oh chale! Ain’t that some sh*t?!" },
+      { role: "cue", text: "Haha. But then I remembered Peewee could help, so I went back to him and explained that I’d recorded some songs with Big Jeff which I needed mixed. Luckily for me, he agreed to that, and asked that I came over to his crib the next day at 8am so we could get to work. Chale, I was at his place by 6am the next morning, but instead of working on the mix job, he’d make me follow him around in town running errands. By the time we were done with his rounds, we’d be exhausted and he’d ask me to return the next day. Surely, I’d return, but he’d never mix the songs. This went on for a couple of days, almost a week I think. But I was so back into the music at that point that I was just happy to in that environment; I’d go to the studio and Cabum would be recording. I’d only been hearing of him on the radio. So, to be able to see him record in person and not even have my stuff mixed, chale, that was enough for me. However, because of the way I was still always punctual and dedicated, without complaining, Peewezel took a liking to me. He said he liked my work ethic. Eventually, he mixed my songs for me. And it even went beyond him giving me that full service; we formed a bond, and then he had the opportunity to work at some new studio. He’d taught me how to record by then. So, he was like if my plan is to record the mixtapes, what we could do was that I’d come to the studio to help him record other guys, and at the end of the day, when he was going home, he’d leave the studio keys with me so I could record myself. Then later, we could figure out how to go about the mixing and mastering. That, he said, was the little he could do to help me achieve my goals. " },
+      { role: "interviewer", text: "Oh cool. That was nice of him." },
+      { role: "cue", text: "Yeah chale! So, that’s how I met Peeweezel, whom I’d later form a crew with. " },
+      { role: "interviewer", text: "Which year was this tho?" },
+      { role: "cue", text: "That was 2008/09, into 2010. ." },
+      { role: "interviewer", text: "So what happened after this period?" },
+      { role: "cue", text: "You know what, meeting Ian Jazzi and Tallal also informed my decision to come to school in Accra." },
+      { role: "interviewer", text: "Oh yeah?! Why’s that?" },
+      { role: "cue", text: "I wanted to be closer to the movers and the shakers in the music biz. And also so I could be closer to my manager to make work easier. So I finally decided to come to school. School hadn’t been on my mind for a very long time, but to be able to make the move to Accra, schooling made perfect sense as an excuse or a reason. And then, I won’t even say I found my moral compass or whatever,… I don’t know where the switch happened, but at some point, when I’d go to the café, I’d spend more energy trying to promote my music on Facebook instead of doing the other stuff. Chale, I just eased off on the other stuff. There was now enough money for me to go to school, so I just stopped. I started school some time later, and began entering different spaces. " },
+      { role: "interviewer", text: "Ohok. So, who would you say are your musical influences?" },
+      { role: "cue", text: " Errmm… Obrafour, definitely. Jay-Z is a huge influence as well. A bit of Lil Wayne at some point. I’ve gone through my phases, so I’ve been influenced by Okyeame Kwame as well. E.L. too. Bra Kevin and [Lil] Shaker. Kendrick, Drake, and Ab-Soul, at some point. J. Cole too. But I’d say my main ones, or those who formed the foundation of whom I am today, would be Obrafour, M3nsa, and Okyeame Kwame on one hand, and Tupac, Jay-Z, and Kanye on the other. " },
+      { role: "interviewer", text: "Ohok. I guess it’s the scenario where your idols became your friends?" },
+      { role: "cue", text: "Yes!..." },
+      { role: "interviewer", text: "Because you mentioned Shaker and Bra Kevin…" },
+      { role: "cue", text: "Yeah. " },
+      { role: "interviewer", text: "At the time, you were hearing of them but you didn’t know them personally." },
+      { role: "cue", text: "Yeah chale. I remember the first time I met… and I’ve told him this story before. The first time I met Okyeame Kwame was at Pokallos, and I was frozen in the same place." },
+      { role: "interviewer", text: "Hahaha…" },
+      { role: "cue", text: "Yeaaahhh! He’d come to record one of the songs on the ‘Woso’ album. It was produced by the Pokallos guy; Big Dave, Tunji, who’s now one of my godfathers. I had no idea Okyeame Kwame would be coming to the studio, and at the time, Okyeame Kwame was the Best Rapper Alive. You understand? He was killing every feature; I was super into the stuff they were doing. So, I’m just walking out of the studio to go buy some stuff for either Tunji or Smoke, one of them. I’ve forgotten who exactly it was. I just walk out of the studio, and Okyeame Kwame walks past me. Chale, I start shaking, then I freeze. I’m sure I stood there for a good five minutes after he’d passed. Years later, I’m in a position where I can have conversations with him. Shaker as well; I got to know Shaker from Reverbnation. But I think with Shaker, it wasn’t much of an idol situation. It was more like a peer whom you respect. You get it?" },
+       { role: "interviewer", text: "Yeaah…" },
+       { role: "cue", text: "With him, I wasn’t star struck, but there was still a lot of respect for him." },
+        { role: "interviewer", text: "Ohok. Back then, those guys were killing it with the Skillions." },
+        { role: "cue", text: "Yeaaah. Also, moving to Accra at that point meant I needed a place to record. And that’s how I ended up at KluMonsta’s place in Adenta, because some of the guys who used to record at Klu’s studio were students at KNUST, and they used to come record at Peewee’s. Guys like Loonee TKR. So I had that connection from there. When I mentioned the need for me to find a studio to record at after I’d finally moved to Accra, that was when they suggested I check Klu’s place out. I think the first person to take me to Klu’s end was either Kay-Ara or Looney." },
+         { role: "interviewer", text: "Interesting." },
+         { role: "cue", text: "Klu later also moved to Kumasi for school, and he needed a place to record. So we made a deal where he could record for free at our studios in Kumasi, while I record for free at his in Accra." },
+        { role: "interviewer", text: "Ohok. But how did you meet Kay-Ara? " }, 
+         { role: "cue", text: "Ermmm… He hit me up on Reverbnation one day. At that point, I’d already put out two mixtapes. So, he said he wanted me to feature on a song he was working on. In my head, I was like Who’s this n*gga?" },
+         { role: "interviewer", text: "Hahaha…" },
+         { role: "cue", text: "So I go on his Reverbnation page to check out some of his stuff. And I remember, the first time I listened to him, he had done… Bra Kevin [Beats] had this freestyle called X-Men vs. Transformers, and Kay-Ara had done his version of that where he was talking about a recent heartbreak that he’d had. I was also dealing with heartbreak; I’d just come out of my first ever heartbreak. So when I heard the song, I was like Yo!. It hit me chale. So I was like I’ll do the record. I’ll be in Accra on this date. We’ll go record it at Klu’s. The first day we met, we just got to talking; we talked about any and almost everything. And our relationship grew stronger from there. Like, I’m genuinely a fan… I’d say he’s one of my favourite rappers ever. I learnt how to make projects from him, even though I’d already put out two mixtapes before him. Prior to meeting him, I was doing what [most] Ghanaians usually do when it comes to music projects; just throw a bunch of songs they’ve done… But through watching him craft his mixtapes, I started to take cues and started to be more meticulous with it. Then I found out he was a twin; my dad is a twin, my mum’s dad is a twin. Kay-Ara’s twin is a girl, my dad’s twin is a girl. Kay-Ara’s name is Kwaku Atta, and my dad’s uncle whom he had a great relationship with was also a twin and he was called Kwaku Atta. My dad is light skinned, and his uncle was dark skinned; I’m light skinned and Kay-Ara is dark skinned. So, it just felt like there was something there. We started doing almost everything together. He’d help me out when I was working on my projects, and I’d do the same for him. And through our conversations, we both begun to realise that our lives have very similar patterns. Yeaaah. So we started calling ourselves Twin Souls. And we make this joke that we were supposed to be twins, but I ended up going the other way. " },
     ],
     mixingNoteImages: [
       {
@@ -1015,7 +1056,7 @@ Wiase nsemsem na ama no aba saa (Wiase abrabɔ yi ɛnyɛ mmirika oh)
 `,
     buttons: [
       { text: "BTS PHOTOS", icon: BTSPhotoIcon, link: "/location/12/bts-photos" },
-      { text: "WATCH MUSIC VIDEO", icon: watchMusicVideo, link: "/location/12/comingsoon" }, 
+      { text: "WATCH MUSIC VIDEO", icon: watchMusicVideo, link: "/location/12/comingsoon" },
       { text: "FULL LYRICS", icon: fullLyricsIcon, link: "/location/12/comingsoon" },
     ],
 
@@ -1027,8 +1068,8 @@ Wiase nsemsem na ama no aba saa (Wiase abrabɔ yi ɛnyɛ mmirika oh)
     image: "",
     coords: { top: "66%", left: "27%" },
     songTitle: "Dreams",
-   songUrl: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/Askor%20Voice%20Note.m4a?alt=media&token=981b2622-c5e4-4b93-993f-b206b30b69ac",
-   videoUrl: "",
+    songUrl: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/Askor%20Voice%20Note.m4a?alt=media&token=981b2622-c5e4-4b93-993f-b206b30b69ac",
+    videoUrl: "",
     artistName: "Kojo Cue",
     lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis",
     buttons: [
@@ -1183,7 +1224,7 @@ Fell and hit my head in love
       { text: "MIXING NOTES", icon: mixingNoteIcon, link: "/location/14/mixing-notes" },
       { text: "FULL LYRICS", icon: fullLyricsIcon, link: "/location/14/comingsoon" },
       { text: "BTS VIDEO", icon: BTSVideoIcon, link: "/location/14/video" },
-      { text: "WATCH MUSIC VIDEO", icon: watchMusicVideo, link: "/location/14/comingsoon" }, 
+      { text: "WATCH MUSIC VIDEO", icon: watchMusicVideo, link: "/location/14/comingsoon" },
     ],
     mixingNoteImages: [
       {
@@ -1217,7 +1258,7 @@ Fell and hit my head in love
     coords: { top: "59%", left: "31%" },
     songTitle: "The Fall",
     songUrl: "",
-    videoUrl:'https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/The%20Fall%20Film%20Reel.mp4?alt=media&token=4aaf2a06-c8f2-4e1e-9cfb-93fcdc4a524d' ,
+    videoUrl: 'https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/The%20Fall%20Film%20Reel.mp4?alt=media&token=4aaf2a06-c8f2-4e1e-9cfb-93fcdc4a524d',
     artistName: "Kojo Cue",
     lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis",
     buttons: [
