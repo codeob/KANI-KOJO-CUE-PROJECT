@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import bgimage from '../assets/backgrounds/VoiceNotebg.png';
+import bgimage from '../assets/backgrounds/bgimage.png';
 import PauseIcon from "./PauseIcon";
 import PlayIcon from './PlayIcon';
 import KExpWithCloseBtnHeadingBrown from './KExpWithCloseBtnHeadingBrown';
