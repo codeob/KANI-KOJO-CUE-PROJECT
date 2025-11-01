@@ -5,7 +5,6 @@ import HomePage from "./Pages/HomePage"
 import WelcomePage from "./Pages/WelcomePage"
 import Map from "./Pages/Map"
 import WaveformPlayer from "./components/WaveformPlayer"
-import LyricsContainer from "./components/Interview.jsx"
 import BTSPhotos from "./components/BTSPhotos"
 import WrittenReflection from "./components/WrittenReflection"
 import ErrorPage from "./Pages/ErrorPage"
@@ -15,12 +14,21 @@ import Lyricsbreakedown from "./components/Lyricsbreakedown"
 import FilmReel from "./components/FilmReel.jsx"
 import ComingSoon from "./Pages/ComingSoon.jsx"
 import Interview from "./components/Interview.jsx"
+import useLocationStore from "./store/useLocationStore.js"
 
 
 
 function ContentRouter () {
   const { id, contentType } = useParams();
-  const location = locationPins.find((loc) => loc.id === Number(id));  
+  const { selectedLocation, setSelectedLocation } = useLocationStore();
+
+  let location = selectedLocation;
+
+  // If not found (e.g., after page refresh), fall back to locationPins
+  if (!location && id) {
+    location = locationPins.find((loc) => loc.id === Number(id));
+    if (location) setSelectedLocation(Number(id));
+  }  
   
   if (!location) {
     return <ErrorPage />;
@@ -44,9 +52,7 @@ function ContentRouter () {
     case "voice-note":
       return <WaveformPlayer audioUrl={location.songUrl} /> 
     case "mixing-notes":
-      return <ImagePreviewComponent /> 
-    case "interview":
-      return <VideoPlayer src={location.videoUrl} />  
+      return <ImagePreviewComponent />  
     case "comingsoon":
       return <ComingSoon /> 
     default:
