@@ -108,9 +108,10 @@ const WaveformPlayer = ({ audioUrl }) => {
   };
 
   return (
-    <div className="h-screen relative overflow-hidden">
-      <img src={bgimage} alt="" className="absolute bg-secondy-100/75 h-full w-full object-cover" />
-      <div className="relative z-10 flex flex-col items-center justify-between h-full w-full p-4 sm:p-6 md:p-8 lg:p-10">
+    <div className="min-h-screen w-full bg-cover bg-center flex flex-col justify-between items-center px-4 sm:px-6 lg:px-10 relative"
+      style={{ backgroundImage: `url(${bgimage})` }}
+    >
+      <div className="relative z-10 flex flex-1 flex-col items-center justify-between h-full w-full p-4 sm:p-6 md:p-8 lg:p-10">
         <div className="w-full">
           <KExpWithCloseBtnHeadingBrown />
         </div>
