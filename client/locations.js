@@ -654,7 +654,7 @@ Jesus said, “Love your neighbor as yourself.” Maybe he knew that would be th
     image: "",
     coords: { top: "43%", left: "77%" },
     songTitle: "Angel / Pente Interlude",
-    songUrl: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/Kiki_Angel%20(Voice%20Note).m4a?alt=media&token=86b6fdff-fcf3-4230-b34c-87560e554c99",
+    songUrl: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/Kiki%20(Voice%20Note).m4a?alt=media&token=2dc1fd08-7b07-4ed7-bbe9-a0464059c146",
     videoUrl: 'https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/Angel%20Film%20Reel.mp4?alt=media&token=4631e9d9-4cca-4d2f-b215-892441680782',
     artistName: "Ko-Jo Cue",
     lyrics: "",
