@@ -953,8 +953,8 @@ Grew up too quick
       "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/BTS%20Photos%2FTontonte%2FDSCF5372%20(1).jpg?alt=media&token=8c00d8a6-33b7-4a13-bcb5-a89bb714afda",
       "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/BTS%20Photos%2FTontonte%2FElsie%201.jpg?alt=media&token=90416cf6-0733-4e53-9f71-18fba1636b1b",
       "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/BTS%20Photos%2FTontonte%2FExtra%201.jpg?alt=media&token=52303ecc-4eeb-4cb7-a0b5-b5cebeae240c",
-      "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/BTS%20Photos%2FTontonte%2FWith%20Ara%201.jpg?alt=media&token=c31aa0df-6266-463f-8a88-3f0ca65cbc46",
-      "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/BTS%20Photos%2FTontonte%2FWith%20Ara%203.jpg?alt=media&token=86814616-36b8-431c-9ced-dee76cffaaaf",
+      "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/BTS%20Photos%2FTontonte%2FWith%20Ara%201.jpg?alt=media&token=c31aa0df-6266-463f-8a88-3f0ca65cbc46f-8a88-3f0ca65cbc46",
+      "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/BTS%20Photos%2FTontonte%2FWith%20Ara%203.jpg?alt=media&token=86814616-36b8-431c-9ced-dee76cffaaaff",
   
     ],
     coords: { top: "55%", left: "76%" },

@@ -158,7 +158,7 @@ export default function BTSPhotos() {
             />
 
             {/* Image positioned on top of the frames, responsive sizing and positioning for all screens */}
-            <div className="absolute top-[1rem] left-[1rem] h-[60%] w-[54%] sm:top-[1.5rem] sm:left-[10rem] sm:h-[49%] sm:w-[54%] md:top-[2rem] md:left-[2rem] md:h-[60%] md:w-[54%] lg:top-[2.5rem] lg:left-[5rem] lg:h-[60%] lg:w-[54%] xl:top-[3rem] xl:left-[11.6rem] xl:h-[60%] xl:w-[54%] overflow-hidden z-10">
+            <div className="absolute top-[1rem] left-[rem] h-[60%] w-[34%] sm:top-[7rem] sm:left-[10rem] sm:h-[49%] sm:w-[34%] md:top-[2rem] md:left-[2rem] md:h-[60%] md:w-[54%] lg:top-[2.5rem] lg:left-[5rem] lg:h-[60%] lg:w-[54%] xl:top-[3rem] xl:left-[11.6rem] xl:h-[60%] xl:w-[54%]  z-10">
               <img
                 ref={imageRef}
                 src={images[currentIndex]}
