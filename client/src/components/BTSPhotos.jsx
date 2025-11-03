@@ -195,7 +195,7 @@ const positionPhotoContainer = async () => {
                 ref={backFrameRef}
                 src={backPhotoFrame}
                 alt="Back frame"
-                className="absolute left-4 sm:left-5 md:-left-4 top-3 sm:top-4 md:top-5 -rotate-5 h-[90%] w-[90%] object-contain"
+                className="absolute left-4 sm:left-5 md:-left-4 top-4 sm:top-5 md:top-6 -rotate-5 h-[90%] w-[90%] object-contain"
               />
 
               {/* Photo inside frame (BEFORE FRONT: covers black exactly, behind border) */}
