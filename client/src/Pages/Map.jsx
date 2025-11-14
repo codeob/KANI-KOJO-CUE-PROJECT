@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef, useCallback } from "react";
 import useLocationStore from "../store/useLocationStore";
 import grainBG from "../assets/backgrounds/grainBG.png";
 import mapDay from "../assets/mapDay.png";
-import mapNight from "../assets/mapNight.png";
+import      mapNight from "../assets/mapNight.png";
 import locPin from "../assets/icons/locationPin.svg";
 import speaker from "../assets/icons/speaker.svg";
 import speakerMute from "../assets/icons/speakerMute.svg";
@@ -156,7 +156,7 @@ function Map() {
     };
   }, [computeImageInfo]);
 
-  // Wheel zoom handler (desktop)
+  // Wheel zoom handler (desktop) - using native addEventListener for passive: false
   const handleWheel = useCallback((e) => {
     e.preventDefault();
     const ii = imageInfoRef.current;
@@ -191,7 +191,7 @@ function Map() {
     setPan({ x: newPanX, y: newPanY });
   }, []);
 
-  // Touch handlers for pinch zoom (mobile)
+  // Touch handlers for pinch zoom (mobile) - using native addEventListener for passive: false on touchmove
   const handleTouchStart = useCallback((e) => {
     if (e.touches.length === 2 && mapContainerRef.current) {
       setIsPinching(true);
@@ -200,13 +200,12 @@ function Map() {
       const t1 = e.touches[1];
       initialDistRef.current = Math.hypot(t1.clientX - t0.clientX, t1.clientY - t0.clientY);
       initialUserScaleRef.current = userScaleRef.current;
-      e.preventDefault();
     }
   }, []);
 
   const handleTouchMove = useCallback((e) => {
     if (e.touches.length !== 2 || !mapContainerRef.current) return;
-    e.preventDefault();
+    e.preventDefault(); // This now works due to passive: false
 
     const rect = mapContainerRef.current.getBoundingClientRect();
     const t0 = e.touches[0];
@@ -251,6 +250,24 @@ function Map() {
       initialDistRef.current = 0;
     }
   }, []);
+
+  // Attach touch and wheel listeners with proper passive options
+  useEffect(() => {
+    const el = mapContainerRef.current;
+    if (!el) return;
+
+    el.addEventListener('touchstart', handleTouchStart, { passive: true });
+    el.addEventListener('touchmove', handleTouchMove, { passive: false });
+    el.addEventListener('touchend', handleTouchEnd, { passive: true });
+    el.addEventListener('wheel', handleWheel, { passive: false });
+
+    return () => {
+      el.removeEventListener('touchstart', handleTouchStart);
+      el.removeEventListener('touchmove', handleTouchMove);
+      el.removeEventListener('touchend', handleTouchEnd);
+      el.removeEventListener('wheel', handleWheel);
+    };
+  }, [handleTouchStart, handleTouchMove, handleTouchEnd, handleWheel]);
 
   // pointer handlers - attach move/up to window for robust dragging
   const handlePointerDown = (e) => {
@@ -391,10 +408,6 @@ function Map() {
           }`}
           style={{ touchAction: "none" }}
           onPointerDown={handlePointerDown}
-          onWheel={handleWheel}
-          onTouchStart={handleTouchStart}
-          onTouchMove={handleTouchMove}
-          onTouchEnd={handleTouchEnd}
         >
           {/* Position the image wrapper using offset + pan */}
           <div
@@ -404,7 +417,6 @@ function Map() {
               top: `${imageInfo.offsetY + pan.y}px`,
               width: `${imageInfo.displayedW}px`,
               height: `${imageInfo.displayedH}px`,
-              // Removed touchAction: "none" to allow better multi-touch handling on mobile
             }}
           >
             <img
@@ -461,7 +473,7 @@ function Map() {
 
       {/* Slide overlay - positioned fixed to viewport, unaffected by map scaling/panning */}
       {isSlideVisible && (
-        <div className="fixed inset-0 bg-black/55 z-50 flex items-center justify-center p-2 sm:p-4 md:p-6 lg:p-8 xl:p-10">
+        <div className="fixed inset-0 bg-black/55 z-50 flex items-center justify-center p-2 sm:p-4 md:p-6 lg:p-8 xl:p-10 pointer-events-auto">
           <Slide
             location={selectedLocation}
             close={handleClose}
