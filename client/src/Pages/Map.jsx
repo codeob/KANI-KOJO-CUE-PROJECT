@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState, useRef, useCallback } from "react";
 import useLocationStore from "../store/useLocationStore";
 import grainBG from "../assets/backgrounds/grainBG.png";
@@ -244,7 +243,7 @@ function Map() {
 
     setUserScale(newUserScale);
     setPan({ x: newPanX, y: newPanY });
-  }, [isPinching]);
+  }, []);
 
   const handleTouchEnd = useCallback((e) => {
     if (e.touches.length < 2) {
@@ -384,22 +383,13 @@ function Map() {
         }`}
         style={{ backgroundImage: `url(${grainBG})` }}
       >
-        {/* <h2
-          className={`fixed left-5 top-5 lg:left-13 lg:top-13 text-center text-[1.5rem] md:text-[2rem] lg:text-[2.5rem] rock leading-tight ${
-            hours > 5 && hours < 18 ? "text-primary-100" : "text-textLight-100"
-          }`}
-        >
-          Explore the Kani
-          <br />
-          <span className="lowercase">journey</span>
-        </h2> */}
-
         {/* Map container */}
         <div
           ref={mapContainerRef}
           className={`absolute inset-0 overflow-hidden select-none ${
             isDraggingRef.current ? "cursor-grabbing" : "cursor-grab"
           }`}
+          style={{ touchAction: "none" }}
           onPointerDown={handlePointerDown}
           onWheel={handleWheel}
           onTouchStart={handleTouchStart}
@@ -414,7 +404,7 @@ function Map() {
               top: `${imageInfo.offsetY + pan.y}px`,
               width: `${imageInfo.displayedW}px`,
               height: `${imageInfo.displayedH}px`,
-              touchAction: "none", // prevent default touch gestures that conflict
+              // Removed touchAction: "none" to allow better multi-touch handling on mobile
             }}
           >
             <img
@@ -469,7 +459,7 @@ function Map() {
         </button>
       </div>
 
-      {/* Slide overlay */}
+      {/* Slide overlay - positioned fixed to viewport, unaffected by map scaling/panning */}
       {isSlideVisible && (
         <div className="fixed inset-0 bg-black/55 z-50 flex items-center justify-center p-2 sm:p-4 md:p-6 lg:p-8 xl:p-10">
           <Slide
