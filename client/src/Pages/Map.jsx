@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef, useCallback } from "react";
 import useLocationStore from "../store/useLocationStore";
 import grainBG from "../assets/backgrounds/grainBG.png";
 import mapDay from "../assets/mapDay.png";
-import      mapNight from "../assets/mapNight.png";
+import mapNight from "../assets/mapNight.png";
 import locPin from "../assets/icons/locationPin.svg";
 import speaker from "../assets/icons/speaker.svg";
 import speakerMute from "../assets/icons/speakerMute.svg";
@@ -156,7 +156,7 @@ function Map() {
     };
   }, [computeImageInfo]);
 
-  // Wheel zoom handler (desktop) - using native addEventListener for passive: false
+  // Wheel zoom handler (desktop)
   const handleWheel = useCallback((e) => {
     e.preventDefault();
     const ii = imageInfoRef.current;
@@ -191,7 +191,7 @@ function Map() {
     setPan({ x: newPanX, y: newPanY });
   }, []);
 
-  // Touch handlers for pinch zoom (mobile) - using native addEventListener for passive: false on touchmove
+  // Touch handlers for pinch zoom (mobile)
   const handleTouchStart = useCallback((e) => {
     if (e.touches.length === 2 && mapContainerRef.current) {
       setIsPinching(true);
@@ -205,7 +205,7 @@ function Map() {
 
   const handleTouchMove = useCallback((e) => {
     if (e.touches.length !== 2 || !mapContainerRef.current) return;
-    e.preventDefault(); // This now works due to passive: false
+    e.preventDefault();
 
     const rect = mapContainerRef.current.getBoundingClientRect();
     const t0 = e.touches[0];
@@ -406,7 +406,7 @@ function Map() {
           className={`absolute inset-0 overflow-hidden select-none ${
             isDraggingRef.current ? "cursor-grabbing" : "cursor-grab"
           }`}
-          style={{ touchAction: "none" }}
+          style={{ touchAction: "manipulation" }} // Allows pinch-zoom and panning gestures on mobile
           onPointerDown={handlePointerDown}
         >
           {/* Position the image wrapper using offset + pan */}
