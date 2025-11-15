@@ -21,6 +21,7 @@ function Map() {
     offsetX: 0,
     offsetY: 0,
     scale: 1,
+    baseScale: 1,
     displayedW: 0,
     displayedH: 0,
     containerW: window.innerWidth,
@@ -29,6 +30,7 @@ function Map() {
 
   const [userScale, setUserScale] = useState(1.0);
   const [isPinching, setIsPinching] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   const [playing, setPlaying] = useState(false);
   const audioRef = useRef(null);
@@ -100,6 +102,46 @@ function Map() {
     setNaturalSize({ w, h });
   };
 
+  // Get dynamic ZOOM_FACTOR based on container width
+  const getZoomFactor = useCallback((containerW) => {
+    if (containerW >= 1536) return 3.0;
+    if (containerW >= 1280) return 2.7;
+    if (containerW >= 1024) return 2.4;
+    return 2.1;
+  }, []);
+
+  // Zoom function at a specific point (relative to container)
+  const doZoom = useCallback((scaleFactor, optPointX, optPointY) => {
+    const ii = imageInfoRef.current;
+    const ns = naturalSizeRef.current;
+    if (!ns.w || !ns.h || !mapContainerRef.current) return;
+
+    const rect = mapContainerRef.current.getBoundingClientRect();
+    const pointX = optPointX !== undefined ? optPointX : ii.containerW / 2;
+    const pointY = optPointY !== undefined ? optPointY : ii.containerH / 2;
+    const currentScale = ii.scale;
+    const currentOffsetX = ii.offsetX + panRef.current.x;
+    const currentOffsetY = ii.offsetY + panRef.current.y;
+    const worldX = (pointX - currentOffsetX) / currentScale;
+    const worldY = (pointY - currentOffsetY) / currentScale;
+
+    let newUserScale = userScaleRef.current * scaleFactor;
+    newUserScale = Math.max(0.5, Math.min(5, newUserScale));
+
+    const baseRatio = Math.min(ii.containerW / ns.w, ii.containerH / ns.h);
+    const ZOOM_FACTOR = getZoomFactor(ii.containerW);
+    const newScale = baseRatio * ZOOM_FACTOR * newUserScale;
+    const newDisplayedW = ns.w * newScale;
+    const newDisplayedH = ns.h * newScale;
+    const newOffsetX = (ii.containerW - newDisplayedW) / 2;
+    const newOffsetY = (ii.containerH - newDisplayedH) / 2;
+    const newPanX = pointX - worldX * newScale - newOffsetX;
+    const newPanY = pointY - worldY * newScale - newOffsetY;
+
+    setUserScale(newUserScale);
+    setPan({ x: newPanX, y: newPanY });
+  }, [getZoomFactor]);
+
   // compute image info (displayed width/height, offsets) using naturalSize
   const computeImageInfo = useCallback(() => {
     const { w: naturalW, h: naturalH } = naturalSize;
@@ -115,9 +157,10 @@ function Map() {
     // base ratio to fit whole image
     const baseRatio = Math.min(containerW / naturalW, containerH / naturalH);
 
-    // Zoom factor - adjust this to taste (1.5 to 2.2 are common)
-    const ZOOM_FACTOR = 1.8;
-    const scale = baseRatio * ZOOM_FACTOR * userScale;
+    // Dynamic Zoom factor based on screen size for bigger screens
+    const ZOOM_FACTOR = getZoomFactor(containerW);
+    const baseScale = baseRatio * ZOOM_FACTOR;
+    const scale = baseScale * userScale;
 
     const displayedW = naturalW * scale;
     const displayedH = naturalH * scale;
@@ -130,6 +173,7 @@ function Map() {
       offsetX,
       offsetY,
       scale,
+      baseScale,
       displayedW,
       displayedH,
       containerW,
@@ -140,7 +184,7 @@ function Map() {
     if (userScale === 1) {
       setPan({ x: 0, y: 0 });
     }
-  }, [naturalSize, userScale]);
+  }, [naturalSize, userScale, getZoomFactor]);
 
   // Attach resizing and orientation handlers
   useEffect(() => {
@@ -156,40 +200,23 @@ function Map() {
     };
   }, [computeImageInfo]);
 
+  // Check mobile on resize
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
   // Wheel zoom handler (desktop)
   const handleWheel = useCallback((e) => {
     e.preventDefault();
-    const ii = imageInfoRef.current;
-    const ns = naturalSizeRef.current;
-    if (!ns.w || !ns.h || !mapContainerRef.current) return;
-
     const rect = mapContainerRef.current.getBoundingClientRect();
     const mouseX = e.clientX - rect.left;
     const mouseY = e.clientY - rect.top;
-
-    const currentScale = ii.scale;
-    const currentOffsetX = ii.offsetX + panRef.current.x;
-    const currentOffsetY = ii.offsetY + panRef.current.y;
-    const worldX = (mouseX - currentOffsetX) / currentScale;
-    const worldY = (mouseY - currentOffsetY) / currentScale;
-
     const scaleFactor = e.deltaY < 0 ? 1.1 : 0.9;
-    let newUserScale = userScaleRef.current * scaleFactor;
-    newUserScale = Math.max(0.5, Math.min(5, newUserScale));
-
-    const baseRatio = Math.min(ii.containerW / ns.w, ii.containerH / ns.h);
-    const ZOOM_FACTOR = 1.8;
-    const newScale = baseRatio * ZOOM_FACTOR * newUserScale;
-    const newDisplayedW = ns.w * newScale;
-    const newDisplayedH = ns.h * newScale;
-    const newOffsetX = (ii.containerW - newDisplayedW) / 2;
-    const newOffsetY = (ii.containerH - newDisplayedH) / 2;
-    const newPanX = mouseX - worldX * newScale - newOffsetX;
-    const newPanY = mouseY - worldY * newScale - newOffsetY;
-
-    setUserScale(newUserScale);
-    setPan({ x: newPanX, y: newPanY });
-  }, []);
+    doZoom(scaleFactor, mouseX, mouseY);
+  }, [doZoom]);
 
   // Touch handlers for pinch zoom (mobile)
   const handleTouchStart = useCallback((e) => {
@@ -231,7 +258,7 @@ function Map() {
     const worldY = (mouseY - currentOffsetY) / currentScale;
 
     const baseRatio = Math.min(ii.containerW / ns.w, ii.containerH / ns.h);
-    const ZOOM_FACTOR = 1.8;
+    const ZOOM_FACTOR = getZoomFactor(ii.containerW);
     const newScale = baseRatio * ZOOM_FACTOR * newUserScale;
     const newDisplayedW = ns.w * newScale;
     const newDisplayedH = ns.h * newScale;
@@ -242,7 +269,7 @@ function Map() {
 
     setUserScale(newUserScale);
     setPan({ x: newPanX, y: newPanY });
-  }, []);
+  }, [getZoomFactor]);
 
   const handleTouchEnd = useCallback((e) => {
     if (e.touches.length < 2) {
@@ -268,6 +295,10 @@ function Map() {
       el.removeEventListener('wheel', handleWheel);
     };
   }, [handleTouchStart, handleTouchMove, handleTouchEnd, handleWheel]);
+
+  // Zoom buttons handlers
+  const handleZoomIn = () => doZoom(1.2);
+  const handleZoomOut = () => doZoom(0.833);
 
   // pointer handlers - attach move/up to window for robust dragging
   const handlePointerDown = (e) => {
@@ -311,9 +342,11 @@ function Map() {
     return () => window.removeEventListener("orientationchange", checkOrientation);
   }, []);
 
-  // Slide logic (unchanged)
+  // Slide logic (reset zoom to original when opening slide)
   useEffect(() => {
     if (selectedLocation) {
+      setUserScale(1.0);
+      setPan({ x: 0, y: 0 });
       setIsSlideVisible(true);
       setTimeout(() => setIsAnimating(true), 10);
     }
@@ -354,7 +387,7 @@ function Map() {
     }
   };
 
-  // compute pin sizes based on imageInfo.scale
+  // compute pin sizes based on imageInfo.baseScale (fixed size, no userScale)
   const pinBaseWidth = 220;
   const pinBaseHeight = 270;
   const getPinDimensions = () => {
@@ -365,8 +398,8 @@ function Map() {
     return { width: pinBaseWidth * 0.8, height: pinBaseHeight * 1 };
   };
   const pinDimensions = getPinDimensions();
-  const pinWidth = `${Math.max(20, pinDimensions.width * imageInfo.scale)}px`;
-  const pinHeight = `${Math.max(20, pinDimensions.height * imageInfo.scale)}px`;
+  const pinWidth = `${Math.max(20, pinDimensions.width * imageInfo.baseScale)}px`;
+  const pinHeight = `${Math.max(20, pinDimensions.height * imageInfo.baseScale)}px`;
 
   // whenever natural size changes, recompute image info
   useEffect(() => {
@@ -460,6 +493,24 @@ function Map() {
             })}
           </div>
         </div>
+
+        {/* Zoom buttons - only on mobile */}
+        {isMobile && (
+          <div className="fixed bottom-20 right-4 flex flex-col gap-2 z-10">
+            <button
+              onClick={handleZoomIn}
+              className="w-12 h-12 bg-white/90 rounded-full shadow-lg flex items-center justify-center text-xl font-bold text-gray-800 hover:bg-white transition-colors"
+            >
+              +
+            </button>
+            <button
+              onClick={handleZoomOut}
+              className="w-12 h-12 bg-white/90 rounded-full shadow-lg flex items-center justify-center text-xl font-bold text-gray-800 hover:bg-white transition-colors"
+            >
+              -
+            </button>
+          </div>
+        )}
 
         {/* Speaker toggle */}
         <button onClick={togglePlay} className="cursor-pointer fixed bottom-6 left-12 lg:bottom-10">
