@@ -331,15 +331,24 @@ function Map() {
 
   // show rotate prompt on small portrait devices
   const checkOrientation = () => {
-    const isSmallScreen = window.innerWidth < 640;
+    const isSmallScreen = Math.min(window.innerWidth, window.innerHeight) < 640;
     const isPortrait = window.innerWidth < window.innerHeight;
     setShowLandscapePrompt(isSmallScreen && isPortrait);
   };
 
   useEffect(() => {
+    const handleResizeOrOrientation = () => {
+      // Small delay to ensure dimensions are updated after orientation change
+      setTimeout(checkOrientation, 100);
+    };
+
     checkOrientation();
-    window.addEventListener("orientationchange", checkOrientation);
-    return () => window.removeEventListener("orientationchange", checkOrientation);
+    window.addEventListener("orientationchange", handleResizeOrOrientation);
+    window.addEventListener("resize", handleResizeOrOrientation);
+    return () => {
+      window.removeEventListener("orientationchange", handleResizeOrOrientation);
+      window.removeEventListener("resize", handleResizeOrOrientation);
+    };
   }, []);
 
   // Slide logic (reset zoom to original when opening slide)
