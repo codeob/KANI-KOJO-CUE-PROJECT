@@ -8,6 +8,8 @@ import speaker from "../assets/icons/speaker.svg";
 import speakerMute from "../assets/icons/speakerMute.svg";
 import Slide from "./Slide";
 import locationPins from "../../locations";
+import ZoomIn from "../assets/icons/ZoomIn.svg"
+import ZoomOut from "../assets/icons/ZoomOut.svg"
 
 function Map() {
   const { selectedLocation, setSelectedLocation, clearSelected } = useLocationStore();
@@ -515,18 +517,17 @@ function Map() {
 
         {/* Zoom buttons - only on mobile */}
         {isMobile && (
-          <div className="fixed bottom-20 right-4 flex flex-col gap-2 z-10 md:hidden lg:hidden">
+          <div className="fixed bottom-8 right-4 flex flex-col gap-2 z-10 md:hidden lg:hidden">
             <button
               onClick={handleZoomIn}
-              className="w-12 h-12 bg-white/90 rounded-full shadow-lg flex items-center justify-center text-xl font-bold text-gray-800 hover:bg-white transition-colors"
+              className="w-12 h-12"
             >
-              +
+              <img src={ZoomIn} alt="" className="w-12 h-12"/>
             </button>
             <button
               onClick={handleZoomOut}
-              className="w-12 h-12 bg-white/90 rounded-full shadow-lg flex items-center justify-center text-xl font-bold text-gray-800 hover:bg-white transition-colors"
             >
-              -
+              <img src={ZoomOut} alt="" className="w-12 h-12 " />
             </button>
           </div>
         )}
