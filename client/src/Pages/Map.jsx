@@ -204,14 +204,11 @@ function Map() {
   useEffect(() => {
     const checkMobile = () => setIsMobile(Math.min(window.innerWidth, window.innerHeight) < 768);
     checkMobile();
-    const handleResizeOrOrientation = () => {
-      setTimeout(checkMobile, 100);
-    };
-    window.addEventListener("resize", handleResizeOrOrientation);
-    window.addEventListener("orientationchange", handleResizeOrOrientation);
+    window.addEventListener("resize", checkMobile);
+    window.addEventListener("orientationchange", checkMobile);
     return () => {
-      window.removeEventListener("resize", handleResizeOrOrientation);
-      window.removeEventListener("orientationchange", handleResizeOrOrientation);
+      window.removeEventListener("resize", checkMobile);
+      window.removeEventListener("orientationchange", checkMobile);
     };
   }, []);
 
@@ -345,8 +342,8 @@ function Map() {
 
   useEffect(() => {
     const handleResizeOrOrientation = () => {
-      // Increased delay to ensure dimensions are fully updated after orientation change
-      setTimeout(checkOrientation, 300);
+      // Small delay to ensure dimensions are updated after orientation change
+      setTimeout(checkOrientation, 200);
     };
 
     checkOrientation();
