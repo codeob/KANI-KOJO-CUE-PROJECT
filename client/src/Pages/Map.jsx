@@ -30,7 +30,7 @@ function Map() {
 
   const [userScale, setUserScale] = useState(1.0);
   const [isPinching, setIsPinching] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [isMobile, setIsMobile] = useState(Math.min(window.innerWidth, window.innerHeight) < 768);
 
   const [playing, setPlaying] = useState(false);
   const audioRef = useRef(null);
@@ -200,12 +200,19 @@ function Map() {
     };
   }, [computeImageInfo]);
 
-  // Check mobile on resize
+  // Check mobile on resize/orientation
   useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    const checkMobile = () => setIsMobile(Math.min(window.innerWidth, window.innerHeight) < 768);
     checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
+    const handleResizeOrOrientation = () => {
+      setTimeout(checkMobile, 100);
+    };
+    window.addEventListener("resize", handleResizeOrOrientation);
+    window.addEventListener("orientationchange", handleResizeOrOrientation);
+    return () => {
+      window.removeEventListener("resize", handleResizeOrOrientation);
+      window.removeEventListener("orientationchange", handleResizeOrOrientation);
+    };
   }, []);
 
   // Wheel zoom handler (desktop)
@@ -338,8 +345,8 @@ function Map() {
 
   useEffect(() => {
     const handleResizeOrOrientation = () => {
-      // Small delay to ensure dimensions are updated after orientation change
-      setTimeout(checkOrientation, 100);
+      // Increased delay to ensure dimensions are fully updated after orientation change
+      setTimeout(checkOrientation, 300);
     };
 
     checkOrientation();
