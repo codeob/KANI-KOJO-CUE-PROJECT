@@ -202,7 +202,13 @@ function Map() {
 
   // Check mobile on resize/orientation
   useEffect(() => {
-    const checkMobile = () => setIsMobile(Math.min(window.innerWidth, window.innerHeight) < 768);
+    const checkMobile = () => {
+      // Small delay to ensure dimensions are updated after orientation change
+      setTimeout(() => {
+        setIsMobile(Math.min(window.innerWidth, window.innerHeight) < 768);
+      }, 300);
+    };
+
     checkMobile();
     window.addEventListener("resize", checkMobile);
     window.addEventListener("orientationchange", checkMobile);
@@ -343,7 +349,7 @@ function Map() {
   useEffect(() => {
     const handleResizeOrOrientation = () => {
       // Small delay to ensure dimensions are updated after orientation change
-      setTimeout(checkOrientation, 200);
+      setTimeout(checkOrientation, 300);
     };
 
     checkOrientation();
@@ -509,7 +515,7 @@ function Map() {
 
         {/* Zoom buttons - only on mobile */}
         {isMobile && (
-          <div className="fixed bottom-20 right-4 flex flex-col gap-2 z-10">
+          <div className="fixed bottom-20 right-4 flex flex-col gap-2 z-10 md:hidden lg:hidden">
             <button
               onClick={handleZoomIn}
               className="w-12 h-12 bg-white/90 rounded-full shadow-lg flex items-center justify-center text-xl font-bold text-gray-800 hover:bg-white transition-colors"
