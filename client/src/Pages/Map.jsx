@@ -233,6 +233,350 @@
 
 
 
+// // new code for zooming into the map after clicking a particular location to display each related song
+// import React, { useEffect, useState, useRef } from "react";
+// import useLocationStore from "../store/useLocationStore";
+// import grainBG from "../assets/backgrounds/grainBG.png";
+// import mapDay from "../assets/mapDay.png";
+// import mapNight from "../assets/mapNight.png";
+// import locPin from "../assets/icons/locationPin.svg";
+// import speaker from "../assets/icons/speaker.svg";
+// import speakerMute from "../assets/icons/speakerMute.svg";
+// import Slide from "./Slide";
+// // import musical note placeholder - you'll replace with your own icon
+// import musicalNote from "../assets/icons/interviewIcon.svg";
+
+// function Map() {
+//   const { groupedLocations, selectedLocation, setSelectedLocation, clearSelected } = useLocationStore();
+//   const [isSlideVisible, setIsSlideVisible] = useState(false);
+//   const [isAnimating, setIsAnimating] = useState(false);
+//   const [scale, setScale] = useState(1);
+//   const [imageInfo, setImageInfo] = useState({ offsetX: 0, offsetY: 0, scale: 1, naturalWidth: 0, naturalHeight: 0 });
+//   const [playing, setPlaying] = useState(false);
+//   const [zoomedLocationId, setZoomedLocationId] = useState(null); // which location is zoomed (group id)
+//   const [mapTransform, setMapTransform] = useState({ translateX: 0, translateY: 0, scale: 1 });
+//   const mapRef = useRef(null);
+//   const containerRef = useRef(null);
+//   const audioRef = useRef(null);
+//   const now = new Date();
+//   const hours = now.getHours();
+
+//   const pinBaseWidth = 220;
+//   const pinBaseHeight = 270;
+
+//   const getPinDimensions = () => {
+//     if (window.innerWidth >= 1536) return { width: pinBaseWidth * 1.6, height: pinBaseHeight * 1.6 };
+//     if (window.innerWidth >= 1280) return { width: pinBaseWidth * 1.4, height: pinBaseHeight * 1.4 };
+//     if (window.innerWidth >= 1024) return { width: pinBaseWidth * 1.4, height: pinBaseHeight * 1.4 };
+//     if (window.innerWidth >= 768) return { width: pinBaseWidth * 1.2, height: pinBaseHeight * 1.2 };
+//     return { width: pinBaseWidth * 0.8, height: pinBaseHeight * 1.2 };
+//   };
+//   const pinDimensions = getPinDimensions();
+//   const pinWidth = `${pinDimensions.width * scale}px`;
+//   const pinHeight = `${pinDimensions.height * scale}px`;
+
+//   // audio
+//   const song1 = "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/Inst%20Clip%202.wav?alt=media&token=10316723-b997-4e1d-9a84-c90e8f077d72";
+
+//   const togglePlay = () => {
+//     const audio = audioRef.current;
+//     if (!audio) return;
+//     if (playing) {
+//       audio.pause();
+//       setPlaying(false);
+//     } else {
+//       audio.play();
+//       setPlaying(true);
+//     }
+//   };
+
+//   useEffect(() => {
+//     const audio = audioRef.current;
+//     if (!audio) return;
+//     const tryPlay = async () => {
+//       try {
+//         await audio.play();
+//         setPlaying(true);
+//       } catch (err) {
+//         console.warn("Autoplay blocked — waiting for user interaction.");
+//       }
+//     };
+//     tryPlay();
+//     const handleUserInteraction = () => {
+//       audio.muted = false;
+//       document.removeEventListener("click", handleUserInteraction);
+//     };
+//     document.addEventListener("click", handleUserInteraction);
+//     return () => {
+//       audio.pause();
+//       audio.currentTime = 0;
+//       document.removeEventListener("click", handleUserInteraction);
+//     };
+//   }, []);
+
+//   // compute displayed image dimensions + offset & store natural sizes
+//   const updateImageInfo = () => {
+//     const img = mapRef.current;
+//     if (!img || !img.complete) return;
+//     const naturalWidth = img.naturalWidth;
+//     const naturalHeight = img.naturalHeight;
+//     const containerWidth = window.innerWidth;
+//     const containerHeight = window.innerHeight;
+//     const ratio = Math.min(containerWidth / naturalWidth, containerHeight / naturalHeight);
+//     const displayedWidth = naturalWidth * ratio;
+//     const displayedHeight = naturalHeight * ratio;
+//     const offsetX = (containerWidth - displayedWidth) / 2;
+//     const offsetY = (containerHeight - displayedHeight) / 2;
+//     setImageInfo({ offsetX, offsetY, scale: ratio, naturalWidth, naturalHeight });
+//     setScale(ratio);
+//   };
+
+//   useEffect(() => {
+//     updateImageInfo();
+//     window.addEventListener("resize", updateImageInfo);
+//     return () => window.removeEventListener("resize", updateImageInfo);
+//   }, []);
+
+//   // When a grouped location is selected in the store (a song click from Slide), open slide
+//   useEffect(() => {
+//     if (selectedLocation) {
+//       setIsSlideVisible(true);
+//       setTimeout(() => setIsAnimating(true), 10);
+//     }
+//   }, [selectedLocation]);
+
+//   const zoomToLocation = (locId) => {
+//     // if already zoomed into same, do nothing or toggle out
+//     if (zoomedLocationId === locId) return;
+//     const loc = groupedLocations.find((g) => g.id === locId);
+//     if (!loc) return;
+//     // compute pixel coords for the anchor point (using the stored coords percent)
+//     const topPercent = parseFloat(loc.coords.top.replace("%", ""));
+//     const leftPercent = parseFloat(loc.coords.left.replace("%", ""));
+//     const { offsetX, offsetY, scale: imgScale, naturalWidth, naturalHeight } = imageInfo;
+
+//     // fallback if imageInfo not ready
+//     const displayedWidth = naturalWidth * imgScale || window.innerWidth;
+//     const displayedHeight = naturalHeight * imgScale || window.innerHeight;
+
+//     const anchorX = offsetX + (leftPercent / 100) * displayedWidth;
+//     const anchorY = offsetY + (topPercent / 100) * displayedHeight;
+
+//     // zoom factor (tweakable)
+//     const zoomScale = Math.min(2.2, window.innerWidth / 600);
+
+//     // translate so anchor becomes centered (center of viewport)
+//     const centerX = window.innerWidth / 2;
+//     const centerY = window.innerHeight / 2;
+
+//     const translateX = centerX - anchorX;
+//     const translateY = centerY - anchorY;
+
+//     // because we also scale, adjust translate to account for scale origin:
+//     // apply translate then scale around center: use transform-origin center center
+//     setMapTransform({ translateX, translateY, scale: zoomScale });
+//     setZoomedLocationId(locId);
+
+//     // small CSS transition via class or inline style
+//     // we'll keep the musical note pins visible after short delay (simulate zoom animation)
+//     setTimeout(() => {
+//       // focus on showing musical notes - nothing to do here besides state
+//     }, 300);
+//   };
+
+//   const zoomOut = () => {
+//     setZoomedLocationId(null);
+//     setMapTransform({ translateX: 0, translateY: 0, scale: 1 });
+//   };
+
+//   // Handle main grouped location pin click: zoom in (not open slide)
+//   const handleMainPinClick = (locId) => {
+//     zoomToLocation(locId);
+//   };
+
+//   // After clicking a musical note, setSelectedLocation with songId to open Slide
+//   const handleSongPinClick = (locId, song) => {
+//     // set selectedLocation in store with song
+//     setSelectedLocation({ id: locId, songId: song.id });
+//   };
+
+//   // compute pixel position helper
+//   const computePixelFromCoords = (coords) => {
+//     const topPercent = parseFloat(coords.top.replace("%", ""));
+//     const leftPercent = parseFloat(coords.left.replace("%", ""));
+//     const { offsetX, scale: imgScale, naturalWidth, naturalHeight } = imageInfo;
+//     const displayedWidth = naturalWidth * imgScale;
+//     const displayedHeight = naturalHeight * imgScale;
+//     const x = offsetX + (leftPercent / 100) * displayedWidth;
+//     const y = (window.innerHeight - displayedHeight) / 2 + (topPercent / 100) * displayedHeight;
+//     return { x, y };
+//   };
+
+//   // distribute note icons around anchor (basic radial layout)
+//   const getSongPinPositions = (loc) => {
+//     const { x: anchorX, y: anchorY } = computePixelFromCoords(loc.coords);
+//     const songs = loc.songs || [];
+//     const radius = Math.min(90, 30 + songs.length * 12); // adjust radius by number of songs
+//     const positions = songs.map((s, i) => {
+//       const angle = (i / songs.length) * Math.PI * 2;
+//       const px = anchorX + Math.cos(angle) * radius;
+//       const py = anchorY + Math.sin(angle) * radius;
+//       return { song: s, left: px, top: py };
+//     });
+//     return positions;
+//   };
+
+//   return (
+//     <div className="h-screen w-full flex justify-center items-center overflow-hidden relative" ref={containerRef}>
+//       <audio ref={audioRef} src={song1} loop preload="auto" />
+//       <div
+//         className={`relative flex-shrink-0 max-w-full max-h-screen w-full h-full ${
+//           hours > 5 && hours < 18 ? "bg-[rgba(196,170,141,0.9)]" : "bg-[rgb(15,15,15)]"
+//         }`}
+//         style={{ backgroundImage: `url(${grainBG})` }}
+//       >
+//         <h2
+//           className={`fixed left-5 top-5 lg:left-13 lg:top-13 text-center text-[1.2rem] sm:text-[1.5rem] md:text-[2rem] lg:text-[2.5rem] rock mb-2 leading-tight ${
+//             hours > 5 && hours < 18 ? "text-primary-100" : "text-textLight-100"
+//           }`}
+//         >
+//           Explore the Kani
+//           <br />
+//           <span className="lowercase">journey</span>
+//         </h2>
+
+//         {/* Map wrapper for transform (scale + translate) */}
+//         <div
+//           className="map-transform-wrapper w-full h-full transition-transform duration-500 ease-in-out"
+//           style={{
+//             transformOrigin: "center center",
+//             transform: `translate(${mapTransform.translateX}px, ${mapTransform.translateY}px) scale(${mapTransform.scale})`,
+//           }}
+//         >
+//           <img
+//             ref={mapRef}
+//             src={hours > 5 && hours < 18 ? mapDay : mapNight}
+//             alt="Map"
+//             className="max-w-full max-h-screen object-contain w-full h-full"
+//             onLoad={updateImageInfo}
+//           />
+
+//           {/* Only render the 7 main location pins (groupedLocations) */}
+//           {groupedLocations.map((loc) => {
+//             const topPercent = parseFloat(loc.coords.top.replace("%", ""));
+//             const leftPercent = parseFloat(loc.coords.left.replace("%", ""));
+//             const { offsetX, scale: imgScale, naturalWidth, naturalHeight } = imageInfo;
+//             const displayedWidth = naturalWidth * (imgScale || 1) || window.innerWidth;
+//             const displayedHeight = naturalHeight * (imgScale || 1) || window.innerHeight;
+//             const topPx = (window.innerHeight - displayedHeight) / 2 + (topPercent / 100) * displayedHeight;
+//             const leftPx = offsetX + (leftPercent / 100) * displayedWidth;
+
+//             return (
+//               <img
+//                 key={loc.id}
+//                 src={locPin}
+//                 alt={loc.locationName}
+//                 className="absolute cursor-pointer transition-all duration-200 hover:scale-110 z-20"
+//                 style={{
+//                   top: `${topPx}px`,
+//                   left: `${leftPx}px`,
+//                   width: pinWidth,
+//                   height: pinHeight,
+//                   transform: "translate(-50%, -100%)",
+//                 }}
+//                 onClick={() => handleMainPinClick(loc.id)}
+//               />
+//             );
+//           })}
+
+//           {/* When zoomed to a specific location, render song pins (musical notes) around it */}
+//           {zoomedLocationId &&
+//             (() => {
+//               const loc = groupedLocations.find((g) => g.id === zoomedLocationId);
+//               if (!loc) return null;
+//               const positions = getSongPinPositions(loc);
+//               return positions.map((pObj, i) => (
+//                 <img
+//                   key={pObj.song.id}
+//                   src={musicalNote} // replace with your musical note icon later
+//                   alt={pObj.song.songTitle}
+//                   className="absolute cursor-pointer z-30 transition-transform duration-200 hover:scale-125"
+//                   style={{
+//                     top: `${pObj.top}px`,
+//                     left: `${pObj.left}px`,
+//                     width: 44,
+//                     height: 44,
+//                     transform: "translate(-50%, -50%)",
+//                   }}
+//                   onClick={() => handleSongPinClick(loc.id, pObj.song)}
+//                 />
+//               ));
+//             })()}
+//         </div>
+
+//         {/* speaker */}
+//         <button onClick={togglePlay} className="cursor-pointer fixed bottom-6 left-12 lg:bottom-10 z-40">
+//           <img src={playing ? speakerMute : speaker} alt={playing ? "Mute" : "Play"} className="h-5 w-5 sm:h-6 sm:w-6 lg:h-12 lg:w-12" />
+//         </button>
+
+//         {/* Zoom-out button appears when zoomed */}
+//         {zoomedLocationId && (
+//           <button
+//             onClick={zoomOut}
+//             className="fixed top-5 right-5 z-50 bg-white/90 rounded-full p-2 shadow-md"
+//             aria-label="Zoom out"
+//           >
+//             {/* replace with your close/zoom-out icon if you want */}
+//             ✕
+//           </button>
+//         )}
+//       </div>
+
+//       {/* Slide overlay (unchanged usage) */}
+//       {isSlideVisible && (
+//         <div className="fixed inset-0 bg-black/55 z-50 flex items-center justify-center p-2 sm:p-4 md:p-6 lg:p-8 xl:p-10">
+//           <Slide
+//             location={selectedLocation}
+//             close={() => {
+//               // keep behaviour: close slide but if you were zoomed, keep zoomed visible
+//               setIsAnimating(false);
+//               setTimeout(() => {
+//                 setIsSlideVisible(false);
+//                 setIsAnimating(false);
+//                 // store clearSelected will also clear location.selectedSong
+//                 clearSelected();
+//               }, 300);
+//             }}
+//             isAnimating={isAnimating}
+//             onNext={() => {
+//               // move to next song in same location if present
+//               if (!selectedLocation) return;
+//               const songs = selectedLocation.songs || [];
+//               if (!selectedLocation.selectedSong || songs.length === 0) return;
+//               const currentIndex = songs.findIndex((s) => s.id === selectedLocation.selectedSong.id);
+//               const nextIndex = (currentIndex + 1) % songs.length;
+//               setSelectedLocation({ id: selectedLocation.id, songId: songs[nextIndex].id });
+//             }}
+//             onPrevious={() => {
+//               if (!selectedLocation) return;
+//               const songs = selectedLocation.songs || [];
+//               if (!selectedLocation.selectedSong || songs.length === 0) return;
+//               const currentIndex = songs.findIndex((s) => s.id === selectedLocation.selectedSong.id);
+//               const prevIndex = (currentIndex - 1 + songs.length) % songs.length;
+//               setSelectedLocation({ id: selectedLocation.id, songId: songs[prevIndex].id });
+//             }}
+//           />
+//         </div>
+//       )}
+//     </div>
+//   );
+// }
+
+// export default Map;
+
+
+
+
 
 import React, { useEffect, useState, useRef, useCallback } from "react";
 import useLocationStore from "../store/useLocationStore";
