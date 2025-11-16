@@ -10,12 +10,17 @@ import Slide from "./Slide";
 import locationPins from "../../locations";
 import ZoomIn from "../assets/icons/ZoomIn.svg"
 import ZoomOut from "../assets/icons/ZoomOut.svg"
+import webtoast from "../assets/icons/webtoast.svg"
+import mobiletoast from "../assets/icons/mobiletoast.svg"
 
 function Map() {
   const { selectedLocation, setSelectedLocation, clearSelected } = useLocationStore();
   const [isSlideVisible, setIsSlideVisible] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
   const [showLandscapePrompt, setShowLandscapePrompt] = useState(false);
+
+  // Toast state
+  const [showToast, setShowToast] = useState(false);
 
   // image metadata & layout
   const [naturalSize, setNaturalSize] = useState({ w: 0, h: 0 });
@@ -58,6 +63,15 @@ function Map() {
   const mapContainerRef = useRef(null);
   const now = new Date();
   const hours = now.getHours();
+
+  // Toast effect - show on mount for 4 seconds
+  useEffect(() => {
+    setShowToast(true);
+    const timer = setTimeout(() => {
+      setShowToast(false);
+    }, 4000);
+    return () => clearTimeout(timer);
+  }, []);
 
   const togglePlay = () => {
     const audio = audioRef.current;
@@ -434,6 +448,16 @@ function Map() {
   return (
     <div className="h-screen w-full flex justify-center items-center overflow-hidden relative">
       <audio ref={audioRef} src={song1} loop preload="auto" />
+
+      {showToast && (
+        <div className="fixed left-12 top-10 z-50">
+          <img
+            src={isMobile ? mobiletoast : webtoast}
+            alt="Toast Notification"
+            className="w-auto h-auto max-w-sm max-h-32 object-contain"
+          />
+        </div>
+      )}
 
       {showLandscapePrompt && (
         <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4">
