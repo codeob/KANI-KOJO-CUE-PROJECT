@@ -87,19 +87,31 @@ const positionPhotoContainer = async () => {
     }
   }, []);
 
-  // Resize + Orientation handlers
+  // Resize + Orientation handlers (debounced & guarded)
   useEffect(() => {
-    checkOrientation();
-    const handleResizeOrOrientation = () => {
-      checkOrientation();
-      positionPhotoContainer(); // Reposition on change
+    let tId = 0;
+    const debounced = () => {
+      if (tId) clearTimeout(tId);
+      tId = setTimeout(() => {
+        // Only set if changed to avoid re-renders
+        const isSmall = window.innerWidth < 640;
+        const isPortrait = window.innerWidth < window.innerHeight;
+        const nextPrompt = isSmall && isPortrait;
+        setShowLandscapePrompt((prev) => (prev !== nextPrompt ? nextPrompt : prev));
+        // batch layout adjustment with rAF after state
+        requestAnimationFrame(() => positionPhotoContainer());
+      }, 200);
     };
 
-    window.addEventListener("resize", handleResizeOrOrientation);
-    window.addEventListener("orientationchange", handleResizeOrOrientation);
+    // initial
+    debounced();
+
+    window.addEventListener("resize", debounced);
+    window.addEventListener("orientationchange", debounced);
     return () => {
-      window.removeEventListener("resize", handleResizeOrOrientation);
-      window.removeEventListener("orientationchange", handleResizeOrOrientation);
+      if (tId) clearTimeout(tId);
+      window.removeEventListener("resize", debounced);
+      window.removeEventListener("orientationchange", debounced);
     };
   }, []);
 
