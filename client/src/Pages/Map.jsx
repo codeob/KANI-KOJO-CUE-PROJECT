@@ -8,13 +8,16 @@ import speaker from "../assets/icons/speaker.svg";
 import speakerMute from "../assets/icons/speakerMute.svg";
 import Slide from "./Slide";
 import locationPins from "../../locations";
-import ZoomIn from "../assets/icons/ZoomIn.svg"
-import ZoomOut from "../assets/icons/ZoomOut.svg"
-import webtoast from "../assets/icons/webtoast.svg"
-import mobiletoast from "../assets/icons/mobiletoast.svg"
+import ZoomIn from "../assets/icons/ZoomIn.svg";
+import ZoomOut from "../assets/icons/ZoomOut.svg";
+import webtoast from "../assets/icons/webtoast.svg";
+import mobiletoast from "../assets/icons/mobiletoast.svg";
+import calendar from "../assets/icons/calendardate.svg";
+import shopbag from "../assets/icons/shoppingbag.svg"
 
 function Map() {
-  const { selectedLocation, setSelectedLocation, clearSelected } = useLocationStore();
+  const { selectedLocation, setSelectedLocation, clearSelected } =
+    useLocationStore();
   const [isSlideVisible, setIsSlideVisible] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
   const [showLandscapePrompt, setShowLandscapePrompt] = useState(false);
@@ -38,14 +41,20 @@ function Map() {
   const [userScale, setUserScale] = useState(1.0);
   const [isPinching, setIsPinching] = useState(false);
   const getIsMobile = () => {
-    const coarse = typeof window !== 'undefined' && window.matchMedia ? window.matchMedia('(pointer: coarse)').matches : false;
-    const smallViewport = Math.max(window.innerWidth, window.innerHeight) <= 1024;
+    const coarse =
+      typeof window !== "undefined" && window.matchMedia
+        ? window.matchMedia("(pointer: coarse)").matches
+        : false;
+    const smallViewport =
+      Math.max(window.innerWidth, window.innerHeight) <= 1024;
     return coarse || smallViewport;
   };
   const [isMobile, setIsMobile] = useState(getIsMobile());
   const [isLandscape, setIsLandscape] = useState(
-    (typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(orientation: landscape)').matches) ||
-    window.innerWidth > window.innerHeight
+    (typeof window !== "undefined" &&
+      window.matchMedia &&
+      window.matchMedia("(orientation: landscape)").matches) ||
+      window.innerWidth > window.innerHeight
   );
 
   const [playing, setPlaying] = useState(false);
@@ -64,10 +73,18 @@ function Map() {
   const initialDistRef = useRef(0);
   const initialUserScaleRef = useRef(1.0);
 
-  useEffect(() => { userScaleRef.current = userScale; }, [userScale]);
-  useEffect(() => { panRef.current = pan; }, [pan]);
-  useEffect(() => { imageInfoRef.current = imageInfo; }, [imageInfo]);
-  useEffect(() => { naturalSizeRef.current = naturalSize; }, [naturalSize]);
+  useEffect(() => {
+    userScaleRef.current = userScale;
+  }, [userScale]);
+  useEffect(() => {
+    panRef.current = pan;
+  }, [pan]);
+  useEffect(() => {
+    imageInfoRef.current = imageInfo;
+  }, [imageInfo]);
+  useEffect(() => {
+    naturalSizeRef.current = naturalSize;
+  }, [naturalSize]);
 
   const mapContainerRef = useRef(null);
   const now = new Date();
@@ -136,36 +153,39 @@ function Map() {
   }, []);
 
   // Zoom function at a specific point (relative to container)
-  const doZoom = useCallback((scaleFactor, optPointX, optPointY) => {
-    const ii = imageInfoRef.current;
-    const ns = naturalSizeRef.current;
-    if (!ns.w || !ns.h || !mapContainerRef.current) return;
+  const doZoom = useCallback(
+    (scaleFactor, optPointX, optPointY) => {
+      const ii = imageInfoRef.current;
+      const ns = naturalSizeRef.current;
+      if (!ns.w || !ns.h || !mapContainerRef.current) return;
 
-    const rect = mapContainerRef.current.getBoundingClientRect();
-    const pointX = optPointX !== undefined ? optPointX : ii.containerW / 2;
-    const pointY = optPointY !== undefined ? optPointY : ii.containerH / 2;
-    const currentScale = ii.scale;
-    const currentOffsetX = ii.offsetX + panRef.current.x;
-    const currentOffsetY = ii.offsetY + panRef.current.y;
-    const worldX = (pointX - currentOffsetX) / currentScale;
-    const worldY = (pointY - currentOffsetY) / currentScale;
+      const rect = mapContainerRef.current.getBoundingClientRect();
+      const pointX = optPointX !== undefined ? optPointX : ii.containerW / 2;
+      const pointY = optPointY !== undefined ? optPointY : ii.containerH / 2;
+      const currentScale = ii.scale;
+      const currentOffsetX = ii.offsetX + panRef.current.x;
+      const currentOffsetY = ii.offsetY + panRef.current.y;
+      const worldX = (pointX - currentOffsetX) / currentScale;
+      const worldY = (pointY - currentOffsetY) / currentScale;
 
-    let newUserScale = userScaleRef.current * scaleFactor;
-    newUserScale = Math.max(0.5, Math.min(5, newUserScale));
+      let newUserScale = userScaleRef.current * scaleFactor;
+      newUserScale = Math.max(0.5, Math.min(5, newUserScale));
 
-    const baseRatio = Math.min(ii.containerW / ns.w, ii.containerH / ns.h);
-    const ZOOM_FACTOR = getZoomFactor(ii.containerW);
-    const newScale = baseRatio * ZOOM_FACTOR * newUserScale;
-    const newDisplayedW = ns.w * newScale;
-    const newDisplayedH = ns.h * newScale;
-    const newOffsetX = (ii.containerW - newDisplayedW) / 2;
-    const newOffsetY = (ii.containerH - newDisplayedH) / 2;
-    const newPanX = pointX - worldX * newScale - newOffsetX;
-    const newPanY = pointY - worldY * newScale - newOffsetY;
+      const baseRatio = Math.min(ii.containerW / ns.w, ii.containerH / ns.h);
+      const ZOOM_FACTOR = getZoomFactor(ii.containerW);
+      const newScale = baseRatio * ZOOM_FACTOR * newUserScale;
+      const newDisplayedW = ns.w * newScale;
+      const newDisplayedH = ns.h * newScale;
+      const newOffsetX = (ii.containerW - newDisplayedW) / 2;
+      const newOffsetY = (ii.containerH - newDisplayedH) / 2;
+      const newPanX = pointX - worldX * newScale - newOffsetX;
+      const newPanY = pointY - worldY * newScale - newOffsetY;
 
-    setUserScale(newUserScale);
-    setPan({ x: newPanX, y: newPanY });
-  }, [getZoomFactor]);
+      setUserScale(newUserScale);
+      setPan({ x: newPanX, y: newPanY });
+    },
+    [getZoomFactor]
+  );
 
   // compute image info (displayed width/height, offsets) using naturalSize
   const computeImageInfo = useCallback(() => {
@@ -274,14 +294,17 @@ function Map() {
   }, []);
 
   // Wheel zoom handler (desktop)
-  const handleWheel = useCallback((e) => {
-    e.preventDefault();
-    const rect = mapContainerRef.current.getBoundingClientRect();
-    const mouseX = e.clientX - rect.left;
-    const mouseY = e.clientY - rect.top;
-    const scaleFactor = e.deltaY < 0 ? 1.1 : 0.9;
-    doZoom(scaleFactor, mouseX, mouseY);
-  }, [doZoom]);
+  const handleWheel = useCallback(
+    (e) => {
+      e.preventDefault();
+      const rect = mapContainerRef.current.getBoundingClientRect();
+      const mouseX = e.clientX - rect.left;
+      const mouseY = e.clientY - rect.top;
+      const scaleFactor = e.deltaY < 0 ? 1.1 : 0.9;
+      doZoom(scaleFactor, mouseX, mouseY);
+    },
+    [doZoom]
+  );
 
   // Touch handlers for pinch zoom (mobile)
   const handleTouchStart = useCallback((e) => {
@@ -290,51 +313,57 @@ function Map() {
       const rect = mapContainerRef.current.getBoundingClientRect();
       const t0 = e.touches[0];
       const t1 = e.touches[1];
-      initialDistRef.current = Math.hypot(t1.clientX - t0.clientX, t1.clientY - t0.clientY);
+      initialDistRef.current = Math.hypot(
+        t1.clientX - t0.clientX,
+        t1.clientY - t0.clientY
+      );
       initialUserScaleRef.current = userScaleRef.current;
     }
   }, []);
 
-  const handleTouchMove = useCallback((e) => {
-    if (e.touches.length !== 2 || !mapContainerRef.current) return;
-    e.preventDefault();
+  const handleTouchMove = useCallback(
+    (e) => {
+      if (e.touches.length !== 2 || !mapContainerRef.current) return;
+      e.preventDefault();
 
-    const rect = mapContainerRef.current.getBoundingClientRect();
-    const t0 = e.touches[0];
-    const t1 = e.touches[1];
-    const mouseX = ((t0.clientX + t1.clientX) / 2) - rect.left;
-    const mouseY = ((t0.clientY + t1.clientY) / 2) - rect.top;
-    const dist = Math.hypot(t1.clientX - t0.clientX, t1.clientY - t0.clientY);
-    const initialDist = initialDistRef.current;
-    if (initialDist <= 0) return;
+      const rect = mapContainerRef.current.getBoundingClientRect();
+      const t0 = e.touches[0];
+      const t1 = e.touches[1];
+      const mouseX = (t0.clientX + t1.clientX) / 2 - rect.left;
+      const mouseY = (t0.clientY + t1.clientY) / 2 - rect.top;
+      const dist = Math.hypot(t1.clientX - t0.clientX, t1.clientY - t0.clientY);
+      const initialDist = initialDistRef.current;
+      if (initialDist <= 0) return;
 
-    const scaleFactor = dist / initialDist;
-    let newUserScale = initialUserScaleRef.current * scaleFactor;
-    newUserScale = Math.max(0.5, Math.min(5, newUserScale));
+      const scaleFactor = dist / initialDist;
+      let newUserScale = initialUserScaleRef.current * scaleFactor;
+      newUserScale = Math.max(0.5, Math.min(5, newUserScale));
 
-    if (Math.abs(newUserScale - userScaleRef.current) < 0.005) return;
+      if (Math.abs(newUserScale - userScaleRef.current) < 0.005) return;
 
-    const ii = imageInfoRef.current;
-    const ns = naturalSizeRef.current;
-    const currentScale = ii.scale;
-    const currentOffsetX = ii.offsetX + panRef.current.x;
-    const currentOffsetY = ii.offsetY + panRef.current.y;
-    const worldX = (mouseX - currentOffsetX) / currentScale;
-    const worldY = (mouseY - currentOffsetY) / currentScale;
+      const ii = imageInfoRef.current;
+      const ns = naturalSizeRef.current;
+      const currentScale = ii.scale;
+      const currentOffsetX = ii.offsetX + panRef.current.x;
+      const currentOffsetY = ii.offsetY + panRef.current.y;
+      const worldX = (mouseX - currentOffsetX) / currentScale;
+      const worldY = (mouseY - currentOffsetY) / currentScale;
 
-    const baseRatio = Math.min(ii.containerW / ns.w, ii.containerH / ns.h);
-    const ZOOM_FACTOR = getZoomFactor(ii.containerW);
-    const newScale = baseRatio * ZOOM_FACTOR * newUserScale;
-    const newDisplayedW = ns.w * newScale;
-    const newDisplayedH = ns.h * newScale;
-    const newOffsetX = (ii.containerW - newDisplayedW) / 2;
-    const newOffsetY = (ii.containerH - newDisplayedH) / 2;
-    const newPanX = mouseX - worldX * newScale - newOffsetX;
-    const newPanY = mouseY - worldY * newScale - newOffsetY;
+      const baseRatio = Math.min(ii.containerW / ns.w, ii.containerH / ns.h);
+      const ZOOM_FACTOR = getZoomFactor(ii.containerW);
+      const newScale = baseRatio * ZOOM_FACTOR * newUserScale;
+      const newDisplayedW = ns.w * newScale;
+      const newDisplayedH = ns.h * newScale;
+      const newOffsetX = (ii.containerW - newDisplayedW) / 2;
+      const newOffsetY = (ii.containerH - newDisplayedH) / 2;
+      const newPanX = mouseX - worldX * newScale - newOffsetX;
+      const newPanY = mouseY - worldY * newScale - newOffsetY;
 
-    setUserScale(newUserScale);
-    setPan({ x: newPanX, y: newPanY });
-  }, [getZoomFactor]);
+      setUserScale(newUserScale);
+      setPan({ x: newPanX, y: newPanY });
+    },
+    [getZoomFactor]
+  );
 
   const handleTouchEnd = useCallback((e) => {
     if (e.touches.length < 2) {
@@ -348,16 +377,16 @@ function Map() {
     const el = mapContainerRef.current;
     if (!el) return;
 
-    el.addEventListener('touchstart', handleTouchStart, { passive: true });
-    el.addEventListener('touchmove', handleTouchMove, { passive: false });
-    el.addEventListener('touchend', handleTouchEnd, { passive: true });
-    el.addEventListener('wheel', handleWheel, { passive: false });
+    el.addEventListener("touchstart", handleTouchStart, { passive: true });
+    el.addEventListener("touchmove", handleTouchMove, { passive: false });
+    el.addEventListener("touchend", handleTouchEnd, { passive: true });
+    el.addEventListener("wheel", handleWheel, { passive: false });
 
     return () => {
-      el.removeEventListener('touchstart', handleTouchStart);
-      el.removeEventListener('touchmove', handleTouchMove);
-      el.removeEventListener('touchend', handleTouchEnd);
-      el.removeEventListener('wheel', handleWheel);
+      el.removeEventListener("touchstart", handleTouchStart);
+      el.removeEventListener("touchmove", handleTouchMove);
+      el.removeEventListener("touchend", handleTouchEnd);
+      el.removeEventListener("wheel", handleWheel);
     };
   }, [handleTouchStart, handleTouchMove, handleTouchEnd, handleWheel]);
 
@@ -397,8 +426,13 @@ function Map() {
   // show rotate prompt on small portrait devices
   const checkOrientation = () => {
     const isSmallScreen = Math.min(window.innerWidth, window.innerHeight) < 640;
-    const mql = typeof window !== 'undefined' && window.matchMedia ? window.matchMedia('(orientation: landscape)') : null;
-    const landscape = mql ? mql.matches : window.innerWidth > window.innerHeight;
+    const mql =
+      typeof window !== "undefined" && window.matchMedia
+        ? window.matchMedia("(orientation: landscape)")
+        : null;
+    const landscape = mql
+      ? mql.matches
+      : window.innerWidth > window.innerHeight;
     setShowLandscapePrompt(isSmallScreen && !landscape);
     setIsLandscape(landscape);
   };
@@ -464,7 +498,8 @@ function Map() {
   const handlePrevious = (currentId) => {
     const currentIndex = locationPins.findIndex((loc) => loc.id === currentId);
     if (currentIndex !== -1) {
-      const prevIndex = (currentIndex - 1 + locationPins.length) % locationPins.length;
+      const prevIndex =
+        (currentIndex - 1 + locationPins.length) % locationPins.length;
       setSelectedLocation(locationPins[prevIndex].id);
     }
   };
@@ -473,15 +508,25 @@ function Map() {
   const pinBaseWidth = 220;
   const pinBaseHeight = 270;
   const getPinDimensions = () => {
-    if (window.innerWidth >= 1536) return { width: pinBaseWidth * 1.6, height: pinBaseHeight * 1.6 };
-    if (window.innerWidth >= 1280) return { width: pinBaseWidth * 1.4, height: pinBaseHeight * 1.4 };
-    if (window.innerWidth >= 1024) return { width: pinBaseWidth * 1.3, height: pinBaseHeight * 1.3 };
-    if (window.innerWidth >= 768) return { width: pinBaseWidth * 1.1, height: pinBaseHeight * 1.1 };
+    if (window.innerWidth >= 1536)
+      return { width: pinBaseWidth * 1.6, height: pinBaseHeight * 1.6 };
+    if (window.innerWidth >= 1280)
+      return { width: pinBaseWidth * 1.4, height: pinBaseHeight * 1.4 };
+    if (window.innerWidth >= 1024)
+      return { width: pinBaseWidth * 1.3, height: pinBaseHeight * 1.3 };
+    if (window.innerWidth >= 768)
+      return { width: pinBaseWidth * 1.1, height: pinBaseHeight * 1.1 };
     return { width: pinBaseWidth * 0.8, height: pinBaseHeight * 1 };
   };
   const pinDimensions = getPinDimensions();
-  const pinWidth = `${Math.max(20, pinDimensions.width * imageInfo.baseScale)}px`;
-  const pinHeight = `${Math.max(20, pinDimensions.height * imageInfo.baseScale)}px`;
+  const pinWidth = `${Math.max(
+    20,
+    pinDimensions.width * imageInfo.baseScale
+  )}px`;
+  const pinHeight = `${Math.max(
+    20,
+    pinDimensions.height * imageInfo.baseScale
+  )}px`;
 
   // whenever natural size changes, recompute image info
   useEffect(() => {
@@ -513,15 +558,39 @@ function Map() {
               Please Rotate Your Device
             </h2>
             <p className="text-sm sm:text-base text-primary-100">
-              For best experience, use landscape mode or view on a larger screen.
+              For best experience, use landscape mode or view on a larger
+              screen.
             </p>
           </div>
         </div>
       )}
-
+      {/* get ticket and buy Merch */}
+      <div className="fixed z-50 bg-primary-100 rounded-xl flex items-center justify-between gap-6 px-4 py-2 
+                      left-1/2 -translate-x-1/2 bottom-6
+                      w-[90%] max-w-[26rem]
+                      sm:bottom-8 sm:w-[26rem]
+                      md:bottom-10 md:max-w-[28rem]
+                      lg:bottom-12">
+        <a href="https://formybrotherslive.hustlesasa.shop/" target="_blank" rel="noopener noreferrer" className="cursor-pointer flex-1">
+          <button className="flex flex-row items-center gap-2 text-white underline">
+            <img src={calendar} alt="Calendar icon" className="h-5 w-5 sm:h-6 sm:w-6" />
+            <span className="text-sm sm:text-base">Get Tickets</span>
+          </button>
+        </a>
+        <div className="mx-2 h-6 w-px bg-white/70 hidden sm:block" />
+        <a href="https://ripeorganic.world/" target="_blank" rel="noopener noreferrer" className="cursor-pointer flex-1 text-right sm:text-left">
+          <button className="flex flex-row items-center gap-2 text-white underline justify-end sm:justify-start">
+            <img src={shopbag} alt="Shopping bag icon" className="h-5 w-5 sm:h-6 sm:w-6" />
+            <span className="text-sm sm:text-base">Buy Merch</span>
+          </button>
+        </a>
+      </div>
+      {/* get ticket and buy Merch */}
       <div
         className={`relative w-full h-full ${
-          hours > 5 && hours < 18 ? "bg-[rgba(196,170,141,0.9)]" : "bg-[rgb(15,15,15)]"
+          hours > 5 && hours < 18
+            ? "bg-[rgba(196,170,141,0.9)]"
+            : "bg-[rgb(15,15,15)]"
         }`}
         style={{ backgroundImage: `url(${grainBG})` }}
       >
@@ -590,24 +659,26 @@ function Map() {
         {isMobile && isLandscape && (
           <div
             className="fixed right-4 flex flex-col gap-2 z-40"
-            style={{ bottom: "calc(env(safe-area-inset-bottom, 0px) + 2rem)", right: "calc(env(safe-area-inset-right, 0px) + 1rem)", pointerEvents: "auto" }}
+            style={{
+              bottom: "calc(env(safe-area-inset-bottom, 0px) + 2rem)",
+              right: "calc(env(safe-area-inset-right, 0px) + 1rem)",
+              pointerEvents: "auto",
+            }}
           >
-            <button
-              onClick={handleZoomIn}
-              className="w-12 h-12"
-            >
-              <img src={ZoomIn} alt="" className="w-12 h-12"/>
+            <button onClick={handleZoomIn} className="w-12 h-12">
+              <img src={ZoomIn} alt="" className="w-12 h-12" />
             </button>
-            <button
-              onClick={handleZoomOut}
-            >
+            <button onClick={handleZoomOut}>
               <img src={ZoomOut} alt="" className="w-12 h-12 " />
             </button>
           </div>
         )}
 
         {/* Speaker toggle */}
-        <button onClick={togglePlay} className="cursor-pointer fixed bottom-6 left-12 lg:bottom-10">
+        <button
+          onClick={togglePlay}
+          className="cursor-pointer fixed bottom-6 left-12 lg:bottom-10 z-50"
+        >
           <img
             src={playing ? speakerMute : speaker}
             alt={playing ? "Mute" : "Play"}
