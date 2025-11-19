@@ -38,6 +38,7 @@ function Map() {
   const [userScale, setUserScale] = useState(1.0);
   const [isPinching, setIsPinching] = useState(false);
   const [isMobile, setIsMobile] = useState(Math.min(window.innerWidth, window.innerHeight) < 768);
+  const [isLandscape, setIsLandscape] = useState(window.innerWidth > window.innerHeight);
 
   const [playing, setPlaying] = useState(false);
   const audioRef = useRef(null);
@@ -390,6 +391,7 @@ function Map() {
     const isSmallScreen = Math.min(window.innerWidth, window.innerHeight) < 640;
     const isPortrait = window.innerWidth < window.innerHeight;
     setShowLandscapePrompt(isSmallScreen && isPortrait);
+    setIsLandscape(!isPortrait);
   };
 
   useEffect(() => {
@@ -575,8 +577,8 @@ function Map() {
           </div>
         </div>
 
-        {/* Zoom buttons - only on mobile */}
-        {isMobile && (
+        {/* Zoom buttons - only on mobile and landscape */}
+        {isMobile && isLandscape && (
           <div className="fixed bottom-8 right-4 flex flex-col gap-2 z-10 md:hidden lg:hidden">
             <button
               onClick={handleZoomIn}
