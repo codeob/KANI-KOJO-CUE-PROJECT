@@ -37,8 +37,16 @@ function Map() {
 
   const [userScale, setUserScale] = useState(1.0);
   const [isPinching, setIsPinching] = useState(false);
-  const [isMobile, setIsMobile] = useState(Math.min(window.innerWidth, window.innerHeight) < 768);
-  const [isLandscape, setIsLandscape] = useState(window.innerWidth > window.innerHeight);
+  const getIsMobile = () => {
+    const coarse = typeof window !== 'undefined' && window.matchMedia ? window.matchMedia('(pointer: coarse)').matches : false;
+    const smallViewport = Math.max(window.innerWidth, window.innerHeight) <= 1024;
+    return coarse || smallViewport;
+  };
+  const [isMobile, setIsMobile] = useState(getIsMobile());
+  const [isLandscape, setIsLandscape] = useState(
+    (typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(orientation: landscape)').matches) ||
+    window.innerWidth > window.innerHeight
+  );
 
   const [playing, setPlaying] = useState(false);
   const audioRef = useRef(null);
@@ -244,7 +252,7 @@ function Map() {
     let tId = 0;
 
     const applyMobile = () => {
-      const next = Math.min(window.innerWidth, window.innerHeight) < 768;
+      const next = getIsMobile();
       setIsMobile((prev) => (prev !== next ? next : prev));
     };
 
@@ -389,9 +397,10 @@ function Map() {
   // show rotate prompt on small portrait devices
   const checkOrientation = () => {
     const isSmallScreen = Math.min(window.innerWidth, window.innerHeight) < 640;
-    const isPortrait = window.innerWidth < window.innerHeight;
-    setShowLandscapePrompt(isSmallScreen && isPortrait);
-    setIsLandscape(!isPortrait);
+    const mql = typeof window !== 'undefined' && window.matchMedia ? window.matchMedia('(orientation: landscape)') : null;
+    const landscape = mql ? mql.matches : window.innerWidth > window.innerHeight;
+    setShowLandscapePrompt(isSmallScreen && !landscape);
+    setIsLandscape(landscape);
   };
 
   useEffect(() => {
@@ -579,7 +588,10 @@ function Map() {
 
         {/* Zoom buttons - only on mobile and landscape */}
         {isMobile && isLandscape && (
-          <div className="fixed bottom-8 right-4 flex flex-col gap-2 z-10 md:hidden lg:hidden">
+          <div
+            className="fixed right-4 flex flex-col gap-2 z-40"
+            style={{ bottom: "calc(env(safe-area-inset-bottom, 0px) + 2rem)", right: "calc(env(safe-area-inset-right, 0px) + 1rem)", pointerEvents: "auto" }}
+          >
             <button
               onClick={handleZoomIn}
               className="w-12 h-12"
