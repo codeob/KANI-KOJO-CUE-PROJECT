@@ -202,35 +202,65 @@ function Map() {
     }
   }, [naturalSize, userScale, getZoomFactor]);
 
-  // Attach resizing and orientation handlers
+  // Attach resizing and orientation handlers (debounced to avoid thrashing)
   useEffect(() => {
-    computeImageInfo();
-    const onResize = () => computeImageInfo();
-    const onOrientation = () => computeImageInfo();
+    let rafId = 0;
+    let lastW = window.innerWidth;
+    let lastH = window.innerHeight;
 
-    window.addEventListener("resize", onResize);
-    window.addEventListener("orientationchange", onOrientation);
+    const scheduleCompute = () => {
+      if (rafId) cancelAnimationFrame(rafId);
+      rafId = requestAnimationFrame(() => {
+        const w = window.innerWidth;
+        const h = window.innerHeight;
+        // Only recompute if container size actually changed
+        if (w !== lastW || h !== lastH) {
+          lastW = w;
+          lastH = h;
+          computeImageInfo();
+        }
+      });
+    };
+
+    // initial compute
+    scheduleCompute();
+
+    const onResizeOrOrientation = () => {
+      scheduleCompute();
+    };
+
+    window.addEventListener("resize", onResizeOrOrientation);
+    window.addEventListener("orientationchange", onResizeOrOrientation);
     return () => {
-      window.removeEventListener("resize", onResize);
-      window.removeEventListener("orientationchange", onOrientation);
+      if (rafId) cancelAnimationFrame(rafId);
+      window.removeEventListener("resize", onResizeOrOrientation);
+      window.removeEventListener("orientationchange", onResizeOrOrientation);
     };
   }, [computeImageInfo]);
 
-  // Check mobile on resize/orientation
+  // Check mobile on resize/orientation (debounced and guarded)
   useEffect(() => {
-    const checkMobile = () => {
-      // Small delay to ensure dimensions are updated after orientation change
-      setTimeout(() => {
-        setIsMobile(Math.min(window.innerWidth, window.innerHeight) < 768);
-      }, 300);
+    let tId = 0;
+
+    const applyMobile = () => {
+      const next = Math.min(window.innerWidth, window.innerHeight) < 768;
+      setIsMobile((prev) => (prev !== next ? next : prev));
     };
 
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    window.addEventListener("orientationchange", checkMobile);
+    const handler = () => {
+      if (tId) clearTimeout(tId);
+      tId = setTimeout(applyMobile, 200);
+    };
+
+    // initial
+    handler();
+
+    window.addEventListener("resize", handler);
+    window.addEventListener("orientationchange", handler);
     return () => {
-      window.removeEventListener("resize", checkMobile);
-      window.removeEventListener("orientationchange", checkMobile);
+      if (tId) clearTimeout(tId);
+      window.removeEventListener("resize", handler);
+      window.removeEventListener("orientationchange", handler);
     };
   }, []);
 
@@ -363,17 +393,23 @@ function Map() {
   };
 
   useEffect(() => {
-    const handleResizeOrOrientation = () => {
-      // Small delay to ensure dimensions are updated after orientation change
-      setTimeout(checkOrientation, 300);
+    let tId = 0;
+    const debounced = () => {
+      if (tId) clearTimeout(tId);
+      tId = setTimeout(() => {
+        checkOrientation();
+      }, 200);
     };
 
-    checkOrientation();
-    window.addEventListener("orientationchange", handleResizeOrOrientation);
-    window.addEventListener("resize", handleResizeOrOrientation);
+    // initial
+    debounced();
+
+    window.addEventListener("orientationchange", debounced);
+    window.addEventListener("resize", debounced);
     return () => {
-      window.removeEventListener("orientationchange", handleResizeOrOrientation);
-      window.removeEventListener("resize", handleResizeOrOrientation);
+      if (tId) clearTimeout(tId);
+      window.removeEventListener("orientationchange", debounced);
+      window.removeEventListener("resize", debounced);
     };
   }, []);
 
