@@ -139,8 +139,8 @@ export default function WrittenReflection() {
 
   const headingText = selectedLocation?.locationName || "Untitled Location";
   const paragraphText =
-    selectedLocation?.WrittenReflection ||
-    selectedLocation?.WrittenRelection ||
+    selectedLocation?.writtenReflection ||
+    selectedLocation?.writtenRelection ||
     "No written reflection available for this location.";
 
   const animatedHeading = useTypingEffect(headingText, 1000);
