@@ -13,6 +13,24 @@ const WaveformPlayer = ({ audioUrl }) => {
   const [duration, setDuration] = useState(0);
   const [waveformData, setWaveformData] = useState([]);
 
+  // Detect small landscape (e.g. phones rotated)
+  const [isSmallLandscape, setIsSmallLandscape] = useState(() =>
+    window.innerWidth < 640 && window.innerWidth > window.innerHeight
+  );
+
+  useEffect(() => {
+    const handler = () => {
+      setIsSmallLandscape(window.innerWidth < 640 && window.innerWidth > window.innerHeight);
+    };
+    window.addEventListener('resize', handler);
+    window.addEventListener('orientationchange', handler);
+    return () => {
+      window.removeEventListener('resize', handler);
+      window.removeEventListener('orientationchange', handler);
+    };
+  }, []);
+
+  // Fake waveform (same as yours)
   useEffect(() => {
     const samples = 60;
     const data = [];
@@ -48,13 +66,12 @@ const WaveformPlayer = ({ audioUrl }) => {
     }
   }, []);
 
+  // Canvas drawing (unchanged logic)
   useEffect(() => {
     if (!canvasRef.current || waveformData.length === 0) return;
-
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
     const rect = canvas.getBoundingClientRect();
-
     canvas.width = rect.width * 2;
     canvas.height = rect.height * 2;
     ctx.scale(2, 2);
@@ -69,9 +86,7 @@ const WaveformPlayer = ({ audioUrl }) => {
       const barHeight = amp * (height * 0.85);
       const x = i * barWidth;
       const y = (height - barHeight) / 2;
-
       const isInProgress = x + barWidth <= (currentTime / duration) * width;
-
       const spacing = 12;
       const effectiveWidth = barWidth - spacing;
 
@@ -81,7 +96,7 @@ const WaveformPlayer = ({ audioUrl }) => {
         ctx.fillStyle = "#AFA692";
       }
 
-      const radius = Math.min(effectiveWidth / 4, 3);
+      const radius = Math.max(0, Math.min(effectiveWidth / 4, 3));
       ctx.beginPath();
       ctx.roundRect(x + spacing / 2, y, effectiveWidth, barHeight, radius);
       ctx.fill();
@@ -108,30 +123,59 @@ const WaveformPlayer = ({ audioUrl }) => {
   };
 
   return (
-    <div className="h-screen relative overflow-hidden">
-      <img src={bgimage} alt="" className="absolute bg-secondy-100/75 h-full w-full object-cover" />
-      <div className="relative z-10 flex flex-col items-center justify-between h-full w-full p-4 sm:p-6 md:p-8 lg:p-10">
-        <div className="w-full">
+    <div className="relative h-screen w-screen overflow-hidden">
+      {/* Background */}
+      <img
+        src={bgimage}
+        alt=""
+        className="absolute inset-0 h-full w-full object-cover"
+      />
+
+      {/* Content */}
+      <div className="relative z-10 flex flex-col justify-between h-full px-4 py-6 sm:px-8 md:px-12 lg:px-16">
+        
+        {/* Top - Heading */}
+        <div className="w-full ">
           <KExpWithCloseBtnHeadingBrown />
         </div>
-        <div className="px-4 sm:px-6 md:px-8 lg:px-[42px] py-6 sm:py-8 md:py-10 lg:py-[52px] max-w-[1020px] w-full"> 
-          <audio ref={audioRef} src={audioUrl} preload="metadata" />
-          <div
-            className="w-full h-40 sm:h-48 md:h-56 lg:h-60 cursor-pointer overflow-hidden"
-            onClick={handleWaveformClick}
-          >
-            <canvas ref={canvasRef} className="w-full h-full" />
-          </div>
-          <div className="flex justify-center mt-2 sm:mt-4 md:mt-6 lg:mt-[8px]">
-            <button
-              onClick={togglePlayPause}
-              className="w-[60px] sm:w-[70px] md:w-[80px] lg:w-[87px] h-[60px] sm:h-[70px] md:h-[80px] lg:h-[87px] bg-[#B69F7C] rounded-full flex items-center justify-center hover:scale-110 active:scale-95 transition-transform duration-200" // changed: responsive button size
+
+        {/* Middle - Waveform + Play Button */}
+        <div className="relative flex-1 flex flex-col items-center justify-center max-w-5xl mx-auto w-full">
+          <div className="relative w-full">
+            <audio ref={audioRef} src={audioUrl} preload="metadata" />
+
+            {/* Waveform Canvas */}
+            <div
+              className="w-full cursor-pointer"
+              style={{ height: isSmallLandscape ? '120px' : 'clamp(160px, 35vh, 280px)' }}
+              onClick={handleWaveformClick}
             >
-              {isPlaying ? <PauseIcon /> : <PlayIcon />}
-            </button>
+              <canvas ref={canvasRef} className="w-full h-full" />
+            </div>
+
+            {/* Play/Pause Button - perfectly centered in all cases */}
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+              <button
+                onClick={togglePlayPause}
+                className={`
+                  pointer-events-auto
+                  w-16 h-16
+                  xs:w-18 xs:h-18
+                  sm:w-20 sm:h-20
+                  md:w-22 md:h-22
+                  lg:w-24 lg:h-24
+                  bg-[#B69F7C] rounded-full flex items-center justify-center
+                  hover:scale-110 active:scale-95 transition-transform duration-200 shadow-2xl
+                `}
+              >
+                {isPlaying ? <PauseIcon /> : <PlayIcon />}
+              </button>
+            </div>
           </div>
         </div>
-        <div className="w-full">
+
+        {/* Bottom - Map & Link */}
+        <div className="w-full flex justify-center pb-2 sm:pb-6">
           <BTMapAndAudioLink />
         </div>
       </div>
