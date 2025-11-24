@@ -144,17 +144,19 @@ function Map() {
     setNaturalSize({ w, h });
   };
 
-  // Get dynamic ZOOM_FACTOR based on container width
+  // Get dynamic ZOOM_FACTOR based on container width and mobile status
   const getZoomFactor = useCallback((containerW) => {
+    if (isMobile) return 1.0; // Static full view on small screens
     if (containerW >= 1536) return 3.0;
     if (containerW >= 1280) return 2.7;
     if (containerW >= 1024) return 2.4;
     return 2.1;
-  }, []);
+  }, [isMobile]);
 
   // Zoom function at a specific point (relative to container)
   const doZoom = useCallback(
     (scaleFactor, optPointX, optPointY) => {
+      if (isMobile) return; // Disable zoom on mobile
       const ii = imageInfoRef.current;
       const ns = naturalSizeRef.current;
       if (!ns.w || !ns.h || !mapContainerRef.current) return;
@@ -296,6 +298,7 @@ function Map() {
   // Wheel zoom handler (desktop)
   const handleWheel = useCallback(
     (e) => {
+      if (isMobile) return; // Disable on mobile
       e.preventDefault();
       const rect = mapContainerRef.current.getBoundingClientRect();
       const mouseX = e.clientX - rect.left;
@@ -303,11 +306,12 @@ function Map() {
       const scaleFactor = e.deltaY < 0 ? 1.1 : 0.9;
       doZoom(scaleFactor, mouseX, mouseY);
     },
-    [doZoom]
+    [doZoom, isMobile]
   );
 
   // Touch handlers for pinch zoom (mobile)
   const handleTouchStart = useCallback((e) => {
+    if (isMobile) return; // Disable on mobile
     if (e.touches.length === 2 && mapContainerRef.current) {
       setIsPinching(true);
       const rect = mapContainerRef.current.getBoundingClientRect();
@@ -319,10 +323,11 @@ function Map() {
       );
       initialUserScaleRef.current = userScaleRef.current;
     }
-  }, []);
+  }, [isMobile]);
 
   const handleTouchMove = useCallback(
     (e) => {
+      if (isMobile) return; // Disable on mobile
       if (e.touches.length !== 2 || !mapContainerRef.current) return;
       e.preventDefault();
 
@@ -362,15 +367,16 @@ function Map() {
       setUserScale(newUserScale);
       setPan({ x: newPanX, y: newPanY });
     },
-    [getZoomFactor]
+    [getZoomFactor, isMobile]
   );
 
   const handleTouchEnd = useCallback((e) => {
+    if (isMobile) return; // Disable on mobile
     if (e.touches.length < 2) {
       setIsPinching(false);
       initialDistRef.current = 0;
     }
-  }, []);
+  }, [isMobile]);
 
   // Attach touch and wheel listeners with proper passive options
   useEffect(() => {
@@ -396,6 +402,7 @@ function Map() {
 
   // pointer handlers - attach move/up to window for robust dragging
   const handlePointerDown = (e) => {
+    if (isMobile) return; // Disable panning on mobile
     // ignore clicks on pins
     if (e.target.closest && e.target.closest(".location-pin")) return;
     if (isPinching) return;
@@ -655,8 +662,8 @@ function Map() {
           </div>
         </div>
 
-        {/* Zoom buttons - only on mobile and landscape */}
-        {isMobile && isLandscape && (
+        {/* Zoom buttons - only on non-mobile and landscape */}
+        {!isMobile && isLandscape && (
           <div
             className="fixed right-4 flex flex-col gap-2 z-40"
             style={{
