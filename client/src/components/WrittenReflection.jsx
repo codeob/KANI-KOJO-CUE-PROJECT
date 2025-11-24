@@ -177,7 +177,7 @@ export default function WrittenReflection() {
                 forceSingleModeWidth={false}
                 min={10}
                 max={36}
-                className="jim-nightshade  mb-2 sm:mb-4"
+                className="font-futura  mb-2 sm:mb-4"
               >
                 {animatedHeading}
               </Textfit>
@@ -187,7 +187,7 @@ export default function WrittenReflection() {
                 forceSingleModeWidth={false}
                 min={8}
                 max={26}
-                className="island-moments whitespace-pre-wrap leading-relaxed "
+                className="font-futura  whitespace-pre-wrap leading-relaxed "
               >
                 {animatedParagraph}
               </Textfit>

@@ -252,6 +252,14 @@ input[type="range"]::-webkit-slider-thumb {
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'NanumPenScript';
+  src: url('../src/assets/font/NanumPenScript-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 .font-biro {
   font-family: 'BiroScript', cursive;
 }
@@ -276,6 +284,10 @@ input[type="range"]::-webkit-slider-thumb {
   font-family: 'RoughOTF', cursive;
 }
 
+.font-nanum {
+  font-family: 'NanumPenScript', cursive;
+}
+
 @layer utilities {
   .font-biro { font-family: 'BiroScript', cursive; }
   .font-futura { font-family: 'FuturaCyrillicDemi', "Helvetica Neue", Arial, sans-serif; }
@@ -283,6 +295,7 @@ input[type="range"]::-webkit-slider-thumb {
   .font-homemadeApple { font-family: 'HomemadeApple', cursive; }
   .font-cocogoose { font-family: 'COCOGOOSELETTERPRESSTRIAL', "Helvetica Neue", Arial, sans-serif; }
   .font-rough { font-family: 'RoughOTF', cursive; }
+  .font-nanum { font-family: 'NanumPenScript', cursive; }
 }
 
 

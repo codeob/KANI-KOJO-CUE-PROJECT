@@ -42,7 +42,7 @@ function Slide({ location, close, isAnimating, onNext, onPrevious }) {
                 <h1 className="oswald text-[0.65rem] sm:text-[0.75rem] md:text-[0.875rem] text-secondy-100 tracking-wide font-bold font-futura"> 
                   THE HEART OF THE STORY
                 </h1>
-                <p className="text-[0.875rem] sm:text-[1rem] md:text-[1.125rem]  text-primary-100 font-biro"> 
+                <p className="text-[0.875rem] sm:text-[1rem] md:text-[1.125rem]  text-primary-100 font-nanum "> 
                   {location.importance}
                 </p>
               </div>

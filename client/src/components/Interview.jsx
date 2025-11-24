@@ -97,7 +97,7 @@ export default function Interview() {
                           mode="multi"
                           max={40}
                           forceSingleModeWidth={false}
-                          className="font-biro leading-7 w-full"
+                          className="font-futura leading-7 w-full"
                         >
                           <p className="break-words whitespace-pre-line">{slot.text}</p>
                         </Textfit>
