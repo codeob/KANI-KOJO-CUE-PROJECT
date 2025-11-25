@@ -104,7 +104,7 @@ function Slide({ location, close, isAnimating, onNext, onPrevious }) {
                   className="w-[100px]  h-[100px]"
                 />
                   </div>
-                  <div className="">
+                  <div className=" ">
                        <h2 className="text-3xl  freckle-face-regular font-normal text-primary-100 "> 
                       {location.songTitle}
                     </h2>
@@ -114,7 +114,7 @@ function Slide({ location, close, isAnimating, onNext, onPrevious }) {
                   </div>
                   </div>
                   {/* Dynamic Buttons */}
-                  <div className="flex flex-row gap-4 sm:gap-6 mt-2.5 "> 
+                  <div className="flex flex-row  gap-4 sm:gap-6 mt-2.5 "> 
                     {location.buttons?.map((btn, index) => (
                       <Link key={index} to={btn.link}>
                         <button className="group relative flex items-center gap-6  justify-between py-2 px-4 sm:px-6 rounded-[10px] w-full cursor-pointer transition-all duration-300 hover:bg-surface-100 focus:bg-secondy-100 outline-none">

@@ -406,7 +406,7 @@ function Map() {
       </div>
 
       {/* Desktop Zoom Buttons */}
-      {!isMobile && (
+      {/* {!isMobile && (
         <div className="fixed right-6 bottom-24 flex flex-col gap-3 z-40">
           <button onClick={() => doZoom(1.2)} className="w-12 h-12 bg-white/20 backdrop-blur rounded-full flex items-center justify-center">
             <img src={ZoomIn} alt="+" />
@@ -415,7 +415,7 @@ function Map() {
             <img src={ZoomOut} alt="-" />
           </button>
         </div>
-      )}
+      )} */}
 
       {/* Speaker */}
       <button onClick={togglePlay} className="fixed left-6 bottom-6 z-50">
