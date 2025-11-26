@@ -18,7 +18,19 @@ export default function MusicVideo({ src }) {
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const [volume, setVolume] = useState(1);
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(false);
+
+  // Convert YouTube URL to embed URL
+  const getEmbedUrl = (url) => {
+    if (!url) return '';
+    const youtuBeMatch = url.match(/youtu\.be\/([a-zA-Z0-9_-]+)/);
+    if (youtuBeMatch) return `https://www.youtube.com/embed/${youtuBeMatch[1]}`;
+    const youtubeMatch = url.match(/youtube\.com\/watch\?v=([a-zA-Z0-9_-]+)/);
+    if (youtubeMatch) return `https://www.youtube.com/embed/${youtubeMatch[1]}`;
+    return url;
+  };
+
+  const embedUrl = getEmbedUrl(src);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -30,17 +42,23 @@ export default function MusicVideo({ src }) {
 
   useEffect(() => {
     const handleFullscreenChange = () => {
-      setIsFullscreen(!!document.fullscreenElement || !!document.webkitFullscreenElement || !!document.mozFullScreenElement);
+      setIsFullscreen(!!(
+        document.fullscreenElement ||
+        document.webkitFullscreenElement ||
+        document.mozFullScreenElement ||
+        document.msFullscreenElement
+      ));
     };
 
-    document.addEventListener("fullscreenchange", handleFullscreenChange);
-    document.addEventListener("webkitfullscreenchange", handleFullscreenChange);
-    document.addEventListener("mozfullscreenchange", handleFullscreenChange);
-    return () => {
-      document.removeEventListener("fullscreenchange", handleFullscreenChange);
-      document.removeEventListener("webkitfullscreenchange", handleFullscreenChange);
-      document.removeEventListener("mozfullscreenchange", handleFullscreenChange);
-    };
+    const events = [
+      "fullscreenchange",
+      "webkitfullscreenchange",
+      "mozfullscreenchange",
+      "MSFullscreenChange"
+    ];
+    events.forEach(event => document.addEventListener(event, handleFullscreenChange));
+
+    return () => events.forEach(event => document.removeEventListener(event, handleFullscreenChange));
   }, []);
 
   useEffect(() => {
@@ -52,172 +70,196 @@ export default function MusicVideo({ src }) {
       controls.style.opacity = '1';
       clearTimeout(timeout);
       timeout = setTimeout(() => {
-        if (isFullscreen) controls.style.opacity = '0.3';
+        if (isFullscreen && playing) controls.style.opacity = '0';
       }, 3000);
     };
 
-    const handleMouseMove = () => {
+    const handleActivity = () => {
       if (isFullscreen) showControls();
     };
 
-    playerRef.current.addEventListener('mousemove', handleMouseMove);
+    const player = playerRef.current;
+    player.addEventListener('mousemove', handleActivity);
+    player.addEventListener('touchstart', handleActivity); // Important for mobile!
+
+    showControls(); // Initial show
+
     return () => {
-      playerRef.current?.removeEventListener('mousemove', handleMouseMove);
+      player.removeEventListener('mousemove', handleActivity);
+      player.removeEventListener('touchstart', handleActivity);
       clearTimeout(timeout);
     };
-  }, [isFullscreen]);
+  }, [isFullscreen, playing]);
 
   const togglePlay = () => {
     const video = videoRef.current;
-    if (playing) {
-      video.pause();
-    } else {
-      video.play();
-    }
+    if (!video) return;
+    if (playing) video.pause();
+    else video.play();
     setPlaying(!playing);
   };
 
   const handleSeek = (e) => {
     const video = videoRef.current;
+    if (!video) return;
     video.currentTime = e.target.value;
     setCurrentTime(video.currentTime);
   };
 
-  const changeVolume = (v) => {
-    const newVolume = Math.min(Math.max(volume + v, 0), 1);
+  const changeVolume = (delta) => {
+    const newVolume = Math.min(Math.max(volume + delta, 0), 1);
     setVolume(newVolume);
-    videoRef.current.volume = newVolume;
+    if (videoRef.current) videoRef.current.volume = newVolume;
   };
 
   const goFullscreen = () => {
-    if (!document.fullscreenElement && !document.webkitFullscreenElement && !document.mozFullScreenElement) {
-      const elem = playerRef.current;
-      const video = videoRef.current;
-      if (elem.requestFullscreen) {
-        elem.requestFullscreen().catch(() => {
-          if (video.requestFullscreen) video.requestFullscreen();
-        });
-      } else if (elem.webkitRequestFullscreen) {
-        elem.webkitRequestFullscreen().catch(() => {
-          if (video.webkitRequestFullscreen) video.webkitRequestFullscreen();
-        });
-      } else if (elem.mozRequestFullScreen) {
-        elem.mozRequestFullScreen().catch(() => {
-          if (video.mozRequestFullScreen) video.mozRequestFullScreen();
-        });
-      }
+    const elem = playerRef.current;
+    if (!elem) return;
+
+    if (!document.fullscreenElement) {
+      if (elem.requestFullscreen) elem.requestFullscreen();
+      else if (elem.webkitRequestFullscreen) elem.webkitRequestFullscreen();
+      else if (elem.mozRequestFullScreen) elem.mozRequestFullScreen();
+      else if (elem.msRequestFullscreen) elem.msRequestFullscreen();
     } else {
-      if (document.exitFullscreen) {
-        document.exitFullscreen();
-      } else if (document.webkitExitFullscreen) {
-        document.webkitExitFullscreen();
-      } else if (document.mozCancelFullScreen) {
-        document.mozCancelFullScreen();
-      }
+      if (document.exitFullscreen) document.exitFullscreen();
+      else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+      else if (document.mozCancelFullScreen) document.mozCancelFullScreen();
+      else if (document.msExitFullscreen) document.msExitFullscreen();
     }
   };
 
+  const formatTime = (seconds) => {
+    const mins = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60);
+    return `${mins}:${secs.toString().padStart(2, '0')}`;
+  };
+
   return (
-    <div style={{ backgroundImage: `url(${mapBG})` }}
-      className="min-h-screen w-full bg-cover bg-center flex flex-col justify-center items-center px-4 relative"
+    <div
+      className="min-h-screen w-full bg-cover bg-center flex flex-col"
+      style={{ backgroundImage: `url(${mapBG})` }}
     >
-    
-      <div className="relative z-10 flex flex-col items-center justify-between flex-1 h-full w-full  lg:p-10">
-        <div className="w-full">
+      {/* Main Content */}
+      <div className="flex-1 flex flex-col justify-between px-4 py-6 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+        
+        {/* Header */}
+        <div className="w-full z-20">
           <KExpWithCloseBtnHeadingBrown />
         </div>
+
+        {/* Video Player - Fully Responsive */}
         <div
           ref={playerRef}
-          className="relative w-full max-w-[800px] sm:max-w-[900px] md:max-w-[1000px] lg:max-w-[1049px] h-[598px] flex flex-col items-center"
+          className="relative w-full max-w-5xl mx-auto my-4 sm:my-6 lg:my-8 touch-manipulation"
         >
-          <div className="relative w-full flex justify-center" style={{ height: 'calc(100% - 60px)' }}>
-            <video
-              src={src}
-              ref={videoRef}
-              controls={false}
-              className="w-full h-full object-contain rounded-lg"
-              onLoadedMetadata={(e)=> {
-                setDuration(e.target.duration);
-                setIsLoading(false)
-              }}
-              onLoadStart={()=> setIsLoading(true)} // removes spinner on video play
-              onWaiting={()=> setIsLoading(true)} // shows spinner if buffering
-              onCanPlay={()=> setIsLoading(false)} // hides spinner when ready to play
-              onClick={togglePlay}
-            />
-            {isLoading && (
-              <div className="absolute inset-0 flex items-center justify-center bg-black/90 rounded-3xl z-20">
-                <div className="w-12 h-12 border-4 border-t-transparent border-watermark-100 rounded-full animate-spin"></div>
+          {/* Video Container with Responsive Aspect Ratio */}
+          <div className="relative w-full aspect-video bg-black rounded-2xl overflow-hidden shadow-2xl">
+            {embedUrl.includes('youtube.com/embed') ? (
+              <iframe
+                src={`${embedUrl}?autoplay=0&controls=1&modestbranding=1&rel=0&playsinline=1`}
+                className="absolute inset-0 w-full h-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                title="Music Video"
+              />
+            ) : (
+              <>
+                <video
+                  src={src}
+                  ref={videoRef}
+                  className="w-full h-full object-contain"
+                  playsInline
+                  onClick={togglePlay}
+                  onLoadedMetadata={(e) => {
+                    setDuration(e.target.duration);
+                    setIsLoading(false);
+                  }}
+                  onLoadStart={() => setIsLoading(true)}
+                  onWaiting={() => setIsLoading(true)}
+                  onCanPlay={() => setIsLoading(false)}
+                />
+
+                {/* Loading Spinner */}
+                {isLoading && (
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/80 z-10">
+                    <div className="w-12 h-12 border-4 border-t-transparent border-white rounded-full animate-spin"></div>
+                  </div>
+                )}
+
+                {/* Big Play Button Overlay */}
+                {!playing && !isLoading && (
+                  <button
+                    onClick={togglePlay}
+                    className="absolute inset-0 flex items-center justify-center bg-black/70 hover:bg-black/80 transition-all z-10"
+                    aria-label="Play video"
+                  >
+                    <img
+                      src={playBtnOverlay}
+                      alt="Play"
+                      className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 drop-shadow-2xl"
+                    />
+                  </button>
+                )}
+              </>
+            )}
+          </div>
+
+          {/* Custom Controls - Only for non-YouTube videos */}
+          {!embedUrl.includes('youtube.com/embed') && (
+            <div
+              className="custom-controls absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-4 sm:p-5 transition-opacity duration-300"
+              style={{ opacity: isFullscreen && playing ? 0 : 1 }}
+              onMouseMove={(e) => e.stopPropagation()}
+            >
+              <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4">
+                {/* Left Controls */}
+                <div className="flex items-center gap-3 sm:gap-4 bg-surface-100/90 backdrop-blur-sm rounded-2xl px-4 py-2">
+                  <button onClick={togglePlay} className="p-2 hover:scale-110 transition">
+                    <img src={playing ? pauseIcon : playIcon} alt="Play/Pause" className="w-6 h-6 sm:w-7 sm:h-7" />
+                  </button>
+                  <button onClick={() => changeVolume(-0.1)} className="p-2">
+                    <img src={volumeDown} alt="Volume Down" className="w-6 h-6" />
+                  </button>
+                  <button onClick={() => changeVolume(0.1)} className="p-2">
+                    <img src={volumeUp} alt="Volume Up" className="w-6 h-6" />
+                  </button>
+                </div>
+
+                {/* Progress Bar */}
+                <input
+                  type="range"
+                  min="0"
+                  max={duration || 0}
+                  step="0.1"
+                  value={currentTime}
+                  onChange={handleSeek}
+                  className="flex-1 h-2 rounded-lg cursor-pointer accent-primary-100"
+                  style={{
+                    background: `linear-gradient(to right, #D4AF37 0%, #D4AF37 ${(currentTime / duration) * 100}%, #522a00 ${(currentTime / duration) * 100}%, #522a00 100%)`,
+                  }}
+                />
+
+                {/* Right Controls */}
+                <div className="flex items-center gap-3 sm:gap-6 bg-surface-100/90 backdrop-blur-sm rounded-2xl px-4 py-2">
+                  <span className="text-xs sm:text-sm font-medium text-amber-100 tracking-wider">
+                    {formatTime(currentTime)} / {formatTime(duration)}
+                  </span>
+                  <button onClick={goFullscreen} className="p-2 hover:scale-110 transition">
+                    <img
+                      src={isFullscreen ? exitFullscreen : fullscreen}
+                      alt="Fullscreen"
+                      className="w-6 h-6 sm:w-8 sm:h-8"
+                    />
+                  </button>
+                </div>
               </div>
-            )}
-            {!playing && (
-              <button
-                onClick={togglePlay}
-                className="absolute inset-0 flex items-center justify-center bg-black/90 rounded-3xl"
-              >
-                <img
-                  src={playBtnOverlay}
-                  alt="Play overlay"
-                  className="h-20 w-20 sm:h-25 sm:w-25 cursor-pointer"
-                />
-              </button>
-            )}
-          </div>
-          <div className="custom-controls flex items-center justify-between gap-4 sm:gap-6 rounded-lg py-2 w-full mt-2">
-            <div className="bg-surface-100 rounded-2xl py-2 px-4 sm:px-5 h-[40px] sm:h-[50px] w-[120px] sm:w-[141px] flex items-center justify-between"> 
-              <button onClick={togglePlay} className="cursor-pointer">
-                <img
-                  src={playing ? pauseIcon : playIcon}
-                  alt={playing ? "Pause" : "Play"}
-                  className="h-5 w-5 sm:h-6 sm:w-6" 
-                />
-              </button>
-              <button
-                onClick={() => changeVolume(-0.1)}
-                className="cursor-pointer"
-              >
-                <img
-                  src={volumeDown}
-                  alt="Volume Down"
-                  className="h-5 w-5 sm:h-6 sm:w-6" 
-                />
-              </button>
-              <button
-                onClick={() => changeVolume(0.1)}
-                className="cursor-pointer"
-              >
-                <img src={volumeUp} alt="Volume Up" className="h-5 w-5 sm:h-6 sm:w-6" /> 
-              </button>
             </div>
-            <input
-              type="range"
-              min="0"
-              max={duration}
-              value={currentTime}
-              onChange={handleSeek}
-              className="flex-1 appearance-none h-2 rounded-lg cursor-pointer"
-              style={{
-                background: `linear-gradient(to right, #522a00 ${(currentTime / duration) * 100}%, #B69F7C ${(currentTime / duration) * 100}%)`,
-              }}
-            />
-            <div className="bg-surface-100 rounded-2xl py-2 px-4 sm:px-5 flex items-center justify-between gap-6 sm:gap-8">
-              <span className="special-elite text-xs sm:text-sm md:text-base text-primary-100">
-                {Math.floor(currentTime / 60)}:
-                {("0" + Math.floor(currentTime % 60)).slice(-2)} /{" "}
-                {Math.floor(duration / 60)}:
-                {("0" + Math.floor(duration % 60)).slice(-2)}
-              </span>
-              <button onClick={goFullscreen} className="cursor-pointer">
-                <img
-                  src={isFullscreen ? exitFullscreen : fullscreen}
-                  alt="Fullscreen toggle"
-                  className="h-6 w-6 sm:h-8 sm:w-8" // changed: responsive icon size
-                />
-              </button>
-            </div>
-          </div>
+          )}
         </div>
-        <div className="w-full">
+
+        {/* Footer */}
+        <div className="w-full z-20">
           <BTMapAndAudioLink />
         </div>
       </div>

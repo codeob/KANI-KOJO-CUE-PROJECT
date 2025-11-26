@@ -355,7 +355,7 @@ interview: [
     buttons: [
       { text: "BTS VIDEO", icon: BTSVideoIcon, link: "/location/4/video" },
       { text: "MIXING NOTES", icon: mixingNoteIcon, link: "/location/4/mixing-notes" },   // ask where this link routes to?
-      { text: "WATCH MUSIC VIDEO", icon: watchMusicVideo, link: "/location/4/music-video" },
+      { text: "WATCH MUSIC VIDEO", icon: watchMusicVideo, link: "/location/4/comingsoon" },
     ],
     mixingNoteImages: [
       {
@@ -1111,7 +1111,7 @@ Wiase nsemsem na ama no aba saa (Wiase abrabɔ yi ɛnyɛ mmirika oh)
 `,
     buttons: [
       { text: "BTS PHOTOS", icon: BTSPhotoIcon, link: "/location/12/bts-photos" },
-      { text: "WATCH MUSIC VIDEO", icon: watchMusicVideo, link: "/location/12/music-video" },
+      { text: "WATCH MUSIC VIDEO", icon: watchMusicVideo, link: "/location/12/comingsoon" },
       { text: "FULL LYRICS", icon: fullLyricsIcon, link: "/location/12/comingsoon" },
     ],
 
@@ -1283,7 +1283,7 @@ Fell and hit my head in love
       { text: "MIXING NOTES", icon: mixingNoteIcon, link: "/location/14/mixing-notes" },
       { text: "FULL LYRICS", icon: fullLyricsIcon, link: "/location/14/comingsoon" },
       { text: "BTS VIDEO", icon: BTSVideoIcon, link: "/location/14/video" },
-      { text: "WATCH MUSIC VIDEO", icon: watchMusicVideo, link: "/location/14/music-video" },
+      { text: "WATCH MUSIC VIDEO", icon: watchMusicVideo, link: "/location/14/comingsoon" },
     ],
     mixingNoteImages: [
       {
