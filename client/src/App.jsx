@@ -9,6 +9,7 @@ import BTSPhotos from "./components/BTSPhotos"
 import WrittenReflection from "./components/WrittenReflection"
 import ErrorPage from "./Pages/ErrorPage"
 import VideoPlayer from "./components/VideoPlayer"
+import MusicVideo from "./components/MusicVideo"
 import ImagePreviewComponent from "./components/ImagePreviewComponent"
 import Lyricsbreakedown from "./components/Lyricsbreakedown"
 import FilmReel from "./components/FilmReel.jsx"
@@ -49,12 +50,14 @@ function ContentRouter () {
       return <WrittenReflection />;
     case "video":
       return <VideoPlayer src={location.videoUrl} />;
+    case "music-video":
+      return <MusicVideo src={location.musicVideoUrl} />;
     case "voice-note":
-      return <WaveformPlayer audioUrl={location.songUrl} /> 
+      return <WaveformPlayer audioUrl={location.songUrl} />
     case "mixing-notes":
-      return <ImagePreviewComponent />  
+      return <ImagePreviewComponent />
     case "comingsoon":
-      return <ComingSoon /> 
+      return <ComingSoon />
     default:
       return <ErrorPage />
   }

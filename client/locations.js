@@ -18,13 +18,14 @@ const locationPins = [
   {
     id: 1,
     locationName: "Ota 42 - Adum",
-    importance: "Cue’s birthplace and his mother’s family home in Adum, Kumasi — where his story quietly began and, years later, came full circle as his mother returned to live there.",
+    importance: "Cue's birthplace and his mother's family home in Adum, Kumasi — where his story quietly began and, years later, came full circle as his mother returned to live there.",
     coords: { top: "40%", left: "50%" },
     fullsongUrl:"https://youtu.be/kIKlrvm3ZdE?si=ODuccNC8gl_rFtti",
     image: "",
     songTitle: "Fruit of the Womb",
     songUrl: "",
     videoUrl: 'https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/Fruit%20of%20the%20Womb%20Film%20Reel.mp4?alt=media&token=8837820d-db42-4658-96e7-6bf8a395a132',
+    musicVideoUrl: 'https://youtu.be/kIKlrvm3ZdE?si=ODuccNC8gl_rFtti',
     artistName: "Ko-Jo Cue",
     lyrics: `I made a little mistake
 Have I taken on more than I weigh?
@@ -167,13 +168,14 @@ have to tell y’all the story of my life.
   {
     id: 2,
     locationName: "Ota 42 - Adum",
-    importance: "Cue’s birthplace and his mother’s family home in Adum, Kumasi — where his story quietly began and, years later, came full circle as his mother returned to live there.",
+    importance: "Cue's birthplace and his mother's family home in Adum, Kumasi — where his story quietly began and, years later, came full circle as his mother returned to live there.",
     image: "",
     coords: { top: "50%", left: "43%" },
     fullsongUrl:"https://youtu.be/KtQu1fotNcs?si=ZJ_OvAl-0nzSA0a_",
     songTitle: "Big Boy",
     songUrl: "",
     videoUrl: 'https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/Big%20Boy%20Film%20Reel.mp4?alt=media&token=05a852d0-178f-430d-a950-8e7cea372aba',
+    musicVideoUrl: 'https://youtu.be/KtQu1fotNcs?si=ZJ_OvAl-0nzSA0a_',
     artistName: "Ko-Jo Cue",
     lyrics: `I made a little mistake
 Have I taken on more than I weigh?
@@ -295,6 +297,7 @@ interview: [
     songTitle: "Next term",
     songUrl: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/nextterm.mp3?alt=media&token=72df2a02-c29b-4b92-8b9e-5c24f1bf5e2c",
     videoUrl: "",
+    musicVideoUrl: 'https://youtu.be/C48tSjnC-wc?si=av9Ei-ZKbOLKYZ5K',
     artistName: "Ko-Jo Cue",
     lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis Next term",
     buttons: [
@@ -339,19 +342,20 @@ interview: [
   {
     id: 4,
     locationName: "Jamaica House - Bantama",
-    importance: "Cue’s father’s family home in Bantama — the unshakable center of his world, filled with childhood laughter, family lessons, and the comfort of belonging.",
+    importance: "Cue's father's family home in Bantama — the unshakable center of his world, filled with childhood laughter, family lessons, and the comfort of belonging.",
     image: "",
     coords: { top: "13%", left: "48%" },
     fullsongUrl:"https://youtu.be/o6dkYFXoTQQ?si=OauEEEjQVSCPYFWh",
     songTitle: "Bantama Blues 3",
     songUrl: "",
     videoUrl: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/BTS%20Recording%20Skits.mp4?alt=media&token=96de9fdb-afc8-4751-a676-60e253438e29",
+    musicVideoUrl: 'https://youtu.be/o6dkYFXoTQQ?si=OauEEEjQVSCPYFWh',
     artistName: "Ko-Jo Cue",
     lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis Bantama Blues 3",
     buttons: [
       { text: "BTS VIDEO", icon: BTSVideoIcon, link: "/location/4/video" },
       { text: "MIXING NOTES", icon: mixingNoteIcon, link: "/location/4/mixing-notes" },   // ask where this link routes to?
-      { text: "WATCH MUSIC VIDEO", icon: watchMusicVideo, link: "/location/4/comingsoon" },
+      { text: "WATCH MUSIC VIDEO", icon: watchMusicVideo, link: "/location/4/music-video" },
     ],
     mixingNoteImages: [
       {
@@ -401,13 +405,14 @@ interview: [
   {
     id: 5,
     locationName: "Jamaica House - Bantama",
-    importance: "Cue’s father’s family home in Bantama — the unshakable center of his world, filled with childhood laughter, family lessons, and the comfort of belonging.",
+    importance: "Cue's father's family home in Bantama — the unshakable center of his world, filled with childhood laughter, family lessons, and the comfort of belonging.",
     image: "",
     coords: { top: "28%", left: "47%" },
     fullsongUrl:"https://youtu.be/L-CA1QPgSAE?si=h5-JO-xLiHTUbIpk",
     songTitle: "Abrantie",
     songUrl: "",
     videoUrl: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/Abrantie%20Film%20Reel.mp4?alt=media&token=fba62780-14e3-4146-bb22-dafb2edea49c",
+    musicVideoUrl: 'https://youtu.be/L-CA1QPgSAE?si=h5-JO-xLiHTUbIpk',
     artistName: "Ko-Jo Cue",
     lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis Jamaica House - Bantama Abrantie",
     buttons: [
@@ -465,6 +470,7 @@ interview: [
     songTitle: "Squad",
     songUrl: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/Cobby%20Voice%20Note.m4a?alt=media&token=bcd329bf-5bab-4070-a1c6-56db82933e78",
     videoUrl: "",
+    musicVideoUrl: 'https://youtu.be/F_bQGcpAAKo?si=Y-ys6YF5FFO2N-h4',
     artistName: "Ko-Jo Cue",
     lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis OWASS BASIC - Santasi",
     buttons: [
@@ -484,6 +490,7 @@ interview: [
     songTitle: "Mr. Eben",
     songUrl: "",
     videoUrl: "",
+    musicVideoUrl: 'https://youtu.be/CrwYZanPoVw?si=Ey3l6fvpWXXZJo9c',
     artistName: "Ko-Jo Cue",
     lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis Mr. Eben Interlude",
     buttons: [
@@ -550,6 +557,7 @@ interview: [
     songTitle: "Mysterious Ways",
     songUrl: "",
     videoUrl: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/BTS%20MW.mp4?alt=media&token=6cbb2511-4980-4e34-9c7d-010cc2da6b67",
+    musicVideoUrl: 'https://youtu.be/A-r6w7m1mx0?si=CT6I6IT_lo8BduIl',
     artistName: "Ko-Jo Cue",
     lyrics: `Kwaku ahyɛ ne white shirt 
 Lilian agye ne white dress 
@@ -687,6 +695,7 @@ Jesus said, “Love your neighbor as yourself.” Maybe he knew that would be th
     songTitle: "Angel / Pente Interlude",
     songUrl: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/Kiki%20(Voice%20Note).m4a?alt=media&token=2dc1fd08-7b07-4ed7-bbe9-a0464059c146",
     videoUrl: 'https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/Angel%20Film%20Reel.mp4?alt=media&token=4631e9d9-4cca-4d2f-b215-892441680782',
+    musicVideoUrl: 'https://youtu.be/u0l_Kj3fZY0?si=3NYiF15JsprxzhzS',
     artistName: "Ko-Jo Cue",
     lyrics: "",
     buttons: [
@@ -723,6 +732,7 @@ Jesus said, “Love your neighbor as yourself.” Maybe he knew that would be th
     songTitle: "F176",
     songUrl: "",
     videoUrl: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/BTS%20Mixing.mp4?alt=media&token=c7e10a59-5db2-49fe-a7db-7b248e6fc03c",
+    musicVideoUrl: 'https://youtu.be/wgZAKtrOruc?si=nKBbmVq4shl-SYgL',
     artistName: "Ko-Jo Cue",
     lyrics: "",
     buttons: [
@@ -846,6 +856,7 @@ Jesus said, “Love your neighbor as yourself.” Maybe he knew that would be th
     songTitle: "Grew Up Fast",
     songUrl: "",
     videoUrl: "",
+    musicVideoUrl: 'https://youtu.be/smPyPdku1vg?si=h3AZnlX280sl-IRV',
     artistName: "Ko-Jo Cue",
     lyrics: `Never had a chance to choose red or blue pill
 How adey SS2 dey think about the two bills?
@@ -972,6 +983,7 @@ Grew up too quick
     songTitle: "Tontonte",
     songUrl: "",
     videoUrl: "",
+    musicVideoUrl: 'https://youtu.be/c8jU_nkUDl8?si=ajOsjag8XMaTeEGo',
     artistName: "Ko-Jo Cue",
     lyrics: `Ehhhhh ahhhhh (Ginseng asɛ nsuo grawa)
 Mmm ahhh mmmm (Me redwene, got me thinking louder)
@@ -1099,7 +1111,7 @@ Wiase nsemsem na ama no aba saa (Wiase abrabɔ yi ɛnyɛ mmirika oh)
 `,
     buttons: [
       { text: "BTS PHOTOS", icon: BTSPhotoIcon, link: "/location/12/bts-photos" },
-      { text: "WATCH MUSIC VIDEO", icon: watchMusicVideo, link: "/location/12/comingsoon" },
+      { text: "WATCH MUSIC VIDEO", icon: watchMusicVideo, link: "/location/12/music-video" },
       { text: "FULL LYRICS", icon: fullLyricsIcon, link: "/location/12/comingsoon" },
     ],
 
@@ -1114,6 +1126,7 @@ Wiase nsemsem na ama no aba saa (Wiase abrabɔ yi ɛnyɛ mmirika oh)
     songTitle: "Dreams",
     songUrl: "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/Askor%20Voice%20Note.m4a?alt=media&token=981b2622-c5e4-4b93-993f-b206b30b69ac",
     videoUrl: "",
+    musicVideoUrl: 'https://youtu.be/Mu5JCCwYgw4?si=SJZYUSAK1LfTQ1SH',
     artistName: "Ko-Jo Cue",
     lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis",
     buttons: [
@@ -1154,6 +1167,7 @@ Wiase nsemsem na ama no aba saa (Wiase abrabɔ yi ɛnyɛ mmirika oh)
     songTitle: "You Are",
     songUrl: "",
     videoUrl: 'https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/BTS%20You%20Are.mp4?alt=media&token=1fc4015b-6d88-4755-8bc7-3fba1ef64a5e',
+    musicVideoUrl: 'https://youtu.be/UAg6Au9NAxc?si=FxTmSd0MUVrX-EFL',
     artistName: "Ko-Jo Cue",
     lyrics: `I lost my sight
 I’m driving blind when I’m with you
@@ -1269,7 +1283,7 @@ Fell and hit my head in love
       { text: "MIXING NOTES", icon: mixingNoteIcon, link: "/location/14/mixing-notes" },
       { text: "FULL LYRICS", icon: fullLyricsIcon, link: "/location/14/comingsoon" },
       { text: "BTS VIDEO", icon: BTSVideoIcon, link: "/location/14/video" },
-      { text: "WATCH MUSIC VIDEO", icon: watchMusicVideo, link: "/location/14/comingsoon" },
+      { text: "WATCH MUSIC VIDEO", icon: watchMusicVideo, link: "/location/14/music-video" },
     ],
     mixingNoteImages: [
       {
@@ -1305,6 +1319,7 @@ Fell and hit my head in love
     songTitle: "The Fall",
     songUrl: "",
     videoUrl: 'https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/The%20Fall%20Film%20Reel.mp4?alt=media&token=4aaf2a06-c8f2-4e1e-9cfb-93fcdc4a524d',
+    musicVideoUrl: 'https://youtu.be/UkRl-yJzwpQ?si=Hzea730F_K7PrRhw',
     artistName: "Ko-Jo Cue",
     lyrics: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, ad ab provident at commodi corporis perferendis perspiciatis nulla velit accusantium quas aliquid doloremque quasi! Nesciunt ex ipsam id est? Illum nulla sunt voluptas necessitatibus dicta accusantium doloremque repellat atque, dolore incidunt laborum placeat adipisci earum suscipit aliquam nam quo debitis autem architecto, libero sapiente esse consequatur! Odit, animi harum eligendi, doloremque commodi eaque perferendis ut, enim aperiam corrupti repellat. Quia dolor aliquid voluptatibus soluta odio cumque explicabo odit, perspiciatis omnis",
     buttons: [
@@ -1452,6 +1467,7 @@ Fell and hit my head in love
     songTitle: "Onipa Hia Mmoa",
     songUrl: "",
     videoUrl: "",
+    musicVideoUrl: 'https://youtu.be/C83uaaapc_w?si=2voi1UsgY8DodL1a',
     artistName: "Ko-Jo Cue",
     lyrics: `Bere a yi si, Ko-Jo kill
 Ko-Jo kill, bere a yi si, mmh
@@ -1566,6 +1582,7 @@ Story
     songTitle: "Gold Dust",
     songUrl: "",
     videoUrl: "",
+    musicVideoUrl: 'https://youtu.be/0ewvYWsomGw?si=61T9bGFoiVzQbyUW',
     artistName: "Ko-Jo Cue",
     lyrics: `I swear this girl she’s got a diamond for a heart
 Cos with a little bit of light
