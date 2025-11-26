@@ -11,7 +11,7 @@ import locationPins from "../../locations";
 import ZoomIn from "../assets/icons/ZoomIn.svg";
 import ZoomOut from "../assets/icons/ZoomOut.svg";
 import webtoast from "../assets/icons/webtoast.svg";
-import mobiletoast from "../assets/icons/mobiletoast.svg";
+import mobiletoast from "../assets/icons/mobiletoast1.svg";
 import calendar from "../assets/icons/calendardate.svg";
 import shopbag from "../assets/icons/shoppingbag.svg";
 
@@ -258,8 +258,8 @@ function Map() {
   // Pin sizing - increased base sizes
   const getPinSize = () => {
     const scale = imageInfo.baseScale || 1;
-    const baseWidth = 250; // Increased from 220
-    const baseHeight = 300; // Increased from 270
+    const baseWidth = 550; // Increased from 220
+    const baseHeight = 700; // Increased from 270
     return {
       width: `${baseWidth * scale}px`,
       height: `${baseHeight * scale}px`,
@@ -328,13 +328,13 @@ function Map() {
       )}
 
       {/* Tickets & Merch */}
-      <div className="fixed z-50 bg-primary-100 rounded-xl flex items-center justify-center gap-6 px-6 py-3 bottom-6 left-1/2 -translate-x-1/2 w-[90%] max-w-md">
+      <div className="fixed z-50 bg-primary-100 rounded-xl flex items-center justify-end gap-4 px-2 py-3 bottom-6 right-6 w-auto">
         <a href="https://formybrotherslive.hustlesasa.shop/" target="_blank" rel="noopener" className="flex items-center gap-2 text-white">
-          <img src={calendar} className="w-6 h-6" /> <span>Get Tickets</span>
+          <img src={calendar} className="w-5 h-5" /> <span>Get Tickets</span>
         </a>
         <span className="hidden sm:block w-px h-8 bg-white/50" />
         <a href="https://ripeorganic.world/" target="_blank" rel="noopener" className="flex items-center gap-2 text-white">
-          <img src={shopbag} className="w-6 h-6" /> <span>Merch</span>
+          <img src={shopbag} className="w-5 h-5" /> <span>Merch</span>
         </a>
       </div>
 

@@ -175,7 +175,7 @@ const WaveformPlayer = ({ audioUrl }) => {
         </div>
 
         {/* Bottom - Map & Link */}
-        <div className="w-full flex justify-center pb-2 sm:pb-6">
+        <div className="w-full flex justify-center py-4">
           <BTMapAndAudioLink />
         </div>
       </div>
