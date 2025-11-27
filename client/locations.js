@@ -968,15 +968,23 @@ Grew up too quick
     locationName: "F176 - Buokrom Estate",
     importance: "Buokrom Estate, 2004–2007 — where Cue came of age, met his father for the first time, and found ambition shaping the boy into a young man.",
     image:[
-      "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/BTS%20Photos%2FTontonte%2FCue%2C%20Ara%2C%20Girls%201.jpg?alt=media&token=3edc2643-70fd-4bdf-bc76-6d1151741aa7",
-      "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/BTS%20Photos%2FTontonte%2FDSCF5263.jpg?alt=media&token=8e839e59-389d-42b3-81ee-8a4f9ece8ebf",
-      "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/BTS%20Photos%2FTontonte%2FDSCF5266.jpg?alt=media&token=d927a4ff-201f-4a0e-a325-f202b5e269a1",
-      "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/BTS%20Photos%2FTontonte%2FDSCF5366.jpg?alt=media&token=45e6c04b-acde-40f6-bac0-521a9750fb01",
-      "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/BTS%20Photos%2FTontonte%2FDSCF5372%20(1).jpg?alt=media&token=8c00d8a6-33b7-4a13-bcb5-a89bb714afda",
-      "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/BTS%20Photos%2FTontonte%2FElsie%201.jpg?alt=media&token=90416cf6-0733-4e53-9f71-18fba1636b1b",
-      "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/BTS%20Photos%2FTontonte%2FExtra%201.jpg?alt=media&token=52303ecc-4eeb-4cb7-a0b5-b5cebeae240c",
-      "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/BTS%20Photos%2FTontonte%2FWith%20Ara%201.jpg?alt=media&token=c99393ad-05cb-4dcc-842e-80c598a26aa2",
-      "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/BTS%20Photos%2FTontonte%2FWith%20Ara%203.jpg?alt=media&token=68a05df5-97e7-43d9-942a-c29cbad2d066",
+      "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/BTS%20Photos%2FTontonte%2FCue%2C%20Ara%2C%20Girls%201%20(wecompress.com).jpg?alt=media&token=b4d27dee-0031-4b8a-add0-7c749868acc6",
+
+      "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/BTS%20Photos%2FTontonte%2FDSCF5263%20(wecompress.com).jpg?alt=media&token=e8e5704e-4bd0-4b46-a99f-8195dc50124e",
+
+      "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/BTS%20Photos%2FTontonte%2FDSCF5266%20(wecompress.com).jpg?alt=media&token=b87f19bf-5c9b-49ea-9076-74ae75f183ec",
+
+      "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/BTS%20Photos%2FTontonte%2FDSCF5366%20(wecompress.com).jpg?alt=media&token=cdcd2e03-bb25-43e3-b238-9bd3d4f7f3a8",
+
+      "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/BTS%20Photos%2FTontonte%2FDSCF5372%20(1)%20(wecompress.com).jpg?alt=media&token=99189a44-5605-49c7-9fe9-44724eddfafd",
+
+      "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/BTS%20Photos%2FTontonte%2FElsie%201%20(wecompress.com).jpg?alt=media&token=5a7b907b-ec00-41df-8ae7-c75353ff9bc7",
+
+      "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/BTS%20Photos%2FTontonte%2FExtra%201%20(wecompress.com).jpg?alt=media&token=40066f66-a356-4db4-8239-25887ada31b5",
+
+      "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/BTS%20Photos%2FTontonte%2FWith%20Ara%201%20(wecompress.com).jpg?alt=media&token=2501df37-b39f-46c5-af54-e64c2c14186f",
+
+      "https://firebasestorage.googleapis.com/v0/b/kanialbum.firebasestorage.app/o/BTS%20Photos%2FTontonte%2FWith%20Ara%203%20(wecompress.com).jpg?alt=media&token=aa2ea4da-7640-42a0-ac26-5107153af385",
     ],
     coords: { top: "55%", left: "80%" },
     fullsongUrl:"https://youtu.be/-YKpDIOFq1Y?si=dn1qAVd5GpGnyTc7",
