@@ -18,209 +18,212 @@ export default function VideoPlayer({ src }) {
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const [volume, setVolume] = useState(1);
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(true);
+  const [showOverlayControls, setShowOverlayControls] = useState(true);
 
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
-    const updateTime = () => setCurrentTime(video.currentTime);
-    video.addEventListener("timeupdate", updateTime);
-    return () => video.removeEventListener("timeupdate", updateTime);
+    const update = () => setCurrentTime(video.currentTime);
+    video.addEventListener("timeupdate", update);
+    return () => video.removeEventListener("timeupdate", update);
   }, []);
 
   useEffect(() => {
-    const handleFullscreenChange = () => {
-      setIsFullscreen(!!document.fullscreenElement || !!document.webkitFullscreenElement || !!document.mozFullScreenElement);
-    };
-
-    document.addEventListener("fullscreenchange", handleFullscreenChange);
-    document.addEventListener("webkitfullscreenchange", handleFullscreenChange);
-    document.addEventListener("mozfullscreenchange", handleFullscreenChange);
-    return () => {
-      document.removeEventListener("fullscreenchange", handleFullscreenChange);
-      document.removeEventListener("webkitfullscreenchange", handleFullscreenChange);
-      document.removeEventListener("mozfullscreenchange", handleFullscreenChange);
-    };
+    const handler = () => setIsFullscreen(!!document.fullscreenElement);
+    document.addEventListener("fullscreenchange", handler);
+    return () => document.removeEventListener("fullscreenchange", handler);
   }, []);
 
+  // Auto-hide overlay controls in fullscreen only
   useEffect(() => {
-    let timeout;
-    const controls = playerRef.current?.querySelector('.custom-controls');
-    if (!controls) return;
+    if (!isFullscreen || !playing) {
+      setShowOverlayControls(true);
+      return;
+    }
+    const timer = setTimeout(() => setShowOverlayControls(false), 3000);
+    return () => clearTimeout(timer);
+  }, [isFullscreen, playing, currentTime]);
 
-    const showControls = () => {
-      controls.style.opacity = '1';
-      clearTimeout(timeout);
-      timeout = setTimeout(() => {
-        if (isFullscreen) controls.style.opacity = '0.3';
-      }, 3000);
-    };
-
-    const handleMouseMove = () => {
-      if (isFullscreen) showControls();
-    };
-
-    playerRef.current.addEventListener('mousemove', handleMouseMove);
-    return () => {
-      playerRef.current?.removeEventListener('mousemove', handleMouseMove);
-      clearTimeout(timeout);
-    };
-  }, [isFullscreen]);
+  const handleActivity = () => {
+    setShowOverlayControls(true);
+    if (isFullscreen && playing) {
+      const timer = setTimeout(() => setShowOverlayControls(false), 3000);
+      return () => clearTimeout(timer);
+    }
+  };
 
   const togglePlay = () => {
-    const video = videoRef.current;
-    if (playing) {
-      video.pause();
-    } else {
-      video.play();
-    }
+    if (!videoRef.current) return;
+    playing ? videoRef.current.pause() : videoRef.current.play();
     setPlaying(!playing);
   };
 
   const handleSeek = (e) => {
-    const video = videoRef.current;
-    video.currentTime = e.target.value;
-    setCurrentTime(video.currentTime);
+    if (!videoRef.current || !duration) return;
+    const percent = e.target.value;
+    videoRef.current.currentTime = (percent / 100) * duration;
+    setCurrentTime((percent / 100) * duration);
   };
 
-  const changeVolume = (v) => {
-    const newVolume = Math.min(Math.max(volume + v, 0), 1);
-    setVolume(newVolume);
-    videoRef.current.volume = newVolume;
+  const changeVolume = (delta) => {
+    const newVol = Math.max(0, Math.min(1, volume + delta));
+    setVolume(newVol);
+    if (videoRef.current) videoRef.current.volume = newVol;
   };
 
   const goFullscreen = () => {
-    if (!document.fullscreenElement && !document.webkitFullscreenElement && !document.mozFullScreenElement) {
-      const elem = playerRef.current;
-      const video = videoRef.current;
-      if (elem.requestFullscreen) {
-        elem.requestFullscreen().catch(() => {
-          if (video.requestFullscreen) video.requestFullscreen();
-        });
-      } else if (elem.webkitRequestFullscreen) {
-        elem.webkitRequestFullscreen().catch(() => {
-          if (video.webkitRequestFullscreen) video.webkitRequestFullscreen();
-        });
-      } else if (elem.mozRequestFullScreen) {
-        elem.mozRequestFullScreen().catch(() => {
-          if (video.mozRequestFullScreen) video.mozRequestFullScreen();
-        });
-      }
-    } else {
-      if (document.exitFullscreen) {
-        document.exitFullscreen();
-      } else if (document.webkitExitFullscreen) {
-        document.webkitExitFullscreen();
-      } else if (document.mozCancelFullScreen) {
-        document.mozCancelFullScreen();
-      }
-    }
+    if (!playerRef.current) return;
+    document.fullscreenElement
+      ? document.exitFullscreen()
+      : playerRef.current.requestFullscreen?.() || playerRef.current.webkitRequestFullscreen?.();
+  };
+
+  const formatTime = (sec) => {
+    if (!sec) return "0:00";
+    const m = Math.floor(sec / 60);
+    const s = Math.floor(sec % 60);
+    return `${m}:${s.toString().padStart(2, "0")}`;
   };
 
   return (
-    <div style={{ backgroundImage: `url(${mapBG})` }}
-      className="min-h-screen w-full bg-cover bg-center flex flex-col justify-center items-center px-4 relative"
+    <div
+      className="fixed inset-0 flex flex-col bg-cover bg-center overflow-hidden"
+      style={{ backgroundImage: `url(${mapBG})` }}
     >
-    
-      <div className="relative z-10 flex flex-col items-center justify-between flex-1 h-full w-full  lg:p-10">
-        <div className="w-full">
-          <KExpWithCloseBtnHeadingBrown />
-        </div>
+      {/* Header */}
+      <header className="z-50 px-4 pt-safe-offset-top pb-2 flex-shrink-0">
+        <KExpWithCloseBtnHeadingBrown />
+      </header>
+
+      {/* Main Video Area */}
+      <main className="flex-1 flex flex-col items-center justify-center px-4 gap-4">
+        {/* Video Container */}
         <div
           ref={playerRef}
-          className="relative w-full max-w-[800px] sm:max-w-[900px] md:max-w-[1000px] lg:max-w-[1049px] h-[598px] flex flex-col items-center"
+          className="relative w-full max-w-5xl bg-black rounded-2xl overflow-hidden shadow-2xl border-4 border-amber-900/40"
+          style={{ maxHeight: "calc(100vh - 220px)" }}
+          onMouseMove={handleActivity}
+          onTouchStart={handleActivity}
         >
-          <div className="relative w-full flex justify-center" style={{ height: 'calc(100% - 60px)' }}>
-            <video
-              src={src}
-              ref={videoRef}
-              controls={false}
-              className="w-full h-full object-contain rounded-lg"
-              onLoadedMetadata={(e)=> {
-                setDuration(e.target.duration);
-                setIsLoading(false)
-              }}
-              onLoadStart={()=> setIsLoading(true)} // removes spinner on video play
-              onWaiting={()=> setIsLoading(true)} // shows spinner if buffering
-              onCanPlay={()=> setIsLoading(false)} // hides spinner when ready to play
+          <video
+            src={src}
+            ref={videoRef}
+            className="w-full h-full object-contain"
+            playsInline
+            preload="metadata"
+            onClick={togglePlay}
+            onLoadedMetadata={(e) => setDuration(e.target.duration)}
+            onLoadStart={() => setIsLoading(true)}
+            onCanPlay={() => setIsLoading(false)}
+            onWaiting={() => setIsLoading(true)}
+          />
+
+          {/* Loading */}
+          {isLoading && (
+            <div className="absolute inset-0 flex items-center justify-center bg-black/90 z-50">
+              <div className="w-16 h-16 border-4 border-t-transparent border-amber-500 rounded-full animate-spin" />
+            </div>
+          )}
+
+          {/* Big Play Button */}
+          {!playing && !isLoading && (
+            <button
               onClick={togglePlay}
-            />
-            {isLoading && (
-              <div className="absolute inset-0 flex items-center justify-center bg-black/90 rounded-3xl z-20">
-                <div className="w-12 h-12 border-4 border-t-transparent border-watermark-100 rounded-full animate-spin"></div>
+              className="absolute inset-0 flex items-center justify-center bg-black/70 z-40"
+            >
+              <img src={playBtnOverlay} alt="Play" className="w-24 h-24 md:w-32 md:h-32 drop-shadow-2xl" />
+            </button>
+          )}
+
+          {/* Overlay Controls - Only on Large Screens */}
+          <div
+            className="hidden md:block absolute inset-0 pointer-events-none z-40 transition-opacity duration-300"
+            style={{ opacity: showOverlayControls ? 1 : 0 }}
+          >
+            <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-black/90 via-black/40 to-transparent pointer-events-auto" />
+            <div className="absolute bottom-4 left-4 right-4 flex flex-col gap-3 pointer-events-auto">
+              <input
+                type="range"
+                min="0"
+                max="100"
+                value={duration ? (currentTime / duration) * 100 : 0}
+                onChange={handleSeek}
+                className="w-full h-3 rounded-full accent-amber-500 bg-gray-700/80 cursor-pointer"
+                style={{
+                  background: `linear-gradient(to right, #D4AF37 0%, #D4AF37 ${duration ? (currentTime / duration) * 100 : 0}%, #522a00 ${duration ? (currentTime / duration) * 100 : 0}%, #522a00 100%)`,
+                }}
+              />
+              <div className="flex justify-between items-center">
+                <div className="flex items-center gap-4 bg-black/70 backdrop-blur-md rounded-full px-5 py-3">
+                  <button onClick={togglePlay}>
+                    <img src={playing ? pauseIcon : playIcon} alt="Play" className="w-8 h-8" />
+                  </button>
+                  <button onClick={() => changeVolume(-0.1)}>
+                    <img src={volumeDown} alt="Vol-" className="w-7 h-7" />
+                  </button>
+                  <button onClick={() => changeVolume(0.1)}>
+                    <img src={volumeUp} alt="Vol+" className="w-7 h-7" />
+                  </button>
+                </div>
+                <div className="flex items-center gap-4 bg-black/70 backdrop-blur-md rounded-full px-5 py-3">
+                  <span className="text-amber-100 font-medium text-sm">
+                    {formatTime(currentTime)} / {formatTime(duration)}
+                  </span>
+                  <button onClick={goFullscreen}>
+                    <img src={isFullscreen ? exitFullscreen : fullscreen} alt="FS" className="w-8 h-8" />
+                  </button>
+                </div>
               </div>
-            )}
-            {!playing && (
-              <button
-                onClick={togglePlay}
-                className="absolute inset-0 flex items-center justify-center bg-black/90 rounded-3xl"
-              >
-                <img
-                  src={playBtnOverlay}
-                  alt="Play overlay"
-                  className="h-20 w-20 sm:h-25 sm:w-25 cursor-pointer"
-                />
-              </button>
-            )}
+            </div>
           </div>
-          <div className="custom-controls flex items-center justify-between gap-4 sm:gap-6 rounded-lg py-2 w-full mt-2">
-            <div className="bg-surface-100 rounded-2xl py-2 px-4 sm:px-5 h-[40px] sm:h-[50px] w-[120px] sm:w-[141px] flex items-center justify-between"> 
-              <button onClick={togglePlay} className="cursor-pointer">
-                <img
-                  src={playing ? pauseIcon : playIcon}
-                  alt={playing ? "Pause" : "Play"}
-                  className="h-5 w-5 sm:h-6 sm:w-6" 
-                />
+        </div>
+
+        {/* Controls BELOW Video - Only on Small Screens (phones) */}
+        <div className="md:hidden w-full max-w-5xl flex flex-col gap-3 px-2">
+          {/* Progress Bar */}
+          <input
+            type="range"
+            min="0"
+            max="100"
+            value={duration ? (currentTime / duration) * 100 : 0}
+            onChange={handleSeek}
+            className="w-full h-3 rounded-full accent-amber-500 bg-gray-700"
+            style={{
+              background: `linear-gradient(to right, #D4AF37 0%, #D4AF37 ${duration ? (currentTime / duration) * 100 : 0}%, #522a00 ${duration ? (currentTime / duration) * 100 : 0}%, #522a00 100%)`,
+            }}
+          />
+
+          {/* Bottom Controls Row */}
+          <div className="flex justify-between items-center gap-4">
+            <div className="flex items-center gap-4 bg-black/80 backdrop-blur-md rounded-full px-5 py-3">
+              <button onClick={togglePlay}>
+                <img src={playing ? pauseIcon : playIcon} alt="Play" className="w-8 h-8" />
               </button>
-              <button
-                onClick={() => changeVolume(-0.1)}
-                className="cursor-pointer"
-              >
-                <img
-                  src={volumeDown}
-                  alt="Volume Down"
-                  className="h-5 w-5 sm:h-6 sm:w-6" 
-                />
+              <button onClick={() => changeVolume(-0.1)}>
+                <img src={volumeDown} alt="Vol-" className="w-7 h-7" />
               </button>
-              <button
-                onClick={() => changeVolume(0.1)}
-                className="cursor-pointer"
-              >
-                <img src={volumeUp} alt="Volume Up" className="h-5 w-5 sm:h-6 sm:w-6" /> 
+              <button onClick={() => changeVolume(0.1)}>
+                <img src={volumeUp} alt="Vol+" className="w-7 h-7" />
               </button>
             </div>
-            <input
-              type="range"
-              min="0"
-              max={duration}
-              value={currentTime}
-              onChange={handleSeek}
-              className="flex-1 appearance-none h-2 rounded-lg cursor-pointer"
-              style={{
-                background: `linear-gradient(to right, #522a00 ${(currentTime / duration) * 100}%, #B69F7C ${(currentTime / duration) * 100}%)`,
-              }}
-            />
-            <div className="bg-surface-100 rounded-2xl py-2 px-4 sm:px-5 flex items-center justify-between gap-6 sm:gap-8">
-              <span className="special-elite text-xs sm:text-sm md:text-base text-primary-100">
-                {Math.floor(currentTime / 60)}:
-                {("0" + Math.floor(currentTime % 60)).slice(-2)} /{" "}
-                {Math.floor(duration / 60)}:
-                {("0" + Math.floor(duration % 60)).slice(-2)}
+
+            <div className="flex items-center gap-4 bg-black/80 backdrop-blur-md rounded-full px-5 py-3">
+              <span className="text-amber-100 font-medium text-sm">
+                {formatTime(currentTime)} / {formatTime(duration)}
               </span>
-              <button onClick={goFullscreen} className="cursor-pointer">
-                <img
-                  src={isFullscreen ? exitFullscreen : fullscreen}
-                  alt="Fullscreen toggle"
-                  className="h-6 w-6 sm:h-8 sm:w-8" // changed: responsive icon size
-                />
+              <button onClick={goFullscreen}>
+                <img src={isFullscreen ? exitFullscreen : fullscreen} alt="Fullscreen" className="w-8 h-8" />
               </button>
             </div>
           </div>
         </div>
-        <div className="w-full">
-          <BTMapAndAudioLink />
-        </div>
-      </div>
+      </main>
+
+      {/* Footer */}
+      <footer className="z-50 px-4 pb-safe-offset-bottom pt-2 flex-shrink-0">
+        <BTMapAndAudioLink />
+      </footer>
     </div>
   );
 }
