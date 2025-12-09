@@ -780,7 +780,7 @@ Jesus said, “Love your neighbor as yourself.” Maybe he knew that would be th
       { role: "interviewer", text: "He’s the guy who produced ‘001’, right?" },
       { role: "cue", text: "Yeah, that’s him. And on the music end, I can’t say there’s anyone I’d call a frequent collaborator apart from Shaker. I don’t think I worked with anyone from The Shining on For My Brothers. I don’t think I worked with anyone from Pen & Paper on For My Brothers. So I’d say it’s usually on the production end." },
       { role: "interviewer", text: "Ohok. But how about videography and stuff?" },
-      { role: "cue", text: "With videos, I used to shoot with Esianyo Kumodzi a lot. My last video was by Third Eye Montage. My graphics guy for the last three (3) years has been Aprodo of Y Programming. Evans Kafui Ofori is my creative director, since For My Brothers." },
+      { role: "cue", text: "With videos, I used to shoot with Esianyo Kumodzi a lot. My last video was by Third Eye Montage. My graphics guy for the last three (3) years has been Aprodoo of Y Programming  to Afri5a of Ripe Organic. Evans Kafui Offori is my creative director, since For My Brothers." },
       { role: "interviewer", text: "And who does your photography?" },
       { role: "cue", text: "Kush! Ah! Kush on Shotz Photography. That’s my brother. He just takes photos and sends them to me. Kush has been taking photos of me since like 2014." },
       { role: "interviewer", text: "Ok. Nice. So if I were to ask you, ever since you got into the game, what have been some of your successes, what would you say?" },

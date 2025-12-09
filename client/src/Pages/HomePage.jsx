@@ -7,7 +7,7 @@ import KaniLogo from '../assets/backgrounds/Kani_Logo.png'
 function HomePage() {
     return (
         <div
-            className="min-h-screen w-full bg-cover bg-center flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 "
+            className="min-h-screen w-full bg-cover bg-center flex flex-col justify-center items-center px-4 py-5 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 "
             style={{ backgroundImage: `url(${Homepage})` }}
         >
             {/* Title */}
@@ -24,7 +24,13 @@ function HomePage() {
             {/* Button */}
              </div>
              {/* Title */}
-
+               
+               {/*  */}
+               <div className=''>
+                 <h1 className='text-[#B69F7C] font-semibold text-xl '>
+                    Designed & Built in collaboration with FrayedJacket Creative Agency.
+                 </h1>
+               </div>
         </div>
     );
 }

@@ -4,60 +4,86 @@ import mapIcon from "../assets/icons/mapIcon.svg";
 import audioLinkBG from "../assets/backgrounds/audioLinkBG.png";
 import voiceIDIcon from "../assets/icons/voiceIDIcon.svg";
 import arrowNEIcon from "../assets/icons/arrow_ne.svg";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import useLocationStore from "../store/useLocationStore";
 
-export default function BTMapAndAudioLink({ onBack }) {
+export default function BTMapAndAudioLink() {
   const { selectedLocation, clearSelected } = useLocationStore();
   const navigate = useNavigate();
 
   const handleBack2Map = () => {
-    navigate('/map'); 
+    navigate("/map");
     clearSelected();
   };
 
   return (
-    <div className="flex justify-between w-full ">
-      {/* ✅ Back to Map button */}
-      <button onClick={handleBack2Map} className="flex items-center gap-2 sm:gap-3 cursor-pointer">
-        <img src={mapIcon} alt="Return to map" className="w-6 h-6 sm:w-8 sm:h-8" /> 
-        <p className="rock text-primary-100 text-[10px] sm:text-base md:text-lg">Back to map</p>
-      </button>
+    <div className="w-full bg-transparent">
+      {/* Always horizontal bar – works on 320px+ */}
+      <div className="flex flex-row items-center justify-between gap-3 px-3 sm:px-5 lg:px-8 py-2.5 sm:py-3.5 max-w-screen-2xl mx-auto text-primary-100">
 
-      {/* ✅ Audio Link Box */}
-      <div className="relative h-fit max-w-fit flex items-center px-3 sm:px-4 md:px-5 py-2 sm:py-3 gap-2 sm:gap-3"> 
-        <img src={audioLinkBG} alt="Audio link background" className="absolute inset-0 h-full w-full" />
+        {/* LEFT: Back to Map */}
+        <button
+          onClick={handleBack2Map}
+          className="flex items-center gap-1.5 sm:gap-2.5 hover:opacity-75 transition-opacity flex-shrink-0 whitespace-nowrap"
+        >
+          <img
+            src={mapIcon}
+            alt="Back"
+            className="w-5 h-5 xxs:w-6 xxs:h-6 sm:w-8 sm:h-8"
+          />
+          <span className="rock text-[10px] xxs:text-xs sm:text-base lg:text-lg">
+            Back to map
+          </span>
+        </button>
 
-        {/* Voice Icon */}
-        <div className="flex relative bg-watermark-100 h-full rounded-full">
-          <img src={voiceIDIcon} alt="Voice ID icon" className="w-6 h-6 sm:w-8 sm:h-8" /> 
-        </div>
+        {/* CENTER: Credit Text – always visible, scales down smoothly */}
+        <p className="font-bold rock text-[5px] xxs:text-[10px] xs:text-xs sm:text-sm lg:text-base text-center opacity-75 leading-tight flex-1 px-2">
+          Designed & Built in collaboration with FrayedJacket Creative Agency.
+        </p>
 
-        {/* Song Title + Full Song Link */}
-        <div className="flex flex-col relative mr-2">
+        {/* RIGHT: Audio Link Box */}
+        <div className="relative flex items-center rounded-xl overflow-hidden shadow-lg flex-shrink-0">
+          <img
+            src={audioLinkBG}
+            alt=""
+            className="absolute inset-0 w-full h-full object-cover"
+          />
 
-          {/* ✅ Show Song Title */}
-          <p className="rock text-watermark-100 text-xs sm:text-sm md:text-base"> 
-            {selectedLocation ? selectedLocation.songTitle : ""}
-          </p>
+          <div className="relative z-10 flex items-center gap-2 sm:gap-3 px-2.5 sm:px-4 py-2 sm:py-3">
+            {/* Voice Icon */}
+            <div className="bg-watermark-100/90 backdrop-blur-sm rounded-full p-1.5 sm:p-2">
+              <img
+                src={voiceIDIcon}
+                alt="Play"
+                className="w-6 h-6 xxs:w-7 xxs:h-7 sm:w-9 sm:h-9"
+              />
+            </div>
 
-          {/* ✅ If fullsongUrl exists, show the Listen to Full Song link */}
-          {selectedLocation?.fullsongUrl && (
-            <a 
-              href={selectedLocation.fullsongUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="cursor-pointer"
-            >
-              <div className="flex items-center gap-1 sm:gap-2"> 
-                <p className="text-tertiary-100 font-semibold font-biro text-xs sm:text-sm md:text-base"> 
-                  Listen to full song
-                </p>
-                <img src={arrowNEIcon} alt="arrow icon" className="w-4 h-4 sm:w-5 sm:h-5" />
-              </div>
-            </a>
-          )}
+            {/* Song Title + Link */}
+            <div className="min-w-0">
+              <p className="font-rock text-watermark-100 text-[10px] xxs:text-xs sm:text-sm lg:text-base font-medium truncate max-w-[140px] xs:max-w-[180px] sm:max-w-none">
+                {selectedLocation?.songTitle || "Select a location"}
+              </p>
 
+              {selectedLocation?.fullsongUrl && (
+                <a
+                  href={selectedLocation.fullsongUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1 mt-0.5 group"
+                >
+                  <span className="font-biro text-tertiary-100 font-bold text-[9px] xxs:text-[10px] sm:text-xs lg:text-sm group-hover:underline">
+                    Listen to full song
+                  </span>
+                  <img
+                    src={arrowNEIcon}
+                    alt="Open"
+                    className="w-3.5 h-3.5 xxs:w-4 xxs:h-4 sm:w-5 sm:h-5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
+                  />
+                </a>
+              )}
+            </div>
+          </div>
         </div>
       </div>
     </div>
